@@ -1,0 +1,94 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Preamble}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Industry 4.0}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Internet-of-Things in Industry}{2}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Artificial Intelligence in Internet-of-Things}{2}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Error Tolerance in Machine Learning Algorithms}{2}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Problem Statement}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Research Objective}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Working Hypothesis}{4}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Network Compression and Quantization}{4}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Approximate Computing}{4}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Motivation}{5}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Main Contribution}{6}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Spike-by-Spike Neural Networks}{6}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Convolutional Neural Networks}{7}{subsection.1.6.2}%
+\contentsline {section}{\numberline {1.7}Publications}{7}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Dissertation Outline}{9}{section.1.8}%
+\contentsline {chapter}{\numberline {2}Background}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Spike-by-Spike Neural Networks}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Basic Network Overview}{12}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Computational Cost}{12}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Error Tolerance}{14}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Conv2D Tensor Operation}{15}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Floating-point Number Representation}{15}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Accelerating Spike-by-Spike Neural Networks}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Related Work}{21}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Network Compression}{21}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Classical Approximate Computing}{22}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Spike-by-Spike Neural Networks Accelerators}{22}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}System Design}{23}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Hardware Architecture}{23}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Conv Processing Unit}{24}{subsection.3.3.2}%
+\contentsline {subsubsection}{\nonumberline Configuration Mode}{24}{section*.15}%
+\contentsline {subsubsection}{\nonumberline Computation Mode}{25}{section*.16}%
+\contentsline {subsection}{\numberline {3.3.3}Dot-Product Hardware Module}{25}{subsection.3.3.3}%
+\contentsline {subsubsection}{\nonumberline Dot-Product with Standard Floating-Point Computation}{27}{section*.18}%
+\contentsline {subsubsection}{\nonumberline Dot-Product with Hybrid Custom Floating-Point and Logarithmic Approximation}{28}{section*.20}%
+\contentsline {section}{\numberline {3.4}Experimental Results}{31}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Performance Benchmark}{32}{subsection.3.4.1}%
+\contentsline {subsubsection}{\nonumberline Benchmark on Embedded CPU}{32}{section*.23}%
+\contentsline {subsubsection}{\nonumberline Benchmark on Processing Units with Standard Floating-Point Computation}{32}{section*.26}%
+\contentsline {subsubsection}{\nonumberline Benchmark on Noise Tolerance Plot}{36}{section*.33}%
+\contentsline {subsection}{\numberline {3.4.2}Design Exploration with Hybrid Custom Floating-Point and Logarithmic Approximation}{37}{subsection.3.4.2}%
+\contentsline {subsubsection}{\nonumberline Parameters for Numeric Representation of Synaptic Weight Matrix}{38}{section*.35}%
+\contentsline {subsubsection}{\nonumberline Design Exploration for Dot-product with Hybrid Custom Floating-Point Approximation}{38}{section*.37}%
+\contentsline {subsubsection}{\nonumberline Design Exploration for Dot-Product whit Hybrid Logarithmic Approximation}{40}{section*.42}%
+\contentsline {subsection}{\numberline {3.4.3}Results and Discussion}{43}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Conclusions}{44}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Accelerating Convolutional Neural Networks}{47}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{47}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Related work}{50}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Hybrid Custom Floating-Point}{50}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Low-Precision Floating-Point}{50}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Low-Power}{51}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}System Design}{51}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Base embedded system architecture}{51}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Tensor processor}{51}{subsection.4.3.2}%
+\contentsline {subsubsection}{\nonumberline \textbf {Modes of operation}}{52}{section*.55}%
+\contentsline {subsubsection}{\nonumberline \textbf {Dot-product with hybrid floating-point}}{53}{section*.56}%
+\contentsline {subsubsection}{\nonumberline \textbf {Multiply-Accumulate}}{53}{section*.59}%
+\contentsline {subsubsection}{\nonumberline \textbf {On-chip memory utilization}}{56}{section*.61}%
+\contentsline {subsection}{\numberline {4.3.3}Training Method}{57}{subsection.4.3.3}%
+\contentsline {subsubsection}{\nonumberline Training with Iterative Early Stop}{57}{section*.63}%
+\contentsline {subsubsection}{\nonumberline Quantization-Aware Training}{58}{section*.64}%
+\contentsline {subsection}{\numberline {4.3.4}Embedded software architecture}{60}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Experimental Results}{61}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Sensor Analytics Application}{61}{subsection.4.4.1}%
+\contentsline {subsubsection}{\nonumberline Experimental Setup}{61}{section*.70}%
+\contentsline {subsubsection}{\nonumberline Data Sets}{62}{section*.71}%
+\contentsline {subsubsection}{\nonumberline CNN-Regression Model}{64}{section*.74}%
+\contentsline {subsection}{\numberline {4.4.2}Training}{65}{subsection.4.4.2}%
+\contentsline {subsubsection}{\nonumberline Base Model}{65}{section*.76}%
+\contentsline {subsubsection}{\nonumberline TensorFlow Lite 8-bit Quantization}{66}{section*.79}%
+\contentsline {subsubsection}{\nonumberline Inference of non-quantized models on HF6 hardware}{68}{section*.80}%
+\contentsline {subsubsection}{\nonumberline Quantization-Aware Training for HF6 hardware}{68}{section*.81}%
+\contentsline {subsubsection}{\nonumberline Quantization-Aware Training for Hybrid-Logarithmic 6-bit}{68}{section*.82}%
+\contentsline {subsection}{\numberline {4.4.3}Hardware Design Exploration}{68}{subsection.4.4.3}%
+\contentsline {subsubsection}{\nonumberline Benchmark on Embedded CPU}{69}{section*.83}%
+\contentsline {subsubsection}{\nonumberline Benchmark on Tensor Processor Synthesized with Xilinx LogiCORE IP for Floating-Point Computation}{69}{section*.84}%
+\contentsline {subsubsection}{\nonumberline Tensor Processor Synthesized with Hybrid-Float6 Hardware Architecture}{70}{section*.89}%
+\contentsline {subsection}{\numberline {4.4.4}Discussion}{73}{subsection.4.4.4}%
+\contentsline {subsubsection}{\nonumberline Training and Quantization}{73}{section*.91}%
+\contentsline {subsubsection}{\nonumberline Implementation and Performance}{73}{section*.93}%
+\contentsline {subsubsection}{\nonumberline SoC Design and Compatibility}{75}{section*.96}%
+\contentsline {subsubsection}{\nonumberline Limitations and Directions for Future Work}{75}{section*.97}%
+\contentsline {section}{\numberline {4.5}Conclusions}{76}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Conclusion and Outlook}{77}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of Contributions}{78}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Future Works}{78}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Appendix}{79}{appendix.A}%
+\contentsline {section}{\numberline {A.1}SbS algorithm}{79}{section.A.1}%
