@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.3)  8 MAY 2023 19:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.3)  8 MAY 2023 22:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3120,19 +3120,18 @@ LaTeX Warning: Float too large for page by 32.48447pt on input line 149.
 
 
 
-] [80] [81] [82]
-No file Thesis_YaribNevarez.gls.
-[83
+] [80] [81] [82] (./Thesis_YaribNevarez.gls [83
 
 
 
-] [84
-
-
-] (./Thesis_YaribNevarez.lof
+]) [84]
+(./Thesis_YaribNevarez.lof
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [85]
+ [85
+
+
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [86])
@@ -3190,165 +3189,15 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 201.
  ) 
 Here is how much of TeX's memory you used:
- 63298 strings out of 481239
- 1297339 string characters out of 5920378
- 1761328 words of memory out of 5000000
- 76548 multiletter control sequences out of 15000+600000
+ 63304 strings out of 481239
+ 1297489 string characters out of 5920378
+ 1761313 words of memory out of 5000000
+ 76550 multiletter control sequences out of 15000+600000
  718734 words of font info for 244 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,17n,122p,10114b,2779s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{glo:lut} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:ff} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:dsp} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:pc} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:fft} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:stft} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{glo:awg} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:rnn} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:gpu} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:rtl} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:pl} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:ps} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:dma} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:api} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:pu} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:xnor} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{glo:bnn} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:wq} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:qor} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:nn} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:nnmf} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{glo:dnn} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:mlp} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:nan} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:ip_sbs} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:cpu} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:hpc} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:har} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:npu} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:asic} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{glo:cps} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:soc} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:ae} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:shm} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:tf} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:tp} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:qat} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:mac} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:hf6} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:fpga} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{glo:hls} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:lif} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:sbs} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:fp} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:ann} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:cnn} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:snn} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:iot} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:ml} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:ai} has been referenced but does not exist, rep
-laced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+st, replaced by a fixed one
 
 {/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/share/texlive/texmf-dist/font
@@ -3367,9 +3216,9 @@ texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/newtx/txsys.pfb>
-Output written on Thesis_YaribNevarez.pdf (112 pages, 6104038 bytes).
+Output written on Thesis_YaribNevarez.pdf (112 pages, 6155016 bytes).
 PDF statistics:
- 4919 PDF objects out of 5155 (max. 8388607)
- 624 named destinations out of 1000 (max. 500000)
+ 5180 PDF objects out of 6186 (max. 8388607)
+ 626 named destinations out of 1000 (max. 500000)
  976 words of extra memory for PDF output out of 10000 (max. 10000000)
 
