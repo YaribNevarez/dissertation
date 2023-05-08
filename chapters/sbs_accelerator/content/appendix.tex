@@ -33,16 +33,16 @@ The SbS network inference is described in \Algo{alg:inference}, while spike prod
 		
 		\FOR {$l = 0$ \textbf{to} $N_{L}-1$}
 		\IF {$l == 0$}
-		\STATE Draw spikes from input \tcp{(Algorithm~\ref{alg:spike})}
+		\STATE Draw spikes from input \tcp{(\Algo{alg:spike})}
 		\ELSE
-		\STATE Draw spikes from $H^l$ \tcp{(Algorithm~\ref{alg:spike})}
+		\STATE Draw spikes from $H^l$ \tcp{(\Algo{alg:spike})}
 		\ENDIF
 		
 		\ENDFOR
 		
 		\textit{Update layers} :
 		\FOR {$l = 0$ \textbf{to} $N_L - 1$}
-		\STATE Update $H^l$ \tcp{(Algorithm~\ref{alg:update})}
+		\STATE Update $H^l$ \tcp{(\Algo{alg:update})}
 		\ENDFOR
 		
 		\ENDFOR
