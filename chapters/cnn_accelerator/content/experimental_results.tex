@@ -265,7 +265,7 @@ The estimated power dissipation on the \gls{soc} is presented in \fig{fig:power}
 	\label{fig:power}
 \end{figure}
 
-The run-time inference of TensorFlow Lite on the \gls{soc} is illustrated in \Fig{fig:runtime}. This shows the convolution layers as the compute-bound operations. The proposed embedded platform is a cooperative system where the convolution operations are delegated to the dedicated hardware accelerator. The ARM \gls{cpu} obtains a latency of $\unit[387]{ms}$ ($\unit[2.58]{FPS}$). The platform with standard \gls{fp} hardware obtains a latency of $\unit[48]{ms}$ ($\unit[20.8]{FPS}$), while the implementation with \gls{hf6} obtains a latency of $\unit[27.9]{ms}$ ($\unit[35.84]{FPS}$). These represent an overall acceleration of $8\times$ and $13.87\times$ over the \gls{cpu}, respectively.
+The run-time inference of TensorFlow Lite on the \gls{soc} is illustrated in \Fig{fig:runtime}. This shows the convolution layers as the compute-bound operations. The proposed embedded platform is a cooperative system where the convolution operations are delegated to the dedicated hardware accelerator. The ARM \gls{cpu} obtains a latency of \unit[387]{ms} (\unit[2.58]{FPS}). The platform with standard \gls{fp} hardware obtains a latency of \unit[48]{ms} (\unit[20.8]{FPS}), while the implementation with \gls{hf6} obtains a latency of \unit[27.9]{ms} (\unit[35.84]{FPS}). These represent an overall acceleration of $8\times$ and $13.87\times$ over the \gls{cpu}, respectively.
 
 This design facilitates \gls{ml} compatibility/portability as the 6-bit \gls{fp} is wrapped in the standard \gls{fp} representation. The dedicated hardware design extracts the 6-bit format automatically and performs computation.
 

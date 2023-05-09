@@ -88,7 +88,7 @@
 \contentsline {subsubsection}{\nonumberline Limitations and Directions for Future Work}{75}{section*.97}%
 \contentsline {section}{\numberline {4.5}Conclusions}{76}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Conclusion and Outlook}{77}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary of Contributions}{78}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Future Works}{78}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Appendix}{79}{appendix.A}%
-\contentsline {section}{\numberline {A.1}SbS algorithm}{79}{section.A.1}%
+\contentsline {section}{\numberline {5.1}Summary of Contributions}{79}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Future Works}{80}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Appendix}{81}{appendix.A}%
+\contentsline {section}{\numberline {A.1}SbS algorithm}{81}{section.A.1}%

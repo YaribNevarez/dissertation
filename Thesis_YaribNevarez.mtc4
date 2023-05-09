@@ -9,7 +9,7 @@
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Modes of operation}{\reset@font\mtcSSSfont 52}{section*.55}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Dot-product with hybrid floating-point}{\reset@font\mtcSSSfont 53}{section*.56}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Multiply-Accumulate}{\reset@font\mtcSSSfont 53}{section*.59}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline \textbf {On-chip memory utilization}}{\reset@font\mtcSSSfont 56}{section*.61}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline On-chip memory utilization}{\reset@font\mtcSSSfont 56}{section*.61}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.3}Training Method}{\reset@font\mtcSSfont 57}{subsection.4.3.3}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Training with Iterative Early Stop}{\reset@font\mtcSSSfont 57}{section*.63}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Quantization-Aware Training}{\reset@font\mtcSSSfont 58}{section*.64}}
