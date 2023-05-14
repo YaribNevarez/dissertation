@@ -48,7 +48,7 @@
 \contentsline {subsubsection}{\nonumberline Design Exploration for Dot-product with Hybrid Custom Floating-Point Approximation}{38}{section*.37}%
 \contentsline {subsubsection}{\nonumberline Design Exploration for Dot-Product whit Hybrid Logarithmic Approximation}{40}{section*.42}%
 \contentsline {subsection}{\numberline {3.4.3}Results and Discussion}{43}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Conclusions}{44}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Conclusions}{45}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Accelerating Convolutional Neural Networks}{47}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{47}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Related work}{50}{section.4.2}%
