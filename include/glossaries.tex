@@ -31,31 +31,6 @@
 \newcommand{\meanP}{\bar{p}}
 
 %----------------symbols------------------- %
-\newglossary{math}{2i}{2o}{General mathematical symbols and specific operators}
-
-%% \newglossaryentry{gf2}
-%% { type=math, 
-%%   name={\ensuremath{\mathbb{F}_2}},
-%%   description={binary Galois field 2},
-%%   %sort={F_2}
-%% }
-
-\newglossaryentry{log2}
-{ type=math, 
-	name={\ensuremath{\log_2(x)}},
-	description={binary (base 2) logarithm of $x$},
-	sort={log_2}
-}
-
-
-
-
-\newglossaryentry{bn}
-{ type=math, 
-	name={\ensuremath{\mathbb{N}}},
-	description={set of  natural numbers: \{0,1,2,3,\dots \}},
-	%sort={N}
-}
 
 
 
@@ -111,14 +86,6 @@
 %%   %sort={OPERATOR: Hadamard}
 %% }
 
-\newglossaryentry{boolean_xor}
-{ type=math,
-	name={\ensuremath{\oplus}},
-	description={Boolean \gls{xor} operator },
-	%sort={OPERATOR: bit-wise boolean negation}
-}
-
-
 %% \newglossaryentry{max_matr}
 %% { type=math, 
 %%   name={\ensuremath{\max(\matr{M}_1, \matr{M}_2)}},
@@ -167,80 +134,6 @@
 %%   description={Laplace transform of $f(t)$},
 %%   %sort={FUNCTION: Laplace transform}
 %% }
-
-\newglossaryentry{absolute_value}
-{ type=math,
-	name={\ensuremath{|X|}},
-	description={the absolute value of variable $X$},
-	%sort={FUNCTION: Operator Expectation}
-}
-
-\newglossaryentry{expected_value}
-{ type=math,
-	name={\ensuremath{\mathbb{E}\big[X\big]}},
-	description={expectation operator for a value discrete variable $X$},
-	%sort={FUNCTION: Operator Expectation}
-}
-
-\newglossaryentry{probability}
-{ type=math,
-	name={\ensuremath{Pr\big[x_i\big]}},
-	description={probability of $x_i$ being 1},
-	%sort={FUNCTION: Operator Expectation}
-}
-
-\newglossaryentry{average}
-{ type=math,
-	name={\ensuremath{\mu}},
-	description={average error},
-	%sort={$\sigma$}
-}
-
-
-\newglossaryentry{sigma}
-{ type=math,
-	name={\ensuremath{\sigma}},
-	description={standard deviation of error},
-	%sort={$\sigma$}
-}
-
-\newglossaryentry{variance}
-{ type=math,
-	name={\ensuremath{\sigma^2}},
-	description={variance of error},
-	%sort={$\sigma^2$}
-}
-
-
-\newglossaryentry{vdd}
-{ type=math,
-	name={\ensuremath{V_\textnormal{dd}}},
-	description={power-supply voltage},
-	%sort={v_dd}
-}
-
-\newglossaryentry{tclk}
-{ type=math,
-	name={\ensuremath{T_\textnormal{clk}}},
-	description={period time of the clock determining the pattern duration},
-	%sort={t_clk}
-}
-
-\newglossaryentry{fclk}
-{ type=math,
-	name={\ensuremath{f}},
-	description={frequency equal to $\nicefrac{1}{T_\textnormal{clk}}$},
-	%sort={f}
-}
-
-
-\newglossaryentry{tpd}
-{ type=math,
-	name={\ensuremath{T_\textnormal{pd}}},
-	description={50\%--50\% propagation delay},
-	%sort={t_pd}
-}
-
 
 % \newglossaryentry{expected_value_cont}
 % { type=math,
@@ -774,10 +667,6 @@
 
 %%%----------------ADD ALL SYMBOLS TO BE PRINTED
 %\glsaddall[types={math,symbol}]
-\glsaddall[types={math}]
-
-
-
 
 
 
@@ -791,16 +680,8 @@
 
 
 %----------------abbreviation (not shown)------------------- %
-\newglossary{abbreviation}{1i}{1o}{Abbreviation}
+%\newglossary{abbreviation}{1i}{1o}{Abbreviation}
 
-
-
-\newglossaryentry{gnd}{
-	type=abbreviation,
-	name={GND},%
-	description={ground}%
-	first={ground~(GND)}
-}
 
 
 %----------------unit (not shown)------------------- %
@@ -907,7 +788,7 @@
 \newacronym{aca}{ACA}{Almost Correct Adder}
 \newacronym{gear}{GeAr}{Generic Accuracy-configurable Adder}
 \newacronym{oloca}{OLOCA}{Optimized Lower-part OR-Constant Adder}
-\newacronym{mac}{MAC}{Multiply-Accumulate Unit}
+\newacronym{mac}{MAC}{Multiply-Accumulate}
 
 \newacronym{rtl}{RTL}{Register-Transfer Level}
 \newacronym{rca}{RCA}{Ripple-Carry Adder}

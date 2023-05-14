@@ -21,7 +21,7 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces Resource utilization and power dissipation on the Zynq-7007S SoC.\relax }}{70}{table.caption.85}%
 \contentsline {table}{\numberline {4.2}{\ignorespaces Compute performance of the CPU and TP on each Conv2D tensor operation. This table presents: tensor operation, computational cost in mega floating-point operations (MFLOP), latency, throughput, power efficiency, and estimated energy consumption as the energy delay product (EDP).\relax }}{71}{table.caption.86}%
 \contentsline {table}{\numberline {4.3}{\ignorespaces Resource utilization and power dissipation of individual multiplier and adder floating-point (IEEE 754) operator cores (Xilinx LogiCORE IP).\relax }}{71}{table.caption.88}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Comparison of hardware implementation with related work.\relax }}{76}{table.caption.98}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Comparison of hardware implementation with related work.\relax }}{75}{table.caption.97}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Conclusion and Outlook}{77}{chapter.5}%
 \addvspace {10\p@ }
