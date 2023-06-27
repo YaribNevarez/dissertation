@@ -1,16 +1,19 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.1}Preamble}{\reset@font\mtcSfont 1}{section.1.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.1}Industry 4.0}{\reset@font\mtcSSfont 1}{subsection.1.1.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.2}Internet-of-Things in Industry}{\reset@font\mtcSSfont 2}{subsection.1.1.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.3}Artificial Intelligence in Internet-of-Things}{\reset@font\mtcSSfont 2}{subsection.1.1.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.4}Error Tolerance in Machine Learning Algorithms}{\reset@font\mtcSSfont 2}{subsection.1.1.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.2}Problem Statement}{\reset@font\mtcSfont 3}{section.1.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.3}Research Objective}{\reset@font\mtcSfont 3}{section.1.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.4}Working Hypothesis}{\reset@font\mtcSfont 4}{section.1.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.1}Network Compression and Quantization}{\reset@font\mtcSSfont 4}{subsection.1.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.2}Approximate Computing}{\reset@font\mtcSSfont 4}{subsection.1.4.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.5}Motivation}{\reset@font\mtcSfont 5}{section.1.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.6}Main Contribution}{\reset@font\mtcSfont 6}{section.1.6}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.1}Spike-by-Spike Neural Networks}{\reset@font\mtcSSfont 6}{subsection.1.6.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.2}Convolutional Neural Networks}{\reset@font\mtcSSfont 7}{subsection.1.6.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.7}Publications}{\reset@font\mtcSfont 7}{section.1.7}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.8}Dissertation Outline}{\reset@font\mtcSfont 9}{section.1.8}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.1}AI/ML for Industry 4.0}{\reset@font\mtcSSfont 1}{subsection.1.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Industry 4.0}{\reset@font\mtcSSSfont 1}{section*.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Internet-of-Things in Industry}{\reset@font\mtcSSSfont 2}{section*.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Artificial Intelligence in Internet-of-Things}{\reset@font\mtcSSSfont 2}{section*.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.2}Approximation in AI/ML}{\reset@font\mtcSSfont 2}{subsection.1.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Error Tolerance in Machine Learning Algorithms}{\reset@font\mtcSSSfont 2}{section*.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Network Compression and Quantization}{\reset@font\mtcSSSfont 2}{section*.8}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Approximate Computing}{\reset@font\mtcSSSfont 3}{section*.9}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.2}Research Approach}{\reset@font\mtcSfont 3}{section.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.1}Problem Statement}{\reset@font\mtcSSfont 3}{subsection.1.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.2}Research Objective}{\reset@font\mtcSSfont 4}{subsection.1.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.3}Working Hypothesis}{\reset@font\mtcSSfont 4}{subsection.1.2.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.3}Scope of the Thesis}{\reset@font\mtcSfont 5}{section.1.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.4}Main Contribution}{\reset@font\mtcSfont 6}{section.1.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.1}Spike-by-Spike Neural Networks}{\reset@font\mtcSSfont 6}{subsection.1.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.2}Convolutional Neural Networks}{\reset@font\mtcSSfont 7}{subsection.1.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.5}Publications}{\reset@font\mtcSfont 7}{section.1.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.6}Dissertation Outline}{\reset@font\mtcSfont 9}{section.1.6}}
