@@ -2,23 +2,23 @@
 \babel@toc {english}{}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Preamble}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}AI/ML for Industry 4.0}{1}{subsection.1.1.1}%
-\contentsline {subsubsection}{\nonumberline Industry 4.0}{1}{section*.4}%
+\contentsline {subsection}{\numberline {1.1.1}AI/ML in Industry 4.0}{2}{subsection.1.1.1}%
+\contentsline {subsubsection}{\nonumberline Industry 4.0}{2}{section*.4}%
 \contentsline {subsubsection}{\nonumberline Internet-of-Things in Industry}{2}{section*.5}%
 \contentsline {subsubsection}{\nonumberline Artificial Intelligence in Internet-of-Things}{2}{section*.6}%
-\contentsline {subsection}{\numberline {1.1.2}Approximation in AI/ML}{2}{subsection.1.1.2}%
-\contentsline {subsubsection}{\nonumberline Error Tolerance in Machine Learning Algorithms}{2}{section*.7}%
-\contentsline {subsubsection}{\nonumberline Network Compression and Quantization}{2}{section*.8}%
-\contentsline {subsubsection}{\nonumberline Approximate Computing}{3}{section*.9}%
-\contentsline {section}{\numberline {1.2}Research Approach}{3}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Problem Statement}{3}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Research Objective}{4}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Working Hypothesis}{4}{subsection.1.2.3}%
-\contentsline {section}{\numberline {1.3}Scope of the Thesis}{5}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Main Contribution}{6}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Spike-by-Spike Neural Networks}{6}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.1.2}Approximation in AI/ML}{3}{subsection.1.1.2}%
+\contentsline {subsubsection}{\nonumberline Error Tolerance in Machine Learning Algorithms}{3}{section*.7}%
+\contentsline {subsubsection}{\nonumberline Network Compression and Quantization}{3}{section*.8}%
+\contentsline {subsubsection}{\nonumberline Approximate Computing}{4}{section*.9}%
+\contentsline {section}{\numberline {1.2}Approach}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Problem Statement}{4}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Research Objective}{5}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Working Hypothesis}{5}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Motivation}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Contributions}{7}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Spike-by-Spike Neural Networks}{7}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Convolutional Neural Networks}{7}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Publications}{7}{section.1.5}%
+\contentsline {section}{\numberline {1.5}Publications}{8}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Dissertation Outline}{9}{section.1.6}%
 \contentsline {chapter}{\numberline {2}Background}{11}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Spike-by-Spike Neural Networks}{11}{section.2.1}%
