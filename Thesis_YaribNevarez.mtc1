@@ -7,13 +7,14 @@
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Error Tolerance in Machine Learning Algorithms}{\reset@font\mtcSSSfont 3}{section*.7}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Network Compression and Quantization}{\reset@font\mtcSSSfont 3}{section*.8}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Approximate Computing}{\reset@font\mtcSSSfont 4}{section*.9}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.2}Approach}{\reset@font\mtcSfont 4}{section.1.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.1}Problem Statement}{\reset@font\mtcSSfont 4}{subsection.1.2.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.2}Research Objective}{\reset@font\mtcSSfont 5}{subsection.1.2.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.3}Working Hypothesis}{\reset@font\mtcSSfont 5}{subsection.1.2.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.3}Motivation}{\reset@font\mtcSfont 5}{section.1.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.4}Contributions}{\reset@font\mtcSfont 7}{section.1.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.1}Spike-by-Spike Neural Networks}{\reset@font\mtcSSfont 7}{subsection.1.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.2}Convolutional Neural Networks}{\reset@font\mtcSSfont 7}{subsection.1.4.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.5}Publications}{\reset@font\mtcSfont 8}{section.1.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.6}Dissertation Outline}{\reset@font\mtcSfont 9}{section.1.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.2}Problem Statement}{\reset@font\mtcSfont 4}{section.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.1}Power Dissipation}{\reset@font\mtcSSfont 5}{subsection.1.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.2}Inference Quality}{\reset@font\mtcSSfont 5}{subsection.1.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.3}Working Hypothesis}{\reset@font\mtcSfont 5}{section.1.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.4}Research Objective}{\reset@font\mtcSfont 6}{section.1.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.5}Scope}{\reset@font\mtcSfont 6}{section.1.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.6}Contributions}{\reset@font\mtcSfont 7}{section.1.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.1}Spike-by-Spike Neural Networks}{\reset@font\mtcSSfont 7}{subsection.1.6.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.2}Convolutional Neural Networks}{\reset@font\mtcSSfont 8}{subsection.1.6.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.7}Publications}{\reset@font\mtcSfont 8}{section.1.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.8}Dissertation Outline}{\reset@font\mtcSfont 10}{section.1.8}}
