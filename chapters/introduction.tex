@@ -1,9 +1,9 @@
 \chapter{Introduction}\label{chap.intro}
 \minitoc
 \section{Preamble}
-The use of \gls{ai}/\gls{ml} is entering a new era with ubiquitous connected embedded systems to enhance intelligence, functionality, and connectivity in our increasingly digital world. However, \gls{ai}/\gls{ml} algorithms are computationally and energy expensive, this represents an important challenge for sustainability and realization. Therefore, this digital transformation requires hardware design methodologies that reconcile efficiency with inference quality and adaptability.
+The use of \gls{ai}/\gls{ml} is entering a new era with ubiquitous connected devices to enhance intelligence, functionality, and connectivity in our increasingly digital world. However, \gls{ai}/\gls{ml} algorithms are computationally and energy intensive, this represents an important challenge for sustainability and realization. Therefore, this digital transformation requires hardware design methodologies that reconcile efficiency with inference quality, and adaptability.
 
-Hardware acceleration for embedded devices is expected to drive further advancements in AI/ML technologies, paving the way for transformative applications in Edge AI, \gls{iot}, \gls{fl}, Industry 4.0, and smart cities. The development of efficient compute engines remains a crucial enabler for unlocking the full potential of these technologies.
+Hardware acceleration for embedded devices is expected to drive further advancements in \gls{ai}/\gls{ml} technologies, paving the way for transformative applications in Edge AI, \gls{iot}, \gls{fl}, Industry 4.0, and smart cities. Interoperability of quantization approaches and model compression techniques are often favored in decentralized machine learning approaches and mission critical domains to ensure the safety and reliability of \gls{ai} systems. In this line, the development of efficient compute engines remains a crucial enabler for unlocking the full potential of \gls{ai}/\gls{ml} technologies.
 
 This section presents the preamble to investigate design methodologies for low-power hardware accelerators of \gls{ai}/\gls{ml} algorithms focusing on inference quality, scalability, versatility, and compatibility as design philosophy.
 
@@ -61,12 +61,27 @@ Furthermore, reducing the compute hardware with aggressive quantization such as 
 
 While aggressive quantization can be beneficial for resource-constrained environments and non-critical applications, careful consideration and a more conservative approach are essential for ensuring the safety and reliability of \gls{ai}/\gls{ml} systems in mission-critical domains. Quantization techniques must be chosen wisely, keeping in mind the specific requirements and constraints of each application.
 
-\subsection{Compatibility, Portability, and Interoperability}
-Aggressive quantization might not be supported by all hardware platforms. Custom hardware accelerators may have limitations on the precision they can handle effectively, limiting the compatibility and portability of aggressively quantized models. Aggressively quantized models may not be compatible with all frameworks, libraries, or AI platforms, limiting their interoperability and portability across different environments. In real-world deployment scenarios, there may be constraints and requirements that make aggressive quantization impractical, especially when high accuracy, compatibility, portability, and interoperability are necessary.
+\subsection{Interoperability}
+Aggressive quantization might not be supported by all hardware platforms. Custom hardware accelerators may have limitations on the precision they can handle effectively, limiting the compatibility and portability of aggressively quantized models. Aggressively quantized models may not be compatible with all frameworks, libraries, or \gls{ai} platforms, limiting their interoperability and portability across different environments. In real-world deployment scenarios, there may be constraints and requirements that make aggressive quantization impractical, especially when high accuracy, compatibility, portability, and interoperability are necessary.
 %%%%%%%%%%%%%%
 \section{Working Hypothesis}
 % Alternatives and possible solutions for the problem
-To overcome the aforementioned problem, based on the error resilience of \gls{ml} algorithms, a promising solution is approximate computing. This paradigm has been used in a wide range of applications to increase hardware efficiency~\cite{han2013approximate}. For neural network applications, two main approximation strategies are used, namely network compression and classical approximate computing~\cite{bouvier2019spiking}.
+Despite its benefits, quantization may lead to a trade-off between model accuracy and hardware efficiency. Aggressive quantization can cause a loss of model accuracy due to information loss from reduced precision. Therefore, finding the right balance between quantization levels and model accuracy becomes a critical challenge in developing efficient hardware accelerators for \gls{ml} applications.
+
+\textit{Introducing custom \gls{fp} computation, with standard \gls{fp} activation maps and significantly reduced \gls{fp} representation for trainable parameters, will lead to improved hardware efficiency in \gls{ml} accelerators, without significant loss in model accuracy.
+}
+
+The hypothesis is built on the following key aspects:
+
+\begin{itemize}
+	\item \textbf{Reduced precision requirement for weights and biases}. Neural network models can tolerate lower precision for weights and biases without a substantial decrease in model accuracy~\cite{lai2017deep}. By significantly reducing the bit-width of weights and biases, the memory requirements and computational complexity of the accelerator can be significantly reduced.
+	\item \textbf{\gls{fp} activation maps}. Retaining higher precision in activation maps prevents significant accuracy degradation during inference.
+	\item \textbf{Hardware efficiency}. The mixed precision approach, combining standard \gls{fp} activation maps and reduced bit-width for weights and biases, is expected to improve the hardware efficiency of ML accelerators~\cite{lai2017deep}. The reduced bit-width for weights and biases will enable faster arithmetic operations and reduce memory bandwidth requirements, leading to more efficient processing in hardware accelerators.
+	\item \textbf{Compatibility and interoperability}. The hardware accelerator should be designed to efficiently handle the combination of different precision levels for weights, biases, and activation maps. Downgrading \gls{fp} from higher precision to lower precision involves rounding or discarding the extra bits. Upgrading \gls{fp} from lower precision to higher precision involves wrapping values in wider bit representations.
+	\item \textbf{\gls{qat}}. This helps the model adapt to the mixed precision representation, ensuring that the reduced precision for weights and biases does not cause significant accuracy loss.
+\end{itemize}
+
+The dissertation would contribute to the field of hardware-efficient \gls{ml} accelerators by exploring the trade-offs between \gls{fp} precision levels for different hardware components and finding the right balance to achieve improved efficiency without compromising accuracy.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Research Objective}
