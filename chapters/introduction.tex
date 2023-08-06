@@ -68,7 +68,7 @@ Aggressive quantization might not be supported by all hardware platforms. Custom
 % Alternatives and possible solutions for the problem
 Despite its benefits, quantization may lead to a trade-off between model accuracy and hardware efficiency. Aggressive quantization can cause a loss of model accuracy due to information loss from reduced precision. Therefore, finding the right balance between quantization levels and model accuracy becomes a critical challenge in developing efficient hardware accelerators for \gls{ml} applications.
 
-\textit{Introducing custom \gls{fp} computation, with standard \gls{fp} activation maps and significantly reduced \gls{fp} representation for trainable parameters, will lead to improved hardware efficiency in \gls{ml} accelerators, without significant loss in model accuracy.
+\textit{Introducing custom \gls{fp} computation, with standard \gls{fp} activation maps and significantly reduced \gls{fp} representation for trainable parameters, will lead to improved hardware efficiency in \gls{ml} accelerators, \gls{qor}, and interoperability.
 }
 
 The hypothesis is built on the following key aspects:
@@ -88,7 +88,7 @@ The dissertation would contribute to the field of hardware-efficient \gls{ml} ac
 Develop novel design methodologies for low-power neural network accelerators with custom \gls{fp} computation. This research objective encompasses several key aspects that are crucial for advancing the field of low-power neural network accelerators with custom \gls{fp} computation:
 
 \begin{itemize}
-	\item \textbf{Custom \gls{fp} Representation}. Investigate novel custom \gls{fp} representation optimized for neural network computations. This involves exploring different bit-widths, exponent formats, or non-standard floating-point representations tailored specifically for neural network workloads.
+	\item \textbf{Custom \gls{fp} Representation}. Investigate novel custom \gls{fp} representation optimized for neural network computations. This involves exploring different bit-widths, exponent formats, or non-standard \gls{fp} representations tailored specifically for neural network workloads.
 	\item \textbf{Low-Power Design Techniques}. Investigate low-power design techniques at various levels, including logic-level optimizations and architectural-level approaches to minimize power consumption.
 	\item \textbf{Custom \gls{fp} Arithmetic}. Investigate design and implementation of custom arithmetic units that efficiently perform the proposed custom \gls{fp} computations. Special attention shall be given to reducing energy consumption during arithmetic operations.
 	\item \textbf{Neural Network-Specific Optimization}. Investigate accelerator architectures specifically for neural network workloads in resource-constrained applications. Low-power techniques like pipe-lining, data quantization, and hardware-specific optimizations are explored to ensure efficiency and \gls{qor}.
@@ -125,27 +125,26 @@ However, most accelerators have been implemented to target mid- to high-range \g
 \end{itemize}
 
 \section{Contributions}
-This research contributes to hardware design methodologies for custom \gls{fp} neural network accelerators for high quality of inference in
- low-power embedded systems. The contributions for \gls{sbs} and \gls{cnn} hardware accelerators are listed below:
+This research produces hardware design methodologies for low-power hardware accelerators with custom \gls{fp} computation that reconcile efficiency with inference quality, and compatibility. This work is demonstrated on \gls{sbs} and \gls{cnn} hardware accelerators on resource-constrained \gls{soc} \glspl{fpga}:
 
-\subsection{Spike-by-Spike Neural Networks}
+\subsection{Accelerating Spike-by-Spike Neural Networks with Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}
 \begin{enumerate}
-	\item It is presented a hardware component for \gls{fp} vector dot-product approximation. This design increases the performance of computation by performing element-wise multiplication with a quality configurable design based on bit truncation and denormalized accumulation.
-	\item It is presented a design exploration with the proposed dot-product approximation using synaptic weight vectors with custom \gls{fp} and logarithmic representation. The run-time, accuracy degradation, resource utilization, and power dissipation are evaluated. Experimental results demonstrate $20.5\times$ latency enhancement versus embedded \gls{cpu} (ARM Cortex-A9 at \unit[666]{MHz}), and less than $0.5\%$ of accuracy degradation on a handwritten digit recognition task (MNIST).
-	\item It is proposed a noise tolerance plot as quality monitor, which serves as an intuitive visual model to provide insights into the accuracy degradation of \gls{sbs} networks under approximate processing effects.
-	\item The presented design for \gls{fp} dot-product approximation is adaptable as a building block for other error resilient applications (e.g., image/video processing).
+	\item An optimized \gls{fp} \gls{mac} design with hybrid precision is presented. This design utilizes the IEEE 754 single-precision \gls{fp} for feature maps and custom \gls{fp} representation for weights. The custom \gls{fp} precision does not implement a sign bit and has reduced exponent and mantissa bit widths. This design accumulates values in a denormalized manner and produces IEEE 754 single-precision results.This design not only upholds \gls{qor} but also enhances efficiency through reduced latency, diminished power dissipation, minimized hardware resources, and a smaller memory footprint.
+	\item A design exploration is presented focusing on input weight \gls{fp} representation of 8 and 4-bit. Evaluation is reported across various facets such as run-time, accuracy degradation, hardware resource utilization, and power consumption. An embedded system architecture is presented to assess the performance of the custom \gls{fp} \gls{mac}. In evaluations using a generative model based on \gls{nnmf} (\gls{sbs} model), a notable latency improvement of $20.5\times$ was measured in comparison to an embedded \gls{cpu} (ARM Cortex-A9 operating at \unit[666]{MHz}). Notably, in a handwritten digit recognition task, an accuracy degradation of less than $0.5\%$ was measured.
+	\item A noise tolerance plot is proposed as a quality monitor, which is intended to serve as an intuitive visual model. This model offers insights into the accuracy degradation of \gls{nnmf} models (\gls{sbs} networks) when subjected to custom \gls{fp} computation.
+	\item The design presented for custom \gls{fp} \gls{mac} is considered adaptable for use as a building block in other error-resilient applications, such as image/video processing.
 \end{enumerate}
 
 
-\subsection{Convolutional Neural Networks}
+\subsection{Accelerating Convolutional Neural Networks with Hybrid 6-bit Floating-Point Computation}
 \begin{enumerate}
-	\item It is proposed the \gls{hf6} quantization and its dedicated hardware architecture. This design features an optimized hardware \gls{mac} by reducing the mantissa multiplication to a multiplexer-adder operation. This approach exploits the intrinsic error tolerance of \gls{ann} to further reduce the hardware design with approximation. To preserve model accuracy, it is presented a quantization-aware training method, which in some cases improves accuracy based on the regularization effect.
+	\item A 6-bit \gls{fp} representation for weights is presented as \gls{hf6} quantization. An optimized hardware \gls{mac} is proposed, wherein mantissa multiplication is reduced to a multiplexer-adder operation. The intrinsic error tolerance of \gls{ann} is harnessed in this method to further refine the hardware design via approximation. To maintain model accuracy, a \gls{qat} approach is introduced. Notably, in certain instances, this method elevates accuracy, attributed to the regularization effect.
 	
-	\item It is developed a custom hardware/software co-design framework for \gls{cnn} sensor analytics applications on low-power and resource-constrained embedded \glspl{fpga}. This architecture integrates TensorFlow Lite.
+	\item A custom hardware/software co-design framework for \gls{cnn} sensor analytics applications has been developed, targeting resource-constrained \gls{soc} \glspl{fpga}. This architecture incorporates TensorFlow Lite.
 	
-	\item It is presented a customizable tensor processor as a dedicated hardware for \gls{hf6}. This design computes \emph{Conv2D} tensor operations employing a pipelined vector dot-product with approximate computing and parametrized on-chip memory utilization.
+	\item A customizable \gls{tp} is presented as a proof of concept demonstration with \gls{hf6}. In this design, accelerations of up to 48X are achieved by the \emph{Conv2D} tensor operation in comparison to the \gls{cpu} running TensorFlow Lite. This enhancement is realized without accuracy compromise employing \gls{qat}.
 	
-	\item The potential of this approach is demonstrated with a \gls{cnn}-regression model for anomaly localization in structural health monitoring based on acoustic emissions. A hardware design exploration is addressed evaluating accuracy, compute performance, hardware resource utilization, and energy consumption.
+	\item The potential of this approach is demonstrated with a \gls{cnn}-regression model for anomaly localization in \gls{shm} based on \gls{ae}. A hardware design exploration is addressed evaluating accuracy, compute performance, hardware resource utilization, and energy consumption.
 \end{enumerate}
 
 \section{Publications}

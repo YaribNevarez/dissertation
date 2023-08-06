@@ -104,7 +104,7 @@ In this design, the high-level synthesis tool infers computational blocks with c
 	\label{fig:dot_product_float}
 \end{figure*}
 
-\subsubsection{Dot-Product with Hybrid Custom Floating-Point and Logarithmic Approximation}
+\subsubsection{Dot-Product with Hybrid Custom Floating-Point and Logarithmic Computation}
  The hardware module to calculate dot-product with hybrid custom floating-point approximation is shown in \Fig{fig:dot_product_custom}. In this design, $h_\mu(j)$ uses standard 32-bit floating-point number representation, and $W(s|j)$ uses a positive reduced custom floating-point number representation, where the mantissa bit width is the quality configurability knob. This parameter is tuned by the designer to trade-off between QoR and resource utilization, thus, energy consumption.
  
  \begin{figure*}
