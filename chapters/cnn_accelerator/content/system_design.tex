@@ -4,7 +4,7 @@ The system design is a hardware/software co-design framework for low-power \gls{
 
 \subsection{Base embedded system architecture}
 The embedded system architecture consists of a cooperative hardware-software platform. See \Fig{fig:system_architecture}. The embedded \gls{cpu} delegates low-level compute-bound tensor operations to the \glspl{tp}. The \glspl{tp} employ AXI-Lite interface for configuration and AXI-Stream interfaces via \gls{dma} for data movement from off-chip memory. Each \gls{tp} and \gls{dma} pair asserts interrupt flags once its compute job/transaction completes. Interrupt events are handled by the embedded \gls{cpu} to use the results and to start a new compute job/transaction. The hardware architecture can vary its resource utilization by customizing the \glspl{tp} prior to the hardware synthesis.
-\begin{figure}[t!]
+\begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/system_design.pdf}
 	\caption{Base embedded system architecture.}
@@ -13,7 +13,7 @@ The embedded system architecture consists of a cooperative hardware-software pla
 \subsection{Tensor processor}
 The \gls{tp} is a dedicated hardware module to compute tensor operations. This implements high performance communication with AXI-Stream, direct \gls{cpu} communication with AXI-Lite, and on-chip storage utilizing BRAM. This hardware architecture is implemented with \gls{hls}. The tensor operations are implemented based on the C++ TensorFlow Lite micro kernels. See \fig{fig:accelerator}. This research focuses on the \emph{Conv2D} tensor operation that computes 2D convolution layers.
 
-\begin{figure}[t!]
+\begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/accelerator.pdf}
 	\caption{High level hardware architecture of the proposed tensor processor.}
