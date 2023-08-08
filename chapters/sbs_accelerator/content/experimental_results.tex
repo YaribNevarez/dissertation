@@ -164,7 +164,7 @@ As benchmark, the tolerance plot in \Fig{fig:accuracy_vs_noise_pu_fp} revels acc
 	\label{fig:accuracy_vs_noise_pu_fp}
 \end{figure*}
 
-\subsection{Design Exploration with Hybrid Custom Floating-Point and Logarithmic Approximation}
+\subsection{Design Exploration with Hybrid Custom Floating-Point and Logarithmic Computation}
 
 In this section, it is presented a design exploration to evaluate the proposed approach for \gls{sbs} neural network inference using hybrid custom floating-point and logarithmic approximation. First, the synaptic weight matrix of each layer is examined in order to determine the minimum requirements for numeric representation and memory storage. Second, the proposed dot-product architecture is implemented using the minimal floating-point and logarithmic representation as design parameters. Finally, it is presented an evaluation of the overall performance, inference accuracy, resource utilization, and power dissipation.
 
@@ -182,7 +182,7 @@ For quality configurability, the mantissa bit-width is a knob parameter that is 
 	\caption{$\log_2$-histogram of each synaptic weight matrix showing the percentage of matrix elements with given integer exponent.}\label{fig:log2histogram}
 \end{figure*}
 
-\subsubsection{Design Exploration for Dot-product with Hybrid Custom Floating-Point Approximation}
+\subsubsection{Design Exploration for Dot-product with Hybrid Custom Floating-Point Computation}
 For this design exploration, a custom floating-point representation is composed of 4-bit exponent and 1-bit mantissa. This format is used for the synaptic weight vector on the proposed dot-product architecture. Each \emph{Conv} \gls{pu} instantiates an on-chip stationary weight matrix for $52,000$ entries of 5-bit. The available memory size is large enough to store $W\in\mathbb{R}^{5\times 5\times 2\times 32}$ and $W\in\mathbb{R}^{5\times 5\times 32\times 64}$ for \emph{H1\_CONV} and \emph{H3\_CONV}, respectively. The same dot-product architecture is implemented in the processing unit of the fully connected layer (\emph{FC}). However, due to lack of BRAM resources, this \gls{pu} can not instantiate on-chip stationary synaptic weight matrix. Instead, \emph{FC} receives the $\vec{W}(s_t)$ (weight vectors) during operation as well as $\vec{h}_\mu$ and $S_t$. The hardware mapping and the computation schedule of this implementation are displayed in \Tab{tab:latency_cfp} and \Fig{fig:latency_pu_cfp_cycle}.
 
 As shown in the computation schedule in \Tab{tab:latency_cfp} and \Fig{fig:latency_pu_cfp_cycle}, this implementation presents a maximum hardware \gls{pu} latency of \unit[1.30]{ms} according to \Equ{eq:time_pu}, and \gls{cpu} latency of \unit[1.67]{ms}. Therefore, applying \Equ{eq:time_spike}, the total latency is \unit[1.67]{ms} per spike cycle as shown in \Fig{fig:latency_pu_cfp_cycle}. In this case, the cyclic bottleneck in each \gls{sbs} spike is in the \gls{cpu} performance.
@@ -236,7 +236,7 @@ The post-implementation resource utilization and power dissipation of this desig
 	\label{fig:accuracy_vs_noise_pu_cfp}
 \end{figure*}
 
-\subsubsection{Design Exploration for Dot-Product whit Hybrid Logarithmic Approximation}
+\subsubsection{Design Exploration for Dot-Product whit Hybrid Logarithmic Computation}
 For this design, 4-bit integer exponent are used for logarithmic representation of the synaptic weight matrix. Each \emph{Conv} processing unit implements the proposed dot-product architecture including an on-chip stationary weight matrix for $52,000$ entries of 4-bit integer each one to store $W\in\mathbb{N}^{5\times 5\times 2\times 32}$ and $W\in\mathbb{N}^{5\times 5\times 32\times 64}$ for \emph{H1\_CONV} and \emph{H3\_CONV}, respectively. The same dot-product architecture is implemented in the \emph{FC} processing unit without stationary synaptic weight matrix. The hardware assignment and the computation schedule of this implementation are displayed in \Tab{tab:latency_log} and \Fig{fig:latency_pu_log_cycle}.
 
 As shown in the computation schedule in \Tab{tab:latency_log} and \Fig{fig:latency_pu_log_cycle}, this implementation presents a maximum hardware \gls{pu} latency of \unit[1.27]{ms} (according to \Equ{eq:time_pu}), and \gls{cpu} latency of \unit[1.67]{ms}. Therefore, applying \Equ{eq:time_spike}, gives \unit[1.67]{ms} as latency per spike cycle as shown in \Fig{fig:latency_pu_log_cycle}. In this case, the cyclic bottleneck is in the \gls{cpu} performance.
