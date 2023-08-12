@@ -253,11 +253,138 @@ improve the performance under noise even more.
 
 
 \section{Neural Network Accelerators}
-\subsection{\gls{fpga} Design}
-\subsection{Energy-Efficient Dataflow}
-\subsection{Reduced Precision}
-\subsection{Fixed-Point}
-\subsection{Floating-point Number Representation}
+Neural network Accelerators are specialized hardware components or platforms designed to accelerate the computationally intensive tasks associated with neural networks. Their primary goal is to enhance performance, reduce power consumption, and provide real-time processing capabilities for \gls{ai}/\gls{ml} applications.
+
+\subsubsection{Why the Need for Accelerators?}
+\begin{itemize}
+	\item \textbf{Compute Intensive}: \gls{ai}/\gls{ml} models, especially \glspl{cnn} and transformers, are characterized by their deep architectures. Each layer involves a large number of weights and activations. In the forward pass (inference), for each neuron, its input activations are multiplied by corresponding weights, and then all these products are accumulated to produce the neuron's output. Similarly, during training, the backpropagation algorithm is also computation-heavy.
+	Computation for a single neuron in a layer:
+	\begin{align*}
+	o_i &= \sum_{j} w_{ij} \times a_j + b_i
+	\end{align*}
+	Where:
+	\begin{itemize}
+		\item \( o_i \) is the output of the \(i\)-th neuron.
+		\item \( w_{ij} \) represents the weight from the \(j\)-th neuron in the previous layer to the \(i\)-th neuron in the current layer.
+		\item \( a_j \) is the activation of the \(j\)-th neuron from the previous layer.
+		\item \( b_i \) is the bias of the \(i\)-th neuron.
+	\end{itemize}
+	This operation is repeated for all neurons in all layers, emphasizing the compute-intensive nature of neural networks.
+	
+	\item \textbf{Memory Intensive}: \gls{ai}/\gls{ml} models, especially those with millions or even billions of parameters, require elevated memory footprint for model storage. During computation, the frequent access to weights, along with the need to read and write intermediate activations, can stress the memory bandwidth. Memory access is also energy-expensive, often more than the actual arithmetic operations.
+	
+	The memory requirements for neural networks are twofold:
+	\begin{enumerate}
+		\item \textbf{Weights Storage}: Given a deep neural network with \(L\) layers, where each layer \(l\) has \(n_l\) neurons and receives input from \(n_{l-1}\) neurons, the number of weights (excluding biases) is:
+		\begin{align*}
+		W &= \sum_{l=2}^{L} n_l \times n_{l-1}
+		\end{align*}
+		
+		\item \textbf{Activations Storage}: Activations need to be stored for the forward pass and are particularly crucial during training for the backpropagation process. For a given layer \(l\), activations storage requirement is proportional to \(n_l\), and the total for the entire network is:
+		\begin{align*}
+		A &= \sum_{l=1}^{L} n_l
+		\end{align*}
+	\end{enumerate}
+	Considering both weights and activations, the memory access pattern becomes a bottleneck, especially when the model size exceeds the on-chip memory capacity, leading to frequent off-chip accesses which are both time and energy-consuming.
+	
+	\item \textbf{Real-time Requirements}:
+	Many contemporary applications demand instantaneous or near-instantaneous processing due to their interactive or safety-critical nature. Examples include:
+	
+	\begin{enumerate}
+		\item \textbf{Autonomous Driving}: Vehicles equipped with autonomous driving capabilities rely heavily on neural networks to process sensory data (e.g., images, LIDAR, and radar). Given the dynamic nature of driving environments, real-time decision is mandatory. A delay of even a few milliseconds can be the difference between a safe maneuver and an accident.
+		
+		\item \textbf{\gls{ar}}: \gls{ar} applications overlay virtual elements on the real-world view. For a seamless and immersive experience, the processing of the real-world view and the rendering of virtual elements must happen in real-time. Delays can lead to misalignments or user discomfort.
+	\end{enumerate}
+	
+	Hence, the computational backend supporting such applications, often driven by deep neural networks, must be optimized for low-latency and high-throughput to meet the real-time requirements.
+	
+	\item \textbf{Energy Efficiency}: Many modern devices, from smartphones to \gls{iot} sensors, operate on limited power sources like batteries. For these devices, the power-hungry computations of \gls{ai}/\gls{ml} models can quickly drain the battery, limiting usability, applicability, and functionality. Given that neural network computations are becoming pervasive, even in these power-constrained devices, energy efficiency is of vital importance.
+	
+	The proliferation of \gls{ai}/\gls{ml} applications in low-power devices imposes strict constraints on energy consumption. Factors driving this need include:
+	
+	\begin{enumerate}
+		\item \textbf{Battery Capacity}: Most low-power devices rely on battery power. High energy consumption due to intensive computations can drastically reduce operational time between charges, affecting applicability.
+		
+		\item \textbf{Form Factor and Heat Dissipation}: Smaller devices have smaller batteries and reduced space for cooling mechanisms, making them susceptible to overheating. Hence, energy-efficient computations are not only about battery longevity but also about device temperature, safety, and size.
+		
+		\item \textbf{Operational Continuity in Low-Power Devices}: Many edge devices, such as sensors, are expected to operate continuously. These devices might be located in hard-to-reach places, making frequent battery replacements impractical. Thus, energy efficiency is crucial for operational viability and application feasibility.
+	\end{enumerate}
+	
+	Consequently, when deploying neural network models on such devices, it's essential to consider optimizations at both the software and hardware levels to ensure that the power budget is adhered to without compromising performance.
+	
+\end{itemize}
+
+\subsubsection{Types of Accelerators}
+\begin{itemize}
+	\item \textbf{\glspl{gpu}}: Historically designed for the purpose of graphics rendering, \glspl{gpu} have architecture that naturally perform parallel computing. This parallelism is especially beneficial for neural network computations involving repetitive and simultaneous operations. As a result, \glspl{gpu} have become a cornerstone for deep learning training and inference.
+	
+	The success of \glspl{gpu} in the \gls{ai}/\gls{ml} domain is evident from the rise of \gls{gpu}-optimized deep learning frameworks and the continuous evolution of \gls{gpu} architectures tailored for neural network computations.
+	
+	
+	\item \textbf{\glspl{asic}}: they can provide significant benefits in terms of power, performance, and area over general-purpose processors. One of the most notable \glspl{asic} designed for neural network computations is Google's \gls{tpu}. Neuromorphic chips, like IBM's TrueNorth or Intel's Loihi, are \glspl{asic} designed to mimic the synapse-neuron connections in the human brain, potentially offering more efficient ways to handle neural network tasks, especially for real-time processing and low-power scenarios.
+	
+	\item \textbf{\glspl{fpga}}: \glspl{fpga} represent a bridge between general-purpose processors and \glspl{asic} in terms of adaptability and performance:
+	
+	\begin{enumerate}
+		\item \textbf{Reconfigurability}: Unlike \glspl{asic}, which are fixed in their functionality post-manufacture, \glspl{fpga} can be reprogrammed to adopt different logic functions. This means they can be tailored to accelerate specific neural network operations and then reconfigured for another task if needed.
+		
+		\item \textbf{Parallelism}: \glspl{fpga} excel in parallel processing, with their array of logic blocks and interconnects. Neural network computations, which often involve concurrent operations on data, can be accelerated by exploiting this parallelism.
+		
+		\item \textbf{Prototyping and Evolution}: Given their reconfigurable nature, \glspl{fpga} are excellent platforms for prototyping neural network architectures. Furthermore, in environments where neural network models evolve or get updated frequently, \glspl{fpga} can adapt without requiring new hardware.
+		
+		\item \textbf{Trade-offs}: While \glspl{fpga} offer flexibility, they might not achieve the same level of performance or energy efficiency as a highly-optimized \gls{asic} for a specific task. However, their adaptability can outweigh this in certain scenarios.
+	\end{enumerate}
+	
+	In the context of the rapidly evolving field of \gls{ai}/\gls{ml}, \glspl{fpga} provide a compelling balance of adaptability and performance, especially when agility in hardware is desired.
+	
+	\item \textbf{\glspl{npu}}: \glspl{npu} are dedicated hardware accelerators optimized for neural network computation. \glspl{npu} streamline both training and inference processes by focusing on operations and data flow patterns typically found in neural networks, resulting in enhanced energy efficiency and performance compared to general-purpose processors.
+	
+\end{itemize}
+
+\subsubsection{Design Considerations}
+\begin{itemize}
+	\item \textbf{Precision}: In neural network accelerator design, the precision of arithmetic operations plays a pivotal role. Employing reduced precision arithmetic offers dual advantages: it can markedly accelerate computations and simultaneously diminish power consumption. However, it is crucial to preserve a balance to ensure that the reduced precision does not compromise the \gls{qor} and reliability of the neural network model.
+	
+	\item \textbf{Memory Hierarchy and Dataflow}: Memory hierarchy and dataflow are tightly coupled in the design of efficient neural network accelerators. Dataflow refers to the way data is passed and processed between different memory hierarchies and computation units. The choice of dataflow can dramatically impact the energy efficiency, latency, and throughput of the accelerator.
+	
+	For neural networks, especially deep learning models, the memory access pattern plays a significant role in determining overall performance. This is because fetching data (e.g., weights, activations) from memory often consumes more energy and time than the arithmetic computations themselves.
+	\item \textbf{Scalability}: The capability of a neural network accelerator to extend its computational capacity to handle larger neural networks or to accelerate existing processing. This extension can be achieved by either increasing the resources within a single chip (vertical scaling) or by distributing the computation across multiple chips or cores (horizontal scaling).
+	
+	As neural network models become more complex and demand more computational resources, it is crucial for accelerators to be scalable. This ensures that they can continue to provide accelerated performance for newer and larger models without requiring a complete redesign.
+	In neural network accelerator design, a modular approach facilitates easy addition of processing units or modules to address scalability needs.
+	\item \textbf{Flexibility}: Flexibility remains a cornerstone in the design of neural network accelerators. While tailoring hardware for specific tasks or models can yield substantial performance boosts, it is imperative that these accelerators retain the versatility to accommodate a diverse range of neural network models and operations. This ensures a balance between optimized performance and broad applicability, allowing for both efficiency and adaptability in ever-evolving \gls{ai}/\gls{ml} landscapes.
+	
+\end{itemize}
+
+\subsection{Precision}
+\subsubsection{Fixed-Point}
+
+Fixed-point arithmetic represents numbers with a fixed number of digits before and after the decimal point, in contrast to floating-point where the decimal point can "float". Leveraging fixed-point arithmetic offers distinct advantages. Specifically, fixed-point operations are more resource-efficient, leading to expedited computations. Additionally, their inherent simplicity in arithmetic operations often translates to diminished power consumption. 
+
+
+However, while fixed-point arithmetic offers efficiencies in many neural network applications, there are situations where it may not be ideal:
+
+\begin{enumerate}
+	\item \textbf{Training Deep Neural Networks}: During training, the need to represent small weight updates and gradient values is critical. Floating-point arithmetic is often preferred to ensure effective backpropagation, whereas fixed-point might impede convergence or model accuracy.
+	
+	\item \textbf{High-Precision Tasks}: For tasks requiring acute precision, such as medical imaging or anomaly detection, fixed-point arithmetic might compromise prediction accuracy, especially when using fewer bits.
+	
+	\item \textbf{Transfer Learning and Fine-Tuning}: In scenarios like fine-tuning pre-trained models, small gradient values are crucial. The reduced precision of fixed-point might neglect these subtle updates.
+	
+	\item \textbf{Normalizing and Batch Normalization}: Operations involving a diverse range of values, like normalization, might introduce significant quantization errors when using fixed-point representations.
+	
+	\item \textbf{\glspl{rnn}}: \glspl{rnn}, due to their sequential nature and sensitivity to numerical precision, can experience issues like exploding or vanishing gradients with fixed-point arithmetic.
+	
+	\item \textbf{Activation Functions with Exponential Ranges}: Functions such as SoftMax, which operate over a wide range, might be susceptible to quantization errors in a fixed-point context.
+\end{enumerate}
+
+While quantization techniques continue to evolve, making fixed-point deployment feasible for many neural networks, it remains essential to rigorously evaluate fixed-point representations in the above contexts to ensure desired performance and accuracy.
+
+
+
+\subsubsection{Floating-point}
+Floating-point arithmetic offers distinct advantages due to its capability to represent numbers with both high precision and a wide dynamic range. However, while it provides granular accuracy, it typically demands more computational resources and power compared to fixed-point arithmetic. The inherent robustness of neural networks to numerical perturbations implies a potential avenue for exploring reduced-precision floating-point arithmetic.
+
 The representation of every numerical value, in any numerical system, is made of an integer and a fractional part. The border that delimits them is called the radix point. The fixed-point format for representing numeric values derives its name from the fact that in this format, the base point is fixed at a certain position. For integer numbers, this position is at the right of the least significant digit.
 
 In scientific computation, it is often necessary to represent very large and very small values. This is difficult to achieve using the fixed-point format because the bit size required to maintain both the desired precision and the desired range are very large. In such situations, \gls{fp} formats are used to represent real numbers. Each \gls{fp} number can be divided into three fields: sign $S$, exponent $E$, and mantissa $M$. Using the binary number system, it is possible to represent any \gls{fp} number as:
@@ -290,6 +417,41 @@ There are three special definitions in IEEE 754 standard. The first is subnormal
 \begin{eqnarray} \label{eq:float_subnorm}
 (-1)^{S} \times 0.M \times 2^{1-B}
 \end{eqnarray}
+
+\subsection{Dataflow Taxonomy}
+Dataflow taxonomy refers to the classification of various schemes that determine how data (weights, activations, and partial results) moves through the accelerator during computation. The way data is moved and reused can have an impact on the energy efficiency and throughput of the accelerator. These strategies aim to maximize performance and energy efficiency by optimizing data movement, which is often more energy-intensive than computation itself. When choosing or designing a dataflow, it is essential to consider the specific neural network workload, the memory hierarchy, and the architectural details of the hardware to ensure an optimal match.
+
+\subsubsection{Weight Stationary (WS)}
+In this dataflow, weights are kept stationary in the processing elements. As different input activations come in, they are multiplied with these stationary weights. This approach maximizes the reuse of weights, which can be beneficial when processing a large number of activations, such as during a convolution operation.
+Characteristics:
+\begin{align*}
+\textbf{Fixed:} & \quad \text{Weights} \\
+\textbf{Moving:} & \quad \text{Activations, Partial Sums}
+\end{align*}
+
+\subsubsection{Output Stationary (OS)}
+Here, the partial results (output activations) are kept stationary. Weights and input activations move through the processing elements and the partial sums are accumulated in place. This scheme tries to maximize the reuse of the output from the computation, which is beneficial when a given output is the result of multiple accumulations. Characteristics:
+\begin{align*}
+\textbf{Fixed:} & \quad \text{Partial Sums} \\
+\textbf{Moving:} & \quad \text{Weights, Activations}
+\end{align*}
+
+\subsubsection{Input Stationary (IS)}
+In the Input Stationary scheme, input activations remain stationary, while weights move through and are multiplied with these stationary activations. This can be beneficial when a single activation is used in multiple computations. Characteristics:
+\begin{align*}
+\textbf{Fixed:} & \quad \text{Activations} \\
+\textbf{Moving:} & \quad \text{Weights, Partial Sums}
+\end{align*}
+
+\subsubsection{No Local Reuse (NLR)}
+As the name suggests, in this dataflow, there is minimal local data reuse. All data types-weights, activations, and partial sums-move through the processing elements. This is often not as efficient in terms of energy consumption since there is a lack of reuse; however, it is simpler in terms of control and design. Characteristic:
+\begin{align*}
+\textbf{Moving:} & \quad \text{Weights, Activations, Partial Sums}
+\end{align*}
+
+\subsubsection{Row Stationary (RS)}
+This is a specialized dataflow developed for systolic array architectures. In RS, a row of the systolic array holds the activations stationary while weights are propagated horizontally and partial sums propagate vertically.
+
 
 \section{Related Work}
 \subsection{Low-Power Spike-by-Spike Neural Network Accelerators}

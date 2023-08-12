@@ -16,10 +16,10 @@
 \newlabel{chap.background@cref}{{[chapter][2][]2}{[1][15][]15}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction}{15}{section.2.1}\protected@file@percent }
 \citation{gu2018recent}
+\citation{goodfellow2016deep}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Neural Networks}{16}{section.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Convolutional Neural Networks}{16}{subsection.2.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Conv2D Tensor Operation}{16}{section*.12}\protected@file@percent }
-\citation{goodfellow2016deep}
 \newlabel{eq:conv2D}{{2.1}{17}{Conv2D Tensor Operation}{equation.2.2.1}{}}
 \newlabel{eq:conv2D@cref}{{[subsection][1][2,2]2.2.1}{[1][17][]17}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Computational Cost of a Convolution Layer}{17}{subsection.2.2.2}\protected@file@percent }
@@ -60,24 +60,39 @@
 \newlabel{fig:SbS_layer}{{2.2}{22}{\gls {sbs} \glspl {ip_sbs} as independent computational entities, (a) illustrates an input layer with a massive amount of \glspl {ip_sbs} operating as independent computational entities, (b) shows a hidden layer with an arbitrary amount of \glspl {ip_sbs} as independent computational entities, (c) exhibits a set of neurons grouped in an \gls {ip_sbs}.\relax }{figure.caption.26}{}}
 \newlabel{fig:SbS_layer@cref}{{[figure][2][2]2.2}{[1][22][]22}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Neural Network Accelerators}{23}{section.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}\gls {fpga} Design}{23}{subsection.2.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Energy-Efficient Dataflow}{23}{subsection.2.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Reduced Precision}{23}{subsection.2.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Fixed-Point}{23}{subsection.2.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.5}Floating-point Number Representation}{23}{subsection.2.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Why the Need for Accelerators?}{23}{section*.29}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces (a) Performance classification of \gls {sbs} NN versus equivalent \gls {cnn}, and (b) example of the first pattern in the MNIST test data set with different amounts of positive additive uniformly distributed noise.\relax }}{23}{figure.caption.28}\protected@file@percent }
 \newlabel{fig:robustnes_sbs}{{2.3}{23}{(a) Performance classification of \gls {sbs} NN versus equivalent \gls {cnn}, and (b) example of the first pattern in the MNIST test data set with different amounts of positive additive uniformly distributed noise.\relax }{figure.caption.28}{}}
 \newlabel{fig:robustnes_sbs@cref}{{[figure][3][2]2.3}{[1][23][]23}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Types of Accelerators}{26}{section*.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Design Considerations}{27}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Precision}{28}{subsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Fixed-Point}{28}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Floating-point}{29}{section*.33}\protected@file@percent }
 \citation{zuras2008ieee}
-\newlabel{eq:float}{{2.9}{24}{Floating-point Number Representation}{equation.2.3.9}{}}
-\newlabel{eq:float@cref}{{[subsection][5][2,3]2.3.5}{[1][24][]24}}
-\newlabel{eq:float_bias}{{2.10}{24}{Floating-point Number Representation}{equation.2.3.10}{}}
-\newlabel{eq:float_bias@cref}{{[subsection][5][2,3]2.3.5}{[1][24][]24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Floating-point number representation.\relax }}{30}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:floating}{{2.4}{30}{Floating-point number representation.\relax }{figure.caption.34}{}}
+\newlabel{fig:floating@cref}{{[figure][4][2]2.4}{[1][30][]30}}
+\newlabel{eq:float}{{2.9}{30}{Floating-point}{equation.2.3.9}{}}
+\newlabel{eq:float@cref}{{[subsection][1][2,3]2.3.1}{[1][29][]30}}
+\newlabel{eq:float_bias}{{2.10}{30}{Floating-point}{equation.2.3.10}{}}
+\newlabel{eq:float_bias@cref}{{[subsection][1][2,3]2.3.1}{[1][30][]30}}
+\newlabel{eq:float_subnorm}{{2.11}{31}{Floating-point}{equation.2.3.11}{}}
+\newlabel{eq:float_subnorm@cref}{{[subsection][1][2,3]2.3.1}{[1][31][]31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Dataflow Taxonomy}{31}{subsection.2.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Weight Stationary (WS)}{31}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Output Stationary (OS)}{31}{section*.36}\protected@file@percent }
 \citation{bouvier2019spiking}
 \citation{courbariaux2015binaryconnect}
 \citation{han2015deep}
 \citation{hubara2017quantized}
 \citation{rastegari2016xnor}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Input Stationary (IS)}{32}{section*.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline No Local Reuse (NLR)}{32}{section*.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Row Stationary (RS)}{32}{section*.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Related Work}{32}{section.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Low-Power Spike-by-Spike Neural Network Accelerators}{32}{subsection.2.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Network Compression}{32}{section*.40}\protected@file@percent }
 \citation{moons20160}
 \citation{whatmough201714}
 \citation{rastegari2016xnor}
@@ -87,14 +102,6 @@
 \citation{molchanov2016pruning}
 \citation{li2016pruning}
 \citation{liu2018rethinking}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Floating-point number representation.\relax }}{25}{figure.caption.29}\protected@file@percent }
-\newlabel{fig:floating}{{2.4}{25}{Floating-point number representation.\relax }{figure.caption.29}{}}
-\newlabel{fig:floating@cref}{{[figure][4][2]2.4}{[1][24][]25}}
-\newlabel{eq:float_subnorm}{{2.11}{25}{Floating-point Number Representation}{equation.2.3.11}{}}
-\newlabel{eq:float_subnorm@cref}{{[subsection][5][2,3]2.3.5}{[1][24][]25}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Related Work}{25}{section.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Low-Power Spike-by-Spike Neural Network Accelerators}{25}{subsection.2.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Network Compression}{25}{section*.30}\protected@file@percent }
 \citation{rathi2018stdp}
 \citation{sen2017approximate}
 \citation{srivastava2014dropout}
@@ -110,11 +117,11 @@
 \citation{han2013approximate}
 \citation{han2013approximate}
 \citation{kim2013energy}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Classical Approximate Computing}{33}{section*.41}\protected@file@percent }
 \citation{he2016deep}
 \citation{russakovsky2015imagenet}
 \citation{rastegari2016xnor}
 \citation{rotermund2018massively}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Classical Approximate Computing}{26}{section*.31}\protected@file@percent }
 \citation{lai2017deep}
 \citation{settle2018quantizing}
 \citation{lai2017deep}
@@ -122,19 +129,19 @@
 \citation{lian2019high}
 \citation{mei2017200mhz}
 \citation{wu2021low}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Spike-by-Spike Neural Network Accelerators}{27}{section*.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Low-Power Convolutional Neural Network Accelerators}{27}{subsection.2.4.2}\protected@file@percent }
-\newlabel{sec:related_work}{{2.4.2}{27}{Low-Power Convolutional Neural Network Accelerators}{subsection.2.4.2}{}}
-\newlabel{sec:related_work@cref}{{[subsection][2][2,4]2.4.2}{[1][27][]27}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Hybrid Custom Floating-Point}{27}{section*.33}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Low-Precision Floating-Point}{27}{section*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Spike-by-Spike Neural Network Accelerators}{34}{section*.42}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Low-Power Convolutional Neural Network Accelerators}{34}{subsection.2.4.2}\protected@file@percent }
+\newlabel{sec:related_work}{{2.4.2}{34}{Low-Power Convolutional Neural Network Accelerators}{subsection.2.4.2}{}}
+\newlabel{sec:related_work@cref}{{[subsection][2][2,4]2.4.2}{[1][34][]34}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Hybrid Custom Floating-Point}{34}{section*.43}\protected@file@percent }
 \citation{meloni2019cnn}
 \citation{gao2020edgedrnn}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Low-Power}{28}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Low-Precision Floating-Point}{35}{section*.44}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Low-Power}{35}{section*.45}\protected@file@percent }
 \@setckpt{./chapters/background}{
-\setcounter{page}{29}
+\setcounter{page}{36}
 \setcounter{equation}{11}
-\setcounter{enumi}{3}
+\setcounter{enumi}{6}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
@@ -149,7 +156,7 @@
 \setcounter{subparagraph}{0}
 \setcounter{figure}{4}
 \setcounter{table}{1}
-\setcounter{Item}{18}
+\setcounter{Item}{35}
 \setcounter{Hfootnote}{0}
 \setcounter{bookmark@seq@number}{0}
 \setcounter{float@type}{8}

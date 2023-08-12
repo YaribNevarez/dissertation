@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.31)  8 AUG 2023 11:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.31)  13 AUG 2023 00:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2270,7 +2270,11 @@ Underfull \vbox (badness 7326) has occurred while \output is active []
 
 
 ]
-[2] [3] [4] [0
+[2]
+Underfull \vbox (badness 5064) has occurred while \output is active []
+
+ [3]
+[4] [5] [0
 
 ]
 \openout2 = `./chapters/introduction.aux'.
@@ -2410,10 +2414,7 @@ chapter 2.
 
 \openout5 = `Thesis_YaribNevarez.mtc'.
 
-(./Thesis_YaribNevarez.mtc2
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.12502pt on input line 20.
-) [15] [16] [17] [18] [19] [20]
+(./Thesis_YaribNevarez.mtc2) [15] [16] [17] [18] [19] [20]
 Overfull \hbox (12.0pt too wide) detected at line 193
 [][] 
  []
@@ -2423,7 +2424,7 @@ Overfull \hbox (12.0pt too wide) detected at line 193
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/sbs_accelerator/figures/sbs_
 network.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5>
  allowed
-<./chapters/sbs_accelerator/figures/sbs_network.pdf, id=851, 567.38115pt x 334.
+<./chapters/sbs_accelerator/figures/sbs_network.pdf, id=865, 567.38115pt x 334.
 89616pt>
 File: ./chapters/sbs_accelerator/figures/sbs_network.pdf Graphic file (type pdf
 )
@@ -2456,7 +2457,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/sbs_accelerator/figures/SbS_
 layer.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> a
 llowed
-<./chapters/sbs_accelerator/figures/SbS_layer.pdf, id=888, 271.0125pt x 133.498
+<./chapters/sbs_accelerator/figures/SbS_layer.pdf, id=902, 271.0125pt x 133.498
 75pt>
 File: ./chapters/sbs_accelerator/figures/SbS_layer.pdf Graphic file (type pdf)
 <use ./chapters/sbs_accelerator/figures/SbS_layer.pdf>
@@ -2469,7 +2470,7 @@ rator/figures/SbS_layer.pdf>]
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/sbs_accelerator/figures/sbs_
 robustnes.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./chapters/sbs_accelerator/figures/sbs_robustnes.pdf, id=1425, 549.76204pt x 2
+<./chapters/sbs_accelerator/figures/sbs_robustnes.pdf, id=1439, 549.76204pt x 2
 96.34586pt>
 File: ./chapters/sbs_accelerator/figures/sbs_robustnes.pdf Graphic file (type p
 df)
@@ -2477,48 +2478,52 @@ df)
 Package pdftex.def Info: ./chapters/sbs_accelerator/figures/sbs_robustnes.pdf  
 used on input line 249.
 (pdftex.def)             Requested size: 227.62206pt x 122.69635pt.
+[23 <./chapters/sbs_accelerator/figures/sbs_robustnes.pdf>] [24] [25]
+Overfull \hbox (19.12166pt too wide) in paragraph at lines 329--330
+[]\T1/ntxtlf/b/n/12 Reconfigurability\T1/ntxtlf/m/n/12 : Un-like [][]\T1/ntxtlf
+/m/n/10 ASICs[]\T1/ntxtlf/m/n/12 , which are fixed in their func-tion-al-ity po
+st-manufacture,
+ []
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gls' on input line 256.
-
-[23 <./chapters/sbs_accelerator/figures/sbs_robustnes.pdf>]
-<./chapters/cnn_accelerator/figures/power_breakdown/floating_point.pdf, id=1487
+[26] [27] [28] [29]
+<./chapters/cnn_accelerator/figures/power_breakdown/floating_point.pdf, id=1591
 , 252.945pt x 144.54pt>
 File: ./chapters/cnn_accelerator/figures/power_breakdown/floating_point.pdf Gra
 phic file (type pdf)
 <use ./chapters/cnn_accelerator/figures/power_breakdown/floating_point.pdf>
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/power_breakdown/flo
-ating_point.pdf  used on input line 281.
+ating_point.pdf  used on input line 408.
 (pdftex.def)             Requested size: 227.62206pt x 130.07155pt.
- [24] [25 <./chapters/cnn_accelerator/figures/power_breakdown/floating_point.pd
-f>]
-Underfull \vbox (badness 4713) has occurred while \output is active []
-
- [26]
-[27]) [28]
+ [30 <./chapters/cnn_accelerator/figures/power_breakdown/floating_point.pdf>]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.8pt on input line 430.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.6pt on input line 430.
+ [31] [32] [33] [34]) [35]
 \openout2 = `./chapters/accelerating_sbs.aux'.
 
  (./chapters/accelerating_sbs.tex
+[36
+
+
+
+
+]
 chapter 3.
 \openout5 = `Thesis_YaribNevarez.mtc'.
 
 \openout5 = `Thesis_YaribNevarez.mtc'.
 
 (./Thesis_YaribNevarez.mtc3)
-(./chapters/sbs_accelerator/content/introduction.tex [29
-
-
-
-
-]
+(./chapters/sbs_accelerator/content/introduction.tex [37]
 Underfull \vbox (badness 3568) has occurred while \output is active []
 
 
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[30]
-<./chapters/sbs_accelerator/figures/dot-product_unit.pdf, id=1744, 252.91655pt 
+[38]
+<./chapters/sbs_accelerator/figures/dot-product_unit.pdf, id=1855, 252.91655pt 
 x 252.91655pt>
 File: ./chapters/sbs_accelerator/figures/dot-product_unit.pdf Graphic file (typ
 e pdf)
@@ -2529,17 +2534,17 @@ f  used on input line 48.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
+ [39]
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[32 <./chapters/sbs_accelerator/figures/dot-product_unit.pdf>])
+[40 <./chapters/sbs_accelerator/figures/dot-product_unit.pdf>])
 (./chapters/sbs_accelerator/content/system_design.tex
 
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/sbs_accelerator/figures/sbs_
 software_component.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./chapters/sbs_accelerator/figures/sbs_software_component.pdf, id=1822, 431.61
+<./chapters/sbs_accelerator/figures/sbs_software_component.pdf, id=1932, 431.61
 25pt x 277.035pt>
 File: ./chapters/sbs_accelerator/figures/sbs_software_component.pdf Graphic fil
 e (type pdf)
@@ -2547,8 +2552,6 @@ e (type pdf)
 Package pdftex.def Info: ./chapters/sbs_accelerator/figures/sbs_software_compon
 ent.pdf  used on input line 12.
 (pdftex.def)             Requested size: 227.62206pt x 146.10077pt.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 18.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 18.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
@@ -2567,12 +2570,12 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 7.3pt on input line 18.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 7.3pt on input line 18.
-[33 <./chapters/sbs_accelerator/figures/sbs_software_component.pdf>]
+[41 <./chapters/sbs_accelerator/figures/sbs_software_component.pdf>]
 
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/sbs_accelerator/figures/sbs_
 hw.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allo
 wed
-<./chapters/sbs_accelerator/figures/sbs_hw.pdf, id=1851, 228.855pt x 139.52126p
+<./chapters/sbs_accelerator/figures/sbs_hw.pdf, id=1961, 228.855pt x 139.52126p
 t>
 File: ./chapters/sbs_accelerator/figures/sbs_hw.pdf Graphic file (type pdf)
 <use ./chapters/sbs_accelerator/figures/sbs_hw.pdf>
@@ -2586,12 +2589,12 @@ Underfull \vbox (badness 3536) has occurred while \output is active []
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[34 <./chapters/sbs_accelerator/figures/sbs_hw.pdf>] [35]
+[42 <./chapters/sbs_accelerator/figures/sbs_hw.pdf>] [43]
 
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/sbs_accelerator/figures/sbs_
 conv.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> al
 lowed
-<./chapters/sbs_accelerator/figures/sbs_conv.pdf, id=1915, 296.10625pt x 344.28
+<./chapters/sbs_accelerator/figures/sbs_conv.pdf, id=2026, 296.10625pt x 344.28
 625pt>
 File: ./chapters/sbs_accelerator/figures/sbs_conv.pdf Graphic file (type pdf)
 <use ./chapters/sbs_accelerator/figures/sbs_conv.pdf>
@@ -2602,15 +2605,15 @@ on input line 57.
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[36 <./chapters/sbs_accelerator/figures/sbs_conv.pdf>]
+[44 <./chapters/sbs_accelerator/figures/sbs_conv.pdf>]
 Underfull \vbox (badness 3039) has occurred while \output is active []
 
- [37]
+ [45]
 
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/sbs_accelerator/figures/dot_
 product_float.pdf): PDF inclusion: found PDF version <1.7>, but at most version
  <1.5> allowed
-<./chapters/sbs_accelerator/figures/dot_product_float.pdf, id=1959, 460.72125pt
+<./chapters/sbs_accelerator/figures/dot_product_float.pdf, id=2070, 460.72125pt
  x 491.8375pt>
 File: ./chapters/sbs_accelerator/figures/dot_product_float.pdf Graphic file (ty
 pe pdf)
@@ -2623,7 +2626,7 @@ df  used on input line 102.
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/sbs_accelerator/figures/dot_
 product.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5>
  allowed
-<./chapters/sbs_accelerator/figures/dot_product.pdf, id=1961, 446.66875pt x 475
+<./chapters/sbs_accelerator/figures/dot_product.pdf, id=2072, 446.66875pt x 475
 .7775pt>
 File: ./chapters/sbs_accelerator/figures/dot_product.pdf Graphic file (type pdf
 )
@@ -2636,7 +2639,7 @@ ed on input line 112.
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/sbs_accelerator/figures/dot_
 product_log.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
-<./chapters/sbs_accelerator/figures/dot_product_log.pdf, id=1963, 445.665pt x 3
+<./chapters/sbs_accelerator/figures/dot_product_log.pdf, id=2074, 445.665pt x 3
 83.4325pt>
 File: ./chapters/sbs_accelerator/figures/dot_product_log.pdf Graphic file (type
  pdf)
@@ -2648,14 +2651,14 @@ Package pdftex.def Info: ./chapters/sbs_accelerator/figures/dot_product_log.pdf
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[38] [39 <./chapters/sbs_accelerator/figures/dot_product_float.pdf>]
+[46] [47 <./chapters/sbs_accelerator/figures/dot_product_float.pdf>]
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[40 <./chapters/sbs_accelerator/figures/dot_product.pdf> <./chapters/sbs_accele
+[48 <./chapters/sbs_accelerator/figures/dot_product.pdf> <./chapters/sbs_accele
 rator/figures/dot_product_log.pdf>])
-(./chapters/sbs_accelerator/content/experimental_results.tex [41]
-<./chapters/sbs_accelerator/figures/latency_sw.pdf, id=2078, 252.91655pt x 93.9
+(./chapters/sbs_accelerator/content/experimental_results.tex [49]
+<./chapters/sbs_accelerator/figures/latency_sw.pdf, id=2189, 252.91655pt x 93.9
 2255pt>
 File: ./chapters/sbs_accelerator/figures/latency_sw.pdf Graphic file (type pdf)
 
@@ -2667,12 +2670,12 @@ d on input line 37.
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[42]
+[50]
 
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/sbs_accelerator/figures/sbs_
 hw_experimental.pdf): PDF inclusion: found PDF version <1.7>, but at most versi
 on <1.5> allowed
-<./chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf, id=2091, 180.675pt
+<./chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf, id=2202, 180.675pt
  x 117.43875pt>
 File: ./chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf Graphic file (
 type pdf)
@@ -2680,9 +2683,9 @@ type pdf)
 Package pdftex.def Info: ./chapters/sbs_accelerator/figures/sbs_hw_experimental
 .pdf  used on input line 47.
 (pdftex.def)             Requested size: 227.62206pt x 147.95566pt.
-[43 <./chapters/sbs_accelerator/figures/latency_sw.pdf> <./chapters/sbs_acceler
+[51 <./chapters/sbs_accelerator/figures/latency_sw.pdf> <./chapters/sbs_acceler
 ator/figures/sbs_hw_experimental.pdf>]
-<./chapters/sbs_accelerator/figures/latency_pu_fp.pdf, id=2181, 252.91655pt x 1
+<./chapters/sbs_accelerator/figures/latency_pu_fp.pdf, id=2292, 252.91655pt x 1
 15.60355pt>
 File: ./chapters/sbs_accelerator/figures/latency_pu_fp.pdf Graphic file (type p
 df)
@@ -2690,7 +2693,7 @@ df)
 Package pdftex.def Info: ./chapters/sbs_accelerator/figures/latency_pu_fp.pdf  
 used on input line 77.
 (pdftex.def)             Requested size: 227.62206pt x 104.04575pt.
-<./chapters/sbs_accelerator/figures/latency_fp_cycle.pdf, id=2192, 252.91655pt 
+<./chapters/sbs_accelerator/figures/latency_fp_cycle.pdf, id=2303, 252.91655pt 
 x 124.99297pt>
 File: ./chapters/sbs_accelerator/figures/latency_fp_cycle.pdf Graphic file (typ
 e pdf)
@@ -2705,18 +2708,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[44 <./chapters/sbs_accelerator/figures/latency_pu_fp.pdf>]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 104.
-
+[52 <./chapters/sbs_accelerator/figures/latency_pu_fp.pdf>]
 Underfull \vbox (badness 1776) has occurred while \output is active []
 
- [45 <./chapters/sbs_accelerator/figures/latency_fp_cycle.pdf>]
+ [53 <./chapters/sbs_accelerator/figures/latency_fp_cycle.pdf>]
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[46]
-<./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf, id=2297, 252.9
+[54]
+<./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf, id=2407, 252.9
 1655pt x 433.59154pt>
 File: ./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf Graphic fi
 le (type pdf)
@@ -2724,8 +2724,8 @@ le (type pdf)
 Package pdftex.def Info: ./chapters/sbs_accelerator/figures/accuracy_vs_noise_p
 u_fp.pdf  used on input line 162.
 (pdftex.def)             Requested size: 227.62206pt x 390.24202pt.
- [47]
-<./chapters/sbs_accelerator/figures/log2_histogram.pdf, id=2310, 252.91655pt x 
+ [55]
+<./chapters/sbs_accelerator/figures/log2_histogram.pdf, id=2421, 252.91655pt x 
 361.32155pt>
 File: ./chapters/sbs_accelerator/figures/log2_histogram.pdf Graphic file (type 
 pdf)
@@ -2737,9 +2737,9 @@ Package pdftex.def Info: ./chapters/sbs_accelerator/figures/log2_histogram.pdf
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[48 <./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf>] [49 <./ch
+[56 <./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf>] [57 <./ch
 apters/sbs_accelerator/figures/log2_histogram.pdf>]
-<./chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf, id=2365, 252.91655pt
+<./chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf, id=2476, 252.91655pt
  x 252.91655pt>
 File: ./chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf Graphic file (ty
 pe pdf)
@@ -2748,7 +2748,7 @@ Package pdftex.def Info: ./chapters/sbs_accelerator/figures/latency_cfp_cycle.p
 df  used on input line 227.
 (pdftex.def)             Requested size: 227.62206pt x 227.6305pt.
 <./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponent_1-b
-it-mantissa).pdf, id=2366, 252.91655pt x 433.59154pt>
+it-mantissa).pdf, id=2477, 252.91655pt x 433.59154pt>
 File: ./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponen
 t_1-bit-mantissa).pdf Graphic file (type pdf)
 <use ./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponent
@@ -2760,8 +2760,8 @@ u_cfp(4-bit-exponent_1-bit-mantissa).pdf  used on input line 234.
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[50 <./chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf>]
-<./chapters/sbs_accelerator/figures/latency_log_cycle.pdf, id=2406, 252.91655pt
+[58 <./chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf>]
+<./chapters/sbs_accelerator/figures/latency_log_cycle.pdf, id=2516, 252.91655pt
  x 252.91655pt>
 File: ./chapters/sbs_accelerator/figures/latency_log_cycle.pdf Graphic file (ty
 pe pdf)
@@ -2773,7 +2773,7 @@ df  used on input line 269.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf, id=2407, 252.
+<./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf, id=2517, 252.
 91655pt x 433.59154pt>
 File: ./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf Graphic f
 ile (type pdf)
@@ -2784,15 +2784,15 @@ u_log.pdf  used on input line 296.
 
 Underfull \vbox (badness 5592) has occurred while \output is active []
 
- [51]
+ [59]
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[52 <./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponent
+[60 <./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponent
 _1-bit-mantissa).pdf>]
 Underfull \vbox (badness 2600) has occurred while \output is active []
 
- [53 <./chapters/sbs_accelerator/figures/latency_log_cycle.pdf>]
+ [61 <./chapters/sbs_accelerator/figures/latency_log_cycle.pdf>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 6.2pt on input line 315.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
@@ -2807,7 +2807,7 @@ Overfull \hbox (1.05733pt too wide) in paragraph at lines 341--363
  []
 
 <./chapters/sbs_accelerator/figures/platform_power_dissipation_breakdown.pdf, i
-d=2479, 505.86154pt x 93.92255pt>
+d=2590, 505.86154pt x 93.92255pt>
 File: ./chapters/sbs_accelerator/figures/platform_power_dissipation_breakdown.p
 df Graphic file (type pdf)
 <use ./chapters/sbs_accelerator/figures/platform_power_dissipation_breakdown.pd
@@ -2822,15 +2822,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[54 <./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf>]
+[62 <./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55 <./chapters/sbs_accelerator/figures/platform_power_dissipation_breakdown.p
+ [63 <./chapters/sbs_accelerator/figures/platform_power_dissipation_breakdown.p
 df>]))
 Overfull \vbox (14.2389pt too high) has occurred while \output is active []
 
 
-[56]
+[64]
 \openout2 = `./chapters/cnn_accelerator.aux'.
 
  (./chapters/cnn_accelerator.tex
@@ -2840,7 +2840,7 @@ chapter 4.
 \openout5 = `Thesis_YaribNevarez.mtc'.
 
 (./Thesis_YaribNevarez.mtc4)
-(./chapters/cnn_accelerator/content/introduction.tex [57
+(./chapters/cnn_accelerator/content/introduction.tex [65
 
 
 
@@ -2848,8 +2848,8 @@ chapter 4.
 ]
 Underfull \vbox (badness 1824) has occurred while \output is active []
 
- [58]
-<./chapters/cnn_accelerator/figures/workflow.pdf, id=2737, 252.945pt x 93.951pt
+ [66]
+<./chapters/cnn_accelerator/figures/workflow.pdf, id=2847, 252.945pt x 93.951pt
 >
 File: ./chapters/cnn_accelerator/figures/workflow.pdf Graphic file (type pdf)
 <use ./chapters/cnn_accelerator/figures/workflow.pdf>
@@ -2857,9 +2857,9 @@ Package pdftex.def Info: ./chapters/cnn_accelerator/figures/workflow.pdf  used
 on input line 21.
 (pdftex.def)             Requested size: 227.62206pt x 84.54651pt.
 
-[59 <./chapters/cnn_accelerator/figures/workflow.pdf>])
+[67 <./chapters/cnn_accelerator/figures/workflow.pdf>])
 (./chapters/cnn_accelerator/content/system_design.tex
-<./chapters/cnn_accelerator/figures/system_design.pdf, id=2781, 252.945pt x 195
+<./chapters/cnn_accelerator/figures/system_design.pdf, id=2892, 252.945pt x 195
 .129pt>
 File: ./chapters/cnn_accelerator/figures/system_design.pdf Graphic file (type p
 df)
@@ -2870,8 +2870,8 @@ used on input line 9.
 
 Underfull \vbox (badness 1028) has occurred while \output is active []
 
- [60 <./chapters/cnn_accelerator/figures/system_design.pdf>]
-<./chapters/cnn_accelerator/figures/accelerator.pdf, id=2798, 252.945pt x 180.6
+ [68 <./chapters/cnn_accelerator/figures/system_design.pdf>]
+<./chapters/cnn_accelerator/figures/accelerator.pdf, id=2909, 252.945pt x 180.6
 75pt>
 File: ./chapters/cnn_accelerator/figures/accelerator.pdf Graphic file (type pdf
 )
@@ -2882,8 +2882,8 @@ ed on input line 18.
 
 Underfull \vbox (badness 1715) has occurred while \output is active []
 
- [61 <./chapters/cnn_accelerator/figures/accelerator.pdf>]
-<./chapters/cnn_accelerator/figures/dot-product_unit.pdf, id=2830, 252.945pt x 
+ [69 <./chapters/cnn_accelerator/figures/accelerator.pdf>]
+<./chapters/cnn_accelerator/figures/dot-product_unit.pdf, id=2941, 252.945pt x 
 187.902pt>
 File: ./chapters/cnn_accelerator/figures/dot-product_unit.pdf Graphic file (typ
 e pdf)
@@ -2891,7 +2891,7 @@ e pdf)
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/dot-product_unit.pd
 f  used on input line 41.
 (pdftex.def)             Requested size: 227.62206pt x 169.09302pt.
-<./chapters/cnn_accelerator/figures/dot_product_hybrid.pdf, id=2831, 252.945pt 
+<./chapters/cnn_accelerator/figures/dot_product_hybrid.pdf, id=2942, 252.945pt 
 x 346.89601pt>
 File: ./chapters/cnn_accelerator/figures/dot_product_hybrid.pdf Graphic file (t
 ype pdf)
@@ -2902,8 +2902,8 @@ pdf  used on input line 48.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62 <./chapters/cnn_accelerator/figures/dot-product_unit.pdf>]
-<./chapters/cnn_accelerator/figures/multiplier.pdf, id=2873, 252.945pt x 397.48
+ [70 <./chapters/cnn_accelerator/figures/dot-product_unit.pdf>]
+<./chapters/cnn_accelerator/figures/multiplier.pdf, id=2983, 252.945pt x 397.48
 5pt>
 File: ./chapters/cnn_accelerator/figures/multiplier.pdf Graphic file (type pdf)
 
@@ -2914,8 +2914,8 @@ d on input line 58.
 
 Underfull \vbox (badness 1248) has occurred while \output is active []
 
- [63 <./chapters/cnn_accelerator/figures/dot_product_hybrid.pdf>]
-<./chapters/cnn_accelerator/figures/accelerator_buffers.pdf, id=2950, 252.945pt
+ [71 <./chapters/cnn_accelerator/figures/dot_product_hybrid.pdf>]
+<./chapters/cnn_accelerator/figures/accelerator_buffers.pdf, id=3060, 252.945pt
  x 144.54pt>
 File: ./chapters/cnn_accelerator/figures/accelerator_buffers.pdf Graphic file (
 type pdf)
@@ -2923,10 +2923,10 @@ type pdf)
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/accelerator_buffers
 .pdf  used on input line 73.
 (pdftex.def)             Requested size: 227.62206pt x 130.07155pt.
- [64 <./chapters/cnn_accelerator/figures/multiplier.pdf>]
+ [72 <./chapters/cnn_accelerator/figures/multiplier.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65 <./chapters/cnn_accelerator/figures/accelerator_buffers.pdf>] [66]
+ [73 <./chapters/cnn_accelerator/figures/accelerator_buffers.pdf>] [74]
 Overfull \hbox (12.0pt too wide) detected at line 156
 [][] 
  []
@@ -2947,14 +2947,14 @@ Overfull \hbox (12.0pt too wide) detected at line 228
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./chapters/cnn_accelerator/figures/sw_stack.pdf, id=3041, 252.945pt x 130.086p
+<./chapters/cnn_accelerator/figures/sw_stack.pdf, id=3152, 252.945pt x 130.086p
 t>
 File: ./chapters/cnn_accelerator/figures/sw_stack.pdf Graphic file (type pdf)
 <use ./chapters/cnn_accelerator/figures/sw_stack.pdf>
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/sw_stack.pdf  used 
 on input line 231.
 (pdftex.def)             Requested size: 227.62206pt x 117.06439pt.
-<./chapters/cnn_accelerator/figures/sw_stack_flowchart.pdf, id=3042, 252.945pt 
+<./chapters/cnn_accelerator/figures/sw_stack_flowchart.pdf, id=3153, 252.945pt 
 x 151.767pt>
 File: ./chapters/cnn_accelerator/figures/sw_stack_flowchart.pdf Graphic file (t
 ype pdf)
@@ -2962,18 +2962,18 @@ ype pdf)
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/sw_stack_flowchart.
 pdf  used on input line 238.
 (pdftex.def)             Requested size: 227.62206pt x 136.57512pt.
-[67]
+[75]
 
-LaTeX Warning: Text page 68 contains only floats.
+LaTeX Warning: Text page 76 contains only floats.
 
-[68 <./chapters/cnn_accelerator/figures/sw_stack.pdf> <./chapters/cnn_accelerat
+[76 <./chapters/cnn_accelerator/figures/sw_stack.pdf> <./chapters/cnn_accelerat
 or/figures/sw_stack_flowchart.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/cnn_accelerator/figures/sw_s
 tack_flowchart.pdf): PDF inclusion: multiple pdfs with page group included in a
  single page
->]) (./chapters/cnn_accelerator/content/experimental_results.tex [69]
-<./chapters/cnn_accelerator/figures/histograms/data_set.pdf, id=3154, 252.945pt
+>]) (./chapters/cnn_accelerator/content/experimental_results.tex [77]
+<./chapters/cnn_accelerator/figures/histograms/data_set.pdf, id=3264, 252.945pt
  x 505.89pt>
 File: ./chapters/cnn_accelerator/figures/histograms/data_set.pdf Graphic file (
 type pdf)
@@ -2981,9 +2981,9 @@ type pdf)
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/histograms/data_set
 .pdf  used on input line 18.
 (pdftex.def)             Requested size: 227.62206pt x 455.25046pt.
- [70]
-[71 <./chapters/cnn_accelerator/figures/histograms/data_set.pdf>] [72]
-<./chapters/cnn_accelerator/figures/histograms/spectrograms.pdf, id=3195, 252.9
+ [78]
+[79 <./chapters/cnn_accelerator/figures/histograms/data_set.pdf>] [80]
+<./chapters/cnn_accelerator/figures/histograms/spectrograms.pdf, id=3306, 252.9
 45pt x 83.1105pt>
 File: ./chapters/cnn_accelerator/figures/histograms/spectrograms.pdf Graphic fi
 le (type pdf)
@@ -2991,16 +2991,16 @@ le (type pdf)
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/histograms/spectrog
 rams.pdf  used on input line 55.
 (pdftex.def)             Requested size: 227.62206pt x 74.79112pt.
-<./chapters/cnn_accelerator/figures/models.pdf, id=3201, 252.945pt x 252.945pt>
+<./chapters/cnn_accelerator/figures/models.pdf, id=3312, 252.945pt x 252.945pt>
 
 File: ./chapters/cnn_accelerator/figures/models.pdf Graphic file (type pdf)
 <use ./chapters/cnn_accelerator/figures/models.pdf>
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/models.pdf  used on
  input line 74.
 (pdftex.def)             Requested size: 227.62206pt x 227.62523pt.
- [73 <./chapters/cnn_accelerator/figures/histograms/spectrograms.pdf>]
+ [81 <./chapters/cnn_accelerator/figures/histograms/spectrograms.pdf>]
 <./chapters/cnn_accelerator/figures/histograms/training_and_quantization.pdf, i
-d=3227, 252.945pt x 397.485pt>
+d=3338, 252.945pt x 397.485pt>
 File: ./chapters/cnn_accelerator/figures/histograms/training_and_quantization.p
 df Graphic file (type pdf)
 <use ./chapters/cnn_accelerator/figures/histograms/training_and_quantization.pd
@@ -3012,7 +3012,7 @@ _and_quantization.pdf  used on input line 88.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./chapters/cnn_accelerator/figures/histograms/model_evaluation.pdf, id=3231, 2
+<./chapters/cnn_accelerator/figures/histograms/model_evaluation.pdf, id=3342, 2
 52.945pt x 607.068pt>
 File: ./chapters/cnn_accelerator/figures/histograms/model_evaluation.pdf Graphi
 c file (type pdf)
@@ -3023,11 +3023,11 @@ aluation.pdf  used on input line 97.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[74 <./chapters/cnn_accelerator/figures/models.pdf>] [75 <./chapters/cnn_accele
+[82 <./chapters/cnn_accelerator/figures/models.pdf>] [83 <./chapters/cnn_accele
 rator/figures/histograms/training_and_quantization.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [76 <./chapters/cnn_accelerator/figures/histograms/model_evaluation.pdf>] [77]
+ [84 <./chapters/cnn_accelerator/figures/histograms/model_evaluation.pdf>] [85]
 
 Overfull \hbox (6.41911pt too wide) in paragraph at lines 149--150
 []\T1/ntxtlf/m/n/12 The post-implementation re-source uti-liza-tion and power d
@@ -3038,9 +3038,9 @@ is-si-pa-tion are pre-sented in \T1/ntxtlf/b/n/12 Tab. []\T1/ntxtlf/m/n/12 4.1[
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[78]
+[86]
 <./chapters/cnn_accelerator/figures/power_breakdown/acceleration_power_reductio
-n.pdf, id=3735, 252.945pt x 115.632pt>
+n.pdf, id=3846, 252.945pt x 115.632pt>
 File: ./chapters/cnn_accelerator/figures/power_breakdown/acceleration_power_red
 uction.pdf Graphic file (type pdf)
 <use ./chapters/cnn_accelerator/figures/power_breakdown/acceleration_power_redu
@@ -3055,7 +3055,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [79 <./chapters/cnn_accelerator/figures/power_breakdown/acceleration_power_red
+ [87 <./chapters/cnn_accelerator/figures/power_breakdown/acceleration_power_red
 uction.pdf>]
 Overfull \hbox (7.09111pt too wide) in paragraph at lines 216--217
 []\T1/ntxtlf/m/n/12 The post-implementation re-source uti-liza-tion and power d
@@ -3063,7 +3063,7 @@ is-si-pa-tion are pre-sented in \T1/ntxtlf/b/n/12 Tab. []\T1/ntxtlf/m/n/12 4.1[
 ](b).
  []
 
-<./chapters/cnn_accelerator/figures/runtime/runtime.pdf, id=3763, 252.945pt x 5
+<./chapters/cnn_accelerator/figures/runtime/runtime.pdf, id=3874, 252.945pt x 5
 78.16pt>
 File: ./chapters/cnn_accelerator/figures/runtime/runtime.pdf Graphic file (type
  pdf)
@@ -3071,11 +3071,11 @@ File: ./chapters/cnn_accelerator/figures/runtime/runtime.pdf Graphic file (type
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/runtime/runtime.pdf
   used on input line 224.
 (pdftex.def)             Requested size: 227.62206pt x 520.28625pt.
-[80]
+[88]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [81 <./chapters/cnn_accelerator/figures/runtime/runtime.pdf>]
-<./chapters/cnn_accelerator/figures/histograms/2D_error_distribtion.pdf, id=380
+ [89 <./chapters/cnn_accelerator/figures/runtime/runtime.pdf>]
+<./chapters/cnn_accelerator/figures/histograms/2D_error_distribtion.pdf, id=391
 1, 252.945pt x 216.81pt>
 File: ./chapters/cnn_accelerator/figures/histograms/2D_error_distribtion.pdf Gr
 aphic file (type pdf)
@@ -3083,9 +3083,9 @@ aphic file (type pdf)
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/histograms/2D_error
 _distribtion.pdf  used on input line 241.
 (pdftex.def)             Requested size: 227.62206pt x 195.10733pt.
- [82 <./chapters/cnn_accelerator/figures/histograms/2D_error_distribtion.pdf>]
+ [90 <./chapters/cnn_accelerator/figures/histograms/2D_error_distribtion.pdf>]
 <./chapters/cnn_accelerator/figures/power_breakdown/resource_utilization.pdf, i
-d=4193, 252.945pt x 108.405pt>
+d=4303, 252.945pt x 108.405pt>
 File: ./chapters/cnn_accelerator/figures/power_breakdown/resource_utilization.p
 df Graphic file (type pdf)
 <use ./chapters/cnn_accelerator/figures/power_breakdown/resource_utilization.pd
@@ -3093,7 +3093,7 @@ f>
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/power_breakdown/res
 ource_utilization.pdf  used on input line 256.
 (pdftex.def)             Requested size: 227.62206pt x 97.55367pt.
-<./chapters/cnn_accelerator/figures/power_breakdown/power_breakdown.pdf, id=419
+<./chapters/cnn_accelerator/figures/power_breakdown/power_breakdown.pdf, id=430
 4, 252.945pt x 115.632pt>
 File: ./chapters/cnn_accelerator/figures/power_breakdown/power_breakdown.pdf Gr
 aphic file (type pdf)
@@ -3101,7 +3101,7 @@ aphic file (type pdf)
 Package pdftex.def Info: ./chapters/cnn_accelerator/figures/power_breakdown/pow
 er_breakdown.pdf  used on input line 263.
 (pdftex.def)             Requested size: 227.62206pt x 104.05724pt.
- [83 <./chapters/cnn_accelerator/figures/power_breakdown/resource_utilization.p
+ [91 <./chapters/cnn_accelerator/figures/power_breakdown/resource_utilization.p
 df> <./chapters/cnn_accelerator/figures/power_breakdown/power_breakdown.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/cnn_accelerator/figures/powe
@@ -3112,11 +3112,11 @@ Overfull \hbox (9.34799pt too wide) in paragraph at lines 280--294
  [][] 
  []
 
-) (./chapters/cnn_accelerator/content/conclusions.tex) [84]) [85]
+) (./chapters/cnn_accelerator/content/conclusions.tex) [92]) [93]
 \openout2 = `./chapters/conclusion.aux'.
 
 
-(./chapters/conclusion.tex [86
+(./chapters/conclusion.tex [94
 
 
 
@@ -3127,10 +3127,10 @@ chapter 5.
 
 \openout5 = `Thesis_YaribNevarez.mtc'.
 
-(./Thesis_YaribNevarez.mtc5) [87] [88]) [89]
+(./Thesis_YaribNevarez.mtc5) [95] [96]) [97]
 \openout2 = `./chapters/appendix.aux'.
 
- (./chapters/appendix.tex [90
+ (./chapters/appendix.tex [98
 
 
 
@@ -3164,40 +3164,40 @@ Overfull \hbox (12.0pt too wide) detected at line 149
 
 LaTeX Warning: Float too large for page by 32.48447pt on input line 149.
 
-)) [91] [92] [93] [94] (./Thesis_YaribNevarez.gls [95
+)) [99] [100] [101] [102] (./Thesis_YaribNevarez.gls [103
 
 
 
-]) [96]
+]) [104]
 (./Thesis_YaribNevarez.lof
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [97
+ [105
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [98])
+ [106])
 \tf@lof=\write11
 \openout11 = `Thesis_YaribNevarez.lof'.
 
 
-[99] [100
+[107] [108
 
 
 ] (./Thesis_YaribNevarez.lot)
 \tf@lot=\write12
 \openout12 = `Thesis_YaribNevarez.lot'.
 
- (./Thesis_YaribNevarez.bbl [101]
-[102
+ (./Thesis_YaribNevarez.bbl [109]
+[110
 
 
-] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112]
+] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/it' will be
 (Font)              scaled to size 12.0pt on input line 685.
- [113])
+ [121])
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the Thesis_YaribNevarez.maf file.
@@ -3214,7 +3214,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Thesis_YaribNevarez.log file.
 
-[114]
+[122]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
  (./Thesis_YaribNevarez.aux (./chapters/title.aux)
@@ -3233,15 +3233,18 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 201.
  ) 
 Here is how much of TeX's memory you used:
- 62997 strings out of 481239
- 1290886 string characters out of 5920377
- 1759561 words of memory out of 5000000
- 76200 multiletter control sequences out of 15000+600000
- 727130 words of font info for 247 fonts, out of 8000000 for 9000
+ 63069 strings out of 481239
+ 1291613 string characters out of 5920377
+ 1760037 words of memory out of 5000000
+ 76238 multiletter control sequences out of 15000+600000
+ 729922 words of font info for 248 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,17n,122p,10114b,2783s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,17n,122p,10114b,2942s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:ar} has been referenced but does not exist, rep
+laced by a fixed one
 
 pdfTeX warning (dest): name{glo:tpu} has been referenced but does not exist, re
 placed by a fixed one
@@ -3266,9 +3269,9 @@ texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/newtx/txsys.pfb>
-Output written on Thesis_YaribNevarez.pdf (125 pages, 6215067 bytes).
+Output written on Thesis_YaribNevarez.pdf (134 pages, 6250552 bytes).
 PDF statistics:
- 5456 PDF objects out of 6186 (max. 8388607)
- 676 named destinations out of 1000 (max. 500000)
- 1168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5595 PDF objects out of 6186 (max. 8388607)
+ 710 named destinations out of 1000 (max. 500000)
+ 1224 words of extra memory for PDF output out of 10000 (max. 10000000)
 
