@@ -11,6 +11,166 @@ Enter hardware accelerators, specialized hardware designed to expedite specific 
 In this chapter, we delve into the intricate world of neural networks, their indelible mark on modern computation, and the imperatives driving the development of dedicated hardware accelerators. Through this exploration, we set the stage for our deep dive into low-power neural network accelerators leveraging custom floating-point computation a frontier at the nexus of \gls{ai}'s potential and practicality.
 
 \section{Neural Networks}
+The concept of neural networks traces its roots back to the 1940s and 1950s with the introduction of the perceptron by Frank Rosenblatt. The perceptron, a single-layer feedforward neural network, was among the first models capable of binary classifications. However, the limitations of perceptrons, including their inability to solve non-linearly separable functions, led to diminished interest in neural networks until the backpropagation algorithm emerged in the 1980s.
+
+\subsection{Architecture}
+
+Neural networks are computational models inspired by biological neural networks in the human brain. These algorithms are designed to extract patterns, interpret data, and approximate complex functions. Their architecture comprises interconnected nodes (neurons) organized into layers. Each connection possesses a weight, which is adjusted during learning. The primary components include:
+
+\subsubsection{Layers}
+
+\begin{enumerate}
+	\item \textbf{Input Layer}: Receives data. Given input data vector \( \mathbf{x} \) of dimension \( d \), the number of neurons is \( d \).
+	\[
+	\mathbf{x} = [x_1, x_2, ..., x_d]^T
+	\]
+	
+	\item \textbf{Hidden Layer(s)}: Transform the input using weighted connections. The output \( h \) of a neuron in a hidden layer is:
+	\[
+	h = f(\mathbf{w} \cdot \mathbf{x} + b)
+	\]
+	where \( \mathbf{w} \) is the weights vector, \( b \) is a bias, and \( f \) is an activation function.
+	
+	\item \textbf{Output Layer}: Produces the predictions. The architecture depends on the task (e.g., regression, classification).
+\end{enumerate}
+
+\subsubsection{Weights and Bias}
+
+For each neuron, input data is transformed using weights and biases, adjusted during training. The weighted sum for a neuron is:
+\[
+z = \mathbf{w} \cdot \mathbf{x} + b
+\]
+
+\subsubsection{Activation Functions}
+
+Introduce non-linearities, enabling neural networks to capture complex relationships. Common functions include:
+
+\begin{itemize}
+	\item \textbf{Sigmoid}: 
+The sigmoid function, denoted as \( \sigma(z) \), is especially used in binary classification tasks. Mathematically, the sigmoid function is defined as:
+
+\[
+\sigma(z) = \frac{1}{1 + e^{-z}}
+\]
+
+Here, \( z \) represents the input to the function. The function outputs a value between 0 and 1, making it especially useful for models where the output is a probability. 
+
+The curve of the sigmoid function is S-shaped or sigmoidal. One of its properties is that its derivative (used in the backpropagation step of training neural networks) can be expressed in terms of the sigmoid function itself:
+
+\[
+\sigma'(z) = \sigma(z)(1 - \sigma(z))
+\]
+
+However, the sigmoid function is not without its drawbacks. For very large or very small values of \( z \), the function becomes saturated, leading to small gradients and, consequently, slow convergence during training. This phenomenon is often referred to as the "vanishing gradient" problem.
+	
+	\item \textbf{Tanh}: 
+The hyperbolic tangent function, denoted as \( \tanh(z) \), serves as an activation function in many neural network architectures. It scales and shifts the output of the sigmoid function to produce outputs in the range \([-1, 1]\). The mathematical expression for \( \tanh \) is:
+
+\[
+\tanh(z) = \frac{e^{z} - e^{-z}}{e^{z} + e^{-z}}
+\]
+
+Alternatively, it can be expressed in terms of the sigmoid function, \( \sigma(z) \), as:
+
+\[
+\tanh(z) = 2\sigma(2z) - 1
+\]
+
+The derivative of \( \tanh \), which is used during the backpropagation phase of neural network training, is given by:
+
+\[
+\frac{d}{dz}\tanh(z) = 1 - \tanh^2(z)
+\]
+
+Compared to the sigmoid function, \( \tanh \) is often preferred because its outputs are zero-centered, making it less likely to get stuck during training. However, it still suffers from the vanishing gradient problem for very large or very small values of \( z \).
+	
+	\item \textbf{ReLU}: 
+The Rectified Linear Unit, commonly referred to as ReLU, has become one of the default activation functions, particularly for deep learning architectures. Mathematically, the ReLU function is defined as:
+
+\[
+f(z) = \max(0, z)
+\]
+
+In essence, the function returns \( z \) if \( z \) is greater than or equal to zero, and returns zero otherwise. This can be visualized as a linear function that will output the input directly if it is positive; otherwise, it will output zero.
+
+The gradient of the ReLU function is binary:
+
+\[
+f'(z) = 
+\begin{cases} 
+1 & \text{if } z > 0 \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+One noted benefit of the ReLU function is its computational efficiency, given that it only requires a simple thresholding at zero. This allows models to train faster and requires less computational resources compared to other activation functions like sigmoid or tanh.
+
+However, a potential drawback of the ReLU function is that units can sometimes get "stuck" during training and cease updating, leading to what's known as "dying ReLUs." This is due to the fact that for inputs less than 0, the gradient is 0, which can cause weights to not update during backpropagation. To counteract this, variants like Leaky ReLU and Parametric ReLU have been proposed.
+\end{itemize}
+
+\subsection{Training Process}
+
+Neural networks learn by adjusting weights and biases in response to training data. The goal is to minimize the difference between predictions and target values (the loss), often optimized using gradient-based methods.
+
+\subsubsection{Stochastic Gradient Descent}
+
+\gls{sgd} is an iterative optimization algorithm used to minimize an objective function that is defined as a sum of differentiable functions. It's particularly well-suited for problems with a large number of training samples.
+
+Given an objective function \( J(\theta) \) which we aim to minimize, the objective is often defined as:
+\[
+J(\theta) = \frac{1}{N} \sum_{i=1}^{N} J_i(\theta)
+\]
+where \( J_i(\theta) \) is the loss associated with the \( i^{th} \) training example and \( \theta \) represents the parameters of the model.
+
+The basic update rule for SGD is:
+\[
+\theta \leftarrow \theta - \eta \nabla J_i(\theta)
+\]
+where:
+\begin{itemize}
+	\item \( \eta \) is the learning rate, a positive scalar determining the size of steps in the parameter space.
+	\item \( \nabla J_i(\theta) \) is the gradient of the loss with respect to the parameters for the \( i^{th} \) training example.
+\end{itemize}
+
+In each iteration, a single training example \( (x_i, y_i) \) is picked randomly, and the model parameters are updated with the gradient of the loss \( J_i(\theta) \) with respect to that single example.
+
+The iterative nature and use of only a single training example at each step make \gls{sgd} computationally more efficient compared to batch gradient descent, especially for large datasets. However, due to its stochastic nature, the trajectory of the parameters through the parameter space can be noisy, leading to a non-stable convergence to the minimum. Variants and improvements, like momentum or adaptive learning rates, have been introduced to combat this instability and accelerate convergence.
+
+\subsection{Multi-Layer Perceptron}
+
+A \gls{mlp} is a type of feedforward artificial neural network, consisting of multiple layers of interconnected neurons. The architecture of an MLP can be defined as:
+
+\begin{enumerate}
+	\item An \textbf{input layer} that receives the data. The number of neurons in this layer corresponds to the dimensionality of the input data.
+	
+	\item One or more \textbf{hidden layers} that transform the input data. Each neuron in a hidden layer computes a weighted sum of its inputs, applies a bias term, and then undergoes an activation function.
+	
+	\item An \textbf{output layer} that provides the final prediction or classification results. The number of neurons in the output layer and their activation functions are tailored to the specific task.
+\end{enumerate}
+
+Mathematically, the output \( o_{j} \) of the \( j^{th} \) neuron in any layer can be defined as:
+
+\[
+o_{j} = f\left( \sum_{i=1}^{N} w_{ij} x_{i} + b_{j} \right)
+\]
+
+where:
+\begin{itemize}
+	\item \( x_{i} \) is the output of the \( i^{th} \) neuron from the previous layer.
+	\item \( w_{ij} \) is the weight associated with the connection between the \( i^{th} \) neuron from the previous layer and the \( j^{th} \) neuron of the current layer.
+	\item \( b_{j} \) is the bias term for the \( j^{th} \) neuron.
+	\item \( f \) is the activation function, which introduces non-linearity into the network.
+\end{itemize}
+
+Common choices for activation functions include:
+\begin{itemize}
+	\item \textbf{Sigmoid function}: \( f(z) = \frac{1}{1 + e^{-z}} \)
+	\item \textbf{Hyperbolic Tangent function (tanh)}: \( f(z) = \tanh(z) \)
+	\item \textbf{Rectified Linear Unit (ReLU)}: \( f(z) = \max(0, z) \)
+\end{itemize}
+
+The weights and biases of an \gls{mlp} are adjusted during the training phase.
+
 
 \subsection{Convolutional Neural Networks}
 \subsubsection{Conv2D Tensor Operation}
@@ -22,11 +182,11 @@ The 2D convolution process is performed by the \emph{Conv2D} tensor operation, d
 Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,m)}+b_{o}
 \end{eqnarray}
 
-\subsection{Computational Cost of a Convolution Layer}
+\subsubsection{Computational Cost of a Convolution Layer}
 
 The computational complexity of a convolution layer primarily depends on the spatial dimensions of the input and the kernel, the number of input and output channels, and the stride with which the kernel is applied. For clarity, a list of definitions and concepts is presented:
 
-\subsubsection{Definitions}
+\paragraph{Definitions}
 \begin{itemize}
 	\item \( W_i \): Width of the input feature map.
 	\item \( H_i \): Height of the input feature map.
@@ -38,14 +198,14 @@ The computational complexity of a convolution layer primarily depends on the spa
 	\item \( S \): Stride of the convolution.
 \end{itemize}
 
-\subsubsection{Computations Per Output Element}
+\paragraph{Computations Per Output Element}
 
 For each kernel position on the input feature map, the number of multiply and accumulate operations is defined by:
 \begin{equation}
 2 \times W_k \times H_k \times D_k
 \end{equation}
 
-\subsubsection{Output Dimensions}
+\paragraph{Output Dimensions}
 
 Given the stride \( S \), the dimensions of the output feature map are:
 \begin{align}
@@ -53,7 +213,7 @@ W_o &= \frac{W_i - W_k}{S} + 1 \\
 H_o &= \frac{H_i - H_k}{S} + 1
 \end{align}
 
-\subsubsection{Total Computations}
+\paragraph{Total Computations}
 
 For each output feature map, the total operations are:
 \begin{equation}
@@ -67,11 +227,11 @@ N_o \times W_o \times H_o \times 2 \times W_k \times H_k \times D_k
 
 This represents the number of multiply-accumulate operations in a convolution layer. Other considerations might include biases and employed activation functions, but the above calculation primarily signifies the computational burden of the convolution operation.
 
-\subsection{Error Tolerance in Convolution Layers}
+\subsubsection{Error Tolerance in Convolution Layers}
 
 Deep neural networks, especially \glspl{cnn}, have exhibited an intriguing property: they possess a significant degree of robustness to various perturbations in their computations, including reduced-precision arithmetic and the introduction of noise. This error tolerance characteristic of convolution layers has paved the way for various optimization techniques aiming to reduce the computational and storage overhead without sacrificing too much in performance.
 
-\subsubsection{Sources of Error}
+\paragraph{Sources of Error}
 
 Errors in convolution layers can arise from various sources:
 \begin{itemize}
@@ -80,7 +240,7 @@ Errors in convolution layers can arise from various sources:
 	\item \textbf{Approximate Computing:} Techniques that purposefully introduce computational errors to save power or improve speed.
 \end{itemize}
 
-\subsubsection{Impact on Accuracy}
+\paragraph{Impact on Accuracy}
 
 While errors are inevitably introduced, \glspl{cnn} can maintain their \gls{qor} up to a certain threshold of error. The inherent data redundancy in the model (often overparameterized) aids in absorbing these errors. Mathematically, let \( f(x; \theta) \) be the original function computed by the neural network for input \( x \) and parameters \( \theta \). After introducing errors, the function becomes \( f'(x; \theta') \). The error tolerance is given by the bound:
 
@@ -90,7 +250,7 @@ While errors are inevitably introduced, \glspl{cnn} can maintain their \gls{qor}
 
 where \( \epsilon \) is a small value indicating the maximum allowable difference due to the introduced errors.
 
-\subsubsection{Error Compensating Mechanisms}
+\paragraph{Error Compensating Mechanisms}
 
 There are several hypotheses and mechanisms that explain the error tolerance:
 
@@ -100,7 +260,7 @@ There are several hypotheses and mechanisms that explain the error tolerance:
 	\item \textbf{Regularization Effect:} Some error introduction techniques, like quantization, can act as a form of regularization, potentially helping to prevent overfitting.
 \end{itemize}
 
-\subsubsection{Exploiting Error Tolerance for Optimization}
+\paragraph{Exploiting Error Tolerance for Optimization}
 
 Leveraging the error resilience of convolution layers can lead to several benefits:
 
@@ -255,7 +415,7 @@ improve the performance under noise even more.
 \section{Neural Network Accelerators}
 Neural network Accelerators are specialized hardware components or platforms designed to accelerate the computationally intensive tasks associated with neural networks. Their primary goal is to enhance performance, reduce power consumption, and provide real-time processing capabilities for \gls{ai}/\gls{ml} applications.
 
-\subsubsection{Why the Need for Accelerators?}
+\subsection{The Need for Accelerators}
 \begin{itemize}
 	\item \textbf{Compute Intensive}: \gls{ai}/\gls{ml} models, especially \glspl{cnn} and transformers, are characterized by their deep architectures. Each layer involves a large number of weights and activations. In the forward pass (inference), for each neuron, its input activations are multiplied by corresponding weights, and then all these products are accumulated to produce the neuron's output. Similarly, during training, the backpropagation algorithm is also computation-heavy.
 	Computation for a single neuron in a layer:
@@ -288,15 +448,7 @@ Neural network Accelerators are specialized hardware components or platforms des
 	Considering both weights and activations, the memory access pattern becomes a bottleneck, especially when the model size exceeds the on-chip memory capacity, leading to frequent off-chip accesses which are both time and energy-consuming.
 	
 	\item \textbf{Real-time Requirements}:
-	Many contemporary applications demand instantaneous or near-instantaneous processing due to their interactive or safety-critical nature. Examples include:
-	
-	\begin{enumerate}
-		\item \textbf{Autonomous Driving}: Vehicles equipped with autonomous driving capabilities rely heavily on neural networks to process sensory data (e.g., images, LIDAR, and radar). Given the dynamic nature of driving environments, real-time decision is mandatory. A delay of even a few milliseconds can be the difference between a safe maneuver and an accident.
-		
-		\item \textbf{\gls{ar}}: \gls{ar} applications overlay virtual elements on the real-world view. For a seamless and immersive experience, the processing of the real-world view and the rendering of virtual elements must happen in real-time. Delays can lead to misalignments or user discomfort.
-	\end{enumerate}
-	
-	Hence, the computational backend supporting such applications, often driven by deep neural networks, must be optimized for low-latency and high-throughput to meet the real-time requirements.
+	Many contemporary applications demand instantaneous or near-instantaneous processing due to their interactive or safety-critical nature. Hence, the computational backend supporting such applications, often driven by deep neural networks, must be optimized for low-latency and high-throughput to meet the real-time requirements.
 	
 	\item \textbf{Energy Efficiency}: Many modern devices, from smartphones to \gls{iot} sensors, operate on limited power sources like batteries. For these devices, the power-hungry computations of \gls{ai}/\gls{ml} models can quickly drain the battery, limiting usability, applicability, and functionality. Given that neural network computations are becoming pervasive, even in these power-constrained devices, energy efficiency is of vital importance.
 	
@@ -314,7 +466,7 @@ Neural network Accelerators are specialized hardware components or platforms des
 	
 \end{itemize}
 
-\subsubsection{Types of Accelerators}
+\subsection{Types of Accelerators}
 \begin{itemize}
 	\item \textbf{\glspl{gpu}}: Historically designed for the purpose of graphics rendering, \glspl{gpu} have architecture that naturally perform parallel computing. This parallelism is especially beneficial for neural network computations involving repetitive and simultaneous operations. As a result, \glspl{gpu} have become a cornerstone for deep learning training and inference.
 	
@@ -341,7 +493,7 @@ Neural network Accelerators are specialized hardware components or platforms des
 	
 \end{itemize}
 
-\subsubsection{Design Considerations}
+\subsection{Design Considerations}
 \begin{itemize}
 	\item \textbf{Precision}: In neural network accelerator design, the precision of arithmetic operations plays a pivotal role. Employing reduced precision arithmetic offers dual advantages: it can markedly accelerate computations and simultaneously diminish power consumption. However, it is crucial to preserve a balance to ensure that the reduced precision does not compromise the \gls{qor} and reliability of the neural network model.
 	
@@ -356,8 +508,8 @@ Neural network Accelerators are specialized hardware components or platforms des
 	
 \end{itemize}
 
-\subsection{Precision}
-\subsubsection{Fixed-Point}
+\section{Precision}
+\subsection{Fixed-Point}
 
 Fixed-point arithmetic represents numbers with a fixed number of digits before and after the decimal point, in contrast to floating-point where the decimal point can "float". Leveraging fixed-point arithmetic offers distinct advantages. Specifically, fixed-point operations are more resource-efficient, leading to expedited computations. Additionally, their inherent simplicity in arithmetic operations often translates to diminished power consumption. 
 
@@ -382,7 +534,7 @@ While quantization techniques continue to evolve, making fixed-point deployment 
 
 
 
-\subsubsection{Floating-point}
+\subsection{Floating-point}
 Floating-point arithmetic offers distinct advantages due to its capability to represent numbers with both high precision and a wide dynamic range. However, while it provides granular accuracy, it typically demands more computational resources and power compared to fixed-point arithmetic. The inherent robustness of neural networks to numerical perturbations implies a potential avenue for exploring reduced-precision floating-point arithmetic.
 
 The representation of every numerical value, in any numerical system, is made of an integer and a fractional part. The border that delimits them is called the radix point. The fixed-point format for representing numeric values derives its name from the fact that in this format, the base point is fixed at a certain position. For integer numbers, this position is at the right of the least significant digit.
@@ -418,10 +570,10 @@ There are three special definitions in IEEE 754 standard. The first is subnormal
 (-1)^{S} \times 0.M \times 2^{1-B}
 \end{eqnarray}
 
-\subsection{Dataflow Taxonomy}
+\section{Dataflow Taxonomy}
 Dataflow taxonomy refers to the classification of various schemes that determine how data (weights, activations, and partial results) moves through the accelerator during computation. The way data is moved and reused can have an impact on the energy efficiency and throughput of the accelerator. These strategies aim to maximize performance and energy efficiency by optimizing data movement, which is often more energy-intensive than computation itself. When choosing or designing a dataflow, it is essential to consider the specific neural network workload, the memory hierarchy, and the architectural details of the hardware to ensure an optimal match.
 
-\subsubsection{Weight Stationary (WS)}
+\subsection*{Weight Stationary (WS)}
 In this dataflow, weights are kept stationary in the processing elements. As different input activations come in, they are multiplied with these stationary weights. This approach maximizes the reuse of weights, which can be beneficial when processing a large number of activations, such as during a convolution operation.
 Characteristics:
 \begin{align*}
@@ -429,28 +581,65 @@ Characteristics:
 \textbf{Moving:} & \quad \text{Activations, Partial Sums}
 \end{align*}
 
-\subsubsection{Output Stationary (OS)}
+\subsection*{Output Stationary (OS)}
 Here, the partial results (output activations) are kept stationary. Weights and input activations move through the processing elements and the partial sums are accumulated in place. This scheme tries to maximize the reuse of the output from the computation, which is beneficial when a given output is the result of multiple accumulations. Characteristics:
 \begin{align*}
 \textbf{Fixed:} & \quad \text{Partial Sums} \\
 \textbf{Moving:} & \quad \text{Weights, Activations}
 \end{align*}
 
-\subsubsection{Input Stationary (IS)}
+\subsection*{Input Stationary (IS)}
 In the Input Stationary scheme, input activations remain stationary, while weights move through and are multiplied with these stationary activations. This can be beneficial when a single activation is used in multiple computations. Characteristics:
 \begin{align*}
 \textbf{Fixed:} & \quad \text{Activations} \\
 \textbf{Moving:} & \quad \text{Weights, Partial Sums}
 \end{align*}
 
-\subsubsection{No Local Reuse (NLR)}
+\subsection*{No Local Reuse (NLR)}
 As the name suggests, in this dataflow, there is minimal local data reuse. All data types-weights, activations, and partial sums-move through the processing elements. This is often not as efficient in terms of energy consumption since there is a lack of reuse; however, it is simpler in terms of control and design. Characteristic:
 \begin{align*}
 \textbf{Moving:} & \quad \text{Weights, Activations, Partial Sums}
 \end{align*}
 
-\subsubsection{Row Stationary (RS)}
+\subsection*{Row Stationary (RS)}
 This is a specialized dataflow developed for systolic array architectures. In RS, a row of the systolic array holds the activations stationary while weights are propagated horizontally and partial sums propagate vertically.
+
+
+\section{Multiply-Accumulate Unit}
+
+The dot-product, a foundational operation in neural networks, involves a series of multiplications followed by their summation. This directly maps onto a series of \gls{mac} operations. The \gls{mac} operation is foundational in digital signal processing and, it is central to the architecture and efficiency of neural network accelerators. Formally, the \gls{mac} operation can be expressed as:
+\begin{equation}
+\text{ACC} = \text{ACC} + (A \times B)
+\end{equation}
+Where:
+\begin{itemize}
+	\item \( \text{ACC} \): Represents an accumulator accumulating the results of the products.
+	\item \( A \) and \( B \): Operands subjected to multiplication.
+\end{itemize}
+
+In neural computations, a substantial number of \gls{mac} operations are executed. To elucidate, consider the convolutional layer in a \gls{cnn}. This layer predominantly requires \gls{mac} operations to compute the weighted sum of inputs and respective weights. If we denote \( x[i] \) as input values and \( w[i] \) as the weights, an output \( y \) for a specified filter and input position can be delineated as:
+\begin{equation}
+y = \sum_{i} x[i] \cdot w[i]
+\end{equation}
+This summation is fundamentally a sequence of \gls{mac} operations.
+
+\subsection{Design Considerations}
+Several considerations come into play to ensure optimal performance, efficiency, and versatility of \gls{mac} hardware modules.
+
+\begin{enumerate}
+	\item \textbf{Computational Efficiency}: Contemporary neural network models, particularly those under the deep learning paradigm, necessitate executing billions of \gls{mac} operations. An well engineered hardware \gls{mac} unit can amplify the computation speed. The number of clock cycles it takes to complete a \gls{mac} operation can impact the overall performance. High performance is often achieved using parallelism techniques, pipelining, and array-based hardware architectures.
+	
+	\item \textbf{Power Dynamics}: The magnitude of \gls{mac} operations in neural networks means that even marginal inefficiencies can escalate into significant power consumption. A carefully designed \gls{mac} unit, potentially integrating advanced techniques such as quantization or approximation, can mitigate power exigencies.
+	
+	\item \textbf{Precision Dynamics}: Neural networks, in certain architectures, can accommodate reduced precision. However, the essence of a dynamic \gls{mac} unit design is to navigate the balance between computational efficiency and precision.
+	
+	\item \textbf{Scalability Factors}: The ever-evolving domain of neural networks is marked by models growing in complexity and depth. A \gls{mac} unit, based on modular design principles, can be seamlessly scaled across extensive accelerator architectures, serving to the spectrum of models.
+	
+	\item \textbf{Adaptive Flexibility}: The dynamism inherent in neural network architectures necessitates a \gls{mac} unit enriched with the capacity to adapt to diverse operations, varied data typologies (e.g., floating-point, fixed-point), and a range of hybrid/custom precisions.
+\end{enumerate}
+
+The \gls{mac} operation holds a pivotal role in the field of neural network accelerator design. The \gls{mac} design directly influences the accelerator performance, power efficiency, and overall effectiveness.
+
 
 
 \section{Related Work}
