@@ -373,16 +373,107 @@ Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla
 \newblock {\em Advances in neural information processing systems},
   33:1877--1901, 2020.
 
+\bibitem{rosenblatt1958perceptron}
+Frank Rosenblatt.
+\newblock The perceptron: a probabilistic model for information storage and
+  organization in the brain.
+\newblock {\em Psychological review}, 65(6):386, 1958.
+
+\bibitem{rumelhart1986learning}
+David~E Rumelhart, Geoffrey~E Hinton, and Ronald~J Williams.
+\newblock Learning representations by back-propagating errors.
+\newblock {\em nature}, 323(6088):533, 1986.
+
+\bibitem{glorot2010understanding}
+Xavier Glorot and Yoshua Bengio.
+\newblock Understanding the difficulty of training deep feedforward neural
+  networks.
+\newblock In {\em Proceedings of the thirteenth international conference on
+  artificial intelligence and statistics}, pages 249--256. JMLR Workshop and
+  Conference Proceedings, 2010.
+
+\bibitem{maas2013rectifier}
+Andrew~L Maas, Awni~Y Hannun, Andrew~Y Ng, et~al.
+\newblock Rectifier nonlinearities improve neural network acoustic models.
+\newblock In {\em Proc. icml}, volume~30, page~3. Atlanta, GA, 2013.
+
+\bibitem{he2015delving}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Delving deep into rectifiers: Surpassing human-level performance on
+  imagenet classification.
+\newblock In {\em Proceedings of the IEEE international conference on computer
+  vision}, pages 1026--1034, 2015.
+
+\bibitem{bottou2010large}
+L{\'e}on Bottou.
+\newblock Large-scale machine learning with stochastic gradient descent.
+\newblock In {\em Proceedings of COMPSTAT'2010: 19th International Conference
+  on Computational StatisticsParis France, August 22-27, 2010 Keynote, Invited
+  and Contributed Papers}, pages 177--186. Springer, 2010.
+
+\bibitem{bottou2018optimization}
+L{\'e}on Bottou, Frank~E Curtis, and Jorge Nocedal.
+\newblock Optimization methods for large-scale machine learning.
+\newblock {\em SIAM review}, 60(2):223--311, 2018.
+
+\bibitem{sutskever2013importance}
+Ilya Sutskever, James Martens, George Dahl, and Geoffrey Hinton.
+\newblock On the importance of initialization and momentum in deep learning.
+\newblock In {\em International conference on machine learning}, pages
+  1139--1147. PMLR, 2013.
+
+\bibitem{duchi2011adaptive}
+John Duchi, Elad Hazan, and Yoram Singer.
+\newblock Adaptive subgradient methods for online learning and stochastic
+  optimization.
+\newblock {\em Journal of machine learning research}, 12(7), 2011.
+
+\bibitem{goodfellow2016deep}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep learning}.
+\newblock MIT press, 2016.
+
+\bibitem{lecun1998gradient}
+Yann LeCun, L{\'e}on Bottou, Yoshua Bengio, and Patrick Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the IEEE}, 86(11):2278--2324, 1998.
+
 \bibitem{gu2018recent}
 Jiuxiang Gu, Zhenhua Wang, Jason Kuen, Lianyang Ma, Amir Shahroudy, Bing Shuai,
   Ting Liu, Xingxing Wang, Gang Wang, Jianfei Cai, et~al.
 \newblock Recent advances in convolutional neural networks.
 \newblock {\em Pattern Recognition}, 77:354--377, 2018.
 
-\bibitem{goodfellow2016deep}
-Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
-\newblock {\em Deep learning}.
-\newblock MIT press, 2016.
+\bibitem{gerstner2014neuronal}
+Wulfram Gerstner, Werner~M Kistler, Richard Naud, and Liam Paninski.
+\newblock {\em Neuronal dynamics: From single neurons to networks and models of
+  cognition}.
+\newblock Cambridge University Press, 2014.
+
+\bibitem{merolla2014million}
+Paul~A Merolla, John~V Arthur, Rodrigo Alvarez-Icaza, Andrew~S Cassidy, Jun
+  Sawada, Filipp Akopyan, Bryan~L Jackson, Nabil Imam, Chen Guo, Yutaka
+  Nakamura, et~al.
+\newblock A million spiking-neuron integrated circuit with a scalable
+  communication network and interface.
+\newblock {\em Science}, 345(6197):668--673, 2014.
+
+\bibitem{neftci2019surrogate}
+Emre~O Neftci, Hesham Mostafa, and Friedemann Zenke.
+\newblock Surrogate gradient learning in spiking neural networks: Bringing the
+  power of gradient-based optimization to spiking neural networks.
+\newblock {\em IEEE Signal Processing Magazine}, 36(6):51--63, 2019.
+
+\bibitem{lee2016training}
+Jun~Haeng Lee, Tobi Delbruck, and Michael Pfeiffer.
+\newblock Training deep spiking neural networks using backpropagation.
+\newblock {\em Frontiers in neuroscience}, 10:508, 2016.
+
+\bibitem{masquelier2007unsupervised}
+Timoth{\'e}e Masquelier and Simon~J Thorpe.
+\newblock Unsupervised learning of visual features through spike timing
+  dependent plasticity.
+\newblock {\em PLoS computational biology}, 3(2):e31, 2007.
 
 \bibitem{izhikevich2004model}
 Eugene~M Izhikevich.
@@ -394,11 +485,42 @@ Yann LeCun.
 \newblock The mnist database of handwritten digits.
 \newblock {\em http://yann. lecun. com/exdb/mnist/}, 1998.
 
+\bibitem{sze2017efficient}
+Vivienne Sze, Yu-Hsin Chen, Tien-Ju Yang, and Joel~S Emer.
+\newblock Efficient processing of deep neural networks: A tutorial and survey.
+\newblock {\em Proceedings of the IEEE}, 105(12):2295--2329, 2017.
+
+\bibitem{micikevicius2017mixed}
+Paulius Micikevicius, Sharan Narang, Jonah Alben, Gregory Diamos, Erich Elsen,
+  David Garcia, Boris Ginsburg, Michael Houston, Oleksii Kuchaiev, Ganesh
+  Venkatesh, et~al.
+\newblock Mixed precision training.
+\newblock {\em arXiv preprint arXiv:1710.03740}, 2017.
+
+\bibitem{courbariaux2014training}
+Matthieu Courbariaux, Yoshua Bengio, and Jean-Pierre David.
+\newblock Training deep neural networks with low precision multiplications.
+\newblock {\em arXiv preprint arXiv:1412.7024}, 2014.
+
+\bibitem{jacob2018quantization}
+Benoit Jacob, Skirmantas Kligys, Bo~Chen, Menglong Zhu, Matthew Tang, Andrew
+  Howard, Hartwig Adam, and Dmitry Kalenichenko.
+\newblock Quantization and training of neural networks for efficient
+  integer-arithmetic-only inference.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 2704--2713, 2018.
+
 \bibitem{zuras2008ieee}
 Dan Zuras, Mike Cowlishaw, Alex Aiken, Matthew Applegate, David Bailey, Steve
   Bass, Dileep Bhandarkar, Mahesh Bhat, David Bindel, Sylvie Boldo, et~al.
 \newblock Ieee standard for floating-point arithmetic.
 \newblock {\em IEEE Std}, 754(2008):1--70, 2008.
+
+\bibitem{krishnamoorthi2018quantizing}
+Raghuraman Krishnamoorthi.
+\newblock Quantizing deep convolutional networks for efficient inference: A
+  whitepaper.
+\newblock {\em arXiv preprint arXiv:1806.08342}, 2018.
 
 \bibitem{moons20160}
 Bert Moons and Marian Verhelst.

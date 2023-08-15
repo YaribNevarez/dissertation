@@ -11,7 +11,7 @@ Neural networks accelerators such as \glspl{gpu}, \glspl{tpu}, specialized \gls{
 This chapter delves into the world of neural networks, their indelible mark on modern computation, and the imperatives driving the development of dedicated hardware accelerators. Through this exploration, it is provided the background stage into low-power neural network accelerators leveraging custom floating-point computation a frontier at the nexus of \gls{ai} potential and practicality.
 
 \section{Neural Networks}
-The concept of neural networks traces its roots back to the 1940s and 1950s with the introduction of the perceptron by Frank Rosenblatt. The perceptron, a single-layer feedforward neural network, was among the first models capable of binary classifications. However, the limitations of perceptrons, including their inability to solve non-linearly separable functions, led to diminished interest in neural networks until the backpropagation algorithm emerged in the 1980s.
+The concept of neural networks traces its roots back to the 1950s with the introduction of the perceptron by Frank Rosenblatt. The perceptron, a single-layer feedforward neural network, was among the first models capable of binary classifications~\cite{rosenblatt1958perceptron}. However, the limitations of perceptrons, including their inability to solve non-linearly separable functions, led to diminished interest in neural networks until the backpropagation algorithm emerged in the 1980s~\cite{rumelhart1986learning}.
 
 \subsection{Architecture}
 
@@ -19,7 +19,7 @@ Neural networks are computational models designed to extract patterns, interpret
 
 \subsubsection{Layers}
 
-\begin{enumerate}
+\begin{itemize}
 	\item \textbf{Input Layer}: Receives data. Given input data vector \( \mathbf{x} \) of dimension \( d \), the number of neurons is \( d \).
 	\[
 	\mathbf{x} = [x_1, x_2, ..., x_d]^T
@@ -27,18 +27,18 @@ Neural networks are computational models designed to extract patterns, interpret
 	
 	\item \textbf{Hidden Layer(s)}: Transform the input using weighted connections. The output \( h \) of a neuron in a hidden layer is:
 	\[
-	h = f(\mathbf{w} \cdot \mathbf{x} + b)
+	h = f(\mathbf{w^\intercal} \cdot \mathbf{x} + b)
 	\]
 	where \( \mathbf{w} \) is the weights vector, \( b \) is a bias, and \( f \) is an activation function.
 	
 	\item \textbf{Output Layer}: Produces the predictions. The architecture depends on the task (e.g., regression, classification).
-\end{enumerate}
+\end{itemize}
 
 \subsubsection{Weights and Bias}
 
 For each neuron, input data is transformed using weights and biases, adjusted during training. The weighted sum for a neuron is:
 \[
-z = \mathbf{w} \cdot \mathbf{x} + b
+z = \mathbf{w^\intercal} \cdot \mathbf{x} + b
 \]
 
 \subsubsection{Activation Functions}
@@ -61,7 +61,7 @@ The curve of the sigmoid function is S-shaped or sigmoidal. One of its propertie
 \sigma'(z) = \sigma(z)(1 - \sigma(z))
 \]
 
-However, the sigmoid function is not without drawbacks. For very large or very small values of \( z \), the function becomes saturated, leading to small gradients and, consequently, slow convergence during training. This phenomenon is often referred to as the "vanishing gradient" problem.
+However, the sigmoid function is not without drawbacks. For very large or very small values of \( z \), the function becomes saturated, leading to small gradients and, consequently, slow convergence during training~\cite{glorot2010understanding}. This phenomenon is often referred to as the "vanishing gradient" problem.
 	
 	\item \textbf{Tanh}: 
 The hyperbolic tangent function, denoted as \( \tanh(z) \), serves as an activation function in many neural network architectures. It scales and shifts the output of the sigmoid function to produce outputs in the range \([-1, 1]\). The mathematical expression for \( \tanh \) is:
@@ -105,7 +105,14 @@ f'(z) =
 
 One noted benefit of the ReLU function is its computational efficiency, given that it only requires a simple thresholding at zero. This allows models to train faster and requires less computational resources compared to other activation functions like sigmoid or tanh.
 
-However, a potential drawback of the ReLU function is that units can sometimes get "stuck" during training and cease updating, leading to what's known as "dying ReLUs." This is due to the fact that for inputs less than 0, the gradient is 0, which can cause weights to not update during backpropagation. To counteract this, variants like Leaky ReLU and Parametric ReLU have been proposed.
+However, a potential drawback of the ReLU function is that units can sometimes get "stuck" during training and cease updating, leading to what's known as "dying ReLUs." The dying ReLU phenomenon can be viewed as a specific type of the vanishing gradient problem, where ReLU neurons become non-responsive and consistently output a value of zero, regardless of the input they receive. This is due to the fact that for inputs less than 0, the gradient is 0, which can cause weights to not update during backpropagation. To counteract this, variants like Leaky ReLU~\cite{maas2013rectifier} and Parametric ReLU~\cite{he2015delving} have been proposed.
+\item \textbf{Softmax}:
+In a neural network for multiclass classification tasks, the softmax function is a common choice for the activation function in the output layer. Given an input vector \( \mathbf{z} \) of length \( K \), representing the raw output (logits) of the \( K \) nodes in the output layer, the softmax function transforms these logits into a probability distribution over \( K \) classes. For each component \( i \) (where \( i = 1, 2, \ldots, K \)), the softmax function \( S(\mathbf{z}) \) is computed as:
+\[
+S(\mathbf{z})_i = \frac{{\exp(z_i)}}{{\sum_{j=1}^{K} \exp(z_j)}}
+\]
+where \( S(\mathbf{z})_i \) represents the \( i \)-th component of the output vector \( S(\mathbf{z}) \), \( \exp \) denotes the exponential function, and \( z_i \) is the \( i \)-th component of the input vector \( \mathbf{z} \). After applying the softmax function, each component of \( S(\mathbf{z}) \) is in the interval \( (0, 1) \), and the components sum to 1, allowing them to be interpreted as probabilities associated with each of the \( K \) classes. This makes the softmax function particularly useful for producing the final output in a neural network designed for classification tasks, as it ensures that the outputs are normalized and can be interpreted as class probabilities.
+
 \end{itemize}
 
 \subsection{Training Process}
@@ -114,7 +121,7 @@ Neural networks learn by adjusting weights and biases in response to training da
 
 \subsubsection{Stochastic Gradient Descent}
 
-\gls{sgd} is an iterative optimization algorithm used to minimize an objective function that is defined as a sum of differentiable functions. This is particularly well-suited for problems with a large number of training samples.
+\gls{sgd} is an iterative optimization algorithm used to minimize an objective function that is defined as a sum of differentiable functions. This is particularly well-suited for problems with a large number of training samples~\cite{bottou2010large}.
 
 Given an objective function \( J(\theta) \) which we aim to minimize, the objective is often defined as:
 \[
@@ -134,21 +141,21 @@ where:
 
 In each iteration, a single training example \( (x_i, y_i) \) is picked randomly, and the model parameters are updated with the gradient of the loss \( J_i(\theta) \) with respect to that single example.
 
-The iterative nature and use of only a single training example at each step make \gls{sgd} computationally more efficient compared to batch gradient descent, especially for large datasets. However, due to its stochastic nature, the trajectory of the parameters through the parameter space can be noisy, leading to a non-stable convergence to the minimum. Variants and improvements, like momentum or adaptive learning rates, have been introduced to combat this instability and accelerate convergence.
+The iterative nature and use of only a single training example at each step make \gls{sgd} computationally more efficient compared to batch gradient descent, especially for large datasets~\cite{bottou2010large}. However, due to its stochastic nature, the trajectory of the parameters through the parameter space can be noisy, leading to a non-stable convergence to the minimum~\cite{bottou2018optimization}. Variants and improvements, like momentum~\cite{sutskever2013importance} or adaptive learning rates~\cite{duchi2011adaptive}, have been introduced to combat this instability and accelerate convergence.
 
 \subsection{Multi-Layer Perceptron}
 
-A \gls{mlp} is a type of feedforward artificial neural network, consisting of multiple layers of interconnected neurons.
+A \gls{mlp} is a type of feedforward artificial neural network, consisting of multiple layers of interconnected neurons~\cite{goodfellow2016deep}.
 
 \subsubsection{Key Components}
 
-\begin{enumerate}
+\begin{itemize}
 	\item An \textbf{input layer} that receives the data. The number of neurons in this layer corresponds to the dimensionality of the input data.
 	
 	\item One or more \textbf{hidden layers} that transform the input data. Each neuron in a hidden layer computes a weighted sum of its inputs, adds a bias term, and then applies an activation function.
 	
 	\item An \textbf{output layer} that provides the final prediction or classification results. The number of neurons in the output layer and their activation functions are tailored to the specific task.
-\end{enumerate}
+\end{itemize}
 
 Mathematically, the output \( o_{j} \) of the \( j^{th} \) neuron in any layer can be defined as:
 
@@ -164,23 +171,16 @@ where:
 	\item \( f \) is the activation function, which introduces non-linearity into the network.
 \end{itemize}
 
-Common activation functions include:
-\begin{itemize}
-	\item \textbf{Sigmoid function}: \( f(z) = \frac{1}{1 + e^{-z}} \)
-	\item \textbf{Hyperbolic Tangent function (tanh)}: \( f(z) = \tanh(z) \)
-	\item \textbf{Rectified Linear Unit (ReLU)}: \( f(z) = \max(0, z) \)
-\end{itemize}
-
 The weights and biases of an \gls{mlp} are adjusted during the training phase.
 
 
 \subsection{Convolutional Neural Networks}
 
-\glspl{cnn} represent a specialized architecture in the deep learning domain, predominantly optimized for image and video processing tasks. Drawing inspiration from the human visual cortex structure and function, \glspl{cnn} are adept at automatically and adaptively discerning spatial hierarchies and patterns inherent in visual data.
+\glspl{cnn} represent a specialized architecture in the deep learning domain, predominantly optimized for image and video processing tasks. Drawing inspiration from the human visual cortex structure and function, \glspl{cnn} are adept at automatically and adaptively discerning spatial hierarchies and patterns inherent in visual data~\cite{lecun1998gradient}.
 
 \subsubsection{Key Components}
 
-\begin{enumerate}
+\begin{itemize}
 	\item \textbf{Input Layer}: Responsible for ingesting raw pixel values from the image. The size is typically dictated by the resolution and depth (e.g., RGB channels) of the input.
 	
 	\item \textbf{Convolutional Layer}: At its core, the convolution operation involves sliding a filter over the input matrix to produce feature maps. Each filter aims to detect specific features, like edges or textures, in the input.
@@ -196,7 +196,7 @@ The weights and biases of an \gls{mlp} are adjusted during the training phase.
 	\item \textbf{Fully Connected Layer}: This layer sees each neuron connected to every activation from the previous layer, effectively acting as a standard multi-layer perceptron. It linearizes the features extracted from preceding layers and approximates a function, which commonly is an image classification or regression task.
 	
 	\item \textbf{Output Layer}: Generates the final class scores, typically in a probabilistic form via a softmax function.
-\end{enumerate}
+\end{itemize}
 
 A relevant characteristic of \glspl{cnn} is weight sharing, this substantially reduces the number of parameters, thus diminishing the risk of overfitting. Through their capacity to hierarchically discern two-dimensional patterns, \glspl{cnn} have been relevant in furthering advancements in a variety of fields, spanning from sensor analytics to medical image analysis and autonomous vehicle vision systems.
 
@@ -256,7 +256,7 @@ This represents the number of multiply-accumulate operations in a convolution la
 
 \subsubsection{Error Tolerance in Convolution Layers}
 
-Deep neural networks, especially \glspl{cnn}, have exhibited an advantageous property: they possess a significant degree of robustness to various perturbations in their computations, including reduced-precision arithmetic and the introduction of noise. This error tolerance characteristic of convolution layers has paved the way for various optimization techniques aiming to reduce the computational and storage overhead without sacrificing too much in performance.
+Deep neural networks, especially \glspl{cnn}, have exhibited an advantageous property: they possess a significant degree of robustness to various perturbations in their computations, including reduced-precision arithmetic and the introduction of noise. This error tolerance characteristic of convolution layers has paved the way for various optimization techniques aiming to reduce the computational and storage overhead without sacrificing too much in performance~\cite{han2015deep}.
 
 \paragraph{Sources of Error}
 
@@ -266,16 +266,6 @@ Errors in convolution layers can arise from various sources:
 	\item \textbf{Pruning:} Setting certain weights to zero to reduce the total number of weights.
 	\item \textbf{Approximate Computing:} Techniques that purposefully introduce computational errors by simplifying compute hardware to improve power efficiency, area, and speed.
 \end{itemize}
-
-\paragraph{Impact on Accuracy}
-
-While errors are inevitably introduced, \glspl{cnn} can maintain their \gls{qor} up to a certain threshold of error. The inherent data redundancy in the model (often overparameterized) aids in absorbing these errors. Mathematically, let \( f(x; \theta) \) be the original function computed by the neural network for input \( x \) and parameters \( \theta \). After introducing errors, the function becomes \( f'(x; \theta') \). The error tolerance is given by the bound:
-
-\begin{equation}
-||f(x; \theta) - f'(x; \theta')|| \leq \epsilon
-\end{equation}
-
-where \( \epsilon \) is a small value indicating the maximum allowable difference due to the introduced errors.
 
 \paragraph{Error Compensating Mechanisms}
 
@@ -301,13 +291,13 @@ Understanding and harnessing the error tolerance properties of convolution layer
 
 \subsection{Spiking Neural Networks}
 
-\glspl{snn} offer an alternative paradigm in the neural computation landscape. Diverging from traditional \glspl{ann}, they emulate the temporal dynamics of biological neurons. Each neuron in an \gls{snn} accumulates input until a threshold is reached, upon which it emits a spike and resets. This behavior can be mathematically described by models such as the \gls{lif}:
+\glspl{snn} offer an alternative paradigm in the neural computation landscape. Diverging from traditional \glspl{ann}, they emulate the temporal dynamics of biological neurons. Each neuron in an \gls{snn} accumulates input until a threshold is reached, upon which it emits a spike and resets. This behavior can be mathematically described by models such as the \gls{lif}~\cite{gerstner2014neuronal}:
 \begin{equation}
 \tau_m \frac{du(t)}{dt} = -u(t) + RI(t)
 \end{equation}
 where \( u(t) \) is the neuron membrane potential, \( \tau_m \) its time constant, \( R \) its resistance, and \( I(t) \) the input current. A spike is emitted when \( u(t) \) surpasses a threshold \( u_{\text{th}} \), followed by a reset.
 
-Potential advantages of \glspl{snn} include elevated energy efficiency, especially on neuromorphic hardware, and competence for processing temporal data. However, training \glspl{snn} presents challenges due to the non-differentiable nature of spikes. Techniques range from gradient approximations for backpropagation to unsupervised methods such as \gls{stdp}.
+Potential advantages of \glspl{snn} include energy efficiency, especially on neuromorphic hardware, and competence for processing temporal data~\cite{merolla2014million}. However, training \glspl{snn} presents challenges due to the non-differentiable nature of spikes~\cite{neftci2019surrogate}. Techniques range from gradient approximations for backpropagation~\cite{lee2016training}, surrogate gradient methods~\cite{neftci2019surrogate}, and unsupervised methods such as \gls{stdp}~\cite{masquelier2007unsupervised}.
 
 \subsubsection{Spike-by-Spike Neural Networks} 
 
@@ -449,7 +439,7 @@ improve the performance under noise even more.
 
 
 \section{Neural Network Accelerators}
-Neural network accelerators are specialized hardware components or platforms designed to accelerate the computationally intensive tasks associated with neural networks. Their primary goal is to enhance performance, reduce power consumption, and provide real-time processing capabilities for \gls{ai}/\gls{ml} applications.
+Neural network accelerators are specialized hardware components or platforms designed to accelerate the computationally intensive tasks associated with neural networks. Their primary goal is to enhance performance, reduce power consumption, and provide real-time processing capabilities for \gls{ai}/\gls{ml} applications~\cite{sze2017efficient}.
 
 \subsection{The Need for Accelerators}
 \begin{itemize}
@@ -534,7 +524,7 @@ Neural network accelerators are specialized hardware components or platforms des
 
 \section{Precision}
 
-Conventional neural networks typically rely on regular \gls{fp} arithmetic. However, to optimize computational speed, minimize memory footprint, and reduce energy consumption, hardware accelerators adopt lower precision formats. While this can speed up operations and reduce resource demands, there is a trade-off as reduced precision might affect the model accuracy. Therefore, balancing precision and performance is crucial, with techniques such as mixed-precision and dynamic/custom arithmetic being employed to navigate these trade-offs.
+Conventional neural networks typically rely on regular \gls{fp} arithmetic. However, to optimize computational speed, minimize memory footprint, and reduce energy consumption, hardware accelerators adopt lower precision formats. While this can speed up operations and reduce resource demands, there is a trade-off as reduced precision might affect the model accuracy. Therefore, balancing precision and performance is crucial, with techniques such as mixed-precision and dynamic/custom arithmetic being employed to navigate these trade-offs~\cite{micikevicius2017mixed}.
 \subsection{Fixed-Point}
 
 Fixed-point arithmetic represents numbers with a fixed number of digits before and after the decimal point, in contrast to floating-point where the decimal point can "float". Leveraging fixed-point arithmetic offers distinct advantages. Specifically, fixed-point operations are more resource-efficient, leading to expedited computations. Additionally, their inherent simplicity in arithmetic operations often translates to diminished power consumption. 
@@ -543,17 +533,17 @@ Fixed-point arithmetic represents numbers with a fixed number of digits before a
 However, while fixed-point arithmetic offers efficiencies in many neural network applications, there are situations where it may not be ideal:
 
 \begin{enumerate}
-	\item \textbf{Training}: During training, the need to represent small weight updates and gradient values is critical. \gls{fp} arithmetic is often preferred to ensure effective backpropagation, whereas fixed-point might impede convergence or acceptable model accuracy.
+	\item \textbf{Training}: During training, the need to represent small weight updates and gradient values is critical. \gls{fp} arithmetic is often preferred to ensure effective backpropagation, whereas fixed-point might impede convergence or acceptable model accuracy~\cite{courbariaux2014training}.
 	
 	\item \textbf{High-Precision}: For tasks requiring acute precision, such as medical imaging or anomaly detection, fixed-point arithmetic might compromise prediction accuracy, especially when using fewer bits.
 	
 	\item \textbf{Transfer Learning and Fine-Tuning}: In scenarios such as fine-tuning pre-trained models, small gradient values are crucial. The reduced precision of fixed-point might neglect these subtle updates.
 	
-	\item \textbf{Normalizing and Batch Normalization}: Operations involving a diverse range of values, like normalization, might introduce significant quantization errors when using fixed-point representations.
+	\item \textbf{Normalizing and Batch Normalization}: Operations involving a diverse range of values, like normalization, might introduce significant quantization errors when using fixed-point representations~\cite{jacob2018quantization}.
 	
 	\item \textbf{\glspl{rnn}}: \glspl{rnn}, due to their sequential nature and sensitivity to numerical precision, can experience issues such as exploding or vanishing gradients with fixed-point arithmetic.
 	
-	\item \textbf{Activation Functions with Exponential Ranges}: Functions such as SoftMax, which operate over a wide range, might be susceptible to quantization errors in a fixed-point context.
+	\item \textbf{Activation Functions with Exponential Ranges}: Functions such as softmax, which operate over a wide range, might be susceptible to quantization errors in a fixed-point context.
 \end{enumerate}
 
 While quantization techniques continue to evolve, it remains essential to rigorously evaluate fixed-point representations in the above contexts to ensure desired performance and accuracy.
@@ -596,9 +586,11 @@ There are three special definitions in IEEE 754 standard. The first is subnormal
 (-1)^{S} \times 0.M \times 2^{1-B}
 \end{eqnarray}
 
+Transitioning a neural network model from high-precision to lower-precision computations presents a set of challenges. One of the most critical of these challenges lies in preserving the accuracy of the model while it operates under conditions of reduced numerical precision. This balance requires thoughtful consideration and strategic implementation to ensure that the benefits of computational efficiency do not come at the cost of significant degradation in model performance.
+
 \subsection{Post-Training Quantization}
 
-In \gls{ptq}, a neural network, once fully trained, undergoes a conversion process wherein its \gls{fp} weights and activations are mapped to a lower precision.
+In \gls{ptq}, a neural network, once fully trained, undergoes a conversion process wherein its \gls{fp} weights and activations are mapped to a lower precision~\cite{krishnamoorthi2018quantizing}.
 
 Given the full precision weights \( W \) of a neural network, they can be quantized to a lower precision using the quantization function:
 \begin{equation}
@@ -613,7 +605,7 @@ While \gls{ptq} offers the benefit of simplicity, the resultant quantized model 
 
 \subsection{Quantization-Aware Training}
 
-\gls{qat} is a technique developed to optimize neural networks for deployment on platforms with limited numerical precision. This quantization maps weights to a lower precision \( Q(W) \), similarly as in \gls{ptq}. Moreover, \gls{qat} integrates this process into the training phase, ensuring that the resultant model is resilient to potential accuracy degradations. Such adaptations are relevant when targeting resource-constrained devices or specialized hardware accelerators that rely on reduced precision for improved computational efficiency and accuracy.
+\gls{qat} is a technique developed to optimize neural networks for deployment on platforms with limited numerical precision. This quantization maps weights to a lower precision \( Q(W) \), similarly as in \gls{ptq}. Moreover, \gls{qat} integrates this process into the training phase, ensuring that the resultant model is resilient to potential accuracy degradation~\cite{krishnamoorthi2018quantizing}. Such adaptations are relevant when targeting resource-constrained devices or specialized hardware accelerators that rely on reduced precision for improved computational efficiency and accuracy.
 
 For neural networks with custom reduced \gls{fp} formats, \gls{qat} exhibits even greater versatility. Such custom formats, often denoted as \( FP_{M,E} \), allocate specific bit-lengths for the mantissa \( M \) and the exponent \( E \). The quantization function for such a format can potentially take the form:
 \begin{equation}
@@ -628,7 +620,7 @@ Here, \( \eta \) represents the learning rate. However, with \gls{qat}, the mode
 
 
 \section{Dataflow Taxonomy}
-Dataflow taxonomy refers to the classification of various schemes that determine how data (weights, activations, and partial results) moves through the accelerator during computation. The way data is moved and reused can have an impact on the energy efficiency and throughput of the accelerator. These strategies aim to maximize performance and energy efficiency by optimizing data movement, which is often more energy-intensive than computation itself. When choosing or designing a dataflow, it is essential to consider the specific neural network workload, the memory hierarchy, and the architectural details of the hardware to ensure an optimal match.
+Dataflow taxonomy refers to the classification of various schemes that determine how data (weights, activations, and partial results) moves through the accelerator during computation. The way data is moved and reused can have an impact on the energy efficiency and throughput of the accelerator. These strategies aim to maximize performance and energy efficiency by optimizing data movement, which is often more energy-intensive than computation itself. When choosing or designing a dataflow, it is essential to consider the specific neural network workload, the memory hierarchy, and the architectural details of the hardware to ensure an optimal match~\cite{sze2017efficient}.
 
 \subsection*{Weight Stationary (WS)}
 In this dataflow, weights are kept stationary in the processing elements. As different input activations come in, they are multiplied with these stationary weights. This approach maximizes the reuse of weights, which can be beneficial when processing a large number of activations, such as during a convolution operation.
