@@ -5,23 +5,23 @@
 \contentsline {subsection}{\numberline {1.1.1}AI/ML in Industry 4.0}{2}{subsection.1.1.1}%
 \contentsline {subsubsection}{\nonumberline Industry 4.0}{2}{section*.4}%
 \contentsline {subsubsection}{\nonumberline Internet-of-Things in Industry}{2}{section*.5}%
-\contentsline {subsubsection}{\nonumberline Artificial Intelligence in Internet-of-Things}{3}{section*.6}%
+\contentsline {subsubsection}{\nonumberline Artificial Intelligence in Internet-of-Things}{2}{section*.6}%
 \contentsline {subsection}{\numberline {1.1.2}Approximation in AI/ML}{3}{subsection.1.1.2}%
 \contentsline {subsubsection}{\nonumberline Network Compression and Quantization}{3}{section*.7}%
 \contentsline {subsubsection}{\nonumberline Error Tolerance in AI/ML Algorithms}{4}{section*.8}%
 \contentsline {subsubsection}{\nonumberline Approximate Computing}{4}{section*.9}%
-\contentsline {section}{\numberline {1.2}Problem Statement}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Problem Statement}{4}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Power Dissipation}{5}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Aggressive Quantization}{5}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Interoperability}{6}{subsection.1.2.3}%
 \contentsline {section}{\numberline {1.3}Working Hypothesis}{6}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Research Objective}{7}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Scope}{8}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Contributions}{10}{section.1.6}%
+\contentsline {section}{\numberline {1.6}Contributions}{9}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}Accelerating Spike-by-Spike Neural Networks with Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{10}{subsection.1.6.1}%
-\contentsline {subsection}{\numberline {1.6.2}Accelerating Convolutional Neural Networks with Hybrid 6-bit Floating-Point Computation}{11}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.2}Accelerating Convolutional Neural Networks with Hybrid 6-bit Floating-Point Computation}{10}{subsection.1.6.2}%
 \contentsline {section}{\numberline {1.7}Publications}{11}{section.1.7}%
-\contentsline {section}{\numberline {1.8}Dissertation Outline}{13}{section.1.8}%
+\contentsline {section}{\numberline {1.8}Dissertation Outline}{12}{section.1.8}%
 \contentsline {chapter}{\numberline {2}Background and Related Work}{15}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introduction}{16}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Neural Networks}{16}{section.2.2}%
