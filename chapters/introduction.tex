@@ -84,104 +84,148 @@ Aggressive or exotic quantization might not be supported by all hardware/softwar
 %%%%%%%%%%%%%%
 \section{Working Hypothesis}
 
-\textit{The development of design methodologies for custom low-power neural network accelerators, utilizing a \gls{fp} mixed or hybrid precision approach with reduced bit-width for weights and biases and standard \gls{fp} activation maps, can achieve substantial reductions in power consumption and thermal dissipation without significant accuracy degradation. This accelerator design is expected to enable efficient hardware operation, ensure broad compatibility and interoperability across varying hardware and software platforms, maintaining accuracy through \gls{qat} methods.}
+The primary hypothesis guiding this research is as follows:
 
-\paragraph{Reduced Precision Requirement for Weights and Biases}
-\begin{itemize}
-	\item H1: Utilizing lower precision for weights and biases in neural network models will significantly reduce the memory requirements and computational complexity of the accelerator, without causing substantial decrease in model accuracy~\cite{lai2017deep}.
-\end{itemize}
+\begin{quote}
+	\textit{Implementing a mixed or hybrid precision approach in neural network accelerators--using reduced \gls{fp} bit-width for weights and biases while retaining standard \gls{fp} for activation maps--can substantially decrease power consumption and thermal dissipation, without significantly compromising inference accuracy.}
+\end{quote}
 
-\paragraph{Floating-Point Activation Maps}
-\begin{itemize}
-	\item H2: Retaining higher precision in activation maps in the custom accelerator will prevent significant accuracy degradation during inference, despite the reduced precision of weights and biases.
-\end{itemize}
+Under this central hypothesis, the proposed neural network accelerator design, which adopts this hybrid precision approach, is postulated to achieve the following specific outcomes:
 
-\paragraph{Hardware Efficiency}
-\begin{itemize}
-	\item H3: The hybrid precision approach, which combines standard \gls{fp} activation maps and reduced bit-width for weights and biases, is expected to improve the hardware efficiency of the neural network accelerator. This approach is hypothesized to enable faster arithmetic operations and reduce memory bandwidth requirements~\cite{lai2017deep}.
-\end{itemize}
+\begin{enumerate}[label={\textbf{H\arabic*}}]
+	\item \textbf{Efficient Hardware Operation:} Minimization of power consumption and thermal output, enabling sustained and efficient hardware operation~\cite{lai2017deep}.
+	\item \textbf{High Inference Quality:} Preservation of high-quality inference results by maintaining standard \gls{fp} precision in activation maps, despite reduced precision in weights and biases.
+	\item \textbf{Enhanced Hardware Efficiency:} Improvement in the hardware efficiency of the accelerator, facilitated by faster arithmetic operations and decreased memory bandwidth requirements, due to the hybrid precision approach~\cite{lai2017deep}.
+	\item \textbf{Compatibility and Interoperability:} Ability to efficiently handle various precision levels for weights, biases, and activation maps, ensuring compatibility and integration across diverse software frameworks and hardware platforms.
+	\item \textbf{Accuracy Preservation via \gls{qat}:} Utilization of \gls{qat} to adapt neural network models to the hybrid precision, maintaining high model accuracy despite reduced precision components.
+\end{enumerate}
 
-\paragraph{Compatibility and Interoperability}
-\begin{itemize}
-	\item H4: The custom low-power neural network accelerator is hypothesized to be designed to efficiently handle different \gls{fp} formats or precision levels for weights, biases, and activation maps; therefore, ensuring compatibility and interoperability across various software frameworks and hardware platforms.
-\end{itemize}
+\paragraph{Implications}
+This research seeks to demonstrate that the strategic application of hybrid \gls{fp} precision computation in neural network accelerators can enable a new paradigm of energy-efficient machine learning hardware without sacrificing quality, reliability, and interoperability.
 
-\paragraph{Quantization-Aware Training}
-\begin{itemize}
-	\item H5: Implementing \gls{qat} in the training process will help the neural network model adapt to the hybrid precision representation used in the accelerator, ensuring that the reduced precision for weights and biases does not cause significant accuracy loss.
-\end{itemize}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Research Objective}
-Develop advanced methodologies for energy-efficient neural network accelerators with custom \gls{fp} computation in resource-constrained environments. This research objective encompasses several key aspects that are crucial for the progress of energy-efficient neural network accelerators with custom \gls{fp} computation:
 
+The overarching objective of this research is to:
+
+\begin{quote}
+	\textit{Develop advanced methodologies for energy-efficient neural network accelerators that utilize custom \gls{fp} computation in resource-constrained environments.}
+\end{quote}
+
+This primary objective can be decomposed into specific sub-objectives and key aspects, which are enumerated as follows:
+
+\begin{enumerate}[label={\textbf{O\arabic*}}]
+	\item \textbf{Optimized Custom \gls{fp} Representation:} 
+	Examine custom \gls{fp} representations that are minimal specifically tailored for neural network computations, involving various non-standard \gls{fp} formats with different bit-widths for the exponent and mantissa.
+	
+	\item \textbf{Energy-Efficient Design Strategies:} 
+	Investigate design strategies from logic-level optimizations to architectural-level approaches, with the primary aim of minimal energy consumption.
+	
+	\item \textbf{Custom \gls{fp} Arithmetic Units:} 
+	Research the design and implementation of arithmetic units optimized for energy-efficient execution of proposed custom \gls{fp} computations.
+	
+	\item \textbf{Task-Specific Hardware Optimization:} 
+	Study accelerator architectures specialized for neural network tasks in environments with constrained resources, employing techniques such as pipelining and hardware-specific optimizations to ensure efficiency and high \gls{qor}.
+	
+	\item \textbf{Precision and Quantization Impact Analysis:} 
+	Thoroughly explore and analyze the effects of quantization and reduced precision on model accuracy, employing \gls{qat} and dynamic precision techniques to preserve or enhance accuracy.
+	
+	\item \textbf{Scalability and Flexibility:} 
+	Investigate scalability solutions that can adeptly handle diverse neural network models and sizes, promoting broader applicability.
+	
+	\item \textbf{Comparative Analysis with Alternative Techniques:} 
+	Conduct feature comparisons with other energy-efficient neural network accelerators to emphasize the unique advantages and strengths of the proposed custom \gls{fp} computation approaches.
+	
+	\item \textbf{Performance Evaluation and Benchmarking:} 
+	Perform rigorous evaluation and benchmarking against the existing state-of-the-art, aiming to highlight the benefits in terms of energy efficiency and computational performance.
+	
+	\item \textbf{Practical Application Demonstrations:} 
+	Showcase the practical applicability of the proposed methodologies in actual low-power and resource-constrained scenarios, such as \gls{iot} devices and sensor analytics.
+	
+	\item \textbf{Directions for Future Research:} 
+	Offer valuable insights into potential future research paths for further refining energy-efficient neural network accelerators with custom \gls{fp} computation for learning purposes.
+\end{enumerate}
+
+
+\paragraph{Core Aims}
 \begin{itemize}
-	\item \textbf{Optimized Custom \gls{fp} Representation}. Examine innovative custom \gls{fp} representation tailored for neural network computations. This includes the study of various bit-widths, exponent formats, and non-standard \gls{fp} representations.
-	\item \textbf{Energy-Efficient Design Strategies}. Investigate design strategies at various levels, from logic-level optimizations to architectural-level approaches, aiming to achieve minimal energy consumption.
-	\item \textbf{Custom \gls{fp} Arithmetic Units}. Research the design and implementation of arithmetic units that efficiently conduct the proposed custom \gls{fp} computations, with a focus on energy-saving during arithmetic operations.
-	\item \textbf{Task-Specific Neural Network Optimization}. Examine accelerator architectures designed particularly for neural network tasks in environments with limited resources. Techniques such as pipe-lining, data quantization, and hardware-specific optimizations are considered to maintain efficiency and \gls{qor}.
-	\item \textbf{Precision and Quantization Impact Analysis}. Explore and present a thorough analysis of the impacts of quantization and reduced precision on model accuracy, utilizing \gls{qat} and dynamic precision techniques to preserve or improve accuracy.
-	\item \textbf{Scalability and Flexibility}. Investigate scalability methods for handling diverse neural network models and sizes effectively.
-	\item \textbf{Comparative Analysis with Alternative Techniques}. Feature comparisons with other energy-efficient neural network accelerators to highlight the distinctiveness and strengths of the proposed custom \gls{fp} computation approaches.
-	\item \textbf{Performance Evaluation and Benchmarking}. Conduct evaluation and benchmarking against the existing state-of-the-art, with the goal to display benefits in terms of energy efficiency and computational performance.
-	\item \textbf{Practical Application Demonstrations}. This objective encompasses demonstrating the practical applicability in actual energy-efficient and resource-constrained scenarios, such as IoT devices.
-	\item \textbf{Directions for Future Research}. This dissertation is aimed at contributing valuable perspectives on future research trajectories for further refining energy-efficient neural network accelerators with custom \gls{fp} computation, potential integration with edge devices, and the implications on the wider domain of machine learning hardware.
+	\item \textbf{Quality Preservation}: Ensure that reduced energy consumption does not compromise the accuracy and reliability of neural network inference and potentially for training.
+	\item \textbf{Versatility}: Design accelerators adaptable to diverse neural network tasks and deployment scenarios.
+	\item \textbf{Compatibility}: Facilitate seamless integration of the proposed accelerator designs with existing systems and software frameworks.
 \end{itemize}
 
-The overall research objective is set to tackle significant challenges in crafting efficient hardware accelerators for neural networks, emphasizing the reduction of energy consumption through custom \gls{fp} computation and enhancing the state-of-the-art in energy-efficient neural network accelerators.
-
-
+Overall, this research aims to significantly contribute to the evolving development of energy-efficient neural network accelerators, targeting an advancement of the state-of-the-art in this field.
 
 \section{Scope}\label{chap1.scope}
-The scope of this research revolves around enabling energy-efficient and high-quality inference of \gls{sbs} and \gls{cnn} models on resource-constrained applications. This scope presents hardware design methodologies specifically tailored for \gls{sbs} and \gls{cnn} models on \gls{soc} devices with limited computational resources, memory, and power constraints.
 
+The scope of this research encompasses the development of energy-efficient and high-quality inference mechanisms for \gls{sbs} and \gls{cnn} models in resource-constrained applications. The methodologies are particularly tailored for deployment on \gls{soc} devices, which operate under stringent computational, memory, and power constraints.
 
-
-\begin{itemize}
-
-\item \textbf{Spike-by-Spike Neural Networks}. \glspl{snn} offer advantageous robustness and the potential to achieve a power efficiency closer to that of the human brain. \glspl{snn} operate reliably using stochastic elements that are inherently non-reliable mechanisms~\cite{mcdonnell2011benefits}. This provides superior resistance against adversary attacks~\cite{ernst2007efficient, Dapello2020.06.16.154542}. Beside robustness, \glspl{snn} have further advantages like the possibility of a more efficient asynchronous parallelization and higher energy efficiency than conventional \glspl{ann}.
-
-The Spike-by-Spike model is on the less realistic side of the \gls{snn} scale of biological realism~\cite{rotermund2019Backpropagation,ernst2007efficient}. Consequently, the hardware complexity of \gls{sbs} network implementations is greatly reduced~\cite{rotermund2018massively}. In spite of this, \gls{sbs} still uses stochastic spikes as a means of transmitting information between populations of neurons and thus retains the advantageous robustness of \glspl{snn}. A significant research effort has been done in \gls{snn} accelerators, see e.g.~\cite{roy2019towards,bouvier2019spiking,
-	young2019review,TrueNorth_Trans15,Spinnaker_Trans13,davies2018loihi}.
-
-However, hardware accelerators that focus on \gls{sbs} have only been partially investigated so far~\cite{rotermund2018massively}. Enhanced \gls{sbs} accelerators will have a double impact. From scientific and application point of view, they will facilitate fundamental research for neuroscience~\cite{ernst2007efficient,rotermund2019recurrentsbs, dayan2001theoretical} and contribute to the deployment of robust neural networks in small embedded systems~\cite{nevarez2020accelerator}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item \textbf{Convolutional Neural Networks}. \glspl{cnn} represent the essential building blocks in 2D pattern analytics. Sensor-based applications such as mechanical fault detection \cite{li2019sensor,dong2018rolling}, structural health monitoring \cite{nagayama2007structural}, \gls{har} \cite{wang2019deep}, hazardous gas detection \cite{kim2017hazardous} have been powered by \gls{cnn} models in industry and academia. \gls{cnn} models provide advantages such as local dependency, scale invariance, and noise resilience in analytics \cite{du2014leveraging}. However, these models are computationally intensive and power-hungry. This is particularly challenging for low-power embedded applications, specially in the field of \gls{iot}. As a result, numerous commercial \gls{asic} and \gls{fpga} accelerators have been proposed, these are targeting both \gls{hpc} for data-centers and embedded systems applications.
-
-However, most accelerators have been implemented to target mid- to high-range \glspl{fpga} for computationally intensive \gls{cnn} models such as AlexNet, VGG-16, and ResNet-18. The main drawbacks of these implementations are power supply demands, physical dimensions, heat sink requirements, air cooling, and a resulting high price. In some cases, these implementations are not feasible for ubiquitous low-power/resource-constrained applications. Furthermore, reducing the compute hardware with aggressive quantization such as binary \cite{courbariaux2015binaryconnect}, ternary \cite{lin2015neural}, and mixed precision (2-bit activations and ternary weights) \cite{colangelo2018exploration} typically incur significant accuracy degradation for very low precisions, especially for complex problems~\cite{faraone2019addnet}.
-
-\end{itemize}
+\begin{enumerate}[label={\textbf{S\arabic*}}]
+	
+	\item \textbf{Spike-by-Spike Neural Networks}
+	\begin{itemize}
+		\item \glspl{snn} offer advantageous robustness and the potential to achieve a power efficiency closer to that of the human brain. 
+		\item They operate reliably using stochastic elements that are inherently non-reliable mechanisms~\cite{mcdonnell2011benefits}. This provides superior resistance against adversary attacks~\cite{ernst2007efficient, Dapello2020.06.16.154542}.
+		\item The Spike-by-Spike model is on the less realistic side of the \gls{snn} scale of biological realism~\cite{rotermund2019Backpropagation,ernst2007efficient}. Consequently, the hardware complexity of \gls{sbs} network implementations is greatly reduced~\cite{rotermund2018massively}.
+		\item Despite the reduced complexity, \gls{sbs} retains the advantageous robustness of \glspl{snn} through its use of stochastic spikes for transmitting information between neuron populations.
+		\item However \gls{sbs} models present elevated computational demands and memory footprint, unsuitable for resource-constrained environments. Hence, these models have not been investigated in low-power applications. \gls{sbs} accelerators can facilitate neuroscience research~\cite{ernst2007efficient,rotermund2019recurrentsbs, dayan2001theoretical} and contribute to deploying robust neural networks in small embedded systems~\cite{nevarez2020accelerator}.
+	\end{itemize}
+	
+	\item \textbf{Convolutional Neural Networks}
+	\begin{itemize}
+		\item \glspl{cnn} are the essential building blocks in 2D pattern analytics. They have been employed in sensor-based applications, such as mechanical fault detection, structural health monitoring, \gls{har}, and hazardous gas detection, both in industry and academia~\cite{li2019sensor,dong2018rolling,nagayama2007structural,wang2019deep,kim2017hazardous}.
+		\item \gls{cnn} models provide advantages such as local dependency, translation invariance, and noise resilience in analytics~\cite{du2014leveraging}.
+		\item These models, however, are computationally intensive and power-hungry, posing challenges for low-power embedded applications, particularly in the field of \gls{iot} and sensor analytics.
+		\item Numerous commercial \gls{asic} and \gls{fpga} accelerators have been proposed for data-centers and embedded systems applications. However, most target mid- to high-range \glspl{fpga} and exhibit drawbacks, such as high power supply demands, physical dimensions, cooling requirements, and cost.
+		\item Aggressive quantization (e.g., binary, ternary, and mixed precision implementations) often incurs significant accuracy degradation, especially for complex problems~\cite{courbariaux2015binaryconnect,lin2015neural,colangelo2018exploration,faraone2019addnet}.
+		\item These limitations prevent widespread applicability in scenarios where low-power, accuracy, and interoperability are mandatory.
+	\end{itemize}
+	
+\end{enumerate}
 
 \section{Contributions}
-This research produces hardware design methodologies for low-power hardware accelerators with custom \gls{fp} computation that reconcile efficiency with inference quality, and compatibility. This work is demonstrated on \gls{sbs} and \gls{cnn} hardware accelerators on resource-constrained \gls{soc} \glspl{fpga}:
+
+This research produces hardware design methodologies for low-power hardware accelerators with custom \gls{fp} computation that reconcile efficiency with inference quality, and compatibility. This work is demonstrated on \gls{sbs} and \gls{cnn} hardware accelerators on resource-constrained \gls{soc} \glspl{fpga}.
 
 \subsection{Accelerating Spike-by-Spike Neural Networks with Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}
 \begin{enumerate}
-	\item An optimized \gls{fp} \gls{mac} design with hybrid precision is presented. This design utilizes the IEEE 754 single-precision \gls{fp} for feature maps and custom \gls{fp} representation for weights. The custom \gls{fp} precision does not implement a sign bit and has reduced exponent and mantissa bit widths. This design accumulates values in a denormalized manner and produces IEEE 754 single-precision results.This design not only upholds \gls{qor} but also enhances efficiency through reduced latency, diminished power dissipation, minimized hardware resources, and a smaller memory footprint.
-	\item A design exploration is presented focusing on input weight \gls{fp} representation of 8 and 4-bit. Evaluation is reported across various facets such as run-time, accuracy degradation, hardware resource utilization, and power consumption. An embedded system architecture is presented to assess the performance of the custom \gls{fp} \gls{mac}. In evaluations using a generative model based on \gls{nnmf} (\gls{sbs} model), a notable latency improvement of $20.5\times$ was measured in comparison to an embedded \gls{cpu} (ARM Cortex-A9 operating at \unit[666]{MHz}). Notably, in a handwritten digit recognition task, an accuracy degradation of less than $0.5\%$ was measured.
-	\item A noise tolerance plot is proposed as a quality monitor, which is intended to serve as an intuitive visual model. This model offers insights into the accuracy degradation of \gls{nnmf} models (\gls{sbs} networks) when subjected to custom \gls{fp} computation.
-	\item The design presented for custom \gls{fp} \gls{mac} is considered adaptable for use as a building block in other error-resilient applications, such as image/video processing.
+	\item \textbf{Optimized \gls{mac} Design}: 
+	An optimized \gls{fp} \gls{mac} design with hybrid precision is presented. It utilizes the IEEE 754 single-precision \gls{fp} for feature maps and a custom \gls{fp} representation for weights, which significantly enhances efficiency through reduced latency, minimized hardware resources, and a smaller memory footprint, while upholding \gls{qor}.
+	
+	\item \textbf{Design Exploration and Evaluation}: 
+	A comprehensive design exploration for 8 and 4-bit input weight \gls{fp} representation is detailed. Evaluations report runtime, accuracy degradation, hardware resource utilization, and power consumption. A significant latency improvement and minimal accuracy degradation were measured.
+	
+	\item \textbf{Quality Monitoring through Noise Tolerance Plot}: 
+	A noise tolerance plot is proposed as a quality monitor, intended to serve as an intuitive visual model that provides insights into the accuracy degradation of \gls{sbs} networks when subjected to custom \gls{fp} computation.
+	
+	\item \textbf{Adaptable Design for Error-Resilient Applications}: 
+	The custom \gls{fp} \gls{mac} design is proposed as adaptable for use as a building block in other error-resilient applications, such as image/video processing.
 \end{enumerate}
-
 
 \subsection{Accelerating Convolutional Neural Networks with Hybrid 6-bit Floating-Point Computation}
 \begin{enumerate}
-	\item A 6-bit \gls{fp} representation for weights is presented as \gls{hf6} quantization. An optimized hardware \gls{mac} is proposed, wherein mantissa multiplication is reduced to a multiplexer-adder operation. The intrinsic error tolerance of \gls{ann} is harnessed in this method to further refine the hardware design via approximation. To maintain model accuracy, a \gls{qat} approach is introduced. Notably, in certain instances, this method elevates accuracy, attributed to the regularization effect.
+	\item \textbf{\gls{hf6} Quantization}: 
+	A 6-bit \gls{fp} representation for weights and bias is presented. An optimized hardware \gls{mac} is proposed that refines the hardware design via approximation, harnessing the intrinsic error tolerance of \gls{ann} while maintaining model accuracy through a \gls{qat} approach. 
 	
-	\item A custom hardware/software co-design framework for \gls{cnn} sensor analytics applications has been developed, targeting resource-constrained \gls{soc} \glspl{fpga}. This architecture incorporates TensorFlow Lite.
+	\item \textbf{Custom Hardware/Software Co-design Framework}: 
+	A co-design framework for \gls{cnn} sensor analytics applications has been developed, targeting resource-constrained \gls{soc} \glspl{fpga}. This architecture incorporates TensorFlow Lite.
 	
-	\item A customizable \gls{tp} is presented as a proof of concept demonstration with \gls{hf6}. In this design, accelerations of up to 48X are achieved by the \emph{Conv2D} tensor operation in comparison to the \gls{cpu} running TensorFlow Lite. This enhancement is realized without accuracy degradation employing \gls{qat}.
+	\item \textbf{Customizable Tensor Processing with \gls{hf6}}: 
+	A customizable \gls{tp} is demonstrated as a proof of concept with \gls{hf6}. Significant acceleration is achieved for the \emph{Conv2D} tensor operation without accuracy degradation employing \gls{qat}.
 	
-	\item The potential of this approach is demonstrated with a \gls{cnn}-regression model for anomaly localization in \gls{shm} based on \gls{ae}. A hardware design exploration is addressed evaluating accuracy, compute performance, hardware resource utilization, and energy consumption.
+	\item \textbf{Demonstration and Design Exploration}: 
+	The potential of this approach is showcased with a \gls{cnn}-regression model for anomaly localization in \gls{shm} based on \gls{ae}. A hardware design exploration evaluates accuracy, compute performance, hardware resource utilization, and energy consumption.
 \end{enumerate}
 
+
 \section{Publications}
-The outcome of this dissertation, including the collaborative works with our research partners is a list of publications including \cite{nevarez2020accelerator, nevarez2021accelerating, yn2022cnnsensor}. In the following, a complete list of the related publications are itemized.
+The outcome of this dissertation, including the collaborative works with our research partners is a list of publications. In the following, a complete list of the related publications is itemized.
 
 \begin{enumerate}
 	
-	\subsubsection*{Journal Articles}
+	\subsection*{Journal Articles}
 	
 	\item \textbf{Yarib Nevarez}, David Rotermund, Klaus R Pawelzik, and Alberto Garcia-Ortiz, "Accelerating Spike-by-Spike Neural Networks on FPGA With Hybrid Custom Floating-Point and Logarithmic Dot-Product Approximation," 
 	\newblock IEEE Access, vol. 9, pp. 80603--80620, May 2021, doi: 10.1109/ACCESS.2021.3085216.  
@@ -190,7 +234,7 @@ The outcome of this dissertation, including the collaborative works with our res
 	\newblock IEEE Access, vol. 11, pp. 4852--4868, January 2023, doi: 10.1109/ACCESS.2023.3235866.
 
 	
-	\subsubsection*{Conference Proceedings}
+	\subsection*{Conference Proceedings}
 	
 	\item \textbf{Yarib Nevarez}, Alberto Garcia-Ortiz, David Rotermund, and Klaus R Pawelzik, "Accelerator framework of spike-by-spike neural networks for inference and incremental learning in embedded systems,"
 	\newblock 2020 9th International Conference on Modern Circuits and Systems Technologies (MOCAST), Bremen, 2020, pp. 1--5, doi: 10.1109/MOCAST49295.2020.9200288.
@@ -210,11 +254,22 @@ The outcome of this dissertation, including the collaborative works with our res
 
 \section{Dissertation Outline}
 
-This dissertation is organized in three main parts: an introduction, where
-the state of the art and related background are stated; a central core, where the proposed design methodologies and validation are presented; and a final part with the conclusion. More precisely:
+This dissertation is organized into three main parts: an introduction, where the state of the art and related background are presented; a central core, where the proposed design methodologies and validation are discussed; and a final part that includes the conclusion. More specifically:
 
 \begin{enumerate}[I]
-	\item \textbf{Introduction}: Chapter~\ref{chap.background} introduces the background related to \gls{sbs}, \gls{cnn}, and \gls{fp} number representation.
-	\item \textbf{Core}: the proposed hardware design methodologies for \gls{sbs} and \gls{cnn} accelerators are presented in Chapter~\ref{chap.sbs} and Chapter~\ref{chap.cnn}, respectively.
-	\item \textbf{Conclusions}: the final conclusions are presented in Chapter~\ref{chap.conclusion}.
+	\item \textbf{Introduction}: 
+	\begin{itemize}
+		\item Chapter~\ref{chap.background} introduces the background related to \gls{sbs}, \gls{cnn}, and \gls{fp} number representation.
+	\end{itemize}
+	
+	\item \textbf{Core}: 
+	\begin{itemize}
+		\item Chapter~\ref{chap.sbs} presents the proposed hardware design methodologies for \gls{sbs} accelerators.
+		\item Chapter~\ref{chap.cnn} describes the proposed hardware design methodologies for \gls{cnn} accelerators.
+	\end{itemize}
+	
+	\item \textbf{Conclusions}: 
+	\begin{itemize}
+		\item The final conclusions and potential future work are presented in Chapter~\ref{chap.conclusion}.
+	\end{itemize}
 \end{enumerate}
