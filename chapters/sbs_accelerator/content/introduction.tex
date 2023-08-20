@@ -1,3 +1,9 @@
+\section{Abstract}
+\begin{quote}
+In the domain of \glspl{snn}, this chapter explores into the design methodology tailored for low-power inference of \gls{sbs} neural networks in embedded applications. Notably, while \gls{sbs} networks stand out for their reduced model complexity and superior noise robustness compared to conventional \glspl{snn} utilizing the \gls{lif} mechanism, they come with inherent challenges. Particularly, their computational cost and memory footprint have been barriers for deployment on resource-limited devices.
+
+Addressing these challenges, this research capitalizes on the intrinsic error resilience of \gls{sbs} models to improve performance and minimize hardware resources while avoiding model quantization procedures. Central to this approach is the introduction of a novel \gls{mac} module. This module is designed to harmonize computational accuracy and resource efficiency in \gls{fp} operations. This \gls{mac} module provides configurable quality via a hybrid mechanism: it merges standard \gls{fp} representations with a custom 8-bit \gls{fp} format and a 4-bit logarithmic representation. This design excludes the use of a sign bit, which further contributes to the compact and efficient representation of numbers. This design enables the \gls{mac} module to be tailored to the specific resource constraints and performance requirements of a given application. This research makes \gls{sbs} neural networks possible for deployment in resource-constrained environments.
+\end{quote}
 \section{Introduction}
 \label{sec:introduction}
 %%% General intro

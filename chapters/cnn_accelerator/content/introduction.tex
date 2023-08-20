@@ -1,3 +1,7 @@
+\section{Abstract}
+\begin{quote}
+	This chapter introduces a novel hardware design methodology tailored for low-power \gls{cnn} inference in sensor analytics applications. Central to this approach is the \gls{hf6} quantization scheme, which utilizes a hybrid number representation that blends standard \gls{fp} with a 6-bit \gls{fp} format. This unique combination facilitates a more efficient \gls{fp} \gls{mac}, transforming the typical mantissa multiplication into a simplified multiplexer-adder operation. The custom \gls{fp} \gls{mac} is integrated in a dedicated hardware accelerator designed to function as a Conv2D tensor processor. To complement the benefits of the \gls{hf6} scheme, this research introduces a \gls{qat} method which, in certain cases, offers beneficial regularization effects. The efficacy of this approach is showcased through a regression model that achieves enhanced accuracy despite the applied quantization. Prioritizing \gls{ml} portability, this design encapsulates the custom \gls{fp} representation within a standard format, which is automatically processed by the proposed tensor processor. To validate interoperability of this approach, the hardware architecture is integrated with TensorFlow Lite, demonstrating compatibility with industry-standard \gls{ml} frameworks and affirming the potential for practical deployment in various applications while maintaining compliance with established \gls{ml} infrastructure.
+\end{quote}
 
 \section{Introduction}
 \label{sec:introduction}
