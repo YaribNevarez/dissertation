@@ -206,8 +206,8 @@ This research produces hardware design methodologies for low-power hardware acce
 
 \subsection{Accelerating Convolutional Neural Networks with Hybrid 6-bit Floating-Point Computation}
 \begin{enumerate}
-	\item \textbf{\gls{hf6} Quantization}: 
-	A 6-bit \gls{fp} representation for weights and bias is presented. An optimized hardware \gls{mac} is proposed that refines the hardware design via approximation, harnessing the intrinsic error tolerance of \gls{ann} while maintaining model accuracy through a \gls{qat} approach. 
+	\item \textbf{Optimized \gls{mac} Design Incorporating \gls{hf6} Quantization}:
+	This research introduces a 6-bit \gls{fp} representation tailored specifically for weights and bias. The proposed hardware \gls{mac} unit integrates the IEEE 754 single-precision \gls{fp} used for feature maps and a custom \gls{fp} scheme designed for weights. This combination boost efficiency in multiple dimensions: a marked reduction in latency through denormalized accumulation, hardware area reduction achieved by changing traditional mantissa multiplication with a more efficient multiplexer-adder operation, and optimized memory usage. The \gls{qor} is retained throughout these enhancements. This balance is further augmented by the incorporation of the \gls{qat} approach to assure model accuracy.
 	
 	\item \textbf{Custom Hardware/Software Co-design Framework}: 
 	A co-design framework for \gls{cnn} sensor analytics applications has been developed, targeting resource-constrained \gls{soc} \glspl{fpga}. This architecture incorporates TensorFlow Lite.

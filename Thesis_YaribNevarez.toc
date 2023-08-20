@@ -29,7 +29,7 @@
 \contentsline {subsection}{\numberline {1.6.1}Accelerating Spike-by-Spike Neural Networks with Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{11}{subsection.1.6.1}%
 \contentsline {subsection}{\numberline {1.6.2}Accelerating Convolutional Neural Networks with Hybrid 6-bit Floating-Point Computation}{12}{subsection.1.6.2}%
 \contentsline {section}{\numberline {1.7}Publications}{12}{section.1.7}%
-\contentsline {section}{\numberline {1.8}Dissertation Outline}{13}{section.1.8}%
+\contentsline {section}{\numberline {1.8}Dissertation Outline}{14}{section.1.8}%
 \contentsline {chapter}{\numberline {2}Background and Related Work}{15}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introduction}{16}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Neural Networks}{16}{section.2.2}%
@@ -81,24 +81,24 @@
 \contentsline {chapter}{\numberline {3}Low-Power Spike-by-Spike Neural Network Accelerator: Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{45}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Introduction}{45}{section.3.1}%
 \contentsline {section}{\numberline {3.2}System Design}{49}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Hardware Architecture}{50}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.1}Hardware Architecture}{49}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Conv Processing Unit}{50}{subsection.3.2.2}%
 \contentsline {subsubsection}{\nonumberline Configuration Mode}{51}{section*.58}%
 \contentsline {subsubsection}{\nonumberline Computation Mode}{51}{section*.59}%
-\contentsline {subsection}{\numberline {3.2.3}Dot-Product Hardware Module}{52}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}Hybrid Custom Floating-Point Multiply-Accumulate Unit: Vector Dot-Product Approximation}{52}{subsection.3.2.3}%
 \contentsline {subsubsection}{\nonumberline Dot-Product with Standard Floating-Point Computation}{54}{section*.61}%
 \contentsline {subsubsection}{\nonumberline Dot-Product with Hybrid Custom Floating-Point and Logarithmic Computation}{54}{section*.63}%
 \contentsline {section}{\numberline {3.3}Experimental Results}{58}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Performance Benchmark}{58}{subsection.3.3.1}%
 \contentsline {subsubsection}{\nonumberline Benchmark on Embedded CPU}{58}{section*.66}%
 \contentsline {subsubsection}{\nonumberline Benchmark on Processing Units with Standard Floating-Point Computation}{59}{section*.69}%
-\contentsline {subsubsection}{\nonumberline Benchmark on Noise Tolerance Plot}{63}{section*.76}%
+\contentsline {subsubsection}{\nonumberline Benchmark on Noise Tolerance Plot}{62}{section*.76}%
 \contentsline {subsection}{\numberline {3.3.2}Design Exploration with Hybrid Custom Floating-Point and Logarithmic Computation}{63}{subsection.3.3.2}%
 \contentsline {subsubsection}{\nonumberline Parameters for Numeric Representation of Synaptic Weight Matrix}{63}{section*.78}%
-\contentsline {subsubsection}{\nonumberline Design Exploration for Dot-product with Hybrid Custom Floating-Point Computation}{64}{section*.80}%
-\contentsline {subsubsection}{\nonumberline Design Exploration for Dot-Product whit Hybrid Logarithmic Computation}{66}{section*.85}%
-\contentsline {subsection}{\numberline {3.3.3}Results and Discussion}{68}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Conclusions}{72}{section.3.4}%
+\contentsline {subsubsection}{\nonumberline Design Exploration for Dot-product with Hybrid Custom Floating-Point Computation}{65}{section*.80}%
+\contentsline {subsubsection}{\nonumberline Design Exploration for Dot-Product whit Hybrid Logarithmic Computation}{67}{section*.85}%
+\contentsline {subsection}{\numberline {3.3.3}Results and Discussion}{67}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Conclusions}{71}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Low-Power Conv2D Tensor Accelerator: Hybrid 6-bit Floating-Point Computation}{73}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{73}{section.4.1}%
 \contentsline {section}{\numberline {4.2}System Design}{76}{section.4.2}%
@@ -106,7 +106,7 @@
 \contentsline {subsection}{\numberline {4.2.2}Tensor processor}{77}{subsection.4.2.2}%
 \contentsline {subsubsection}{\nonumberline Modes of operation}{77}{section*.98}%
 \contentsline {subsubsection}{\nonumberline Dot-product with hybrid floating-point}{78}{section*.99}%
-\contentsline {subsubsection}{\nonumberline Multiply-Accumulate}{79}{section*.102}%
+\contentsline {subsubsection}{\nonumberline Multiply-Accumulate Unit}{79}{section*.102}%
 \contentsline {subsubsection}{\nonumberline On-chip memory utilization}{80}{section*.104}%
 \contentsline {subsection}{\numberline {4.2.3}Training Method}{82}{subsection.4.2.3}%
 \contentsline {subsubsection}{\nonumberline Training with Iterative Early Stop}{82}{section*.106}%
@@ -133,8 +133,9 @@
 \contentsline {subsubsection}{\nonumberline SoC Design and Compatibility}{100}{section*.139}%
 \contentsline {section}{\numberline {4.4}Conclusions}{100}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Conclusion and Outlook}{103}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusion}{103}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Outlook}{104}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Summary}{105}{section.5.3}%
-\contentsline {chapter}{\numberline {A}Appendix}{107}{appendix.A}%
-\contentsline {section}{\numberline {A.1}SbS algorithm}{107}{section.A.1}%
+\contentsline {section}{\numberline {5.1}State-of-the-art challenges and solutions}{103}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Specific Contributions}{103}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Future Directions}{104}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Final Remarks}{104}{section.5.4}%
+\contentsline {chapter}{\numberline {A}Appendix}{105}{appendix.A}%
+\contentsline {section}{\numberline {A.1}SbS algorithm}{105}{section.A.1}%

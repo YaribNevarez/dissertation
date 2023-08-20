@@ -9,11 +9,11 @@
 \contentsline {table}{\numberline {3.1}{\ignorespaces Computation on embedded CPU.\relax }}{59}{table.caption.67}%
 \contentsline {table}{\numberline {3.2}{\ignorespaces Performance of processing units with standard floating-point (IEEE 754) computation.\relax }}{60}{table.caption.71}%
 \contentsline {table}{\numberline {3.3}{\ignorespaces Resource utilization and power dissipation of processing units with standard floating-point (IEEE 754) computation.\relax }}{62}{table.caption.74}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Resource utilization and power dissipation of multiplier and adder floating-point (IEEE 754) operator cores.\relax }}{62}{table.caption.75}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Resource utilization and power dissipation of multiplier and adder floating-point (IEEE 754) operator cores.\relax }}{63}{table.caption.75}%
 \contentsline {table}{\numberline {3.5}{\ignorespaces Resource utilization and power dissipation of processing units with hybrid custom floating-point approximation.\relax }}{66}{table.caption.81}%
 \contentsline {table}{\numberline {3.6}{\ignorespaces Performance of hardware processing units with hybrid custom floating-point approximation.\relax }}{67}{table.caption.82}%
-\contentsline {table}{\numberline {3.7}{\ignorespaces Performance of hardware processing units with hybrid logarithmic approximation.\relax }}{67}{table.caption.86}%
-\contentsline {table}{\numberline {3.8}{\ignorespaces Resource utilization and power dissipation of processing units with hybrid logarithmic approximation.\relax }}{68}{table.caption.88}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Performance of hardware processing units with hybrid logarithmic approximation.\relax }}{68}{table.caption.86}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces Resource utilization and power dissipation of processing units with hybrid logarithmic approximation.\relax }}{69}{table.caption.88}%
 \contentsline {table}{\numberline {3.9}{\ignorespaces Experimental results.\relax }}{71}{table.caption.91}%
 \contentsline {table}{\numberline {3.10}{\ignorespaces Platform implementations.\relax }}{71}{table.caption.93}%
 \addvspace {10\p@ }
@@ -25,4 +25,4 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Conclusion and Outlook}{103}{chapter.5}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Appendix}{107}{appendix.A}%
+\contentsline {xchapter}{Appendix}{105}{appendix.A}%

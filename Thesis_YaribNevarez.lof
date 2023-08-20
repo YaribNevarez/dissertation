@@ -10,7 +10,7 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Low-Power Spike-by-Spike Neural Network Accelerator: Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{45}{chapter.3}%
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Dot-product hardware module with (a) standard floating-point (IEEE 754) arithmetic, (b) hybrid custom floating-point approximation, and (c) hybrid logarithmic approximation.\relax }}{48}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces System-level overview of the embedded software architecture.\relax }}{49}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces System-level overview of the embedded software architecture.\relax }}{50}{figure.caption.56}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces System-level hardware architecture with scalable number of heterogeneous \glspl {pu}: \emph {Spike}, \emph {Conv}, \emph {Pool}, and \emph {FC}\relax }}{50}{figure.caption.57}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces The \emph {Conv} processing unit and its six stages: (a) receive \gls {ip_sbs} vector, (b) spike firing, (c) receive spike kernel, (d) update dynamics, (e) dispatch new \gls {ip_sbs} vector, (f) dispatch output spike matrix.\relax }}{52}{figure.caption.60}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Dot-product hardware module with standard floating-point (IEEE 754) computation, (a) exhibits the initiation interval of 10 clock cycles, (b) presents the iteration latency of 19 clock cycles, (c) shows the pairwise product block in dark-gray, and (d) illustrates the accumulation block in light-gray.\relax }}{55}{figure.caption.62}%
@@ -26,7 +26,7 @@
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Noise tolerance on hardware PU with custom floating-point approximation, (a) exhibits accuracy degradation applying $50\%$ of noise amplitude, and (b) illustrates convergence of inference with $400$ spikes.\relax }}{68}{figure.caption.84}%
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Performance of processing units with hybrid logarithmic approximation, (a) exhibits computation schedule, and (b) illustrates cyclic computation schedule.\relax }}{69}{figure.caption.87}%
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Noise tolerance on hardware PU with hybrid logarithmic approximation, (a) exhibits accuracy degradation applying $40\%$ of noise amplitude, (b) illustrates convergence of inference with $600$ spikes.\relax }}{70}{figure.caption.89}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Power dissipation breakdown of platform implementations, (a) \cite {nevarez2020accelerator} architecture with homogeneous AUs using standard floating-point arithmetic (IEEE 754), (b) reference architecture with specialized heterogeneous PUs using standard floating-point arithmetic (IEEE 754), (c) proposed architecture with hybrid custom floating-point approximation, and (d) proposed architecture with hybrid logarithmic approximation.\relax }}{71}{figure.caption.94}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Power dissipation breakdown of platform implementations, (a) \cite {nevarez2020accelerator} architecture with homogeneous AUs using standard floating-point arithmetic (IEEE 754), (b) reference architecture with specialized heterogeneous PUs using standard floating-point arithmetic (IEEE 754), (c) proposed architecture with hybrid custom floating-point approximation, and (d) proposed architecture with hybrid logarithmic approximation.\relax }}{72}{figure.caption.94}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Low-Power Conv2D Tensor Accelerator: Hybrid 6-bit Floating-Point Computation}{73}{chapter.4}%
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The workflow of our approach on embedded FPGAs.\relax }}{75}{figure.caption.95}%
@@ -51,4 +51,4 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Conclusion and Outlook}{103}{chapter.5}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Appendix}{107}{appendix.A}%
+\contentsline {xchapter}{Appendix}{105}{appendix.A}%

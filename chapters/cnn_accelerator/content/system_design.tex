@@ -50,7 +50,7 @@ L_{hf}=N+7
 	\label{fig:dot_product_loop}
 \end{figure}
 
-\subsubsection{Multiply-Accumulate}
+\subsubsection{Multiply-Accumulate Unit}
 The multiply-accumulate operation calculates the product of two numbers and adds the result to an accumulator. In \gls{fp} arithmetics, the area of a hardware multiplier scales with the bit size of the mantissas. In the case of \gls{hf6}, the 6-bit \gls{fp} representation allows a reduced hardware multiplicator for mantissas. The 1-bit mantissa enables optimized \gls{mac} implementations by reducing the mantissa multiplication to a multiplexed addition, see \fig{fig:multiplier}. This \gls{mac} produces denormalized results, which are accumulated in a fixed-point accumulator. This approach reduces latency, energy consumption, and hardware area/resource utilization.
 
 \begin{figure}[t!]

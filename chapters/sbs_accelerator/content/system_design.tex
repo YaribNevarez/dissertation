@@ -59,7 +59,7 @@ The calculation of the dot-product of \equ{eq:sbs_update} represents a considera
 	\label{fig:hw_conv}
 \end{figure*}
 
-\subsection{Dot-Product Hardware Module}
+\subsection{Hybrid Custom Floating-Point Multiply-Accumulate Unit: Vector Dot-Product Approximation}
 \label{sec:dot-product_hardware_module}
 The dot-product hardware module is part of an application-specific architecture optimized to approximate the dot-product of arbitrary length vectors, see \equ{eq:dot_product}. For quality configurability, we parameterized the mantissa bit-width of $\vec{W}(s_t)$, which provides a tunable trade-off between resource utilization and \gls{qor}. Since the lower-order bits have smaller significance than the higher-order bits, removing them may have only a minor impact on \gls{qor}. We designate this as hybrid custom floating-point approximation (see {\fig{fig:dot_product_unit}}(b)).
 

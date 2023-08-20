@@ -1,30 +1,37 @@
 \chapter{Conclusion and Outlook}
-\label{chap.conclusion}
-\minitoc
-The use of \gls{ai} is entering a new era based on the use of ubiquitous connected devices. The sustainability of this transformation requires the adoption of design techniques that reconcile accurate results with cost-effective system architectures. As such, improving the efficiency of \gls{ai} hardware engines as well as \gls{ml} portability is considered in this dissertation.
 
-State-of-the-art \gls{ml} algorithms, specially \glspl{snn} and \glspl{cnn}, represent elevated computational and energy cost. Considering the intrinsic error resilience of \gls{ml} algorithms, paradigms such as approximate computing came to the rescue by offering efficiency gains to assist the aforementioned concerns. This dissertation contributes with state-of-the-art methods to address low-power neural network accelerator design with custom \gls{fp} computation.
+Artificial intelligence is launching an era defined by ubiquitous connected devices. To ensure the sustainability of this transformation, it is essential to merge accurate computational results with economical system designs. This dissertation emphasizes refining the efficiency of \gls{ai} hardware engines and enhancing portability.
 
-\section{Conclusion}
+\section{State-of-the-art challenges and solutions}
+Prominent \gls{ai}\gls{ml} algorithms, notably \glspl{snn} and \glspl{cnn}, come with elevated computational and energy demands. The intrinsic error resilience of these algorithms brings "approximate computing" paradigms, such as quantization, to the forefront, offering vital efficiency enhancements. This research delineates cutting-edge methodologies centered on low-power neural network accelerator designs employing custom \gls{fp} computation.
 
-In the field of \gls{snn}, this dissertation presents a hardware design methodology for low-power inference of \gls{sbs} neural networks targeting embedded applications. This research exploits the intrinsic error resilience of \gls{sbs} to improve performance and to reduce hardware complexity. More precisely, it is proposed a vector dot-product module based on approximate computing with configurable quality using hybrid custom \gls{fp} and logarithmic number representations. This approach reduces computational run-time, memory footprint, and power dissipation while preserving inference accuracy. To demonstrate this approach, a design exploration flow is presented with \gls{hls} on a resource-constrained \gls{fpga}. The proposed design reduces $20.5\times$ run-time and $8\times$ weight memory footprint, with less than $0.5\%$ of accuracy degradation without retraining on a handwritten digit classification task.
-
-In the field of \gls{cnn}, this dissertation presents a hardware design methodology for low-power inference targeting sensor analytics applications. In this work, it is proposed the \gls{hf6} quantization and its dedicated hardware processor. This quantization allows an optimized \gls{fp} \gls{mac} hardware design by reducing the mantissa multiplication to a multiplexer-adder operation. Additionally, this design exploits the intrinsic error tolerance of neural networks to further reduce the hardware architecture with approximation on the \gls{fp} subnormal number computation. To preserve model accuracy, a \gls{qat} method is presented, which in some cases improves accuracy based on regularization effects. This concept is demonstrated in 2D convolution layers. A low-power \gls{tp} is proposed implementing a pipelined vector dot-product. For \gls{ml} portability, the custom \gls{fp} representation is wrapped in the standard format, which is automatically extracted by the proposed hardware. The hardware/software architecture is integrated with TensorFlow Lite to demonstrate compatibility and portability with industry standard \gls{ml} frameworks. The applicability of this approach is evaluated with a \gls{cnn}-regression model for anomaly localization in a \gls{shm} application based on \gls{ae}. The embedded hardware/software framework is demonstrated on XC7Z007S. This is the smallest Zynq-7000 \gls{soc}, suitable for ubiquitous \gls{iot} devices. The proposed implementation achieves a peak power efficiency and acceleration of $5.7$ GFLOPS/s/W and $48.3\times$, respectively.
-
-\section{Outlook}
-
-In this research, three lines of future work are foreseen:
+\section{Specific Contributions}
 \begin{itemize}
-	\item \textbf{Reducing energy consumption and memory footprint.} The proposed architectures consists of a hybrid floating-point quantization using 32-bit activation maps. These can be represented using lower-bit formats; for example, Bfloat16 and 8-bit or lower custom floating-point. This would reduce hardware resource utilization, memory footprint and data transfer, while preserving backward compatibility and accuracy. (\gls{fp} formats present better \gls{qor} than fixed-pint representations based on their dynamic value range.)
+	\item \textbf{\gls{snn}}: A hardware design methodology is presented for low-power \gls{sbs} neural networks targeting embedded applications. This approach leverages the intrinsic error resilience of \gls{sbs}, emphasizing a balance between performance and hardware complexity. Significant reductions in run-time, memory footprint, and power consumption are realized, with minimal accuracy trade-offs.
 	
-	\item \textbf{Increasing throughput.} The proposed designs require matching higher computational throughput with memory bandwidth. This would replace the low-power pipeline hardware design with a parallelized structure. This can be achieved by using wider memory channels and systolic arrays to increase throughput. This will increment hardware area and energy consumption, suitable for UltraScale \gls{soc} \gls{fpga} architectures or \gls{asic} implementations.
-	
-	\item \textbf{Performing computer vision applications.} The proposed implementations are designed for sensor analytics workloads. For computer vision applications, the hardware design would require increased on-chip memory capacity for larger bias and filter vectors and higher computational throughput in a larger \gls{fpga} \gls{soc} or \gls{asic}.
+	\item \textbf{\gls{cnn}}: A novel low-power hardware design technique tailored resource-constrained applications is presented. The \gls{hf6} quantization strategy, its specialized hardware \gls{mac} unit and tensor processor is showcased. Compatibility with TensorFlow Lite demonstrates its industry relevance and potential for broader adoption.
 \end{itemize}
 
-\section{Summary}
+\section{Future Directions}
+\begin{itemize}
+	\item \textbf{Efficiency Improvements}: Exploring reduced architectures using lower-bit formats such as Bfloat16 in feature maps can optimize memory usage and energy consumption.
+	
+	\item \textbf{Enhanced Throughput}: There is scope in boosting computational throughput by transitioning from pipeline computation to parallel structures, incorporating wider memory channels, and potentially \gls{asic} implementations for greater efficiency.
+	
+	\item \textbf{Broadened Application Scope}: While the current emphasis is on sensor analytics, future designs will target the comprehensive spectrum of \gls{ai}/\gls{ml} models for inference and learning.
+\end{itemize}
 
-Based on the relaxed need for fully accurate or deterministic computation of neural networks, approximate computing techniques allow substantial enhancement in processing efficiency with moderated accuracy degradation. This dissertation focuses on the investigation of design methodologies to exploit the intrinsic error resilience of \gls{ml} algorithms to optimize high-quality \gls{fp} inference on low-power embedded systems. These design techniques reconcile accurate results with cost-effective system architectures.
+\section{Final Remarks}
+Given neural networks' inherent flexibility regarding precision, approximate computing offers remarkable improvements in processing efficiency with minor accuracy degradation. This dissertation examines deep into designs leveraging the intrinsic error resilience of \gls{ml} algorithms, aiming for optimal \gls{fp} inference on energy-efficient embedded systems. The proposed methodologies possess the adaptability and resilience for both low-power on-device training and scaling up to the high computational demands of data centers. Key takeaways include:
 
-The outcome of this dissertation contributes to the rise of a sustainable next generation of energy efficient neural network processors with \gls{ml} portability and high-accuracy as design philosophy.
+\begin{enumerate}
+	\item Approximate computing techniques, especially quantization, are set to revolutionize hardware designs by optimizing computation acceleration, energy efficiency, and chip area.
+	
+	\item The proposed \gls{mac} module design offers a perfect blend of computational accuracy and resource efficiency, aligning with the needs of resource-constrained devices.
+	
+	
+	\item The \gls{hf6} quantization approach, harmoniously integrating with \gls{fp} standards and TensorFlow Lite, establishes a foundation not only for diverse applications but also across the complete spectrum of \gls{ai}/\gls{ml} models, highlighting the synergy between innovative solutions and industry significance.
+	
+	\item Collectively, the methodologies and designs proposed here mark a pivotal step towards the development of a sustainable next-gen neural network processor ecosystem, properly supporting an interconnected world, spanning from individual devices to expansive data centers.
+\end{enumerate}
 
