@@ -1,4 +1,4 @@
-\section{Design}
+\section{Design Technique}
 \label{sec:system_design}
 The system design is a hardware/software co-design framework for low-power \gls{ml} analytics. This architecture allows design exploration for dedicated hardware in embedded systems. For \gls{ml} compatibility, the proposed framework integrates TensorFlow Lite micro.
 
@@ -121,7 +121,7 @@ This method is described in \Algo{alg:training}.
 \subsubsection{Quantization-Aware Training}
 The \gls{qat} method is integrated into the training process, this operates as a callback on each mini-batch update. The quantization is applied on the trainable parameters of convolution layers. This method is implemented on the \gls{ml} framework (TensorFlow/Keras), see \Algo{alg:quantization_integration}.
 
-The quantization method uses rounding strategy to reduce the \gls{fp} representation. This maps the full precision \gls{fp} values to the closest representable 6-bit \gls{fp} values, see \Algo{alg:quantize_training}. This method quantizes the filter and bias tensors of the convolution layers. The exponent bit size plays a more predominant influence on the model accuracy than the mantissa bit size. In \cite{lai2017deep}, Lai et al. demonstrated that 4-bit exponent and X-bit mantissa is adequate and consistent across different networks (SqueezeNet, AlexNet, GoogLeNet, VGG-16). In this research, the \gls{fp} representation with 4-bit exponent and 1-bit mantissa is investigated.
+The quantization method uses rounding strategy to reduce the \gls{fp} representation. This maps the full precision \gls{fp} values to the closest representable 6-bit \gls{fp} values, see \Algo{alg:quantize_training}. This method quantizes the filter and bias tensors of the convolution layers. The exponent bit size plays a more predominant influence on the model accuracy than the mantissa bit size. In \cite{lai2017deep}, Lai \textit{et al.} demonstrated that 4-bit exponent and X-bit mantissa is adequate and consistent across different networks (SqueezeNet, AlexNet, GoogLeNet, VGG-16). In this research, the \gls{fp} representation with 4-bit exponent and 1-bit mantissa is investigated.
 
 \begin{algorithm}[h!]
 	\caption{Training with iterative early stop cycle.}

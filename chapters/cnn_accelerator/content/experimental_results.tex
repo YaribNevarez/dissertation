@@ -234,7 +234,7 @@ The TensorFlow Lite 8-bit quantization preserves the overall model accuracy. In 
 
 The proposed 6-bit \gls{fp} representation (E4M1) improves latency, hardware area, and power dissipation, while preserving model accuracy. For comparison, in our application, this number format produces better results than the 6-bit logarithmic representation (E5M0). This is demonstrated in \Fig{fig:model_evaluation}(d) and \Fig{fig:model_evaluation}(e).
 
-In \cite{lai2017deep}, Lai et al. demonstrated that 4-bit exponent and X-bit mantissa preserves accuracy on SqueezeNet, AlexNet, GoogLeNet, and VGG-16. To contribute on this, I investigated 4-bit exponent and 1-bit mantissa to ALL-CNN-C~\cite{springenberg2014striving}, this produces an accuracy degradation of 1.39\% and 0.11\% with \gls{qat}. While applying 6-bit logarithmic produces a degradation of 11.18\% and 7.22\% with \gls{qat}.
+In \cite{lai2017deep}, Lai \textit{et al.} demonstrated that 4-bit exponent and X-bit mantissa preserves accuracy on SqueezeNet, AlexNet, GoogLeNet, and VGG-16. To contribute on this, I investigated 4-bit exponent and 1-bit mantissa to ALL-CNN-C~\cite{springenberg2014striving}, this produces an accuracy degradation of 1.39\% and 0.11\% with \gls{qat}. While applying 6-bit logarithmic produces a degradation of 11.18\% and 7.22\% with \gls{qat}.
 
 \begin{figure}[t!]
 	\centering
@@ -278,7 +278,7 @@ The hybrid 32-bit \gls{fp} and 6-bit \gls{fp} quantization enables high quality 
 	\caption{Comparison of hardware implementation with related work.}\label{tab:comparison}
 	\scriptsize
 	\begin{tabular}{lrrrrrr}\toprule
-		Platform &Chunsheng et al. \cite{mei2017200mhz} &Chen et al. \cite{wu2021low} &BFP \cite{lian2019high} &Paolo et al. \cite{meloni2019cnn} &This work \\\midrule
+		Platform &Chunsheng \textit{et al.} \cite{mei2017200mhz} &Chen \textit{et al.} \cite{wu2021low} &BFP \cite{lian2019high} &Paolo \textit{et al.} \cite{meloni2019cnn} &This work \\\midrule
 		Device &XC7VX690T &XC7K325T &XC7VX690T &XC7Z007S &XC7Z007S \\
 		Year &2017 &2019 &2019 &2019 &2023 \\
 		Dev. kit cost &\$7,494 &\$1,299 &\$7,494 &\$89 &\$89 \\

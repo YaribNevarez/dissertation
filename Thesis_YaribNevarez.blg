@@ -206,45 +206,45 @@ Repeated entry---line 4176 of file ./bibliography/mybib.bib
 I'm skipping whatever remains of this entry
 Warning--empty journal in gillani2020exploiting
 Warning--can't use both volume and number fields in maas2013rectifier
-You've used 129 entries,
+You've used 138 entries,
             1791 wiz_defined-function locations,
-            1174 strings with 32822 characters,
-and the built_in function-call counts, 36045 in all, are:
-= -- 3101
-> -- 2050
-< -- 39
-+ -- 730
-- -- 601
-* -- 2611
-:= -- 5687
-add.period$ -- 413
-call.type$ -- 129
-change.case$ -- 126
+            1214 strings with 35099 characters,
+and the built_in function-call counts, 38493 in all, are:
+= -- 3295
+> -- 2230
+< -- 42
++ -- 793
+- -- 655
+* -- 2776
+:= -- 6094
+add.period$ -- 442
+call.type$ -- 138
+change.case$ -- 136
 chr.to.int$ -- 0
-cite$ -- 131
-duplicate$ -- 1552
-empty$ -- 3225
-format.name$ -- 601
-if$ -- 8050
+cite$ -- 140
+duplicate$ -- 1661
+empty$ -- 3420
+format.name$ -- 655
+if$ -- 8591
 int.to.chr$ -- 0
-int.to.str$ -- 129
-missing$ -- 131
-newline$ -- 647
-num.names$ -- 129
-pop$ -- 396
+int.to.str$ -- 138
+missing$ -- 139
+newline$ -- 692
+num.names$ -- 138
+pop$ -- 427
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 789
+skip$ -- 852
 stack$ -- 0
-substring$ -- 2375
-swap$ -- 475
-text.length$ -- 39
+substring$ -- 2469
+swap$ -- 513
+text.length$ -- 42
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 335
-width$ -- 132
-write$ -- 1419
+while$ -- 354
+width$ -- 141
+write$ -- 1517
 (There were 48 error messages)

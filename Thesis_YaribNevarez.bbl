@@ -241,41 +241,6 @@ David Rotermund and Klaus~R. Pawelzik.
 \newblock Massively parallel {FPGA} hardware for spike-by-spike networks.
 \newblock {\em bioRxiv}, 2019.
 
-\bibitem{roy2019towards}
-Kaushik Roy, Akhilesh Jaiswal, and Priyadarshini Panda.
-\newblock Towards spike-based machine intelligence with neuromorphic computing.
-\newblock {\em Nature}, 575(7784):607--617, 2019.
-
-\bibitem{young2019review}
-Aaron~R Young, Mark~E Dean, James~S Plank, and Garrett~S Rose.
-\newblock A review of spiking neuromorphic hardware communication systems.
-\newblock {\em IEEE Access}, 7:135606--135620, 2019.
-
-\bibitem{TrueNorth_Trans15}
-F.~{Akopyan}, J.~{Sawada}, A.~{Cassidy}, R.~{Alvarez-Icaza}, J.~{Arthur},
-  P.~{Merolla}, N.~{Imam}, Y.~{Nakamura}, P.~{Datta}, G.~{Nam}, B.~{Taba},
-  M.~{Beakes}, B.~{Brezzo}, J.~B. {Kuang}, R.~{Manohar}, W.~P. {Risk},
-  B.~{Jackson}, and D.~S. {Modha}.
-\newblock Truenorth: Design and tool flow of a 65 mw 1 million neuron
-  programmable neurosynaptic chip.
-\newblock {\em IEEE Trans. on Computer-Aided Design of Integrated Circuits and
-  Systems}, 34(10):1537--1557, Oct 2015.
-
-\bibitem{Spinnaker_Trans13}
-E.~{Painkras}, L.~A. {Plana}, J.~{Garside}, S.~{Temple}, F.~{Galluppi},
-  C.~{Patterson}, D.~R. {Lester}, A.~D. {Brown}, and S.~B. {Furber}.
-\newblock Spinnaker: A 1-w 18-core system-on-chip for massively-parallel neural
-  network simulation.
-\newblock {\em IEEE Journal of Solid-State Circuits}, 48(8):1943--1953, Aug
-  2013.
-
-\bibitem{davies2018loihi}
-Mike Davies, Narayan Srinivasa, Tsung-Han Lin, Gautham Chinya, Yongqiang Cao,
-  Sri~Harsha Choday, Georgios Dimou, Prasad Joshi, Nabil Imam, Shweta Jain,
-  et~al.
-\newblock Loihi: A neuromorphic manycore processor with on-chip learning.
-\newblock {\em IEEE Micro}, 38(1):82--99, 2018.
-
 \bibitem{rotermund2019recurrentsbs}
 David Rotermund and Klaus~R. Pawelzik.
 \newblock Biologically plausible learning in a deep recurrent spiking network.
@@ -325,19 +290,6 @@ Yong~Chan Kim, Hyeong-Geun Yu, Jae-Hoon Lee, Dong-Jo Park, and Hyun-Woo Nam.
 \newblock In {\em Electro-Optical and Infrared Systems: Technology and
   Applications XIV}, volume 10433, page 1043317. International Society for
   Optics and Photonics, 2017.
-
-\bibitem{nevarez2021accelerating}
-Yarib Nevarez, David Rotermund, Klaus~R Pawelzik, and Alberto Garcia-Ortiz.
-\newblock Accelerating spike-by-spike neural networks on fpga with hybrid
-  custom floating-point and logarithmic dot-product approximation.
-\newblock {\em IEEE Access}, 2021.
-
-\bibitem{yn2022cnnsensor}
-Yarib Nevarez, Andreas Beering, Amir Najafi, Ardalan Najafi, Wanli Yu, Yizhi
-  Chen, Karl-Ludwig Krieger, and Alberto Garcia-Ortiz.
-\newblock Cnn sensor analytics with hybrid-float6 quantization on low-power
-  embedded fpgas.
-\newblock {\em IEEE Access}, 11:4852--4868, 2023.
 
 \bibitem{silver2016mastering}
 David Silver, Aja Huang, Chris~J Maddison, Arthur Guez, Laurent Sifre, George
@@ -681,6 +633,73 @@ Chang Gao, Antonio Rios-Navarro, Xi~Chen, Shih-Chii Liu, and Tobi Delbruck.
 \newblock {\em IEEE Journal on Emerging and Selected Topics in Circuits and
   Systems}, 10(4):419--432, 2020.
 
+\bibitem{venkataramanaiah202228nm}
+Shreyas~Kolala Venkataramanaiah, Jian Meng, Han-Sok Suh, Injune Yeo, Jyotishman
+  Saikia, Sai~Kiran Cherupally, Yichi Zhang, Zhiru Zhang, and Jae-sun Seo.
+\newblock A 28nm 8-bit floating-point tensor core based cnn training processor
+  with dynamic activation/weight sparsification.
+\newblock In {\em ESSCIRC 2022-IEEE 48th European Solid State Circuits
+  Conference (ESSCIRC)}, pages 89--92. IEEE, 2022.
+
+\bibitem{park2021neural}
+Jeongwoo Park, Sunwoo Lee, and Dongsuk Jeon.
+\newblock A neural network training processor with 8-bit shared exponent bias
+  floating point and multiple-way fused multiply-add trees.
+\newblock {\em IEEE Journal of Solid-State Circuits}, 57(3):965--977, 2021.
+
+\bibitem{wu2020phoenix}
+Chen Wu, Mingyu Wang, Xiayu Li, Jicheng Lu, Kun Wang, and Lei He.
+\newblock Phoenix: A low-precision floating-point quantization oriented
+  architecture for convolutional neural networks.
+\newblock {\em arXiv preprint arXiv:2003.02628}, 2020.
+
+\bibitem{venkataramani2021rapid}
+Swagath Venkataramani, Vijayalakshmi Srinivasan, Wei Wang, Sanchari Sen, Jintao
+  Zhang, Ankur Agrawal, Monodeep Kar, Shubham Jain, Alberto Mannari, Hoang
+  Tran, et~al.
+\newblock Rapid: Ai accelerator for ultra-low precision training and inference.
+\newblock In {\em 2021 ACM/IEEE 48th Annual International Symposium on Computer
+  Architecture (ISCA)}, pages 153--166. IEEE, 2021.
+
+\bibitem{noune20228}
+Badreddine Noune, Philip Jones, Daniel Justus, Dominic Masters, and Carlo
+  Luschi.
+\newblock 8-bit numerical formats for deep neural networks.
+\newblock {\em arXiv preprint arXiv:2206.02915}, 2022.
+
+\bibitem{gallus2018handwritten}
+Michal Gallus and Alberto Nannarelli.
+\newblock Handwritten digit classification using 8-bit floating point based
+  convolutional neural networks.
+\newblock Technical report, DTU Compute Technical Report, 2018.
+
+\bibitem{mellempudi2019mixed}
+Naveen Mellempudi, Sudarshan Srinivasan, Dipankar Das, and Bharat Kaul.
+\newblock Mixed precision training with 8-bit floating point.
+\newblock {\em arXiv preprint arXiv:1905.12334}, 2019.
+
+\bibitem{wang2018training}
+Naigang Wang, Jungwook Choi, Daniel Brand, Chia-Yu Chen, and Kailash
+  Gopalakrishnan.
+\newblock Training deep neural networks with 8-bit floating point numbers.
+\newblock {\em Advances in neural information processing systems}, 31, 2018.
+
+\bibitem{sun2019hybrid}
+Xiao Sun, Jungwook Choi, Chia-Yu Chen, Naigang Wang, Swagath Venkataramani,
+  Vijayalakshmi~Viji Srinivasan, Xiaodong Cui, Wei Zhang, and Kailash
+  Gopalakrishnan.
+\newblock Hybrid 8-bit floating point (hfp8) training and inference for deep
+  neural networks.
+\newblock {\em Advances in neural information processing systems}, 32, 2019.
+
+\bibitem{liu2021improving}
+Fangxin Liu, Wenbo Zhao, Zhezhi He, Yanzhi Wang, Zongwu Wang, Changzhi Dai,
+  Xiaoyao Liang, and Li~Jiang.
+\newblock Improving neural network efficiency via post-training quantization
+  with adaptive floating-point.
+\newblock In {\em Proceedings of the IEEE/CVF International Conference on
+  Computer Vision}, pages 5281--5290, 2021.
+
 \bibitem{schmidhuber2015deep}
 J{\"u}rgen Schmidhuber.
 \newblock Deep learning in neural networks: An overview.
@@ -699,6 +718,14 @@ Nassim Abderrahmane, Edgar Lemaire, and Benoît Miramond.
   artificial intelligence.
 \newblock {\em Neural Networks}, 121:366 -- 386, 2020.
 
+\bibitem{Spinnaker_Trans13}
+E.~{Painkras}, L.~A. {Plana}, J.~{Garside}, S.~{Temple}, F.~{Galluppi},
+  C.~{Patterson}, D.~R. {Lester}, A.~D. {Brown}, and S.~B. {Furber}.
+\newblock Spinnaker: A 1-w 18-core system-on-chip for massively-parallel neural
+  network simulation.
+\newblock {\em IEEE Journal of Solid-State Circuits}, 48(8):1943--1953, Aug
+  2013.
+
 \bibitem{SNN_Survey_Trans19}
 Maxence Bouvier, Alexandre Valentian, Thomas Mesquida, Francois Rummens, Marina
   Reyboz, Elisa Vianello, and Edith Beigne.
@@ -706,12 +733,39 @@ Maxence Bouvier, Alexandre Valentian, Thomas Mesquida, Francois Rummens, Marina
   survey.
 \newblock {\em J. Emerg. Technol. Comput. Syst.}, 15(2), April 2019.
 
+\bibitem{davies2018loihi}
+Mike Davies, Narayan Srinivasa, Tsung-Han Lin, Gautham Chinya, Yongqiang Cao,
+  Sri~Harsha Choday, Georgios Dimou, Prasad Joshi, Nabil Imam, Shweta Jain,
+  et~al.
+\newblock Loihi: A neuromorphic manycore processor with on-chip learning.
+\newblock {\em IEEE Micro}, 38(1):82--99, 2018.
+
+\bibitem{TrueNorth_Trans15}
+F.~{Akopyan}, J.~{Sawada}, A.~{Cassidy}, R.~{Alvarez-Icaza}, J.~{Arthur},
+  P.~{Merolla}, N.~{Imam}, Y.~{Nakamura}, P.~{Datta}, G.~{Nam}, B.~{Taba},
+  M.~{Beakes}, B.~{Brezzo}, J.~B. {Kuang}, R.~{Manohar}, W.~P. {Risk},
+  B.~{Jackson}, and D.~S. {Modha}.
+\newblock Truenorth: Design and tool flow of a 65 mw 1 million neuron
+  programmable neurosynaptic chip.
+\newblock {\em IEEE Trans. on Computer-Aided Design of Integrated Circuits and
+  Systems}, 34(10):1537--1557, Oct 2015.
+
 \bibitem{amunts2019human}
 Katrin Amunts, Alois~C Knoll, Thomas Lippert, Cyriel~MA Pennartz, Philippe
   Ryvlin, Alain Destexhe, Viktor~K Jirsa, Egidio D?Angelo, and Jan~G Bjaalie.
 \newblock The human brain project -- synergy between neuroscience, computing,
   informatics, and brain-inspired technologies.
 \newblock {\em PLoS biology}, 17(7):e3000344, 2019.
+
+\bibitem{roy2019towards}
+Kaushik Roy, Akhilesh Jaiswal, and Priyadarshini Panda.
+\newblock Towards spike-based machine intelligence with neuromorphic computing.
+\newblock {\em Nature}, 575(7784):607--617, 2019.
+
+\bibitem{young2019review}
+Aaron~R Young, Mark~E Dean, James~S Plank, and Garrett~S Rose.
+\newblock A review of spiking neuromorphic hardware communication systems.
+\newblock {\em IEEE Access}, 7:135606--135620, 2019.
 
 \bibitem{park2009dynamic}
 Jongsun Park, Jung~Hwan Choi, and Kaushik Roy.
@@ -792,6 +846,12 @@ Eriko Nurvitadhi, Ganesh Venkatesh, Jaewoong Sim, Debbie Marr, Randy Huang,
 Song Han, Jeff Pool, John Tran, and William Dally.
 \newblock Learning both weights and connections for efficient neural network.
 \newblock {\em Advances in neural information processing systems}, 28, 2015.
+
+\bibitem{nevarez2021accelerating}
+Yarib Nevarez, David Rotermund, Klaus~R Pawelzik, and Alberto Garcia-Ortiz.
+\newblock Accelerating spike-by-spike neural networks on fpga with hybrid
+  custom floating-point and logarithmic dot-product approximation.
+\newblock {\em IEEE Access}, 2021.
 
 \bibitem{hannwindowsine}
 Shirsendu Sikdar, Sauvik Banerjee, and G.~Ashish.
