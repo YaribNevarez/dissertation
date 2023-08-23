@@ -46,5 +46,5 @@
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Hybrid Custom Floating-Point}{\reset@font\mtcSSSfont 42}{section*.52}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Low-Precision Floating-Point}{\reset@font\mtcSSSfont 43}{section*.53}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Low-Power}{\reset@font\mtcSSSfont 43}{section*.54}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.4}ASIC Implementations with 8-bit Floating-Point Computation}{\reset@font\mtcSSfont 43}{subsection.2.7.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.4}ASIC implementations with 8-bit Floating-Point Computation}{\reset@font\mtcSSfont 43}{subsection.2.7.4}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.5}Training Techniques with 8-bit Floating-Point Quantization}{\reset@font\mtcSSfont 44}{subsection.2.7.5}}
