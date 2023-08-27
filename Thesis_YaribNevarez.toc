@@ -145,5 +145,5 @@
 \contentsline {subsection}{\numberline {A.1.1}Implementation}{109}{subsection.A.1.1}%
 \contentsline {subsection}{\numberline {A.1.2}Initialization}{110}{subsection.A.1.2}%
 \contentsline {subsection}{\numberline {A.1.3}Operation}{110}{subsection.A.1.3}%
-\contentsline {subsection}{\numberline {A.1.4}Collaboration diagram of TensorFlow delegate classes}{112}{subsection.A.1.4}%
+\contentsline {subsection}{\numberline {A.1.4}Software Classes}{112}{subsection.A.1.4}%
 \contentsline {section}{\numberline {A.2}SbS algorithm}{114}{section.A.2}%
