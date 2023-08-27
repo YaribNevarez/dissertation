@@ -1,0 +1,11 @@
+<map id="ConvProfile" name="ConvProfile">
+<area shape="rect" id="node1" title=" " alt="" coords="472,373,568,451"/>
+<area shape="rect" id="node2" href="$struct_conv_parameters.html" title=" " alt="" coords="369,175,519,267"/>
+<area shape="rect" id="node3" href="$struct_conv_qant_activation.html" title=" " alt="" coords="5,13,157,105"/>
+<area shape="rect" id="node4" href="$struct_conv_offset.html" title=" " alt="" coords="206,5,301,112"/>
+<area shape="rect" id="node5" href="$struct_conv_dilation.html" title=" " alt="" coords="325,13,432,105"/>
+<area shape="rect" id="node6" href="$struct_conv_padding.html" title=" " alt="" coords="456,13,563,105"/>
+<area shape="rect" id="node7" href="$struct_conv_stride.html" title=" " alt="" coords="587,13,680,105"/>
+<area shape="rect" id="node8" href="$struct_conv_activation.html" title=" " alt="" coords="705,13,826,105"/>
+<area shape="rect" id="node9" href="$struct_tensor_shape.html" title=" " alt="" coords="544,182,648,259"/>
+</map>

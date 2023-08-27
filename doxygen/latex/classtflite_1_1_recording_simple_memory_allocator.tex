@@ -1,0 +1,75 @@
+\hypertarget{classtflite_1_1_recording_simple_memory_allocator}{}\doxysection{tflite\+::Recording\+Simple\+Memory\+Allocator Class Reference}
+\label{classtflite_1_1_recording_simple_memory_allocator}\index{tflite::RecordingSimpleMemoryAllocator@{tflite::RecordingSimpleMemoryAllocator}}
+
+
+Inheritance diagram for tflite\+::Recording\+Simple\+Memory\+Allocator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classtflite_1_1_recording_simple_memory_allocator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tflite\+::Recording\+Simple\+Memory\+Allocator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classtflite_1_1_recording_simple_memory_allocator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_ad7c3d0a2862d0bf4f0d3de38b091ea8b}\label{classtflite_1_1_recording_simple_memory_allocator_ad7c3d0a2862d0bf4f0d3de38b091ea8b}} 
+{\bfseries Recording\+Simple\+Memory\+Allocator} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, uint8\+\_\+t $\ast$buffer\+\_\+head, size\+\_\+t buffer\+\_\+size)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_a44416ec23f5988f80d3a4262242bd4c4}\label{classtflite_1_1_recording_simple_memory_allocator_a44416ec23f5988f80d3a4262242bd4c4}} 
+size\+\_\+t {\bfseries Get\+Requested\+Bytes} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_a57754426a8121669f147c6b0338f237c}\label{classtflite_1_1_recording_simple_memory_allocator_a57754426a8121669f147c6b0338f237c}} 
+size\+\_\+t {\bfseries Get\+Used\+Bytes} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_a54f814789d26d8710087183e55bc61fa}\label{classtflite_1_1_recording_simple_memory_allocator_a54f814789d26d8710087183e55bc61fa}} 
+size\+\_\+t {\bfseries Get\+Allocated\+Count} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_a4a5af91eb91d48297da83b29449cffb2}\label{classtflite_1_1_recording_simple_memory_allocator_a4a5af91eb91d48297da83b29449cffb2}} 
+Tf\+Lite\+Status {\bfseries Set\+Head\+Buffer\+Size} (size\+\_\+t size, size\+\_\+t alignment) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_a2b1774ee796af9ceec88f09783632003}\label{classtflite_1_1_recording_simple_memory_allocator_a2b1774ee796af9ceec88f09783632003}} 
+uint8\+\_\+t $\ast$ {\bfseries Allocate\+From\+Tail} (size\+\_\+t size, size\+\_\+t alignment) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_ad7c3d0a2862d0bf4f0d3de38b091ea8b}\label{classtflite_1_1_recording_simple_memory_allocator_ad7c3d0a2862d0bf4f0d3de38b091ea8b}} 
+{\bfseries Recording\+Simple\+Memory\+Allocator} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, uint8\+\_\+t $\ast$buffer\+\_\+head, size\+\_\+t buffer\+\_\+size)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_a44416ec23f5988f80d3a4262242bd4c4}\label{classtflite_1_1_recording_simple_memory_allocator_a44416ec23f5988f80d3a4262242bd4c4}} 
+size\+\_\+t {\bfseries Get\+Requested\+Bytes} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_a57754426a8121669f147c6b0338f237c}\label{classtflite_1_1_recording_simple_memory_allocator_a57754426a8121669f147c6b0338f237c}} 
+size\+\_\+t {\bfseries Get\+Used\+Bytes} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_a54f814789d26d8710087183e55bc61fa}\label{classtflite_1_1_recording_simple_memory_allocator_a54f814789d26d8710087183e55bc61fa}} 
+size\+\_\+t {\bfseries Get\+Allocated\+Count} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_a4a5af91eb91d48297da83b29449cffb2}\label{classtflite_1_1_recording_simple_memory_allocator_a4a5af91eb91d48297da83b29449cffb2}} 
+Tf\+Lite\+Status {\bfseries Set\+Head\+Buffer\+Size} (size\+\_\+t size, size\+\_\+t alignment) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_af766dce8b4ee9c2f639d543271fa7867}\label{classtflite_1_1_recording_simple_memory_allocator_af766dce8b4ee9c2f639d543271fa7867}} 
+uint8\+\_\+t $\ast$ {\bfseries Allocate\+From\+Tail} (size\+\_\+t size, size\+\_\+t alignment) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_a5374be8026c6f954c9214e066b2baf5e}\label{classtflite_1_1_recording_simple_memory_allocator_a5374be8026c6f954c9214e066b2baf5e}} 
+static \mbox{\hyperlink{classtflite_1_1_recording_simple_memory_allocator}{Recording\+Simple\+Memory\+Allocator}} $\ast$ {\bfseries Create} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, uint8\+\_\+t $\ast$buffer\+\_\+head, size\+\_\+t buffer\+\_\+size)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_recording_simple_memory_allocator_afae08a8a376283877293ac2f6ed45b1e}\label{classtflite_1_1_recording_simple_memory_allocator_afae08a8a376283877293ac2f6ed45b1e}} 
+static \mbox{\hyperlink{classtflite_1_1_recording_simple_memory_allocator}{Recording\+Simple\+Memory\+Allocator}} $\ast$ {\bfseries Create} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, uint8\+\_\+t $\ast$buffer\+\_\+head, size\+\_\+t buffer\+\_\+size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/recording\+\_\+simple\+\_\+memory\+\_\+allocator.\+h\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/recording\+\_\+simple\+\_\+memory\+\_\+allocator.\+cpp\end{DoxyCompactItemize}

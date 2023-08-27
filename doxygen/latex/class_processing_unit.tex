@@ -1,0 +1,92 @@
+\hypertarget{class_processing_unit}{}\doxysection{Processing\+Unit Class Reference}
+\label{class_processing_unit}\index{ProcessingUnit@{ProcessingUnit}}
+
+
+Inheritance diagram for Processing\+Unit\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_processing_unit__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Processing\+Unit\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_processing_unit__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_processing_unit_1_1_profile}{Profile}}
+\item 
+struct \mbox{\hyperlink{struct_processing_unit_1_1_transaction}{Transaction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_processing_unit_a5303502ccb1e6eb37557801f381efcb0}\label{class_processing_unit_a5303502ccb1e6eb37557801f381efcb0}} 
+enum {\bfseries Transaction\+Flags} \{ \newline
+{\bfseries T\+X\+\_\+\+C\+A\+C\+H\+E\+\_\+\+F\+U\+SH} = 1$<$$<$0, 
+{\bfseries R\+X\+\_\+\+C\+A\+C\+H\+E\+\_\+\+F\+E\+T\+CH} = 1$<$$<$1, 
+{\bfseries B\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+\_\+\+O\+UT} = 1$<$$<$2, 
+{\bfseries H\+W\+\_\+\+I\+P\+\_\+\+D\+O\+NE} = 1$<$$<$3, 
+\newline
+{\bfseries D\+M\+A\+\_\+\+T\+X\+\_\+\+D\+O\+NE} = 1$<$$<$4, 
+{\bfseries D\+M\+A\+\_\+\+R\+X\+\_\+\+D\+O\+NE} = 1$<$$<$5
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_processing_unit_a061129801d8b71582a52fd91e98b4a2c}\label{class_processing_unit_a061129801d8b71582a52fd91e98b4a2c}} 
+virtual int {\bfseries initialize} (\mbox{\hyperlink{struct_processing_unit_1_1_profile}{Profile}} $\ast$)
+\item 
+\mbox{\Hypertarget{class_processing_unit_a1edc28f67c380a0a92b432a51acb45e4}\label{class_processing_unit_a1edc28f67c380a0a92b432a51acb45e4}} 
+virtual int {\bfseries execute} (\mbox{\hyperlink{struct_processing_unit_1_1_transaction}{Transaction}} $\ast$transaction)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_processing_unit_a41d9ede62de1bde6385ecc4f6726c85e}\label{class_processing_unit_a41d9ede62de1bde6385ecc4f6726c85e}} 
+static void {\bfseries set\+Transaction\+Flags} (\mbox{\hyperlink{struct_processing_unit_1_1_transaction}{Transaction}} \&, int)
+\item 
+\mbox{\Hypertarget{class_processing_unit_abefecb93976d3d10ee232b2eacd36173}\label{class_processing_unit_abefecb93976d3d10ee232b2eacd36173}} 
+static int {\bfseries get\+Transaction\+Flags} (\mbox{\hyperlink{struct_processing_unit_1_1_transaction}{Transaction}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_processing_unit_abea454c5e2e9c93971fb8ccdc1da2677}\label{class_processing_unit_abea454c5e2e9c93971fb8ccdc1da2677}} 
+virtual int {\bfseries initialize\+\_\+ip} (void)
+\item 
+\mbox{\Hypertarget{class_processing_unit_a831ae6720e52e50badbd5f22194d2f87}\label{class_processing_unit_a831ae6720e52e50badbd5f22194d2f87}} 
+virtual int {\bfseries initialize\+\_\+dma} (void)
+\item 
+\mbox{\Hypertarget{class_processing_unit_afccf595b818fb1e42a5948d3224e90a9}\label{class_processing_unit_afccf595b818fb1e42a5948d3224e90a9}} 
+virtual void {\bfseries on\+Done\+\_\+ip} (void)
+\item 
+\mbox{\Hypertarget{class_processing_unit_aa7de796c57e8bcc810a7a22a506c9419}\label{class_processing_unit_aa7de796c57e8bcc810a7a22a506c9419}} 
+virtual void {\bfseries on\+Done\+\_\+dma\+Tx} (void)
+\item 
+\mbox{\Hypertarget{class_processing_unit_a355043d41271c7f1ecb792bb9e8567ef}\label{class_processing_unit_a355043d41271c7f1ecb792bb9e8567ef}} 
+virtual void {\bfseries on\+Done\+\_\+dma\+Rx} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_processing_unit_a8fa51edf6f611e3900011bb81a44d12f}\label{class_processing_unit_a8fa51edf6f611e3900011bb81a44d12f}} 
+\mbox{\hyperlink{struct_processing_unit_1_1_profile}{Profile}} $\ast$ {\bfseries profile\+\_\+} = nullptr
+\item 
+\mbox{\Hypertarget{class_processing_unit_a305fa8799d6dcb28f9f50de0b974f8be}\label{class_processing_unit_a305fa8799d6dcb28f9f50de0b974f8be}} 
+\mbox{\hyperlink{struct_processing_unit_1_1_transaction}{Transaction}} $\ast$ {\bfseries transaction\+\_\+} = nullptr
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/libs/drivers/inc/processing\+\_\+unit.\+h\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/libs/drivers/src/processing\+\_\+unit.\+cpp\end{DoxyCompactItemize}

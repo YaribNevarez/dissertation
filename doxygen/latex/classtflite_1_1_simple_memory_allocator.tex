@@ -1,0 +1,119 @@
+\hypertarget{classtflite_1_1_simple_memory_allocator}{}\doxysection{tflite\+::Simple\+Memory\+Allocator Class Reference}
+\label{classtflite_1_1_simple_memory_allocator}\index{tflite::SimpleMemoryAllocator@{tflite::SimpleMemoryAllocator}}
+
+
+Inheritance diagram for tflite\+::Simple\+Memory\+Allocator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classtflite_1_1_simple_memory_allocator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tflite\+::Simple\+Memory\+Allocator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classtflite_1_1_simple_memory_allocator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_ab5f085971810e0f1d0a37466aff1b299}\label{classtflite_1_1_simple_memory_allocator_ab5f085971810e0f1d0a37466aff1b299}} 
+{\bfseries Simple\+Memory\+Allocator} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, uint8\+\_\+t $\ast$buffer\+\_\+head, uint8\+\_\+t $\ast$buffer\+\_\+tail)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a71dad89cb0387023a0c966eaef5471db}\label{classtflite_1_1_simple_memory_allocator_a71dad89cb0387023a0c966eaef5471db}} 
+{\bfseries Simple\+Memory\+Allocator} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+\_\+size)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a2fd0bde062100645201dce7366e742e7}\label{classtflite_1_1_simple_memory_allocator_a2fd0bde062100645201dce7366e742e7}} 
+virtual Tf\+Lite\+Status {\bfseries Set\+Head\+Buffer\+Size} (size\+\_\+t size, size\+\_\+t alignment)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a82d7af28d9d49afa43e155f8d258ca88}\label{classtflite_1_1_simple_memory_allocator_a82d7af28d9d49afa43e155f8d258ca88}} 
+virtual uint8\+\_\+t $\ast$ {\bfseries Allocate\+From\+Tail} (size\+\_\+t size, size\+\_\+t alignment)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_abe3caa2fba58e4a140a73ec58dc6bad5}\label{classtflite_1_1_simple_memory_allocator_abe3caa2fba58e4a140a73ec58dc6bad5}} 
+virtual uint8\+\_\+t $\ast$ {\bfseries Allocate\+Temp} (size\+\_\+t size, size\+\_\+t alignment)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a5725da8df43c04d41463d4eea778f375}\label{classtflite_1_1_simple_memory_allocator_a5725da8df43c04d41463d4eea778f375}} 
+virtual void {\bfseries Reset\+Temp\+Allocations} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a2d724b4baff5edea526cea53e8bcd4de}\label{classtflite_1_1_simple_memory_allocator_a2d724b4baff5edea526cea53e8bcd4de}} 
+uint8\+\_\+t $\ast$ {\bfseries Get\+Head\+Buffer} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a0d5de39e4382803763fa7fdd864fbf92}\label{classtflite_1_1_simple_memory_allocator_a0d5de39e4382803763fa7fdd864fbf92}} 
+size\+\_\+t {\bfseries Get\+Head\+Used\+Bytes} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a27501a91d001ee6d0dd48b440aadef9c}\label{classtflite_1_1_simple_memory_allocator_a27501a91d001ee6d0dd48b440aadef9c}} 
+size\+\_\+t {\bfseries Get\+Tail\+Used\+Bytes} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a5bf3ab104b45a96a137a81c82f7f3982}\label{classtflite_1_1_simple_memory_allocator_a5bf3ab104b45a96a137a81c82f7f3982}} 
+size\+\_\+t {\bfseries Get\+Available\+Memory} (size\+\_\+t alignment) const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_aa4e8cb69ef543ceca8c9b89e2231c485}\label{classtflite_1_1_simple_memory_allocator_aa4e8cb69ef543ceca8c9b89e2231c485}} 
+size\+\_\+t {\bfseries Get\+Used\+Bytes} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_ab5f085971810e0f1d0a37466aff1b299}\label{classtflite_1_1_simple_memory_allocator_ab5f085971810e0f1d0a37466aff1b299}} 
+{\bfseries Simple\+Memory\+Allocator} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, uint8\+\_\+t $\ast$buffer\+\_\+head, uint8\+\_\+t $\ast$buffer\+\_\+tail)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a71dad89cb0387023a0c966eaef5471db}\label{classtflite_1_1_simple_memory_allocator_a71dad89cb0387023a0c966eaef5471db}} 
+{\bfseries Simple\+Memory\+Allocator} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+\_\+size)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a14dfcc0c65017871d4ff81062539fe49}\label{classtflite_1_1_simple_memory_allocator_a14dfcc0c65017871d4ff81062539fe49}} 
+virtual Tf\+Lite\+Status {\bfseries Set\+Head\+Buffer\+Size} (size\+\_\+t size, size\+\_\+t alignment)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_ab81496fd2d8b2c608bd3bfa771d72cb1}\label{classtflite_1_1_simple_memory_allocator_ab81496fd2d8b2c608bd3bfa771d72cb1}} 
+virtual uint8\+\_\+t $\ast$ {\bfseries Allocate\+From\+Tail} (size\+\_\+t size, size\+\_\+t alignment)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a96dc8b110b6d024892183480b28bcb33}\label{classtflite_1_1_simple_memory_allocator_a96dc8b110b6d024892183480b28bcb33}} 
+virtual uint8\+\_\+t $\ast$ {\bfseries Allocate\+Temp} (size\+\_\+t size, size\+\_\+t alignment)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_aa41c24bf4979ae3f1045c29e37057bec}\label{classtflite_1_1_simple_memory_allocator_aa41c24bf4979ae3f1045c29e37057bec}} 
+virtual void {\bfseries Reset\+Temp\+Allocations} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_af28a9934d7d75fda7de328bd81d4af6a}\label{classtflite_1_1_simple_memory_allocator_af28a9934d7d75fda7de328bd81d4af6a}} 
+uint8\+\_\+t $\ast$ {\bfseries Get\+Head\+Buffer} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a0d5de39e4382803763fa7fdd864fbf92}\label{classtflite_1_1_simple_memory_allocator_a0d5de39e4382803763fa7fdd864fbf92}} 
+size\+\_\+t {\bfseries Get\+Head\+Used\+Bytes} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a27501a91d001ee6d0dd48b440aadef9c}\label{classtflite_1_1_simple_memory_allocator_a27501a91d001ee6d0dd48b440aadef9c}} 
+size\+\_\+t {\bfseries Get\+Tail\+Used\+Bytes} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a5bf3ab104b45a96a137a81c82f7f3982}\label{classtflite_1_1_simple_memory_allocator_a5bf3ab104b45a96a137a81c82f7f3982}} 
+size\+\_\+t {\bfseries Get\+Available\+Memory} (size\+\_\+t alignment) const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_aa4e8cb69ef543ceca8c9b89e2231c485}\label{classtflite_1_1_simple_memory_allocator_aa4e8cb69ef543ceca8c9b89e2231c485}} 
+size\+\_\+t {\bfseries Get\+Used\+Bytes} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a43e6122328c2ab714fc5555c7d60ea8e}\label{classtflite_1_1_simple_memory_allocator_a43e6122328c2ab714fc5555c7d60ea8e}} 
+static \mbox{\hyperlink{classtflite_1_1_simple_memory_allocator}{Simple\+Memory\+Allocator}} $\ast$ {\bfseries Create} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, uint8\+\_\+t $\ast$buffer\+\_\+head, size\+\_\+t buffer\+\_\+size)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a8253ea963207b75a86be21b78b84827c}\label{classtflite_1_1_simple_memory_allocator_a8253ea963207b75a86be21b78b84827c}} 
+static \mbox{\hyperlink{classtflite_1_1_simple_memory_allocator}{Simple\+Memory\+Allocator}} $\ast$ {\bfseries Create} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, uint8\+\_\+t $\ast$buffer\+\_\+head, size\+\_\+t buffer\+\_\+size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_a812c7fb9299d15bbe3a4dd9849fa577b}\label{classtflite_1_1_simple_memory_allocator_a812c7fb9299d15bbe3a4dd9849fa577b}} 
+uint8\+\_\+t $\ast$ {\bfseries head} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_ac1c4eb86273439e1c795ae70adfe175f}\label{classtflite_1_1_simple_memory_allocator_ac1c4eb86273439e1c795ae70adfe175f}} 
+uint8\+\_\+t $\ast$ {\bfseries tail} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_ab0281dc0c2a18a7ee86b7bdd80c58c0f}\label{classtflite_1_1_simple_memory_allocator_ab0281dc0c2a18a7ee86b7bdd80c58c0f}} 
+uint8\+\_\+t $\ast$ {\bfseries head} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_simple_memory_allocator_afa4d2a20ee1b1292461a7a337ecf13c7}\label{classtflite_1_1_simple_memory_allocator_afa4d2a20ee1b1292461a7a337ecf13c7}} 
+uint8\+\_\+t $\ast$ {\bfseries tail} () const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/simple\+\_\+memory\+\_\+allocator.\+h\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/simple\+\_\+memory\+\_\+allocator.\+cpp\end{DoxyCompactItemize}

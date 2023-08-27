@@ -1,0 +1,118 @@
+\hypertarget{class_tensor_processor}{}\doxysection{Tensor\+Processor Class Reference}
+\label{class_tensor_processor}\index{TensorProcessor@{TensorProcessor}}
+
+
+Inheritance diagram for Tensor\+Processor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_tensor_processor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tensor\+Processor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tensor_processor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_tensor_processor_1_1_processor_array}{Processor\+Array}}
+\item 
+struct \mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a3e13f9d0026e46f2066c5872733b53cc}\label{class_tensor_processor_a3e13f9d0026e46f2066c5872733b53cc}} 
+enum {\bfseries Status} \{ {\bfseries I\+D\+LE}, 
+{\bfseries C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}, 
+{\bfseries E\+X\+E\+C\+U\+T\+I\+ON}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tensor_processor_ac25fe058a82f32172421a733d5b694b3}\label{class_tensor_processor_ac25fe058a82f32172421a733d5b694b3}} 
+virtual int {\bfseries initialize} (\mbox{\hyperlink{struct_processing_unit_1_1_profile}{Processing\+Unit\+::\+Profile}} $\ast$profile)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_ad5aaa3f5f30328ef74f8c536614d0c1a}\label{class_tensor_processor_ad5aaa3f5f30328ef74f8c536614d0c1a}} 
+virtual \mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}} {\bfseries create\+Task} (const \mbox{\hyperlink{structtflite_1_1_conv_params}{tflite\+::\+Conv\+Params}} \&params, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&input\+\_\+shape, const float $\ast$input\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&filter\+\_\+shape, const float $\ast$filter\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&bias\+\_\+shape, const float $\ast$bias\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&output\+\_\+shape, float $\ast$output\+\_\+data, \mbox{\hyperlink{struct___event}{Event}} $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_aa04568a162c583d172f8ca2ac5ddbffb}\label{class_tensor_processor_aa04568a162c583d172f8ca2ac5ddbffb}} 
+virtual \mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}} {\bfseries create\+Task} (const \mbox{\hyperlink{structtflite_1_1_conv_params}{tflite\+::\+Conv\+Params}} \&params, const int32\+\_\+t $\ast$output\+\_\+multiplier, const int32\+\_\+t $\ast$output\+\_\+shift, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&input\+\_\+shape, const int8\+\_\+t $\ast$input\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&filter\+\_\+shape, const int8\+\_\+t $\ast$filter\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&bias\+\_\+shape, const int32\+\_\+t $\ast$bias\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&output\+\_\+shape, int8\+\_\+t $\ast$output\+\_\+data, \mbox{\hyperlink{struct___event}{Event}} $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a8c56f351c3c3e2e0055e9997db18c411}\label{class_tensor_processor_a8c56f351c3c3e2e0055e9997db18c411}} 
+virtual \mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}} {\bfseries create\+Task} (const \mbox{\hyperlink{structtflite_1_1_depthwise_params}{tflite\+::\+Depthwise\+Params}} \&params, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&input\+\_\+shape, const float $\ast$input\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&filter\+\_\+shape, const float $\ast$filter\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&bias\+\_\+shape, const float $\ast$bias\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&output\+\_\+shape, float $\ast$output\+\_\+data, \mbox{\hyperlink{struct___event}{Event}} $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a323a01ef1a52ff60a9f984159712e2db}\label{class_tensor_processor_a323a01ef1a52ff60a9f984159712e2db}} 
+virtual \mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}} {\bfseries create\+Task} (const \mbox{\hyperlink{structtflite_1_1_depthwise_params}{tflite\+::\+Depthwise\+Params}} \&params, const int32\+\_\+t $\ast$output\+\_\+multiplier, const int32\+\_\+t $\ast$output\+\_\+shift, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&input\+\_\+shape, const int8\+\_\+t $\ast$input\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&filter\+\_\+shape, const int8\+\_\+t $\ast$filter\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&bias\+\_\+shape, const int32\+\_\+t $\ast$bias\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&output\+\_\+shape, int8\+\_\+t $\ast$output\+\_\+data, \mbox{\hyperlink{struct___event}{Event}} $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a6617d9dcce5ffaf6146c1a74457af379}\label{class_tensor_processor_a6617d9dcce5ffaf6146c1a74457af379}} 
+virtual int {\bfseries execute} (\mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}} \&)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a39ffa4db2ea3d8b946ccb19d8ecbb452}\label{class_tensor_processor_a39ffa4db2ea3d8b946ccb19d8ecbb452}} 
+virtual Status {\bfseries get\+Status} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a09dc72d14b7ff7f4f14671b641b01407}\label{class_tensor_processor_a09dc72d14b7ff7f4f14671b641b01407}} 
+static void {\bfseries set\+Execution\+Flags} (\mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}} \&, int)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_ae18207c99865cf8c747fce70cc84732d}\label{class_tensor_processor_ae18207c99865cf8c747fce70cc84732d}} 
+static int {\bfseries get\+Execution\+Flags} (\mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}} \&)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_afc45d26f232fda026eb55e9141561850}\label{class_tensor_processor_afc45d26f232fda026eb55e9141561850}} 
+static bool {\bfseries is\+Valid} (\mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}} \&)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_ab47abbc028242f3144b4e6fdd0e00a65}\label{class_tensor_processor_ab47abbc028242f3144b4e6fdd0e00a65}} 
+static \mbox{\hyperlink{struct_tensor_processor_1_1_processor_array}{Tensor\+Processor\+::\+Processor\+Array}} $\ast$ {\bfseries instatiate\+Processors} (void)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_acb65aab9811a3cb8c63dff096f7dd12a}\label{class_tensor_processor_acb65aab9811a3cb8c63dff096f7dd12a}} 
+static \mbox{\hyperlink{struct_tensor_processor_1_1_processor_array}{Processor\+Array}} $\ast$ {\bfseries get\+Singleton\+T\+P\+Array} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a1552eb8e2d9839de3a8f274532e86c09}\label{class_tensor_processor_a1552eb8e2d9839de3a8f274532e86c09}} 
+virtual \mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}} {\bfseries create\+Task} (const \mbox{\hyperlink{struct_conv_profile}{Conv\+Profile}} \&profile, const float $\ast$input\+\_\+data, const float $\ast$filter\+\_\+data, const float $\ast$bias\+\_\+data, float $\ast$output\+\_\+data, \mbox{\hyperlink{struct___event}{Event}} $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a2abd95dd321e748ea145e694d6f73c95}\label{class_tensor_processor_a2abd95dd321e748ea145e694d6f73c95}} 
+virtual \mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}} {\bfseries create\+Task} (const \mbox{\hyperlink{struct_conv_profile}{Conv\+Profile}} \&profile, const int8\+\_\+t $\ast$input\+\_\+data, const int8\+\_\+t $\ast$filter\+\_\+data, const int32\+\_\+t $\ast$bias\+\_\+data, int8\+\_\+t $\ast$output\+\_\+data, const int32\+\_\+t $\ast$quant\+\_\+output\+\_\+multiplier, const int32\+\_\+t $\ast$quant\+\_\+output\+\_\+shift, const int32\+\_\+t quant\+\_\+len, \mbox{\hyperlink{struct___event}{Event}} $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a393fea1fba93a9f791a0a089fa437293}\label{class_tensor_processor_a393fea1fba93a9f791a0a089fa437293}} 
+virtual void {\bfseries on\+Done\+\_\+ip} (void)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a6f1309c0f25d309bccb69c159cab7593}\label{class_tensor_processor_a6f1309c0f25d309bccb69c159cab7593}} 
+virtual void {\bfseries on\+Done\+\_\+dma\+Tx} (void)
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a894c03a73930a793f612b44aa998e1e6}\label{class_tensor_processor_a894c03a73930a793f612b44aa998e1e6}} 
+virtual void {\bfseries on\+Done\+\_\+dma\+Rx} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tensor_processor_ad52ba20e48537999138ab4d30faf613c}\label{class_tensor_processor_ad52ba20e48537999138ab4d30faf613c}} 
+\mbox{\hyperlink{struct_tensor_processor_1_1_task}{Task}} $\ast$ {\bfseries current\+\_\+task\+\_\+} = nullptr
+\item 
+\mbox{\Hypertarget{class_tensor_processor_af6c5f0d09cbafa5cae39dd15b1d812a4}\label{class_tensor_processor_af6c5f0d09cbafa5cae39dd15b1d812a4}} 
+Status {\bfseries status\+\_\+} = I\+D\+LE
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tensor_processor_a63feeaccc3ea04f36a72b0f890540c5e}\label{class_tensor_processor_a63feeaccc3ea04f36a72b0f890540c5e}} 
+static \mbox{\hyperlink{struct_tensor_processor_1_1_processor_array}{Processor\+Array}} {\bfseries singleton\+\_\+tp\+\_\+array\+\_\+} = \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/libs/delegates/inc/tensor\+\_\+processor.\+h\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/libs/delegates/src/tensor\+\_\+processor.\+cpp\end{DoxyCompactItemize}

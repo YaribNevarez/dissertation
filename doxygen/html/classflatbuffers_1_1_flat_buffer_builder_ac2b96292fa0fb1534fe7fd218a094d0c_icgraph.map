@@ -1,0 +1,4 @@
+<map id="flatbuffers::FlatBufferBuilder::CreateUninitializedVector" name="flatbuffers::FlatBufferBuilder::CreateUninitializedVector">
+<area shape="rect" id="node1" title="Specialized version of CreateVector for non&#45;copying use cases. Write the data any time later to the r..." alt="" coords="260,5,467,47"/>
+<area shape="rect" id="node2" href="$classflatbuffers_1_1_flat_buffer_builder.html#a2305b63d367845972b51669dd995cc50" title="Specialized version of CreateVector for non&#45;copying use cases. Write the data any time later to the r..." alt="" coords="5,5,212,47"/>
+</map>

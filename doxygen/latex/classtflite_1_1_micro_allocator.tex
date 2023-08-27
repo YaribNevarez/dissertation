@@ -1,0 +1,155 @@
+\hypertarget{classtflite_1_1_micro_allocator}{}\doxysection{tflite\+::Micro\+Allocator Class Reference}
+\label{classtflite_1_1_micro_allocator}\index{tflite::MicroAllocator@{tflite::MicroAllocator}}
+
+
+Inheritance diagram for tflite\+::Micro\+Allocator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classtflite_1_1_micro_allocator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tflite\+::Micro\+Allocator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classtflite_1_1_micro_allocator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a9377b0d649a7e61c4e5832af2fa2b51e}\label{classtflite_1_1_micro_allocator_a9377b0d649a7e61c4e5832af2fa2b51e}} 
+\mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$ {\bfseries Start\+Model\+Allocation} (const Model $\ast$model)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ac2f623bad24d35f85fa40642b797d90c}\label{classtflite_1_1_micro_allocator_ac2f623bad24d35f85fa40642b797d90c}} 
+Tf\+Lite\+Status {\bfseries Finish\+Model\+Allocation} (const Model $\ast$model, \mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$subgraph\+\_\+allocations, \mbox{\hyperlink{structtflite_1_1_scratch_buffer_handle}{Scratch\+Buffer\+Handle}} $\ast$$\ast$scratch\+\_\+buffer\+\_\+handles)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_aa7666fda6bc9f8aa58ef83426dc0cf51}\label{classtflite_1_1_micro_allocator_aa7666fda6bc9f8aa58ef83426dc0cf51}} 
+virtual \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$ {\bfseries Allocate\+Persistent\+Tf\+Lite\+Tensor} (const Model $\ast$model, const \mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$subgraph\+\_\+allocations, int tensor\+\_\+index, int subgraph\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ac2c43f870c991f19b1f11424a7eae67d}\label{classtflite_1_1_micro_allocator_ac2c43f870c991f19b1f11424a7eae67d}} 
+virtual \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$ {\bfseries Allocate\+Temp\+Tf\+Lite\+Tensor} (const Model $\ast$model, const \mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$subgraph\+\_\+allocations, int tensor\+\_\+index, int subgraph\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a1226aa806dff6bcc4f5213d12bbdfba3}\label{classtflite_1_1_micro_allocator_a1226aa806dff6bcc4f5213d12bbdfba3}} 
+virtual void {\bfseries Reset\+Temp\+Allocations} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a2d4e78e2af91dad34ccd09fb0ce5bd75}\label{classtflite_1_1_micro_allocator_a2d4e78e2af91dad34ccd09fb0ce5bd75}} 
+virtual void $\ast$ {\bfseries Allocate\+Persistent\+Buffer} (size\+\_\+t bytes)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a70c8d3d8f2480413dd987a7a55c85928}\label{classtflite_1_1_micro_allocator_a70c8d3d8f2480413dd987a7a55c85928}} 
+Tf\+Lite\+Status {\bfseries Request\+Scratch\+Buffer\+In\+Arena} (size\+\_\+t bytes, int subgraph\+\_\+idx, int $\ast$buffer\+\_\+idx)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a21077a1c40daf387a92fd96f45847adf}\label{classtflite_1_1_micro_allocator_a21077a1c40daf387a92fd96f45847adf}} 
+Tf\+Lite\+Status {\bfseries Finish\+Prepare\+Node\+Allocations} (int node\+\_\+id)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ae902f60497b0dbc6b62f33d7e593b0af}\label{classtflite_1_1_micro_allocator_ae902f60497b0dbc6b62f33d7e593b0af}} 
+size\+\_\+t {\bfseries used\+\_\+bytes} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ad06e777a72acd0859b79e533ebd32a47}\label{classtflite_1_1_micro_allocator_ad06e777a72acd0859b79e533ebd32a47}} 
+Tf\+Lite\+Status {\bfseries Flat\+Buffer\+Vector\+To\+Tf\+Lite\+Type\+Array} (const \mbox{\hyperlink{classflatbuffers_1_1_vector}{flatbuffers\+::\+Vector}}$<$ int32\+\_\+t $>$ $\ast$flatbuffer\+\_\+array, \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$$\ast$result)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ab83f28bf7cf82a6f884a5eb7d3707425}\label{classtflite_1_1_micro_allocator_ab83f28bf7cf82a6f884a5eb7d3707425}} 
+\mbox{\hyperlink{classtflite_1_1_builtin_data_allocator}{Builtin\+Data\+Allocator}} $\ast$ {\bfseries Get\+Builtin\+Data\+Allocator} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a235d96c378ac2ad811d21f7c0559fe7a}\label{classtflite_1_1_micro_allocator_a235d96c378ac2ad811d21f7c0559fe7a}} 
+\mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$ {\bfseries Start\+Model\+Allocation} (const Model $\ast$model)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ac2f623bad24d35f85fa40642b797d90c}\label{classtflite_1_1_micro_allocator_ac2f623bad24d35f85fa40642b797d90c}} 
+Tf\+Lite\+Status {\bfseries Finish\+Model\+Allocation} (const Model $\ast$model, \mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$subgraph\+\_\+allocations, \mbox{\hyperlink{structtflite_1_1_scratch_buffer_handle}{Scratch\+Buffer\+Handle}} $\ast$$\ast$scratch\+\_\+buffer\+\_\+handles)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a0bb93a43b7a6ac04871fed0f80b5471f}\label{classtflite_1_1_micro_allocator_a0bb93a43b7a6ac04871fed0f80b5471f}} 
+virtual \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$ {\bfseries Allocate\+Persistent\+Tf\+Lite\+Tensor} (const Model $\ast$model, const \mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$subgraph\+\_\+allocations, int tensor\+\_\+index, int subgraph\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a01d0cae7adc56eda7c5ab59fb3efa013}\label{classtflite_1_1_micro_allocator_a01d0cae7adc56eda7c5ab59fb3efa013}} 
+virtual \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$ {\bfseries Allocate\+Temp\+Tf\+Lite\+Tensor} (const Model $\ast$model, const \mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$subgraph\+\_\+allocations, int tensor\+\_\+index, int subgraph\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a1fd9e629464cfb0304ffc2b9cf4fff45}\label{classtflite_1_1_micro_allocator_a1fd9e629464cfb0304ffc2b9cf4fff45}} 
+virtual void {\bfseries Reset\+Temp\+Allocations} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a87dee01983bbbd3e425eb8b641b52e81}\label{classtflite_1_1_micro_allocator_a87dee01983bbbd3e425eb8b641b52e81}} 
+virtual void $\ast$ {\bfseries Allocate\+Persistent\+Buffer} (size\+\_\+t bytes)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a70c8d3d8f2480413dd987a7a55c85928}\label{classtflite_1_1_micro_allocator_a70c8d3d8f2480413dd987a7a55c85928}} 
+Tf\+Lite\+Status {\bfseries Request\+Scratch\+Buffer\+In\+Arena} (size\+\_\+t bytes, int subgraph\+\_\+idx, int $\ast$buffer\+\_\+idx)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a21077a1c40daf387a92fd96f45847adf}\label{classtflite_1_1_micro_allocator_a21077a1c40daf387a92fd96f45847adf}} 
+Tf\+Lite\+Status {\bfseries Finish\+Prepare\+Node\+Allocations} (int node\+\_\+id)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ae902f60497b0dbc6b62f33d7e593b0af}\label{classtflite_1_1_micro_allocator_ae902f60497b0dbc6b62f33d7e593b0af}} 
+size\+\_\+t {\bfseries used\+\_\+bytes} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ad06e777a72acd0859b79e533ebd32a47}\label{classtflite_1_1_micro_allocator_ad06e777a72acd0859b79e533ebd32a47}} 
+Tf\+Lite\+Status {\bfseries Flat\+Buffer\+Vector\+To\+Tf\+Lite\+Type\+Array} (const \mbox{\hyperlink{classflatbuffers_1_1_vector}{flatbuffers\+::\+Vector}}$<$ int32\+\_\+t $>$ $\ast$flatbuffer\+\_\+array, \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$$\ast$result)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a4de3bdee8edd03b40e59b581692b2170}\label{classtflite_1_1_micro_allocator_a4de3bdee8edd03b40e59b581692b2170}} 
+\mbox{\hyperlink{classtflite_1_1_builtin_data_allocator}{Builtin\+Data\+Allocator}} $\ast$ {\bfseries Get\+Builtin\+Data\+Allocator} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a0f90ba626c347a5328b32b97d207fdda}\label{classtflite_1_1_micro_allocator_a0f90ba626c347a5328b32b97d207fdda}} 
+static \mbox{\hyperlink{classtflite_1_1_micro_allocator}{Micro\+Allocator}} $\ast$ {\bfseries Create} (uint8\+\_\+t $\ast$tensor\+\_\+arena, size\+\_\+t arena\+\_\+size, \mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a338dc95b10628c10efb851274f9249e6}\label{classtflite_1_1_micro_allocator_a338dc95b10628c10efb851274f9249e6}} 
+static \mbox{\hyperlink{classtflite_1_1_micro_allocator}{Micro\+Allocator}} $\ast$ {\bfseries Create} (\mbox{\hyperlink{classtflite_1_1_simple_memory_allocator}{Simple\+Memory\+Allocator}} $\ast$memory\+\_\+allocator, \mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ad2f5253912b3ed8787ebfd9f5c678d31}\label{classtflite_1_1_micro_allocator_ad2f5253912b3ed8787ebfd9f5c678d31}} 
+static \mbox{\hyperlink{classtflite_1_1_micro_allocator}{Micro\+Allocator}} $\ast$ {\bfseries Create} (uint8\+\_\+t $\ast$tensor\+\_\+arena, size\+\_\+t arena\+\_\+size, \mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a4ce078e5dcf4935e23ae74ce57b35875}\label{classtflite_1_1_micro_allocator_a4ce078e5dcf4935e23ae74ce57b35875}} 
+static \mbox{\hyperlink{classtflite_1_1_micro_allocator}{Micro\+Allocator}} $\ast$ {\bfseries Create} (\mbox{\hyperlink{classtflite_1_1_simple_memory_allocator}{Simple\+Memory\+Allocator}} $\ast$memory\+\_\+allocator, \mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ac68b4ea2caea5b1c0ffcc3b5258d629e}\label{classtflite_1_1_micro_allocator_ac68b4ea2caea5b1c0ffcc3b5258d629e}} 
+{\bfseries Micro\+Allocator} (\mbox{\hyperlink{classtflite_1_1_simple_memory_allocator}{Simple\+Memory\+Allocator}} $\ast$memory\+\_\+allocator, \mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ad1907e6c3766db7614ed701ab6443781}\label{classtflite_1_1_micro_allocator_ad1907e6c3766db7614ed701ab6443781}} 
+virtual Tf\+Lite\+Status {\bfseries Allocate\+Node\+And\+Registrations} (const Model $\ast$model, \mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$subgraph\+\_\+allocations)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ad0c1da29c98679868f08b6eb73b2ac31}\label{classtflite_1_1_micro_allocator_ad0c1da29c98679868f08b6eb73b2ac31}} 
+virtual Tf\+Lite\+Status {\bfseries Allocate\+Tf\+Lite\+Eval\+Tensors} (const Model $\ast$model, \mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$subgraph\+\_\+allocations)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a2b419f187f04a7247a303c6d393c1e6a}\label{classtflite_1_1_micro_allocator_a2b419f187f04a7247a303c6d393c1e6a}} 
+virtual Tf\+Lite\+Status {\bfseries Allocate\+Variables} (const Sub\+Graph $\ast$subgraph, \mbox{\hyperlink{struct_tf_lite_eval_tensor}{Tf\+Lite\+Eval\+Tensor}} $\ast$eval\+\_\+tensors)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a63609aca62f84647bb3df31659947740}\label{classtflite_1_1_micro_allocator_a63609aca62f84647bb3df31659947740}} 
+virtual \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$ {\bfseries Allocate\+Persistent\+Tf\+Lite\+Tensor\+Internal} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a350a257a1a6586ee7fc9c5d6630c4828}\label{classtflite_1_1_micro_allocator_a350a257a1a6586ee7fc9c5d6630c4828}} 
+virtual Tf\+Lite\+Status {\bfseries Populate\+Tf\+Lite\+Tensor\+From\+Flatbuffer} (const Model $\ast$model, \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$tensor, int tensor\+\_\+index, int subgraph\+\_\+idx, bool allocate\+\_\+temp)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a3c8a6f9b28d9ad82537d08bfa184ec81}\label{classtflite_1_1_micro_allocator_a3c8a6f9b28d9ad82537d08bfa184ec81}} 
+\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$ {\bfseries error\+\_\+reporter} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_ac68b4ea2caea5b1c0ffcc3b5258d629e}\label{classtflite_1_1_micro_allocator_ac68b4ea2caea5b1c0ffcc3b5258d629e}} 
+{\bfseries Micro\+Allocator} (\mbox{\hyperlink{classtflite_1_1_simple_memory_allocator}{Simple\+Memory\+Allocator}} $\ast$memory\+\_\+allocator, \mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_afa1c5bf899c3c705bcfaa4539c8f4086}\label{classtflite_1_1_micro_allocator_afa1c5bf899c3c705bcfaa4539c8f4086}} 
+virtual Tf\+Lite\+Status {\bfseries Allocate\+Node\+And\+Registrations} (const Model $\ast$model, \mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$subgraph\+\_\+allocations)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a0ec39c3aa3aeeb068ad334d69f1b873e}\label{classtflite_1_1_micro_allocator_a0ec39c3aa3aeeb068ad334d69f1b873e}} 
+virtual Tf\+Lite\+Status {\bfseries Allocate\+Tf\+Lite\+Eval\+Tensors} (const Model $\ast$model, \mbox{\hyperlink{structtflite_1_1_subgraph_allocations}{Subgraph\+Allocations}} $\ast$subgraph\+\_\+allocations)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a17bebc8fa683241c8557b02070cb539b}\label{classtflite_1_1_micro_allocator_a17bebc8fa683241c8557b02070cb539b}} 
+virtual Tf\+Lite\+Status {\bfseries Allocate\+Variables} (const Sub\+Graph $\ast$subgraph, \mbox{\hyperlink{struct_tf_lite_eval_tensor}{Tf\+Lite\+Eval\+Tensor}} $\ast$eval\+\_\+tensors)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a2ab08b3777cdea9ef7172ebe3ba6cf63}\label{classtflite_1_1_micro_allocator_a2ab08b3777cdea9ef7172ebe3ba6cf63}} 
+virtual \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$ {\bfseries Allocate\+Persistent\+Tf\+Lite\+Tensor\+Internal} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_adf9addcc5527004ecbda0dc6c2156de6}\label{classtflite_1_1_micro_allocator_adf9addcc5527004ecbda0dc6c2156de6}} 
+virtual Tf\+Lite\+Status {\bfseries Populate\+Tf\+Lite\+Tensor\+From\+Flatbuffer} (const Model $\ast$model, \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$tensor, int tensor\+\_\+index, int subgraph\+\_\+idx, bool allocate\+\_\+temp)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_allocator_a97ebf08f1b40e2a0a9d9d1eef3e3a597}\label{classtflite_1_1_micro_allocator_a97ebf08f1b40e2a0a9d9d1eef3e3a597}} 
+\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$ {\bfseries error\+\_\+reporter} () const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/micro\+\_\+allocator.\+h\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/micro\+\_\+allocator.\+cpp\end{DoxyCompactItemize}

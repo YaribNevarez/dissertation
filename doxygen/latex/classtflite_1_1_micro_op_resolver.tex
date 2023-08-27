@@ -1,0 +1,67 @@
+\hypertarget{classtflite_1_1_micro_op_resolver}{}\doxysection{tflite\+::Micro\+Op\+Resolver Class Reference}
+\label{classtflite_1_1_micro_op_resolver}\index{tflite::MicroOpResolver@{tflite::MicroOpResolver}}
+
+
+Inheritance diagram for tflite\+::Micro\+Op\+Resolver\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classtflite_1_1_micro_op_resolver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tflite\+::Micro\+Op\+Resolver\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classtflite_1_1_micro_op_resolver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a244c2246cac5ac1f243ed85b29ad085d}\label{classtflite_1_1_micro_op_resolver_a244c2246cac5ac1f243ed85b29ad085d}} 
+typedef Tf\+Lite\+Status($\ast$ {\bfseries Builtin\+Parse\+Function}) (const Operator $\ast$op, \mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, \mbox{\hyperlink{classtflite_1_1_builtin_data_allocator}{Builtin\+Data\+Allocator}} $\ast$allocator, void $\ast$$\ast$builtin\+\_\+data)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a244c2246cac5ac1f243ed85b29ad085d}\label{classtflite_1_1_micro_op_resolver_a244c2246cac5ac1f243ed85b29ad085d}} 
+typedef Tf\+Lite\+Status($\ast$ {\bfseries Builtin\+Parse\+Function}) (const Operator $\ast$op, \mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, \mbox{\hyperlink{classtflite_1_1_builtin_data_allocator}{Builtin\+Data\+Allocator}} $\ast$allocator, void $\ast$$\ast$builtin\+\_\+data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a693667cbc89da707a9c0078efe8c7a9b}\label{classtflite_1_1_micro_op_resolver_a693667cbc89da707a9c0078efe8c7a9b}} 
+virtual const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ {\bfseries Find\+Op} (Builtin\+Operator op) const =0
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a209f6a6282b86ecec2ddb25a4b837ca0}\label{classtflite_1_1_micro_op_resolver_a209f6a6282b86ecec2ddb25a4b837ca0}} 
+virtual const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ {\bfseries Find\+Op} (const char $\ast$op) const =0
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a728bd60a706206f2ad1811d810991c46}\label{classtflite_1_1_micro_op_resolver_a728bd60a706206f2ad1811d810991c46}} 
+const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ \mbox{\hyperlink{classtflite_1_1_micro_op_resolver_a728bd60a706206f2ad1811d810991c46}{Find\+Op}} (Builtin\+Operator op, int version) const final
+\begin{DoxyCompactList}\small\item\em Finds the op registration for a builtin operator by enum code. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a23df01d4d235c37bc21466afd565e719}\label{classtflite_1_1_micro_op_resolver_a23df01d4d235c37bc21466afd565e719}} 
+const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ \mbox{\hyperlink{classtflite_1_1_micro_op_resolver_a23df01d4d235c37bc21466afd565e719}{Find\+Op}} (const char $\ast$op, int version) const final
+\begin{DoxyCompactList}\small\item\em Finds the op registration of a custom operator by op name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a197123e7bb26b363df61206464062d61}\label{classtflite_1_1_micro_op_resolver_a197123e7bb26b363df61206464062d61}} 
+virtual Builtin\+Parse\+Function {\bfseries Get\+Op\+Data\+Parser} (Builtin\+Operator op) const =0
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a693667cbc89da707a9c0078efe8c7a9b}\label{classtflite_1_1_micro_op_resolver_a693667cbc89da707a9c0078efe8c7a9b}} 
+virtual const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ {\bfseries Find\+Op} (Builtin\+Operator op) const =0
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a209f6a6282b86ecec2ddb25a4b837ca0}\label{classtflite_1_1_micro_op_resolver_a209f6a6282b86ecec2ddb25a4b837ca0}} 
+virtual const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ {\bfseries Find\+Op} (const char $\ast$op) const =0
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a728bd60a706206f2ad1811d810991c46}\label{classtflite_1_1_micro_op_resolver_a728bd60a706206f2ad1811d810991c46}} 
+const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ \mbox{\hyperlink{classtflite_1_1_micro_op_resolver_a728bd60a706206f2ad1811d810991c46}{Find\+Op}} (Builtin\+Operator op, int version) const final
+\begin{DoxyCompactList}\small\item\em Finds the op registration for a builtin operator by enum code. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a23df01d4d235c37bc21466afd565e719}\label{classtflite_1_1_micro_op_resolver_a23df01d4d235c37bc21466afd565e719}} 
+const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ \mbox{\hyperlink{classtflite_1_1_micro_op_resolver_a23df01d4d235c37bc21466afd565e719}{Find\+Op}} (const char $\ast$op, int version) const final
+\begin{DoxyCompactList}\small\item\em Finds the op registration of a custom operator by op name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_op_resolver_a197123e7bb26b363df61206464062d61}\label{classtflite_1_1_micro_op_resolver_a197123e7bb26b363df61206464062d61}} 
+virtual Builtin\+Parse\+Function {\bfseries Get\+Op\+Data\+Parser} (Builtin\+Operator op) const =0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/micro\+\_\+op\+\_\+resolver.\+h\end{DoxyCompactItemize}

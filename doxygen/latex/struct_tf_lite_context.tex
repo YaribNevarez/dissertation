@@ -1,0 +1,88 @@
+\hypertarget{struct_tf_lite_context}{}\doxysection{Tf\+Lite\+Context Struct Reference}
+\label{struct_tf_lite_context}\index{TfLiteContext@{TfLiteContext}}
+
+
+Collaboration diagram for Tf\+Lite\+Context\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_tf_lite_context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a70d1aa6ac0773caf8bb9f20b07cfd595}\label{struct_tf_lite_context_a70d1aa6ac0773caf8bb9f20b07cfd595}} 
+size\+\_\+t {\bfseries tensors\+\_\+size}
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_aa5cdeaf32eb9b734e84dcb73445c21c2}\label{struct_tf_lite_context_aa5cdeaf32eb9b734e84dcb73445c21c2}} 
+Tf\+Lite\+Status($\ast$ {\bfseries Get\+Execution\+Plan} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$$\ast$execution\+\_\+plan)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a2264b9daa01733bb6e328302ab8a039b}\label{struct_tf_lite_context_a2264b9daa01733bb6e328302ab8a039b}} 
+\mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$ {\bfseries tensors}
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_af7d037c4fc03745bffe28e64b00bfe3c}\label{struct_tf_lite_context_af7d037c4fc03745bffe28e64b00bfe3c}} 
+void $\ast$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_af37c2aaccdca191c9ac3bf2b9b00b59a}\label{struct_tf_lite_context_af37c2aaccdca191c9ac3bf2b9b00b59a}} 
+Tf\+Lite\+Status($\ast$ {\bfseries Resize\+Tensor} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$, \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$tensor, \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$new\+\_\+size)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_aefe130a452e108010d3f8fd428b0bf23}\label{struct_tf_lite_context_aefe130a452e108010d3f8fd428b0bf23}} 
+void($\ast$ {\bfseries Report\+Error} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$, const char $\ast$msg,...)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_af42843f0aa27c86616f13b89d918c7fa}\label{struct_tf_lite_context_af42843f0aa27c86616f13b89d918c7fa}} 
+Tf\+Lite\+Status($\ast$ {\bfseries Add\+Tensors} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$, int tensors\+\_\+to\+\_\+add, int $\ast$first\+\_\+new\+\_\+tensor\+\_\+index)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_ad9e4688ba7cc45a5686b2e6fdf78a96b}\label{struct_tf_lite_context_ad9e4688ba7cc45a5686b2e6fdf78a96b}} 
+Tf\+Lite\+Status($\ast$ {\bfseries Get\+Node\+And\+Registration} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$, int node\+\_\+index, \mbox{\hyperlink{struct_tf_lite_node}{Tf\+Lite\+Node}} $\ast$$\ast$node, struct \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$$\ast$registration)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a3ca1af96f5dcbcfe5ae72665dd9c27df}\label{struct_tf_lite_context_a3ca1af96f5dcbcfe5ae72665dd9c27df}} 
+Tf\+Lite\+Status($\ast$ {\bfseries Replace\+Node\+Subsets\+With\+Delegate\+Kernels} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$, struct \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} registration, const \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$nodes\+\_\+to\+\_\+replace, struct \mbox{\hyperlink{struct_tf_lite_delegate}{Tf\+Lite\+Delegate}} $\ast$delegate)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a76dc6ac92f9ff38e377f48b1d0b165ad}\label{struct_tf_lite_context_a76dc6ac92f9ff38e377f48b1d0b165ad}} 
+int {\bfseries recommended\+\_\+num\+\_\+threads}
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a52c92b36afc4037be4a4518994fc8f31}\label{struct_tf_lite_context_a52c92b36afc4037be4a4518994fc8f31}} 
+\mbox{\hyperlink{struct_tf_lite_external_context}{Tf\+Lite\+External\+Context}} $\ast$($\ast$ {\bfseries Get\+External\+Context} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$, Tf\+Lite\+External\+Context\+Type)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a46dd8ae6f6b945bee9caefa39528d954}\label{struct_tf_lite_context_a46dd8ae6f6b945bee9caefa39528d954}} 
+void($\ast$ {\bfseries Set\+External\+Context} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$, Tf\+Lite\+External\+Context\+Type, \mbox{\hyperlink{struct_tf_lite_external_context}{Tf\+Lite\+External\+Context}} $\ast$)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a2c14aa723ed7d38a33fb8c0f611b1ad2}\label{struct_tf_lite_context_a2c14aa723ed7d38a33fb8c0f611b1ad2}} 
+bool {\bfseries allow\+\_\+fp32\+\_\+relax\+\_\+to\+\_\+fp16}
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a57fd0a6cd3d967a82c350da7c1f79a31}\label{struct_tf_lite_context_a57fd0a6cd3d967a82c350da7c1f79a31}} 
+void $\ast$ {\bfseries profiler}
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_abad57406eef93e58a3c20bedc8458834}\label{struct_tf_lite_context_abad57406eef93e58a3c20bedc8458834}} 
+void $\ast$($\ast$ {\bfseries Allocate\+Persistent\+Buffer} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$ctx, size\+\_\+t bytes)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_ae58057987f38a9d4ad2c59612fa69e81}\label{struct_tf_lite_context_ae58057987f38a9d4ad2c59612fa69e81}} 
+Tf\+Lite\+Status($\ast$ {\bfseries Allocate\+Buffer\+For\+Eval} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$ctx, size\+\_\+t bytes, void $\ast$$\ast$ptr)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a7a3778903dc181d98fe1f10a4f6e15c9}\label{struct_tf_lite_context_a7a3778903dc181d98fe1f10a4f6e15c9}} 
+Tf\+Lite\+Status($\ast$ {\bfseries Request\+Scratch\+Buffer\+In\+Arena} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$ctx, size\+\_\+t bytes, int $\ast$buffer\+\_\+idx)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a79a5ae043ca55b703fe6f4cf8c571217}\label{struct_tf_lite_context_a79a5ae043ca55b703fe6f4cf8c571217}} 
+void $\ast$($\ast$ {\bfseries Get\+Scratch\+Buffer} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$ctx, int buffer\+\_\+idx)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_adcbd972b5271979f35c18e83e28511b7}\label{struct_tf_lite_context_adcbd972b5271979f35c18e83e28511b7}} 
+Tf\+Lite\+Status($\ast$ {\bfseries Resize\+Tensor\+Explicit} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$ctx, \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$tensor, int dims, const int $\ast$shape)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_afaaf502811bbcf1441c3879e9c47b8ec}\label{struct_tf_lite_context_afaaf502811bbcf1441c3879e9c47b8ec}} 
+Tf\+Lite\+Status($\ast$ {\bfseries Preview\+Delegate\+Partitioning} )(struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, const \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$nodes\+\_\+to\+\_\+replace, \mbox{\hyperlink{struct_tf_lite_delegate_params}{Tf\+Lite\+Delegate\+Params}} $\ast$$\ast$partition\+\_\+params\+\_\+array, int $\ast$num\+\_\+partitions)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a740e9b4470a663dfc5c33a6a24f9d38c}\label{struct_tf_lite_context_a740e9b4470a663dfc5c33a6a24f9d38c}} 
+\mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$($\ast$ {\bfseries Get\+Tensor} )(const struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, int tensor\+\_\+idx)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_ae2ac05e8baf0ea58fb44a13937ae32a9}\label{struct_tf_lite_context_ae2ac05e8baf0ea58fb44a13937ae32a9}} 
+\mbox{\hyperlink{struct_tf_lite_eval_tensor}{Tf\+Lite\+Eval\+Tensor}} $\ast$($\ast$ {\bfseries Get\+Eval\+Tensor} )(const struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, int tensor\+\_\+idx)
+\item 
+\mbox{\Hypertarget{struct_tf_lite_context_a7b43108005e4b373a604cc3880b16988}\label{struct_tf_lite_context_a7b43108005e4b373a604cc3880b16988}} 
+void $\ast$($\ast$ {\bfseries Get\+Delegate} )(const struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context)
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/c/common.\+h\end{DoxyCompactItemize}

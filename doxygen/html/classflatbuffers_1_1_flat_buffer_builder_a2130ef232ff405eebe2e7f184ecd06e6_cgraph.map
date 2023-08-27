@@ -1,0 +1,4 @@
+<map id="flatbuffers::FlatBufferBuilder::CreateVectorOfSortedTables" name="flatbuffers::FlatBufferBuilder::CreateVectorOfSortedTables">
+<area shape="rect" id="node1" title="Serialize an array of table offsets as a vector in the buffer in sorted order." alt="" coords="5,5,217,47"/>
+<area shape="rect" id="node2" href="$classflatbuffers_1_1_flat_buffer_builder.html#a2cca5c89246a53e80e6ad9487f4c36f3" title="Serialize an array into a FlatBuffer vector." alt="" coords="265,5,472,47"/>
+</map>

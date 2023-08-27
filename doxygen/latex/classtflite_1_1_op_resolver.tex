@@ -1,0 +1,68 @@
+\hypertarget{classtflite_1_1_op_resolver}{}\doxysection{tflite\+::Op\+Resolver Class Reference}
+\label{classtflite_1_1_op_resolver}\index{tflite::OpResolver@{tflite::OpResolver}}
+
+
+{\ttfamily \#include $<$op\+\_\+resolver.\+h$>$}
+
+
+
+Inheritance diagram for tflite\+::Op\+Resolver\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classtflite_1_1_op_resolver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tflite\+::Op\+Resolver\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classtflite_1_1_op_resolver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_op_resolver_a5a4c1ee47218491bcfa5c3ba46f6e044}\label{classtflite_1_1_op_resolver_a5a4c1ee47218491bcfa5c3ba46f6e044}} 
+using {\bfseries Tf\+Lite\+Delegate\+Ptr\+Vector} = std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_tf_lite_delegate}{Tf\+Lite\+Delegate}}, void($\ast$)(\mbox{\hyperlink{struct_tf_lite_delegate}{Tf\+Lite\+Delegate}} $\ast$)$>$ $>$
+\item 
+\mbox{\Hypertarget{classtflite_1_1_op_resolver_a5a4c1ee47218491bcfa5c3ba46f6e044}\label{classtflite_1_1_op_resolver_a5a4c1ee47218491bcfa5c3ba46f6e044}} 
+using {\bfseries Tf\+Lite\+Delegate\+Ptr\+Vector} = std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_tf_lite_delegate}{Tf\+Lite\+Delegate}}, void($\ast$)(\mbox{\hyperlink{struct_tf_lite_delegate}{Tf\+Lite\+Delegate}} $\ast$)$>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_op_resolver_a4b1cc6e397440d4a9d47c4d812406ed1}\label{classtflite_1_1_op_resolver_a4b1cc6e397440d4a9d47c4d812406ed1}} 
+virtual const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ \mbox{\hyperlink{classtflite_1_1_op_resolver_a4b1cc6e397440d4a9d47c4d812406ed1}{Find\+Op}} (tflite\+::\+Builtin\+Operator op, int version) const =0
+\begin{DoxyCompactList}\small\item\em Finds the op registration for a builtin operator by enum code. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtflite_1_1_op_resolver_a0bc0bf7ab1e458d701dbae3e1f9ad834}\label{classtflite_1_1_op_resolver_a0bc0bf7ab1e458d701dbae3e1f9ad834}} 
+virtual const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ \mbox{\hyperlink{classtflite_1_1_op_resolver_a0bc0bf7ab1e458d701dbae3e1f9ad834}{Find\+Op}} (const char $\ast$op, int version) const =0
+\begin{DoxyCompactList}\small\item\em Finds the op registration of a custom operator by op name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtflite_1_1_op_resolver_a4aee8510e32311d69989fc8a16889935}\label{classtflite_1_1_op_resolver_a4aee8510e32311d69989fc8a16889935}} 
+virtual Tf\+Lite\+Delegate\+Ptr\+Vector {\bfseries Get\+Delegates} (int num\+\_\+threads) const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_op_resolver_a4b1cc6e397440d4a9d47c4d812406ed1}\label{classtflite_1_1_op_resolver_a4b1cc6e397440d4a9d47c4d812406ed1}} 
+virtual const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ \mbox{\hyperlink{classtflite_1_1_op_resolver_a4b1cc6e397440d4a9d47c4d812406ed1}{Find\+Op}} (tflite\+::\+Builtin\+Operator op, int version) const =0
+\begin{DoxyCompactList}\small\item\em Finds the op registration for a builtin operator by enum code. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtflite_1_1_op_resolver_a0bc0bf7ab1e458d701dbae3e1f9ad834}\label{classtflite_1_1_op_resolver_a0bc0bf7ab1e458d701dbae3e1f9ad834}} 
+virtual const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ \mbox{\hyperlink{classtflite_1_1_op_resolver_a0bc0bf7ab1e458d701dbae3e1f9ad834}{Find\+Op}} (const char $\ast$op, int version) const =0
+\begin{DoxyCompactList}\small\item\em Finds the op registration of a custom operator by op name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtflite_1_1_op_resolver_a4aee8510e32311d69989fc8a16889935}\label{classtflite_1_1_op_resolver_a4aee8510e32311d69989fc8a16889935}} 
+virtual Tf\+Lite\+Delegate\+Ptr\+Vector {\bfseries Get\+Delegates} (int num\+\_\+threads) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_op_resolver_aa1e0c39bbf9586557c5af91c5e7bc48d}\label{classtflite_1_1_op_resolver_aa1e0c39bbf9586557c5af91c5e7bc48d}} 
+class {\bfseries Op\+Resolver\+Internal}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract interface that returns Tf\+Lite\+Registrations given op codes or custom op names. This is the mechanism that ops being referenced in the flatbuffer model are mapped to executable function pointers (Tf\+Lite\+Registrations). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/core/api/op\+\_\+resolver.\+h\end{DoxyCompactItemize}

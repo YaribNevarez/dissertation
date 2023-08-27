@@ -1,0 +1,55 @@
+\hypertarget{class_t_p_delegate}{}\doxysection{T\+P\+Delegate Class Reference}
+\label{class_t_p_delegate}\index{TPDelegate@{TPDelegate}}
+
+
+Collaboration diagram for T\+P\+Delegate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_p_delegate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t_p_delegate_1_1_job}{Job}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_p_delegate_a15580f44ff2ee16f2143962111f12202}\label{class_t_p_delegate_a15580f44ff2ee16f2143962111f12202}} 
+virtual int {\bfseries initialize} (void)
+\item 
+\mbox{\Hypertarget{class_t_p_delegate_a115f71787dddf498d8884cc610ef4ec2}\label{class_t_p_delegate_a115f71787dddf498d8884cc610ef4ec2}} 
+virtual \mbox{\hyperlink{struct_t_p_delegate_1_1_job}{Job}} {\bfseries create\+Job} (const \mbox{\hyperlink{structtflite_1_1_conv_params}{tflite\+::\+Conv\+Params}} \&params, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&input\+\_\+shape, const float $\ast$input\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&filter\+\_\+shape, const float $\ast$filter\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&bias\+\_\+shape, const float $\ast$bias\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&output\+\_\+shape, float $\ast$output\+\_\+data, \mbox{\hyperlink{struct___event}{Event}} $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_t_p_delegate_aae65dab46c7dda26de7ec38d21a01254}\label{class_t_p_delegate_aae65dab46c7dda26de7ec38d21a01254}} 
+virtual \mbox{\hyperlink{struct_t_p_delegate_1_1_job}{Job}} {\bfseries create\+Job} (const \mbox{\hyperlink{structtflite_1_1_conv_params}{tflite\+::\+Conv\+Params}} \&params, const int32\+\_\+t $\ast$output\+\_\+multiplier, const int32\+\_\+t $\ast$output\+\_\+shift, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&input\+\_\+shape, const int8\+\_\+t $\ast$input\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&filter\+\_\+shape, const int8\+\_\+t $\ast$filter\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&bias\+\_\+shape, const int32\+\_\+t $\ast$bias\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&output\+\_\+shape, int8\+\_\+t $\ast$output\+\_\+data, \mbox{\hyperlink{struct___event}{Event}} $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_t_p_delegate_a4e997cc7bade261ca2be13089aad5d37}\label{class_t_p_delegate_a4e997cc7bade261ca2be13089aad5d37}} 
+virtual \mbox{\hyperlink{struct_t_p_delegate_1_1_job}{Job}} {\bfseries create\+Job} (const \mbox{\hyperlink{structtflite_1_1_depthwise_params}{tflite\+::\+Depthwise\+Params}} \&params, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&input\+\_\+shape, const float $\ast$input\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&filter\+\_\+shape, const float $\ast$filter\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&bias\+\_\+shape, const float $\ast$bias\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&output\+\_\+shape, float $\ast$output\+\_\+data, \mbox{\hyperlink{struct___event}{Event}} $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_t_p_delegate_a2f753811562bbf5a8ad6518b7cb4e425}\label{class_t_p_delegate_a2f753811562bbf5a8ad6518b7cb4e425}} 
+virtual \mbox{\hyperlink{struct_t_p_delegate_1_1_job}{Job}} {\bfseries create\+Job} (const \mbox{\hyperlink{structtflite_1_1_depthwise_params}{tflite\+::\+Depthwise\+Params}} \&params, const int32\+\_\+t $\ast$output\+\_\+multiplier, const int32\+\_\+t $\ast$output\+\_\+shift, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&input\+\_\+shape, const int8\+\_\+t $\ast$input\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&filter\+\_\+shape, const int8\+\_\+t $\ast$filter\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&bias\+\_\+shape, const int32\+\_\+t $\ast$bias\+\_\+data, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{tflite\+::\+Runtime\+Shape}} \&output\+\_\+shape, int8\+\_\+t $\ast$output\+\_\+data, \mbox{\hyperlink{struct___event}{Event}} $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_t_p_delegate_a7e90191abb7fd53921a1d101e4a29749}\label{class_t_p_delegate_a7e90191abb7fd53921a1d101e4a29749}} 
+virtual int {\bfseries execute} (\mbox{\hyperlink{struct_t_p_delegate_1_1_job}{Job}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_p_delegate_a58b466efd8cc706ed72555fdfcc7a149}\label{class_t_p_delegate_a58b466efd8cc706ed72555fdfcc7a149}} 
+static bool {\bfseries is\+Valid} (\mbox{\hyperlink{struct_t_p_delegate_1_1_job}{Job}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_p_delegate_a05366fdb4c7ca28d68d16a3e543f5ca7}\label{class_t_p_delegate_a05366fdb4c7ca28d68d16a3e543f5ca7}} 
+\mbox{\hyperlink{struct_tensor_processor_1_1_processor_array}{Tensor\+Processor\+::\+Processor\+Array}} $\ast$ {\bfseries singleton\+\_\+tp\+\_\+array\+\_\+} = nullptr
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/libs/delegates/inc/tp\+\_\+delegate.\+h\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/libs/delegates/src/tp\+\_\+delegate.\+cpp\end{DoxyCompactItemize}

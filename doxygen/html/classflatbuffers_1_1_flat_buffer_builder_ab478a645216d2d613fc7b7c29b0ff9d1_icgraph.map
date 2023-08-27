@@ -1,0 +1,4 @@
+<map id="flatbuffers::FlatBufferBuilder::CreateSharedString" name="flatbuffers::FlatBufferBuilder::CreateSharedString">
+<area shape="rect" id="node1" title="Store a string in the buffer, which can contain any binary data. If a string with this exact contents..." alt="" coords="260,5,467,47"/>
+<area shape="rect" id="node2" href="$classflatbuffers_1_1_flat_buffer_builder.html#a3eb68613e5883dc4b8fff6cf7d1223d7" title="Store a string in the buffer, which null&#45;terminated. If a string with this exact contents has already..." alt="" coords="5,5,212,47"/>
+</map>

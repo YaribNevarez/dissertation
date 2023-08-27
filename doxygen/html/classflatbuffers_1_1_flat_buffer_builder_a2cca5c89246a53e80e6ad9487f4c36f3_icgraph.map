@@ -1,0 +1,7 @@
+<map id="flatbuffers::FlatBufferBuilder::CreateVector" name="flatbuffers::FlatBufferBuilder::CreateVector">
+<area shape="rect" id="node1" title="Serialize an array into a FlatBuffer vector." alt="" coords="525,71,732,112"/>
+<area shape="rect" id="node2" href="$classflatbuffers_1_1_flat_buffer_builder.html#af715dd24dd37cb0151dc7a980ad0f207" title="Serialize a std::vector into a FlatBuffer vector." alt="" coords="268,5,475,47"/>
+<area shape="rect" id="node3" href="$classflatbuffers_1_1_flat_buffer_builder.html#a2130ef232ff405eebe2e7f184ecd06e6" title="Serialize an array of table offsets as a vector in the buffer in sorted order." alt="" coords="265,71,477,112"/>
+<area shape="rect" id="node5" href="$classflatbuffers_1_1_flat_buffer_builder.html#a592110519a6c8db1926f1365bf2a58e6" title="Serialize a std::vector&lt;std::string&gt; into a FlatBuffer vector. This is a convenience function for a c..." alt="" coords="268,136,475,177"/>
+<area shape="rect" id="node4" href="$classflatbuffers_1_1_flat_buffer_builder.html#ac64d11c219559ea51567eab556e13135" title="Serialize an array of table offsets as a vector in the buffer in sorted order." alt="" coords="5,71,217,112"/>
+</map>

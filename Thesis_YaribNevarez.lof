@@ -52,3 +52,10 @@
 \contentsline {xchapter}{Conclusion and Outlook}{105}{chapter.5}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Appendix}{109}{appendix.A}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces High level embedded software architecture.\relax }}{109}{figure.caption.143}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Software flowchart.\relax }}{110}{figure.caption.144}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Sequence diagram of TensorFlow delegate initialization.\relax }}{110}{figure.caption.145}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Sequence diagram of TensorFlow delegate execution.\relax }}{111}{figure.caption.146}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Tensor Processor task execution. (a) Setup transaction. (b) Compute transaction.\relax }}{112}{figure.caption.147}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Setup transaction buffer stream.\relax }}{112}{figure.caption.148}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Collaboration diagram of TensorFlow delegate classes.\relax }}{113}{figure.caption.149}%

@@ -1,0 +1,3 @@
+<map id="flatbuffers::FlatBufferBuilder::CreateVectorOfSortedStructs" name="flatbuffers::FlatBufferBuilder::CreateVectorOfSortedStructs">
+<area shape="rect" id="node1" title="Serialize a std::vector of structs into a FlatBuffer vector in sorted order." alt="" coords="5,29,221,71"/>
+</map>

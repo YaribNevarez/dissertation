@@ -1,0 +1,91 @@
+\hypertarget{classtflite_1_1_greedy_memory_planner}{}\doxysection{tflite\+::Greedy\+Memory\+Planner Class Reference}
+\label{classtflite_1_1_greedy_memory_planner}\index{tflite::GreedyMemoryPlanner@{tflite::GreedyMemoryPlanner}}
+
+
+Inheritance diagram for tflite\+::Greedy\+Memory\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classtflite_1_1_greedy_memory_planner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tflite\+::Greedy\+Memory\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classtflite_1_1_greedy_memory_planner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtflite_1_1_greedy_memory_planner_1_1_list_entry}{List\+Entry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a99ff0500a7e6e0d9d49d2a8259f386f3}\label{classtflite_1_1_greedy_memory_planner_a99ff0500a7e6e0d9d49d2a8259f386f3}} 
+{\bfseries Greedy\+Memory\+Planner} (unsigned char $\ast$scratch\+\_\+buffer, int scratch\+\_\+buffer\+\_\+size)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a6adbf974f4a8ffdb031a5fb659ca3cec}\label{classtflite_1_1_greedy_memory_planner_a6adbf974f4a8ffdb031a5fb659ca3cec}} 
+Tf\+Lite\+Status {\bfseries Add\+Buffer} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, int size, int first\+\_\+time\+\_\+used, int last\+\_\+time\+\_\+used) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a2763af79ab28c14a81a1ac2c036279ff}\label{classtflite_1_1_greedy_memory_planner_a2763af79ab28c14a81a1ac2c036279ff}} 
+Tf\+Lite\+Status {\bfseries Add\+Buffer} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, int size, int first\+\_\+time\+\_\+used, int last\+\_\+time\+\_\+used, int offline\+\_\+offset)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a1464cfc49923c928211747eb0a1f5aee}\label{classtflite_1_1_greedy_memory_planner_a1464cfc49923c928211747eb0a1f5aee}} 
+size\+\_\+t {\bfseries Get\+Maximum\+Memory\+Size} () override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_af6afd2e3cb050643807abbe5fbb03790}\label{classtflite_1_1_greedy_memory_planner_af6afd2e3cb050643807abbe5fbb03790}} 
+int {\bfseries Get\+Buffer\+Count} () override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a6b18ce89e1bde7694be9fb263431ce0d}\label{classtflite_1_1_greedy_memory_planner_a6b18ce89e1bde7694be9fb263431ce0d}} 
+Tf\+Lite\+Status {\bfseries Get\+Offset\+For\+Buffer} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, int buffer\+\_\+index, int $\ast$offset) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a49ed960467aba0567120e8b0a091782a}\label{classtflite_1_1_greedy_memory_planner_a49ed960467aba0567120e8b0a091782a}} 
+void {\bfseries Print\+Memory\+Plan} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a7eb5bda84d3c4f193bb70f513bcd123f}\label{classtflite_1_1_greedy_memory_planner_a7eb5bda84d3c4f193bb70f513bcd123f}} 
+bool {\bfseries Do\+Any\+Buffers\+Overlap} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a99ff0500a7e6e0d9d49d2a8259f386f3}\label{classtflite_1_1_greedy_memory_planner_a99ff0500a7e6e0d9d49d2a8259f386f3}} 
+{\bfseries Greedy\+Memory\+Planner} (unsigned char $\ast$scratch\+\_\+buffer, int scratch\+\_\+buffer\+\_\+size)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a6adbf974f4a8ffdb031a5fb659ca3cec}\label{classtflite_1_1_greedy_memory_planner_a6adbf974f4a8ffdb031a5fb659ca3cec}} 
+Tf\+Lite\+Status {\bfseries Add\+Buffer} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, int size, int first\+\_\+time\+\_\+used, int last\+\_\+time\+\_\+used) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a2763af79ab28c14a81a1ac2c036279ff}\label{classtflite_1_1_greedy_memory_planner_a2763af79ab28c14a81a1ac2c036279ff}} 
+Tf\+Lite\+Status {\bfseries Add\+Buffer} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, int size, int first\+\_\+time\+\_\+used, int last\+\_\+time\+\_\+used, int offline\+\_\+offset)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a1464cfc49923c928211747eb0a1f5aee}\label{classtflite_1_1_greedy_memory_planner_a1464cfc49923c928211747eb0a1f5aee}} 
+size\+\_\+t {\bfseries Get\+Maximum\+Memory\+Size} () override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_af6afd2e3cb050643807abbe5fbb03790}\label{classtflite_1_1_greedy_memory_planner_af6afd2e3cb050643807abbe5fbb03790}} 
+int {\bfseries Get\+Buffer\+Count} () override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a6b18ce89e1bde7694be9fb263431ce0d}\label{classtflite_1_1_greedy_memory_planner_a6b18ce89e1bde7694be9fb263431ce0d}} 
+Tf\+Lite\+Status {\bfseries Get\+Offset\+For\+Buffer} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter, int buffer\+\_\+index, int $\ast$offset) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a49ed960467aba0567120e8b0a091782a}\label{classtflite_1_1_greedy_memory_planner_a49ed960467aba0567120e8b0a091782a}} 
+void {\bfseries Print\+Memory\+Plan} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a7eb5bda84d3c4f193bb70f513bcd123f}\label{classtflite_1_1_greedy_memory_planner_a7eb5bda84d3c4f193bb70f513bcd123f}} 
+bool {\bfseries Do\+Any\+Buffers\+Overlap} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a9a28a95c2ef5663897d601927fc012b9}\label{classtflite_1_1_greedy_memory_planner_a9a28a95c2ef5663897d601927fc012b9}} 
+static size\+\_\+t {\bfseries per\+\_\+buffer\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_greedy_memory_planner_a9a28a95c2ef5663897d601927fc012b9}\label{classtflite_1_1_greedy_memory_planner_a9a28a95c2ef5663897d601927fc012b9}} 
+static size\+\_\+t {\bfseries per\+\_\+buffer\+\_\+size} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/memory\+\_\+planner/greedy\+\_\+memory\+\_\+planner.\+h\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/memory\+\_\+planner/greedy\+\_\+memory\+\_\+planner.\+cpp\end{DoxyCompactItemize}

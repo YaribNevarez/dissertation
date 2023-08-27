@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['ifoptionsbuilder_282',['IfOptionsBuilder',['../structtflite_1_1_if_options_builder.html',1,'tflite']]],
+  ['ifoptionst_283',['IfOptionsT',['../structtflite_1_1_if_options_t.html',1,'tflite']]],
+  ['implsaturatingroundingmultiplybypot_284',['ImplSaturatingRoundingMultiplyByPOT',['../structgemmlowp_1_1_impl_saturating_rounding_multiply_by_p_o_t.html',1,'gemmlowp']]],
+  ['implsaturatingroundingmultiplybypot_3c_20exponent_2c_20int16x8_5ft_2c_20_2d1_20_3e_285',['ImplSaturatingRoundingMultiplyByPOT&lt; Exponent, int16x8_t, -1 &gt;',['../structgemmlowp_1_1_impl_saturating_rounding_multiply_by_p_o_t_3_01_exponent_00_01int16x8__t_00_01-1_01_4.html',1,'gemmlowp']]],
+  ['implsaturatingroundingmultiplybypot_3c_20exponent_2c_20int16x8_5ft_2c_201_20_3e_286',['ImplSaturatingRoundingMultiplyByPOT&lt; Exponent, int16x8_t, 1 &gt;',['../structgemmlowp_1_1_impl_saturating_rounding_multiply_by_p_o_t_3_01_exponent_00_01int16x8__t_00_011_01_4.html',1,'gemmlowp']]],
+  ['implsaturatingroundingmultiplybypot_3c_20exponent_2c_20int32x4_5ft_2c_20_2d1_20_3e_287',['ImplSaturatingRoundingMultiplyByPOT&lt; Exponent, int32x4_t, -1 &gt;',['../structgemmlowp_1_1_impl_saturating_rounding_multiply_by_p_o_t_3_01_exponent_00_01int32x4__t_00_01-1_01_4.html',1,'gemmlowp']]],
+  ['implsaturatingroundingmultiplybypot_3c_20exponent_2c_20int32x4_5ft_2c_201_20_3e_288',['ImplSaturatingRoundingMultiplyByPOT&lt; Exponent, int32x4_t, 1 &gt;',['../structgemmlowp_1_1_impl_saturating_rounding_multiply_by_p_o_t_3_01_exponent_00_01int32x4__t_00_011_01_4.html',1,'gemmlowp']]],
+  ['implsaturatingroundingmultiplybypot_3c_20exponent_2c_20integertype_2c_20_2d1_20_3e_289',['ImplSaturatingRoundingMultiplyByPOT&lt; Exponent, IntegerType, -1 &gt;',['../structgemmlowp_1_1_impl_saturating_rounding_multiply_by_p_o_t_3_01_exponent_00_01_integer_type_00_01-1_01_4.html',1,'gemmlowp']]],
+  ['implsaturatingroundingmultiplybypot_3c_20exponent_2c_20integertype_2c_200_20_3e_290',['ImplSaturatingRoundingMultiplyByPOT&lt; Exponent, IntegerType, 0 &gt;',['../structgemmlowp_1_1_impl_saturating_rounding_multiply_by_p_o_t_3_01_exponent_00_01_integer_type_00_010_01_4.html',1,'gemmlowp']]],
+  ['implsaturatingroundingmultiplybypot_3c_20exponent_2c_20integertype_2c_201_20_3e_291',['ImplSaturatingRoundingMultiplyByPOT&lt; Exponent, IntegerType, 1 &gt;',['../structgemmlowp_1_1_impl_saturating_rounding_multiply_by_p_o_t_3_01_exponent_00_01_integer_type_00_011_01_4.html',1,'gemmlowp']]],
+  ['indirecthelper_292',['IndirectHelper',['../structflatbuffers_1_1_indirect_helper.html',1,'flatbuffers']]],
+  ['indirecthelper_3c_20const_20t_20_2a_20_3e_293',['IndirectHelper&lt; const T * &gt;',['../structflatbuffers_1_1_indirect_helper_3_01const_01_t_01_5_01_4.html',1,'flatbuffers']]],
+  ['indirecthelper_3c_20offset_3c_20t_20_3e_20_3e_294',['IndirectHelper&lt; Offset&lt; T &gt; &gt;',['../structflatbuffers_1_1_indirect_helper_3_01_offset_3_01_t_01_4_01_4.html',1,'flatbuffers']]],
+  ['int16x8_5fm128i_295',['int16x8_m128i',['../structgemmlowp_1_1int16x8__m128i.html',1,'gemmlowp']]],
+  ['int32vectorbuilder_296',['Int32VectorBuilder',['../structtflite_1_1_int32_vector_builder.html',1,'tflite']]],
+  ['int32vectort_297',['Int32VectorT',['../structtflite_1_1_int32_vector_t.html',1,'tflite']]],
+  ['integral_5fconstant_298',['integral_constant',['../structflatbuffers_1_1integral__constant.html',1,'flatbuffers']]],
+  ['is_5fenum_299',['is_enum',['../structflatbuffers_1_1is__enum.html',1,'flatbuffers']]],
+  ['is_5ffloating_5fpoint_300',['is_floating_point',['../structflatbuffers_1_1is__floating__point.html',1,'flatbuffers']]],
+  ['is_5fint32_5for_5fint64_301',['is_int32_or_int64',['../structtflite_1_1is__int32__or__int64.html',1,'tflite']]],
+  ['is_5fsame_302',['is_same',['../structflatbuffers_1_1is__same.html',1,'flatbuffers']]],
+  ['is_5fscalar_303',['is_scalar',['../structflatbuffers_1_1is__scalar.html',1,'flatbuffers']]],
+  ['is_5fsmall_5finteger_304',['is_small_integer',['../structtflite_1_1is__small__integer.html',1,'tflite']]],
+  ['is_5funsigned_305',['is_unsigned',['../structflatbuffers_1_1is__unsigned.html',1,'flatbuffers']]]
+];

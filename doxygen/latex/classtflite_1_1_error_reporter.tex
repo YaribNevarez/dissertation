@@ -1,0 +1,58 @@
+\hypertarget{classtflite_1_1_error_reporter}{}\doxysection{tflite\+::Error\+Reporter Class Reference}
+\label{classtflite_1_1_error_reporter}\index{tflite::ErrorReporter@{tflite::ErrorReporter}}
+
+
+{\ttfamily \#include $<$error\+\_\+reporter.\+h$>$}
+
+
+
+Inheritance diagram for tflite\+::Error\+Reporter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classtflite_1_1_error_reporter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tflite\+::Error\+Reporter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classtflite_1_1_error_reporter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_error_reporter_aea1c136767f97dd1313af0827b08da0a}\label{classtflite_1_1_error_reporter_aea1c136767f97dd1313af0827b08da0a}} 
+virtual int {\bfseries Report} (const char $\ast$format, va\+\_\+list args)=0
+\item 
+\mbox{\Hypertarget{classtflite_1_1_error_reporter_aafbe9b684566270d57b94130fc2f676c}\label{classtflite_1_1_error_reporter_aafbe9b684566270d57b94130fc2f676c}} 
+int {\bfseries Report} (const char $\ast$format,...)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_error_reporter_af5e7bdb86b4c4aebcf9eeafb69a226d1}\label{classtflite_1_1_error_reporter_af5e7bdb86b4c4aebcf9eeafb69a226d1}} 
+int {\bfseries Report\+Error} (void $\ast$, const char $\ast$format,...)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_error_reporter_aea1c136767f97dd1313af0827b08da0a}\label{classtflite_1_1_error_reporter_aea1c136767f97dd1313af0827b08da0a}} 
+virtual int {\bfseries Report} (const char $\ast$format, va\+\_\+list args)=0
+\item 
+\mbox{\Hypertarget{classtflite_1_1_error_reporter_aafbe9b684566270d57b94130fc2f676c}\label{classtflite_1_1_error_reporter_aafbe9b684566270d57b94130fc2f676c}} 
+int {\bfseries Report} (const char $\ast$format,...)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_error_reporter_af5e7bdb86b4c4aebcf9eeafb69a226d1}\label{classtflite_1_1_error_reporter_af5e7bdb86b4c4aebcf9eeafb69a226d1}} 
+int {\bfseries Report\+Error} (void $\ast$, const char $\ast$format,...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A functor that reports error to supporting system. Invoked similar to printf.
+
+Usage\+: \mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} foo; foo.\+Report(\char`\"{}test \%d\char`\"{}, 5); or va\+\_\+list args; foo.\+Report(\char`\"{}test \%d\char`\"{}, args); // where args is va\+\_\+list
+
+Subclass \mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} to provide another reporting destination. For example, if you have a G\+UI program, you might redirect to a buffer that drives a G\+UI error log box. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/core/api/error\+\_\+reporter.\+h\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/core/api/error\+\_\+reporter.\+cpp\end{DoxyCompactItemize}

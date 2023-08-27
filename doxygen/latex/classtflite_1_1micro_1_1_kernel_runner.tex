@@ -1,0 +1,89 @@
+\hypertarget{classtflite_1_1micro_1_1_kernel_runner}{}\doxysection{tflite\+::micro\+::Kernel\+Runner Class Reference}
+\label{classtflite_1_1micro_1_1_kernel_runner}\index{tflite::micro::KernelRunner@{tflite::micro::KernelRunner}}
+
+
+Collaboration diagram for tflite\+::micro\+::Kernel\+Runner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classtflite_1_1micro_1_1_kernel_runner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a57d6594fae609a1091e0f5b2c768fa40}\label{classtflite_1_1micro_1_1_kernel_runner_a57d6594fae609a1091e0f5b2c768fa40}} 
+{\bfseries Kernel\+Runner} (const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} \&registration, \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$tensors, int tensors\+\_\+size, \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$inputs, \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$outputs, void $\ast$builtin\+\_\+data)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_ab038efef8f2f300d196bb9a58a759c57}\label{classtflite_1_1micro_1_1_kernel_runner_ab038efef8f2f300d196bb9a58a759c57}} 
+Tf\+Lite\+Status {\bfseries Init\+And\+Prepare} (const char $\ast$init\+\_\+data=nullptr, size\+\_\+t length=0)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a38121b58eefd078f6dcc1b26b4a0aea7}\label{classtflite_1_1micro_1_1_kernel_runner_a38121b58eefd078f6dcc1b26b4a0aea7}} 
+Tf\+Lite\+Status {\bfseries Invoke} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_aa5e1e2951b2f9f152c9dc3c81db460a3}\label{classtflite_1_1micro_1_1_kernel_runner_aa5e1e2951b2f9f152c9dc3c81db460a3}} 
+\mbox{\hyperlink{classtflite_1_1_mock_micro_graph}{Mock\+Micro\+Graph}} $\ast$ {\bfseries Get\+Mock\+Graph} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a57d6594fae609a1091e0f5b2c768fa40}\label{classtflite_1_1micro_1_1_kernel_runner_a57d6594fae609a1091e0f5b2c768fa40}} 
+{\bfseries Kernel\+Runner} (const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} \&registration, \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$tensors, int tensors\+\_\+size, \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$inputs, \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$outputs, void $\ast$builtin\+\_\+data)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_ab038efef8f2f300d196bb9a58a759c57}\label{classtflite_1_1micro_1_1_kernel_runner_ab038efef8f2f300d196bb9a58a759c57}} 
+Tf\+Lite\+Status {\bfseries Init\+And\+Prepare} (const char $\ast$init\+\_\+data=nullptr, size\+\_\+t length=0)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a38121b58eefd078f6dcc1b26b4a0aea7}\label{classtflite_1_1micro_1_1_kernel_runner_a38121b58eefd078f6dcc1b26b4a0aea7}} 
+Tf\+Lite\+Status {\bfseries Invoke} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_aa5e1e2951b2f9f152c9dc3c81db460a3}\label{classtflite_1_1micro_1_1_kernel_runner_aa5e1e2951b2f9f152c9dc3c81db460a3}} 
+\mbox{\hyperlink{classtflite_1_1_mock_micro_graph}{Mock\+Micro\+Graph}} $\ast$ {\bfseries Get\+Mock\+Graph} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a62fd05cc9a6f26d901b0fd571fde8cd2}\label{classtflite_1_1micro_1_1_kernel_runner_a62fd05cc9a6f26d901b0fd571fde8cd2}} 
+static \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$ {\bfseries Get\+Tensor} (const struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, int tensor\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_af7d37281b1f110219df8d9f9cdcc5f29}\label{classtflite_1_1micro_1_1_kernel_runner_af7d37281b1f110219df8d9f9cdcc5f29}} 
+static \mbox{\hyperlink{struct_tf_lite_eval_tensor}{Tf\+Lite\+Eval\+Tensor}} $\ast$ {\bfseries Get\+Eval\+Tensor} (const struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, int tensor\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a7130ff28425eca08417f5715a52ef20e}\label{classtflite_1_1micro_1_1_kernel_runner_a7130ff28425eca08417f5715a52ef20e}} 
+static void $\ast$ {\bfseries Allocate\+Persistent\+Buffer} (\mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, size\+\_\+t bytes)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_acba91b0572efa2eec343c49340d787b1}\label{classtflite_1_1micro_1_1_kernel_runner_acba91b0572efa2eec343c49340d787b1}} 
+static Tf\+Lite\+Status {\bfseries Request\+Scratch\+Buffer\+In\+Arena} (\mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, size\+\_\+t bytes, int $\ast$buffer\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a032e8682a88a0954d0ad8549c2505242}\label{classtflite_1_1micro_1_1_kernel_runner_a032e8682a88a0954d0ad8549c2505242}} 
+static void $\ast$ {\bfseries Get\+Scratch\+Buffer} (\mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, int buffer\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_ac45ce8ad52264886bf028be2e8b0ad55}\label{classtflite_1_1micro_1_1_kernel_runner_ac45ce8ad52264886bf028be2e8b0ad55}} 
+static void {\bfseries Report\+Op\+Error} (struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, const char $\ast$format,...)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_aee1222eb400b29ef8702c415c0be297b}\label{classtflite_1_1micro_1_1_kernel_runner_aee1222eb400b29ef8702c415c0be297b}} 
+static Tf\+Lite\+Status {\bfseries Get\+Graph} (struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$$\ast$args)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a38cfdfc252f3f5a7f93390afd1189be2}\label{classtflite_1_1micro_1_1_kernel_runner_a38cfdfc252f3f5a7f93390afd1189be2}} 
+static \mbox{\hyperlink{struct_tf_lite_tensor}{Tf\+Lite\+Tensor}} $\ast$ {\bfseries Get\+Tensor} (const struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, int tensor\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a3c5422fb0608548ba4bc6be2f9fa931c}\label{classtflite_1_1micro_1_1_kernel_runner_a3c5422fb0608548ba4bc6be2f9fa931c}} 
+static \mbox{\hyperlink{struct_tf_lite_eval_tensor}{Tf\+Lite\+Eval\+Tensor}} $\ast$ {\bfseries Get\+Eval\+Tensor} (const struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, int tensor\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a0267100877dad5d602695306b7235aef}\label{classtflite_1_1micro_1_1_kernel_runner_a0267100877dad5d602695306b7235aef}} 
+static void $\ast$ {\bfseries Allocate\+Persistent\+Buffer} (\mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, size\+\_\+t bytes)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_afb1eb02e3dba88fa59504000b4456f74}\label{classtflite_1_1micro_1_1_kernel_runner_afb1eb02e3dba88fa59504000b4456f74}} 
+static Tf\+Lite\+Status {\bfseries Request\+Scratch\+Buffer\+In\+Arena} (\mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, size\+\_\+t bytes, int $\ast$buffer\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a8e0693946f61b074329033d1f5500496}\label{classtflite_1_1micro_1_1_kernel_runner_a8e0693946f61b074329033d1f5500496}} 
+static void $\ast$ {\bfseries Get\+Scratch\+Buffer} (\mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, int buffer\+\_\+index)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a6671133cedf10a4027f14cd79b76f183}\label{classtflite_1_1micro_1_1_kernel_runner_a6671133cedf10a4027f14cd79b76f183}} 
+static void {\bfseries Report\+Op\+Error} (struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, const char $\ast$format,...)
+\item 
+\mbox{\Hypertarget{classtflite_1_1micro_1_1_kernel_runner_a1ad31f7e75c78bf3006b412f22322dea}\label{classtflite_1_1micro_1_1_kernel_runner_a1ad31f7e75c78bf3006b412f22322dea}} 
+static Tf\+Lite\+Status {\bfseries Get\+Graph} (struct \mbox{\hyperlink{struct_tf_lite_context}{Tf\+Lite\+Context}} $\ast$context, \mbox{\hyperlink{struct_tf_lite_int_array}{Tf\+Lite\+Int\+Array}} $\ast$$\ast$args)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/kernels/kernel\+\_\+runner.\+h\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/kernels/kernel\+\_\+runner.\+cpp\end{DoxyCompactItemize}

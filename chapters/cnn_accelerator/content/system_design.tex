@@ -4,7 +4,7 @@ The system design is a hardware/software co-design framework for low-power \gls{
 
 \subsection{Base embedded system architecture}
 The embedded system architecture consists of a cooperative hardware-software platform. See \Fig{fig:system_architecture}. The embedded \gls{cpu} delegates low-level compute-bound tensor operations to the \glspl{tp}. The \glspl{tp} employ AXI-Lite interface for configuration and AXI-Stream interfaces via \gls{dma} for data movement from off-chip memory. Each \gls{tp} and \gls{dma} pair asserts interrupt flags once its compute job/transaction completes. Interrupt events are handled by the embedded \gls{cpu} to use the results and to start a new compute job/transaction. The hardware architecture can vary its resource utilization by customizing the \glspl{tp} prior to the hardware synthesis.
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/system_design.pdf}
 	\caption{Base embedded system architecture.}
@@ -13,7 +13,7 @@ The embedded system architecture consists of a cooperative hardware-software pla
 \subsection{Tensor processor}
 The \gls{tp} is a dedicated hardware module to compute tensor operations. This implements high performance communication with AXI-Stream, direct \gls{cpu} communication with AXI-Lite, and on-chip storage utilizing BRAM. This hardware architecture is implemented with \gls{hls}. The tensor operations are implemented based on the C++ TensorFlow Lite micro kernels. See \fig{fig:accelerator}. This research focuses on the \emph{Conv2D} tensor operation that computes 2D convolution layers.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/accelerator.pdf}
 	\caption{High level hardware architecture of the proposed tensor processor.}
@@ -36,14 +36,14 @@ Rather than a parallelized hardware structure, this approach is a pipelined hard
 L_{hf}=N+7
 \end{eqnarray}
 
-\begin{figure}[t!]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/dot-product_unit.pdf}
 	\caption{Dot-product hardware module with (a) standard floating-point and (b) Hybrid-Float6.}
 	\label{fig:dot_product}
 \end{figure}
 
-\begin{figure}[t!]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/dot_product_hybrid.pdf}
 	\caption{(a) Dot-product hardware module with Hybrid-Float6 MAC, (b) bias accumulation, (c) activation and normalization to IEEE754.}
@@ -53,7 +53,7 @@ L_{hf}=N+7
 \subsubsection{Multiply-Accumulate Unit}
 The multiply-accumulate operation calculates the product of two numbers and adds the result to an accumulator. In \gls{fp} arithmetics, the area of a hardware multiplier scales with the bit size of the mantissas. In the case of \gls{hf6}, the 6-bit \gls{fp} representation allows a reduced hardware multiplicator for mantissas. The 1-bit mantissa enables optimized \gls{mac} implementations by reducing the mantissa multiplication to a multiplexed addition, see \fig{fig:multiplier}. This \gls{mac} produces denormalized results, which are accumulated in a fixed-point accumulator. This approach reduces latency, energy consumption, and hardware area/resource utilization.
 
-\begin{figure}[t!]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/multiplier.pdf}
 	\caption{Hybrid-Float6 multiply-accumulate hardware design.}
@@ -68,7 +68,7 @@ The approximation error is defined by the difference between \Equ{eq:float} and 
 \subsubsection{On-chip memory utilization}
 \label{sec:memory_utilization}
 The total on-chip memory utilization on the \gls{tp} is defined by \Equ{eq:tp_memory}, where $TP_B$ and $V_{M}$ represent the tensor buffers required for \emph{Conv} operation and local registers required for the logic, respectively. \Equ{eq:tp_memory_buffer} defines the tensor buffers, where $Input_{M}$ is the \emph{input buffer}, $Filter_{M}$ is the \emph{filter buffer}, $Bias_{M}$ is the \emph{bias buffer}. These on-chip memory buffers are defined in bits. \fig{fig:accelerator_buffers} illustrates the convolution operation utilizing the on-chip memory buffers.
-\begin{figure}[t!]
+\begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/accelerator_buffers.pdf}
 	\caption{Design parameters for on-chip memory buffers on the TP.}

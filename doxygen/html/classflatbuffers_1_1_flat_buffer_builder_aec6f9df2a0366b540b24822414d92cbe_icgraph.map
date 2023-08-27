@@ -1,0 +1,7 @@
+<map id="flatbuffers::FlatBufferBuilder::CreateString" name="flatbuffers::FlatBufferBuilder::CreateString">
+<area shape="rect" id="node1" title="Store a string in the buffer, which can contain any binary data." alt="" coords="515,71,721,112"/>
+<area shape="rect" id="node2" href="$classflatbuffers_1_1_flat_buffer_builder.html#ab478a645216d2d613fc7b7c29b0ff9d1" title="Store a string in the buffer, which can contain any binary data. If a string with this exact contents..." alt="" coords="260,5,467,47"/>
+<area shape="rect" id="node4" href="$classflatbuffers_1_1_flat_buffer_builder.html#aad93d113ac24e86ed04b5236b3f4c0c5" title="Store a string in the buffer, which is null&#45;terminated." alt="" coords="260,71,467,112"/>
+<area shape="rect" id="node5" href="$classflatbuffers_1_1_flat_buffer_builder.html#a592110519a6c8db1926f1365bf2a58e6" title="Serialize a std::vector&lt;std::string&gt; into a FlatBuffer vector. This is a convenience function for a c..." alt="" coords="260,136,467,177"/>
+<area shape="rect" id="node3" href="$classflatbuffers_1_1_flat_buffer_builder.html#a3eb68613e5883dc4b8fff6cf7d1223d7" title="Store a string in the buffer, which null&#45;terminated. If a string with this exact contents has already..." alt="" coords="5,5,212,47"/>
+</map>

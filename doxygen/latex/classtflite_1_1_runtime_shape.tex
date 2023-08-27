@@ -1,0 +1,148 @@
+\hypertarget{classtflite_1_1_runtime_shape}{}\doxysection{tflite\+::Runtime\+Shape Class Reference}
+\label{classtflite_1_1_runtime_shape}\index{tflite::RuntimeShape@{tflite::RuntimeShape}}
+
+
+Collaboration diagram for tflite\+::Runtime\+Shape\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classtflite_1_1_runtime_shape__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a8e54e531b6b2bdb8e5c14f2cb22ea57d}\label{classtflite_1_1_runtime_shape_a8e54e531b6b2bdb8e5c14f2cb22ea57d}} 
+\mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} \& {\bfseries operator=} (\mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} const \&)=delete
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_aa77b722ef562a982d91080438a9c8722}\label{classtflite_1_1_runtime_shape_aa77b722ef562a982d91080438a9c8722}} 
+{\bfseries Runtime\+Shape} (int dimensions\+\_\+count)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a788e917b94219496dfaaa6e7a0bcbc0a}\label{classtflite_1_1_runtime_shape_a788e917b94219496dfaaa6e7a0bcbc0a}} 
+{\bfseries Runtime\+Shape} (int shape\+\_\+size, int32\+\_\+t value)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_ae6cd749051380780bb28f5988692b766}\label{classtflite_1_1_runtime_shape_ae6cd749051380780bb28f5988692b766}} 
+{\bfseries Runtime\+Shape} (int dimensions\+\_\+count, const int32\+\_\+t $\ast$dims\+\_\+data)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_acef20cef4fd75960a535c14c8bf578d2}\label{classtflite_1_1_runtime_shape_acef20cef4fd75960a535c14c8bf578d2}} 
+{\bfseries Runtime\+Shape} (const std\+::initializer\+\_\+list$<$ int $>$ init\+\_\+list)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_ae88472a66df9acddcdd0b9b9539e79b2}\label{classtflite_1_1_runtime_shape_ae88472a66df9acddcdd0b9b9539e79b2}} 
+{\bfseries Runtime\+Shape} (\mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} const \&other)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_ad9d8c9516706b3184b4e107b998f10ca}\label{classtflite_1_1_runtime_shape_ad9d8c9516706b3184b4e107b998f10ca}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} \&comp) const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a9de8e21fa79a2a74e69578f0240f4ebe}\label{classtflite_1_1_runtime_shape_a9de8e21fa79a2a74e69578f0240f4ebe}} 
+int32\+\_\+t {\bfseries Dimensions\+Count} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a2039ed030a02c05b73a0ea723339a808}\label{classtflite_1_1_runtime_shape_a2039ed030a02c05b73a0ea723339a808}} 
+int32\+\_\+t {\bfseries Dims} (int i) const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_aabb407cb0e0a2d45acc5008da4c6fae5}\label{classtflite_1_1_runtime_shape_aabb407cb0e0a2d45acc5008da4c6fae5}} 
+void {\bfseries Set\+Dim} (int i, int32\+\_\+t val)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a68262777016c4995335af8cdf185c954}\label{classtflite_1_1_runtime_shape_a68262777016c4995335af8cdf185c954}} 
+int32\+\_\+t $\ast$ {\bfseries Dims\+Data} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a6a2056a71ad4467ee6c2f9488b2dd57c}\label{classtflite_1_1_runtime_shape_a6a2056a71ad4467ee6c2f9488b2dd57c}} 
+const int32\+\_\+t $\ast$ {\bfseries Dims\+Data} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_ab3db9f18aa5f1271a71edc6bd00f613e}\label{classtflite_1_1_runtime_shape_ab3db9f18aa5f1271a71edc6bd00f613e}} 
+const int32\+\_\+t $\ast$ {\bfseries Dims\+Data\+Up\+To5D} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a00f4e22f2e2411d65e068ac8e422dcd4}\label{classtflite_1_1_runtime_shape_a00f4e22f2e2411d65e068ac8e422dcd4}} 
+void {\bfseries Resize} (int dimensions\+\_\+count)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a9ddc1902f6a7d9f3e5fccb1f01542ba9}\label{classtflite_1_1_runtime_shape_a9ddc1902f6a7d9f3e5fccb1f01542ba9}} 
+void {\bfseries Replace\+With} (int dimensions\+\_\+count, const int32\+\_\+t $\ast$dims\+\_\+data)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a8091f7a7cee050277b3d4f30f5af0d51}\label{classtflite_1_1_runtime_shape_a8091f7a7cee050277b3d4f30f5af0d51}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries Build\+From} (const T \&src\+\_\+iterable)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a0a65349f170585f72b011773ef7cb20c}\label{classtflite_1_1_runtime_shape_a0a65349f170585f72b011773ef7cb20c}} 
+void {\bfseries Build\+From} (const std\+::initializer\+\_\+list$<$ int $>$ init\+\_\+list)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a73fb2c2df1c833850d88faf428c65630}\label{classtflite_1_1_runtime_shape_a73fb2c2df1c833850d88faf428c65630}} 
+int {\bfseries Flat\+Size} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a6b507a233225cc71662f7368fc0f8660}\label{classtflite_1_1_runtime_shape_a6b507a233225cc71662f7368fc0f8660}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} \&comp) const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a8e54e531b6b2bdb8e5c14f2cb22ea57d}\label{classtflite_1_1_runtime_shape_a8e54e531b6b2bdb8e5c14f2cb22ea57d}} 
+\mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} \& {\bfseries operator=} (\mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} const \&)=delete
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_aa77b722ef562a982d91080438a9c8722}\label{classtflite_1_1_runtime_shape_aa77b722ef562a982d91080438a9c8722}} 
+{\bfseries Runtime\+Shape} (int dimensions\+\_\+count)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a788e917b94219496dfaaa6e7a0bcbc0a}\label{classtflite_1_1_runtime_shape_a788e917b94219496dfaaa6e7a0bcbc0a}} 
+{\bfseries Runtime\+Shape} (int shape\+\_\+size, int32\+\_\+t value)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_ae6cd749051380780bb28f5988692b766}\label{classtflite_1_1_runtime_shape_ae6cd749051380780bb28f5988692b766}} 
+{\bfseries Runtime\+Shape} (int dimensions\+\_\+count, const int32\+\_\+t $\ast$dims\+\_\+data)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_acef20cef4fd75960a535c14c8bf578d2}\label{classtflite_1_1_runtime_shape_acef20cef4fd75960a535c14c8bf578d2}} 
+{\bfseries Runtime\+Shape} (const std\+::initializer\+\_\+list$<$ int $>$ init\+\_\+list)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_ae88472a66df9acddcdd0b9b9539e79b2}\label{classtflite_1_1_runtime_shape_ae88472a66df9acddcdd0b9b9539e79b2}} 
+{\bfseries Runtime\+Shape} (\mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} const \&other)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_ad9d8c9516706b3184b4e107b998f10ca}\label{classtflite_1_1_runtime_shape_ad9d8c9516706b3184b4e107b998f10ca}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} \&comp) const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a9de8e21fa79a2a74e69578f0240f4ebe}\label{classtflite_1_1_runtime_shape_a9de8e21fa79a2a74e69578f0240f4ebe}} 
+int32\+\_\+t {\bfseries Dimensions\+Count} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a2039ed030a02c05b73a0ea723339a808}\label{classtflite_1_1_runtime_shape_a2039ed030a02c05b73a0ea723339a808}} 
+int32\+\_\+t {\bfseries Dims} (int i) const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_aabb407cb0e0a2d45acc5008da4c6fae5}\label{classtflite_1_1_runtime_shape_aabb407cb0e0a2d45acc5008da4c6fae5}} 
+void {\bfseries Set\+Dim} (int i, int32\+\_\+t val)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a68262777016c4995335af8cdf185c954}\label{classtflite_1_1_runtime_shape_a68262777016c4995335af8cdf185c954}} 
+int32\+\_\+t $\ast$ {\bfseries Dims\+Data} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a6a2056a71ad4467ee6c2f9488b2dd57c}\label{classtflite_1_1_runtime_shape_a6a2056a71ad4467ee6c2f9488b2dd57c}} 
+const int32\+\_\+t $\ast$ {\bfseries Dims\+Data} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_ab3db9f18aa5f1271a71edc6bd00f613e}\label{classtflite_1_1_runtime_shape_ab3db9f18aa5f1271a71edc6bd00f613e}} 
+const int32\+\_\+t $\ast$ {\bfseries Dims\+Data\+Up\+To5D} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a00f4e22f2e2411d65e068ac8e422dcd4}\label{classtflite_1_1_runtime_shape_a00f4e22f2e2411d65e068ac8e422dcd4}} 
+void {\bfseries Resize} (int dimensions\+\_\+count)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a9ddc1902f6a7d9f3e5fccb1f01542ba9}\label{classtflite_1_1_runtime_shape_a9ddc1902f6a7d9f3e5fccb1f01542ba9}} 
+void {\bfseries Replace\+With} (int dimensions\+\_\+count, const int32\+\_\+t $\ast$dims\+\_\+data)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a8091f7a7cee050277b3d4f30f5af0d51}\label{classtflite_1_1_runtime_shape_a8091f7a7cee050277b3d4f30f5af0d51}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries Build\+From} (const T \&src\+\_\+iterable)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a0a65349f170585f72b011773ef7cb20c}\label{classtflite_1_1_runtime_shape_a0a65349f170585f72b011773ef7cb20c}} 
+void {\bfseries Build\+From} (const std\+::initializer\+\_\+list$<$ int $>$ init\+\_\+list)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a73fb2c2df1c833850d88faf428c65630}\label{classtflite_1_1_runtime_shape_a73fb2c2df1c833850d88faf428c65630}} 
+int {\bfseries Flat\+Size} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a6b507a233225cc71662f7368fc0f8660}\label{classtflite_1_1_runtime_shape_a6b507a233225cc71662f7368fc0f8660}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} \&comp) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a647264349b0f266c94102a8b3dda22cf}\label{classtflite_1_1_runtime_shape_a647264349b0f266c94102a8b3dda22cf}} 
+static \mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} {\bfseries Extended\+Shape} (int new\+\_\+shape\+\_\+size, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} \&shape)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_a647264349b0f266c94102a8b3dda22cf}\label{classtflite_1_1_runtime_shape_a647264349b0f266c94102a8b3dda22cf}} 
+static \mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} {\bfseries Extended\+Shape} (int new\+\_\+shape\+\_\+size, const \mbox{\hyperlink{classtflite_1_1_runtime_shape}{Runtime\+Shape}} \&shape)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_runtime_shape_ac88eda1e0396ade3b7f7dadbfcbd936d}\label{classtflite_1_1_runtime_shape_ac88eda1e0396ade3b7f7dadbfcbd936d}} 
+static constexpr int {\bfseries k\+Max\+Small\+Size} = 5
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/kernels/internal/types.\+h\end{DoxyCompactItemize}

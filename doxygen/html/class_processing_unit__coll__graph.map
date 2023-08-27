@@ -1,0 +1,8 @@
+<map id="ProcessingUnit" name="ProcessingUnit">
+<area shape="rect" id="node1" title=" " alt="" coords="80,549,257,773"/>
+<area shape="rect" id="node2" href="$struct_processing_unit_1_1_transaction.html" title=" " alt="" coords="5,321,207,472"/>
+<area shape="rect" id="node3" href="$struct_processing_unit_1_1_profile.html" title=" " alt="" coords="231,307,399,487"/>
+<area shape="rect" id="node4" href="$struct_d_m_a_hardware_vtbl.html" title=" " alt="" coords="42,5,210,244"/>
+<area shape="rect" id="node5" href="$struct_hardware_vtbl.html" title=" " alt="" coords="234,13,397,237"/>
+<area shape="rect" id="node6" href="$struct_memory_block.html" title=" " alt="" coords="421,71,541,178"/>
+</map>

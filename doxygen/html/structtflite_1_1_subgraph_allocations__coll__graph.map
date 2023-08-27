@@ -1,0 +1,13 @@
+<map id="tflite::SubgraphAllocations" name="tflite::SubgraphAllocations">
+<area shape="rect" id="node1" title=" " alt="" coords="458,719,651,796"/>
+<area shape="rect" id="node2" href="$struct_tf_lite_eval_tensor.html" title=" " alt="" coords="397,579,526,656"/>
+<area shape="rect" id="node3" href="$union_tf_lite_ptr_union.html" title=" " alt="" coords="241,263,356,516"/>
+<area shape="rect" id="node4" href="$struct_tf_lite_complex128.html" title=" " alt="" coords="5,35,147,127"/>
+<area shape="rect" id="node5" href="$struct_tf_lite_complex64.html" title=" " alt="" coords="171,35,304,127"/>
+<area shape="rect" id="node6" href="$struct_tf_lite_float16.html" title=" " alt="" coords="329,42,437,119"/>
+<area shape="rect" id="node7" href="$struct_tf_lite_int_array.html" title=" " alt="" coords="461,35,571,127"/>
+<area shape="rect" id="node10" href="$struct_tf_lite_node.html" title=" " alt="" coords="545,321,743,457"/>
+<area shape="rect" id="node8" href="$structtflite_1_1_node_and_registration.html" title=" " alt="" coords="550,579,749,656"/>
+<area shape="rect" id="node9" href="$struct_tf_lite_registration.html" title=" " alt="" coords="768,299,907,479"/>
+<area shape="rect" id="node11" href="$struct_tf_lite_delegate.html" title=" " alt="" coords="595,5,783,156"/>
+</map>

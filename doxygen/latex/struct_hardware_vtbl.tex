@@ -1,0 +1,82 @@
+\hypertarget{struct_hardware_vtbl}{}\doxysection{Hardware\+Vtbl Struct Reference}
+\label{struct_hardware_vtbl}\index{HardwareVtbl@{HardwareVtbl}}
+
+
+Collaboration diagram for Hardware\+Vtbl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{struct_hardware_vtbl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a5d1638e3def669d1f794cb7386e8847d}\label{struct_hardware_vtbl_a5d1638e3def669d1f794cb7386e8847d}} 
+void $\ast$($\ast$ {\bfseries new\+\_\+} )(void)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a53d1b6957df3e666e69d0d6a628b9a37}\label{struct_hardware_vtbl_a53d1b6957df3e666e69d0d6a628b9a37}} 
+void($\ast$ {\bfseries delete\+\_\+} )(void $\ast$$\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a31e5c5bbf5d80a26a2f4a56c5ede07b6}\label{struct_hardware_vtbl_a31e5c5bbf5d80a26a2f4a56c5ede07b6}} 
+int($\ast$ {\bfseries Initialize} )(void $\ast$Instance\+Ptr, u16 device\+Id)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_ab819244954a3eda45d861672a06da13b}\label{struct_hardware_vtbl_ab819244954a3eda45d861672a06da13b}} 
+void($\ast$ {\bfseries Start} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a1cd7089df811e197a663854dac06fb49}\label{struct_hardware_vtbl_a1cd7089df811e197a663854dac06fb49}} 
+uint32\+\_\+t($\ast$ {\bfseries Is\+Done} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_abce2db661f73e08d0ae976cc3c34902f}\label{struct_hardware_vtbl_abce2db661f73e08d0ae976cc3c34902f}} 
+uint32\+\_\+t($\ast$ {\bfseries Is\+Idle} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_abb338dfb36c164dc9e89037e778b09ab}\label{struct_hardware_vtbl_abb338dfb36c164dc9e89037e778b09ab}} 
+uint32\+\_\+t($\ast$ {\bfseries Is\+Ready} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a8d466977359a26244c829c0b573503de}\label{struct_hardware_vtbl_a8d466977359a26244c829c0b573503de}} 
+void($\ast$ {\bfseries Enable\+Auto\+Restart} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_acbfce8f2a49d6ccd091ef8201dbc49a7}\label{struct_hardware_vtbl_acbfce8f2a49d6ccd091ef8201dbc49a7}} 
+void($\ast$ {\bfseries Disable\+Auto\+Restart} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_aff118105817534e8222e46a02c47d29f}\label{struct_hardware_vtbl_aff118105817534e8222e46a02c47d29f}} 
+uint32\+\_\+t($\ast$ {\bfseries Get\+\_\+return} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_ac89d9161278a44ec3ce73bf34f9f0942}\label{struct_hardware_vtbl_ac89d9161278a44ec3ce73bf34f9f0942}} 
+void($\ast$ {\bfseries Set\+\_\+mode} )(void $\ast$Instance\+Ptr, uint32\+\_\+t \mbox{\hyperlink{union_data}{Data}})
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a692548061c0d96068ec6c34e7167a70d}\label{struct_hardware_vtbl_a692548061c0d96068ec6c34e7167a70d}} 
+uint32\+\_\+t($\ast$ {\bfseries Get\+\_\+mode} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_ae607330f5d05c3372f03f77fb8bd686d}\label{struct_hardware_vtbl_ae607330f5d05c3372f03f77fb8bd686d}} 
+uint32\+\_\+t($\ast$ {\bfseries Get\+\_\+debug} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a82f223722c6c92571f637095093cc855}\label{struct_hardware_vtbl_a82f223722c6c92571f637095093cc855}} 
+void($\ast$ {\bfseries Interrupt\+Global\+Enable} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a6ced856c463ba612e61168e3f2a11e5f}\label{struct_hardware_vtbl_a6ced856c463ba612e61168e3f2a11e5f}} 
+void($\ast$ {\bfseries Interrupt\+Global\+Disable} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a4b585b5175728a76b007d081fafddd51}\label{struct_hardware_vtbl_a4b585b5175728a76b007d081fafddd51}} 
+void($\ast$ {\bfseries Interrupt\+Enable} )(void $\ast$Instance\+Ptr, uint32\+\_\+t Mask)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_af23505aae3b36dff1491f142bceadac6}\label{struct_hardware_vtbl_af23505aae3b36dff1491f142bceadac6}} 
+void($\ast$ {\bfseries Interrupt\+Disable} )(void $\ast$Instance\+Ptr, uint32\+\_\+t Mask)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a1ff51e1b5245248ae3f7a1037c51aa8d}\label{struct_hardware_vtbl_a1ff51e1b5245248ae3f7a1037c51aa8d}} 
+void($\ast$ {\bfseries Interrupt\+Clear} )(void $\ast$Instance\+Ptr, uint32\+\_\+t Mask)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a82c0858bfd6b9d44872191d0ef05a530}\label{struct_hardware_vtbl_a82c0858bfd6b9d44872191d0ef05a530}} 
+uint32\+\_\+t($\ast$ {\bfseries Interrupt\+Get\+Enabled} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a1a4496b2e69e61977078a46b761f0fb4}\label{struct_hardware_vtbl_a1a4496b2e69e61977078a46b761f0fb4}} 
+uint32\+\_\+t($\ast$ {\bfseries Interrupt\+Get\+Status} )(void $\ast$Instance\+Ptr)
+\item 
+\mbox{\Hypertarget{struct_hardware_vtbl_a6de435fbb86b08dd0b4ebacfc67d2ec3}\label{struct_hardware_vtbl_a6de435fbb86b08dd0b4ebacfc67d2ec3}} 
+uint32\+\_\+t($\ast$ {\bfseries Interrupt\+Set\+Handler} )(void $\ast$Instance\+Ptr, uint32\+\_\+t ID, A\+R\+M\+\_\+\+G\+I\+C\+\_\+\+Interrupt\+Handler handler, void $\ast$data)
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/libs/drivers/inc/processing\+\_\+unit.\+h\end{DoxyCompactItemize}

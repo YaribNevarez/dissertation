@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['data_844',['Data',['../union_data.html',1,'']]],
+  ['defaultallocator_845',['DefaultAllocator',['../classflatbuffers_1_1_default_allocator.html',1,'flatbuffers']]],
+  ['densifyoptionsbuilder_846',['DensifyOptionsBuilder',['../structtflite_1_1_densify_options_builder.html',1,'tflite']]],
+  ['densifyoptionst_847',['DensifyOptionsT',['../structtflite_1_1_densify_options_t.html',1,'tflite']]],
+  ['depthtospaceoptionsbuilder_848',['DepthToSpaceOptionsBuilder',['../structtflite_1_1_depth_to_space_options_builder.html',1,'tflite']]],
+  ['depthtospaceoptionst_849',['DepthToSpaceOptionsT',['../structtflite_1_1_depth_to_space_options_t.html',1,'tflite']]],
+  ['depthtospaceparams_850',['DepthToSpaceParams',['../structtflite_1_1_depth_to_space_params.html',1,'tflite']]],
+  ['depthwiseconv2doptionsbuilder_851',['DepthwiseConv2DOptionsBuilder',['../structtflite_1_1_depthwise_conv2_d_options_builder.html',1,'tflite']]],
+  ['depthwiseconv2doptionst_852',['DepthwiseConv2DOptionsT',['../structtflite_1_1_depthwise_conv2_d_options_t.html',1,'tflite']]],
+  ['depthwiseconvbasickernel_853',['DepthwiseConvBasicKernel',['../structtflite_1_1reference__ops_1_1depthwise__conv_1_1_depthwise_conv_basic_kernel.html',1,'tflite::reference_ops::depthwise_conv']]],
+  ['depthwiseparams_854',['DepthwiseParams',['../structtflite_1_1_depthwise_params.html',1,'tflite']]],
+  ['dequantizationparams_855',['DequantizationParams',['../structtflite_1_1_dequantization_params.html',1,'tflite']]],
+  ['dequantizeoptionsbuilder_856',['DequantizeOptionsBuilder',['../structtflite_1_1_dequantize_options_builder.html',1,'tflite']]],
+  ['dequantizeoptionst_857',['DequantizeOptionsT',['../structtflite_1_1_dequantize_options_t.html',1,'tflite']]],
+  ['detachedbuffer_858',['DetachedBuffer',['../classflatbuffers_1_1_detached_buffer.html',1,'flatbuffers']]],
+  ['dimensionmetadatabuilder_859',['DimensionMetadataBuilder',['../structtflite_1_1_dimension_metadata_builder.html',1,'tflite']]],
+  ['dimensionmetadatat_860',['DimensionMetadataT',['../structtflite_1_1_dimension_metadata_t.html',1,'tflite']]],
+  ['dims_861',['Dims',['../structtflite_1_1_dims.html',1,'tflite']]],
+  ['divoptionsbuilder_862',['DivOptionsBuilder',['../structtflite_1_1_div_options_builder.html',1,'tflite']]],
+  ['divoptionst_863',['DivOptionsT',['../structtflite_1_1_div_options_t.html',1,'tflite']]],
+  ['dmahardwarevtbl_864',['DMAHardwareVtbl',['../struct_d_m_a_hardware_vtbl.html',1,'']]]
+];

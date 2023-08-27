@@ -1,0 +1,551 @@
+\hypertarget{classtflite_1_1_micro_mutable_op_resolver}{}\doxysection{tflite\+::Micro\+Mutable\+Op\+Resolver$<$ t\+Op\+Count $>$ Class Template Reference}
+\label{classtflite_1_1_micro_mutable_op_resolver}\index{tflite::MicroMutableOpResolver$<$ tOpCount $>$@{tflite::MicroMutableOpResolver$<$ tOpCount $>$}}
+
+
+Inheritance diagram for tflite\+::Micro\+Mutable\+Op\+Resolver$<$ t\+Op\+Count $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classtflite_1_1_micro_mutable_op_resolver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tflite\+::Micro\+Mutable\+Op\+Resolver$<$ t\+Op\+Count $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classtflite_1_1_micro_mutable_op_resolver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ad10d878da2e7b32b056d63fe56ea1b81}\label{classtflite_1_1_micro_mutable_op_resolver_ad10d878da2e7b32b056d63fe56ea1b81}} 
+T\+F\+\_\+\+L\+I\+T\+E\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+D\+E\+L\+E\+TE {\bfseries Micro\+Mutable\+Op\+Resolver} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter=nullptr)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a10a67e221d4e47b0497049817a87a98b}\label{classtflite_1_1_micro_mutable_op_resolver_a10a67e221d4e47b0497049817a87a98b}} 
+const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ {\bfseries Find\+Op} (tflite\+::\+Builtin\+Operator op) const override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a5b0e5b8a632f023a361584bdd631aa2b}\label{classtflite_1_1_micro_mutable_op_resolver_a5b0e5b8a632f023a361584bdd631aa2b}} 
+const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ {\bfseries Find\+Op} (const char $\ast$op) const override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a0c97701f89e2255d6c9ffcadf4dee4d2}\label{classtflite_1_1_micro_mutable_op_resolver_a0c97701f89e2255d6c9ffcadf4dee4d2}} 
+Micro\+Op\+Resolver\+::\+Builtin\+Parse\+Function {\bfseries Get\+Op\+Data\+Parser} (Builtin\+Operator op) const override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aff56340f323d4353a5a97c431ea49f12}\label{classtflite_1_1_micro_mutable_op_resolver_aff56340f323d4353a5a97c431ea49f12}} 
+Tf\+Lite\+Status {\bfseries Add\+Custom} (const char $\ast$name, \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$registration)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_afebdbf26fea74f79a751d46f95d90cdb}\label{classtflite_1_1_micro_mutable_op_resolver_afebdbf26fea74f79a751d46f95d90cdb}} 
+Tf\+Lite\+Status {\bfseries Add\+Abs} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_afebac236b6b455cbe0e32daf560a9d8c}\label{classtflite_1_1_micro_mutable_op_resolver_afebac236b6b455cbe0e32daf560a9d8c}} 
+Tf\+Lite\+Status {\bfseries Add\+Add} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_acf9a791dc8180532509197c6b8331c69}\label{classtflite_1_1_micro_mutable_op_resolver_acf9a791dc8180532509197c6b8331c69}} 
+Tf\+Lite\+Status {\bfseries Add\+AddN} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a5dffefb89a1513721b5b8cc8834eb8de}\label{classtflite_1_1_micro_mutable_op_resolver_a5dffefb89a1513721b5b8cc8834eb8de}} 
+Tf\+Lite\+Status {\bfseries Add\+Arg\+Max} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a247d57ab6029d187ec31089331004be2}\label{classtflite_1_1_micro_mutable_op_resolver_a247d57ab6029d187ec31089331004be2}} 
+Tf\+Lite\+Status {\bfseries Add\+Arg\+Min} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a75ea31fef43f2f321b84d7de4ae8a4c1}\label{classtflite_1_1_micro_mutable_op_resolver_a75ea31fef43f2f321b84d7de4ae8a4c1}} 
+Tf\+Lite\+Status {\bfseries Add\+Average\+Pool2D} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ac77c7bbe176bc49beb9c55dbcda4b656}\label{classtflite_1_1_micro_mutable_op_resolver_ac77c7bbe176bc49beb9c55dbcda4b656}} 
+Tf\+Lite\+Status {\bfseries Add\+Batch\+To\+Space\+Nd} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_abf619718d2e37c6dc00ec9468d2d082a}\label{classtflite_1_1_micro_mutable_op_resolver_abf619718d2e37c6dc00ec9468d2d082a}} 
+Tf\+Lite\+Status {\bfseries Add\+Cast} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a31b400be521928470a5e117bcce1b443}\label{classtflite_1_1_micro_mutable_op_resolver_a31b400be521928470a5e117bcce1b443}} 
+Tf\+Lite\+Status {\bfseries Add\+Ceil} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a0362333c1c8e0485fe99692fb081e473}\label{classtflite_1_1_micro_mutable_op_resolver_a0362333c1c8e0485fe99692fb081e473}} 
+Tf\+Lite\+Status {\bfseries Add\+Circular\+Buffer} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a1cd68f6345a13f83ebf5aac0aa1a9e35}\label{classtflite_1_1_micro_mutable_op_resolver_a1cd68f6345a13f83ebf5aac0aa1a9e35}} 
+Tf\+Lite\+Status {\bfseries Add\+Concatenation} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ad34c992407d1286a504e0acf6f2acb7a}\label{classtflite_1_1_micro_mutable_op_resolver_ad34c992407d1286a504e0acf6f2acb7a}} 
+Tf\+Lite\+Status {\bfseries Add\+Conv2D} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a53269477847197ce56888bb4bfacfd36}\label{classtflite_1_1_micro_mutable_op_resolver_a53269477847197ce56888bb4bfacfd36}} 
+Tf\+Lite\+Status {\bfseries Add\+Cos} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a71eed64f3105e895a07004a831131148}\label{classtflite_1_1_micro_mutable_op_resolver_a71eed64f3105e895a07004a831131148}} 
+Tf\+Lite\+Status {\bfseries Add\+Cum\+Sum} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a5e22d2253edbe9577a1019414a3cb0dd}\label{classtflite_1_1_micro_mutable_op_resolver_a5e22d2253edbe9577a1019414a3cb0dd}} 
+Tf\+Lite\+Status {\bfseries Add\+Depth\+To\+Space} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a11c2f00db0494a58ae3b19a61f535d06}\label{classtflite_1_1_micro_mutable_op_resolver_a11c2f00db0494a58ae3b19a61f535d06}} 
+Tf\+Lite\+Status {\bfseries Add\+Depthwise\+Conv2D} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_acb8f8684225812fa0902786c7bf1e29f}\label{classtflite_1_1_micro_mutable_op_resolver_acb8f8684225812fa0902786c7bf1e29f}} 
+Tf\+Lite\+Status {\bfseries Add\+Dequantize} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a315ac47c7b6b59da555d5e06ef2e18f2}\label{classtflite_1_1_micro_mutable_op_resolver_a315ac47c7b6b59da555d5e06ef2e18f2}} 
+Tf\+Lite\+Status {\bfseries Add\+Detection\+Postprocess} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a3633a2f266f51ad883b88d80b8f9f345}\label{classtflite_1_1_micro_mutable_op_resolver_a3633a2f266f51ad883b88d80b8f9f345}} 
+Tf\+Lite\+Status {\bfseries Add\+Elu} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a6c8b26efbd840cf117f85e28f51067de}\label{classtflite_1_1_micro_mutable_op_resolver_a6c8b26efbd840cf117f85e28f51067de}} 
+Tf\+Lite\+Status {\bfseries Add\+Equal} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a49cde60a9ed0c2e588e91f6be96184ac}\label{classtflite_1_1_micro_mutable_op_resolver_a49cde60a9ed0c2e588e91f6be96184ac}} 
+Tf\+Lite\+Status {\bfseries Add\+EthosU} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a2d39db514abfe6ae92d44f0f5d1299b6}\label{classtflite_1_1_micro_mutable_op_resolver_a2d39db514abfe6ae92d44f0f5d1299b6}} 
+Tf\+Lite\+Status {\bfseries Add\+Exp} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a755d910d550fb84a2fdf53f0a3e463a0}\label{classtflite_1_1_micro_mutable_op_resolver_a755d910d550fb84a2fdf53f0a3e463a0}} 
+Tf\+Lite\+Status {\bfseries Add\+Expand\+Dims} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aacbbe9c9705f729812b1efcdaab90e4a}\label{classtflite_1_1_micro_mutable_op_resolver_aacbbe9c9705f729812b1efcdaab90e4a}} 
+Tf\+Lite\+Status {\bfseries Add\+Fill} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a6c30b8552cdd8b8d89975234ea5f5859}\label{classtflite_1_1_micro_mutable_op_resolver_a6c30b8552cdd8b8d89975234ea5f5859}} 
+Tf\+Lite\+Status {\bfseries Add\+Floor} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_acd6ea4d94596fa28ee46b7b392b0275a}\label{classtflite_1_1_micro_mutable_op_resolver_acd6ea4d94596fa28ee46b7b392b0275a}} 
+Tf\+Lite\+Status {\bfseries Add\+Floor\+Div} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aa2fa2b84d7dc8fa9fdd14857b610f48f}\label{classtflite_1_1_micro_mutable_op_resolver_aa2fa2b84d7dc8fa9fdd14857b610f48f}} 
+Tf\+Lite\+Status {\bfseries Add\+Floor\+Mod} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a25c26a14215424ff65785d5d9466bdae}\label{classtflite_1_1_micro_mutable_op_resolver_a25c26a14215424ff65785d5d9466bdae}} 
+Tf\+Lite\+Status {\bfseries Add\+Fully\+Connected} (const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} \&registration=Register\+\_\+\+F\+U\+L\+L\+Y\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED())
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a7d4fb4f3dee609460caeedc0860d7bac}\label{classtflite_1_1_micro_mutable_op_resolver_a7d4fb4f3dee609460caeedc0860d7bac}} 
+Tf\+Lite\+Status {\bfseries Add\+Gather} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aa45e0dd340c233c7e6cb409389948228}\label{classtflite_1_1_micro_mutable_op_resolver_aa45e0dd340c233c7e6cb409389948228}} 
+Tf\+Lite\+Status {\bfseries Add\+Gather\+Nd} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a22459bc1123942932bfef01945948ea5}\label{classtflite_1_1_micro_mutable_op_resolver_a22459bc1123942932bfef01945948ea5}} 
+Tf\+Lite\+Status {\bfseries Add\+Greater} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a3785f9ac1cc8257ec71b50c05a1447ff}\label{classtflite_1_1_micro_mutable_op_resolver_a3785f9ac1cc8257ec71b50c05a1447ff}} 
+Tf\+Lite\+Status {\bfseries Add\+Greater\+Equal} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_af507a134b17900b08f491c9425df8ef0}\label{classtflite_1_1_micro_mutable_op_resolver_af507a134b17900b08f491c9425df8ef0}} 
+Tf\+Lite\+Status {\bfseries Add\+Hard\+Swish} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a910609471ee895c87926077bd2ef2584}\label{classtflite_1_1_micro_mutable_op_resolver_a910609471ee895c87926077bd2ef2584}} 
+Tf\+Lite\+Status {\bfseries Add\+If} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_adb174b56f0cf0ad458c26af131908934}\label{classtflite_1_1_micro_mutable_op_resolver_adb174b56f0cf0ad458c26af131908934}} 
+Tf\+Lite\+Status {\bfseries Add\+L2\+Normalization} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a53121516cc7e42388f9dcb874bd81dce}\label{classtflite_1_1_micro_mutable_op_resolver_a53121516cc7e42388f9dcb874bd81dce}} 
+Tf\+Lite\+Status {\bfseries Add\+L2\+Pool2D} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a9a5a81ff886b7618250c504f7cf2a8e3}\label{classtflite_1_1_micro_mutable_op_resolver_a9a5a81ff886b7618250c504f7cf2a8e3}} 
+Tf\+Lite\+Status {\bfseries Add\+Leaky\+Relu} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_adffccaef19b22f5b9e2c147a06a6a810}\label{classtflite_1_1_micro_mutable_op_resolver_adffccaef19b22f5b9e2c147a06a6a810}} 
+Tf\+Lite\+Status {\bfseries Add\+Less} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_abaab9495903439c1b025db58e74bd344}\label{classtflite_1_1_micro_mutable_op_resolver_abaab9495903439c1b025db58e74bd344}} 
+Tf\+Lite\+Status {\bfseries Add\+Less\+Equal} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ae6166f7a49552ddcd045ff891d8adf00}\label{classtflite_1_1_micro_mutable_op_resolver_ae6166f7a49552ddcd045ff891d8adf00}} 
+Tf\+Lite\+Status {\bfseries Add\+Log} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a1dcf4d4f01df72595faed8686bd1843f}\label{classtflite_1_1_micro_mutable_op_resolver_a1dcf4d4f01df72595faed8686bd1843f}} 
+Tf\+Lite\+Status {\bfseries Add\+Logical\+And} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ad119b136eaad90cf50ec4c8a66e61f59}\label{classtflite_1_1_micro_mutable_op_resolver_ad119b136eaad90cf50ec4c8a66e61f59}} 
+Tf\+Lite\+Status {\bfseries Add\+Logical\+Not} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a325af879f9790705eced6a3c6b5fef6d}\label{classtflite_1_1_micro_mutable_op_resolver_a325af879f9790705eced6a3c6b5fef6d}} 
+Tf\+Lite\+Status {\bfseries Add\+Logical\+Or} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a217a00f3e672333bd9f896bfc5207148}\label{classtflite_1_1_micro_mutable_op_resolver_a217a00f3e672333bd9f896bfc5207148}} 
+Tf\+Lite\+Status {\bfseries Add\+Logistic} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a36d7d2de9ce65e515e540f34491755e1}\label{classtflite_1_1_micro_mutable_op_resolver_a36d7d2de9ce65e515e540f34491755e1}} 
+Tf\+Lite\+Status {\bfseries Add\+Maximum} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a60248088ea410295e46d80ddaf32d657}\label{classtflite_1_1_micro_mutable_op_resolver_a60248088ea410295e46d80ddaf32d657}} 
+Tf\+Lite\+Status {\bfseries Add\+Max\+Pool2D} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aabc5c48704d4915a9401d662068c434d}\label{classtflite_1_1_micro_mutable_op_resolver_aabc5c48704d4915a9401d662068c434d}} 
+Tf\+Lite\+Status {\bfseries Add\+Mean} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aa752e14fe023bcaff3a81889395dc20e}\label{classtflite_1_1_micro_mutable_op_resolver_aa752e14fe023bcaff3a81889395dc20e}} 
+Tf\+Lite\+Status {\bfseries Add\+Minimum} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_adf455ec028d8c87a4f09867f843e7045}\label{classtflite_1_1_micro_mutable_op_resolver_adf455ec028d8c87a4f09867f843e7045}} 
+Tf\+Lite\+Status {\bfseries Add\+Mul} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a6a0bc1c7668b7dc727dacc18aa3c9453}\label{classtflite_1_1_micro_mutable_op_resolver_a6a0bc1c7668b7dc727dacc18aa3c9453}} 
+Tf\+Lite\+Status {\bfseries Add\+Neg} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a2f1d838209a3da71ff27ef614511c848}\label{classtflite_1_1_micro_mutable_op_resolver_a2f1d838209a3da71ff27ef614511c848}} 
+Tf\+Lite\+Status {\bfseries Add\+Not\+Equal} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ac3378b5534046c1a3f85d034e8d1fee1}\label{classtflite_1_1_micro_mutable_op_resolver_ac3378b5534046c1a3f85d034e8d1fee1}} 
+Tf\+Lite\+Status {\bfseries Add\+Pack} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a8b5b7193a7a1ac2af7c4726f93ec3378}\label{classtflite_1_1_micro_mutable_op_resolver_a8b5b7193a7a1ac2af7c4726f93ec3378}} 
+Tf\+Lite\+Status {\bfseries Add\+Pad} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a87d8f6d8f10ad1380e280e77696ca68c}\label{classtflite_1_1_micro_mutable_op_resolver_a87d8f6d8f10ad1380e280e77696ca68c}} 
+Tf\+Lite\+Status {\bfseries Add\+Pad\+V2} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a09243aec694ada9a8dd5df051558c74a}\label{classtflite_1_1_micro_mutable_op_resolver_a09243aec694ada9a8dd5df051558c74a}} 
+Tf\+Lite\+Status {\bfseries Add\+Prelu} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a413f87e85a162189855edaac006e7408}\label{classtflite_1_1_micro_mutable_op_resolver_a413f87e85a162189855edaac006e7408}} 
+Tf\+Lite\+Status {\bfseries Add\+Quantize} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a541f9f3aed2f110d78a11482fafcc880}\label{classtflite_1_1_micro_mutable_op_resolver_a541f9f3aed2f110d78a11482fafcc880}} 
+Tf\+Lite\+Status {\bfseries Add\+Reduce\+Max} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a87d6048003f02c0a5fa962ff35d79c33}\label{classtflite_1_1_micro_mutable_op_resolver_a87d6048003f02c0a5fa962ff35d79c33}} 
+Tf\+Lite\+Status {\bfseries Add\+Relu} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a62a59fc43b153df42a770070b714495b}\label{classtflite_1_1_micro_mutable_op_resolver_a62a59fc43b153df42a770070b714495b}} 
+Tf\+Lite\+Status {\bfseries Add\+Relu6} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aab3822a934543ff1cc17745a678f3278}\label{classtflite_1_1_micro_mutable_op_resolver_aab3822a934543ff1cc17745a678f3278}} 
+Tf\+Lite\+Status {\bfseries Add\+Reshape} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_afddb96778012a15229f25a6babfe84b8}\label{classtflite_1_1_micro_mutable_op_resolver_afddb96778012a15229f25a6babfe84b8}} 
+Tf\+Lite\+Status {\bfseries Add\+Resize\+Bilinear} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ac1aaee97f15c01a46b56395da717377e}\label{classtflite_1_1_micro_mutable_op_resolver_ac1aaee97f15c01a46b56395da717377e}} 
+Tf\+Lite\+Status {\bfseries Add\+Resize\+Nearest\+Neighbor} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a751a61d6cad31967e3359057cb49da1f}\label{classtflite_1_1_micro_mutable_op_resolver_a751a61d6cad31967e3359057cb49da1f}} 
+Tf\+Lite\+Status {\bfseries Add\+Round} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aebcd17a56800843635fb4a10f391e834}\label{classtflite_1_1_micro_mutable_op_resolver_aebcd17a56800843635fb4a10f391e834}} 
+Tf\+Lite\+Status {\bfseries Add\+Rsqrt} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ae7e1aa162f3c72f46b3694795d2068c4}\label{classtflite_1_1_micro_mutable_op_resolver_ae7e1aa162f3c72f46b3694795d2068c4}} 
+Tf\+Lite\+Status {\bfseries Add\+Shape} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a0c4e4b92041193a3e9c84230fcc00ebe}\label{classtflite_1_1_micro_mutable_op_resolver_a0c4e4b92041193a3e9c84230fcc00ebe}} 
+Tf\+Lite\+Status {\bfseries Add\+Sin} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_afcb66ef48b781d74203210ca4749e2a5}\label{classtflite_1_1_micro_mutable_op_resolver_afcb66ef48b781d74203210ca4749e2a5}} 
+Tf\+Lite\+Status {\bfseries Add\+Softmax} (const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} \&registration=Register\+\_\+\+S\+O\+F\+T\+M\+AX())
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_acd6998250f885352f5d7b1e24bbdbd4b}\label{classtflite_1_1_micro_mutable_op_resolver_acd6998250f885352f5d7b1e24bbdbd4b}} 
+Tf\+Lite\+Status {\bfseries Add\+Space\+To\+Batch\+Nd} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ab7cac96f11b1edf12edcceaa055f3ea4}\label{classtflite_1_1_micro_mutable_op_resolver_ab7cac96f11b1edf12edcceaa055f3ea4}} 
+Tf\+Lite\+Status {\bfseries Add\+Split} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a0d5294270036c156a699bc105afb614f}\label{classtflite_1_1_micro_mutable_op_resolver_a0d5294270036c156a699bc105afb614f}} 
+Tf\+Lite\+Status {\bfseries Add\+SplitV} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a5747d08ad97307fc572a23c2101acfd2}\label{classtflite_1_1_micro_mutable_op_resolver_a5747d08ad97307fc572a23c2101acfd2}} 
+Tf\+Lite\+Status {\bfseries Add\+Squeeze} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a591b6e91081ef0715ff3f9e4305f6d48}\label{classtflite_1_1_micro_mutable_op_resolver_a591b6e91081ef0715ff3f9e4305f6d48}} 
+Tf\+Lite\+Status {\bfseries Add\+Sqrt} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_afe3cd96615a55ba6c03569476c773f2d}\label{classtflite_1_1_micro_mutable_op_resolver_afe3cd96615a55ba6c03569476c773f2d}} 
+Tf\+Lite\+Status {\bfseries Add\+Square} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ac4f3525bdd0bfe42c3e5fbb1c9337503}\label{classtflite_1_1_micro_mutable_op_resolver_ac4f3525bdd0bfe42c3e5fbb1c9337503}} 
+Tf\+Lite\+Status {\bfseries Add\+Strided\+Slice} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a1091aeeed6a5c73368569427be3249ef}\label{classtflite_1_1_micro_mutable_op_resolver_a1091aeeed6a5c73368569427be3249ef}} 
+Tf\+Lite\+Status {\bfseries Add\+Sub} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a86cb796f926830b2f2622eaf13e337bb}\label{classtflite_1_1_micro_mutable_op_resolver_a86cb796f926830b2f2622eaf13e337bb}} 
+Tf\+Lite\+Status {\bfseries Add\+Svdf} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a32d8f3eb3bf78895f3a7f727ac8495d7}\label{classtflite_1_1_micro_mutable_op_resolver_a32d8f3eb3bf78895f3a7f727ac8495d7}} 
+Tf\+Lite\+Status {\bfseries Add\+Tanh} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_acc0094a26527b6e1d349d82ff139e160}\label{classtflite_1_1_micro_mutable_op_resolver_acc0094a26527b6e1d349d82ff139e160}} 
+Tf\+Lite\+Status {\bfseries Add\+Transpose\+Conv} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ae1ab361feca3a47ec1bf145aed67aa08}\label{classtflite_1_1_micro_mutable_op_resolver_ae1ab361feca3a47ec1bf145aed67aa08}} 
+Tf\+Lite\+Status {\bfseries Add\+Transpose} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_abfc27c27f6ae80986cdca5a3b5ec80e8}\label{classtflite_1_1_micro_mutable_op_resolver_abfc27c27f6ae80986cdca5a3b5ec80e8}} 
+Tf\+Lite\+Status {\bfseries Add\+Unpack} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a3b8ed18f5a087c3110b7bcc4ab7d0858}\label{classtflite_1_1_micro_mutable_op_resolver_a3b8ed18f5a087c3110b7bcc4ab7d0858}} 
+Tf\+Lite\+Status {\bfseries Add\+Zeros\+Like} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a9508c1c61afb5a429f035b47f3a9642c}\label{classtflite_1_1_micro_mutable_op_resolver_a9508c1c61afb5a429f035b47f3a9642c}} 
+unsigned int {\bfseries Get\+Registration\+Length} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ad10d878da2e7b32b056d63fe56ea1b81}\label{classtflite_1_1_micro_mutable_op_resolver_ad10d878da2e7b32b056d63fe56ea1b81}} 
+T\+F\+\_\+\+L\+I\+T\+E\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+D\+E\+L\+E\+TE {\bfseries Micro\+Mutable\+Op\+Resolver} (\mbox{\hyperlink{classtflite_1_1_error_reporter}{Error\+Reporter}} $\ast$error\+\_\+reporter=nullptr)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a10a67e221d4e47b0497049817a87a98b}\label{classtflite_1_1_micro_mutable_op_resolver_a10a67e221d4e47b0497049817a87a98b}} 
+const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ {\bfseries Find\+Op} (tflite\+::\+Builtin\+Operator op) const override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a5b0e5b8a632f023a361584bdd631aa2b}\label{classtflite_1_1_micro_mutable_op_resolver_a5b0e5b8a632f023a361584bdd631aa2b}} 
+const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$ {\bfseries Find\+Op} (const char $\ast$op) const override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a0c97701f89e2255d6c9ffcadf4dee4d2}\label{classtflite_1_1_micro_mutable_op_resolver_a0c97701f89e2255d6c9ffcadf4dee4d2}} 
+Micro\+Op\+Resolver\+::\+Builtin\+Parse\+Function {\bfseries Get\+Op\+Data\+Parser} (Builtin\+Operator op) const override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aff56340f323d4353a5a97c431ea49f12}\label{classtflite_1_1_micro_mutable_op_resolver_aff56340f323d4353a5a97c431ea49f12}} 
+Tf\+Lite\+Status {\bfseries Add\+Custom} (const char $\ast$name, \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} $\ast$registration)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_afebdbf26fea74f79a751d46f95d90cdb}\label{classtflite_1_1_micro_mutable_op_resolver_afebdbf26fea74f79a751d46f95d90cdb}} 
+Tf\+Lite\+Status {\bfseries Add\+Abs} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_afebac236b6b455cbe0e32daf560a9d8c}\label{classtflite_1_1_micro_mutable_op_resolver_afebac236b6b455cbe0e32daf560a9d8c}} 
+Tf\+Lite\+Status {\bfseries Add\+Add} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_acf9a791dc8180532509197c6b8331c69}\label{classtflite_1_1_micro_mutable_op_resolver_acf9a791dc8180532509197c6b8331c69}} 
+Tf\+Lite\+Status {\bfseries Add\+AddN} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a5dffefb89a1513721b5b8cc8834eb8de}\label{classtflite_1_1_micro_mutable_op_resolver_a5dffefb89a1513721b5b8cc8834eb8de}} 
+Tf\+Lite\+Status {\bfseries Add\+Arg\+Max} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a247d57ab6029d187ec31089331004be2}\label{classtflite_1_1_micro_mutable_op_resolver_a247d57ab6029d187ec31089331004be2}} 
+Tf\+Lite\+Status {\bfseries Add\+Arg\+Min} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a75ea31fef43f2f321b84d7de4ae8a4c1}\label{classtflite_1_1_micro_mutable_op_resolver_a75ea31fef43f2f321b84d7de4ae8a4c1}} 
+Tf\+Lite\+Status {\bfseries Add\+Average\+Pool2D} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ac77c7bbe176bc49beb9c55dbcda4b656}\label{classtflite_1_1_micro_mutable_op_resolver_ac77c7bbe176bc49beb9c55dbcda4b656}} 
+Tf\+Lite\+Status {\bfseries Add\+Batch\+To\+Space\+Nd} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_abf619718d2e37c6dc00ec9468d2d082a}\label{classtflite_1_1_micro_mutable_op_resolver_abf619718d2e37c6dc00ec9468d2d082a}} 
+Tf\+Lite\+Status {\bfseries Add\+Cast} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a31b400be521928470a5e117bcce1b443}\label{classtflite_1_1_micro_mutable_op_resolver_a31b400be521928470a5e117bcce1b443}} 
+Tf\+Lite\+Status {\bfseries Add\+Ceil} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a0362333c1c8e0485fe99692fb081e473}\label{classtflite_1_1_micro_mutable_op_resolver_a0362333c1c8e0485fe99692fb081e473}} 
+Tf\+Lite\+Status {\bfseries Add\+Circular\+Buffer} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a1cd68f6345a13f83ebf5aac0aa1a9e35}\label{classtflite_1_1_micro_mutable_op_resolver_a1cd68f6345a13f83ebf5aac0aa1a9e35}} 
+Tf\+Lite\+Status {\bfseries Add\+Concatenation} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ad34c992407d1286a504e0acf6f2acb7a}\label{classtflite_1_1_micro_mutable_op_resolver_ad34c992407d1286a504e0acf6f2acb7a}} 
+Tf\+Lite\+Status {\bfseries Add\+Conv2D} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a53269477847197ce56888bb4bfacfd36}\label{classtflite_1_1_micro_mutable_op_resolver_a53269477847197ce56888bb4bfacfd36}} 
+Tf\+Lite\+Status {\bfseries Add\+Cos} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a71eed64f3105e895a07004a831131148}\label{classtflite_1_1_micro_mutable_op_resolver_a71eed64f3105e895a07004a831131148}} 
+Tf\+Lite\+Status {\bfseries Add\+Cum\+Sum} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a5e22d2253edbe9577a1019414a3cb0dd}\label{classtflite_1_1_micro_mutable_op_resolver_a5e22d2253edbe9577a1019414a3cb0dd}} 
+Tf\+Lite\+Status {\bfseries Add\+Depth\+To\+Space} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a11c2f00db0494a58ae3b19a61f535d06}\label{classtflite_1_1_micro_mutable_op_resolver_a11c2f00db0494a58ae3b19a61f535d06}} 
+Tf\+Lite\+Status {\bfseries Add\+Depthwise\+Conv2D} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_acb8f8684225812fa0902786c7bf1e29f}\label{classtflite_1_1_micro_mutable_op_resolver_acb8f8684225812fa0902786c7bf1e29f}} 
+Tf\+Lite\+Status {\bfseries Add\+Dequantize} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a315ac47c7b6b59da555d5e06ef2e18f2}\label{classtflite_1_1_micro_mutable_op_resolver_a315ac47c7b6b59da555d5e06ef2e18f2}} 
+Tf\+Lite\+Status {\bfseries Add\+Detection\+Postprocess} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a3633a2f266f51ad883b88d80b8f9f345}\label{classtflite_1_1_micro_mutable_op_resolver_a3633a2f266f51ad883b88d80b8f9f345}} 
+Tf\+Lite\+Status {\bfseries Add\+Elu} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a6c8b26efbd840cf117f85e28f51067de}\label{classtflite_1_1_micro_mutable_op_resolver_a6c8b26efbd840cf117f85e28f51067de}} 
+Tf\+Lite\+Status {\bfseries Add\+Equal} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a49cde60a9ed0c2e588e91f6be96184ac}\label{classtflite_1_1_micro_mutable_op_resolver_a49cde60a9ed0c2e588e91f6be96184ac}} 
+Tf\+Lite\+Status {\bfseries Add\+EthosU} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a2d39db514abfe6ae92d44f0f5d1299b6}\label{classtflite_1_1_micro_mutable_op_resolver_a2d39db514abfe6ae92d44f0f5d1299b6}} 
+Tf\+Lite\+Status {\bfseries Add\+Exp} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a755d910d550fb84a2fdf53f0a3e463a0}\label{classtflite_1_1_micro_mutable_op_resolver_a755d910d550fb84a2fdf53f0a3e463a0}} 
+Tf\+Lite\+Status {\bfseries Add\+Expand\+Dims} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aacbbe9c9705f729812b1efcdaab90e4a}\label{classtflite_1_1_micro_mutable_op_resolver_aacbbe9c9705f729812b1efcdaab90e4a}} 
+Tf\+Lite\+Status {\bfseries Add\+Fill} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a6c30b8552cdd8b8d89975234ea5f5859}\label{classtflite_1_1_micro_mutable_op_resolver_a6c30b8552cdd8b8d89975234ea5f5859}} 
+Tf\+Lite\+Status {\bfseries Add\+Floor} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_acd6ea4d94596fa28ee46b7b392b0275a}\label{classtflite_1_1_micro_mutable_op_resolver_acd6ea4d94596fa28ee46b7b392b0275a}} 
+Tf\+Lite\+Status {\bfseries Add\+Floor\+Div} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aa2fa2b84d7dc8fa9fdd14857b610f48f}\label{classtflite_1_1_micro_mutable_op_resolver_aa2fa2b84d7dc8fa9fdd14857b610f48f}} 
+Tf\+Lite\+Status {\bfseries Add\+Floor\+Mod} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a25c26a14215424ff65785d5d9466bdae}\label{classtflite_1_1_micro_mutable_op_resolver_a25c26a14215424ff65785d5d9466bdae}} 
+Tf\+Lite\+Status {\bfseries Add\+Fully\+Connected} (const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} \&registration=Register\+\_\+\+F\+U\+L\+L\+Y\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED())
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a7d4fb4f3dee609460caeedc0860d7bac}\label{classtflite_1_1_micro_mutable_op_resolver_a7d4fb4f3dee609460caeedc0860d7bac}} 
+Tf\+Lite\+Status {\bfseries Add\+Gather} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aa45e0dd340c233c7e6cb409389948228}\label{classtflite_1_1_micro_mutable_op_resolver_aa45e0dd340c233c7e6cb409389948228}} 
+Tf\+Lite\+Status {\bfseries Add\+Gather\+Nd} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a22459bc1123942932bfef01945948ea5}\label{classtflite_1_1_micro_mutable_op_resolver_a22459bc1123942932bfef01945948ea5}} 
+Tf\+Lite\+Status {\bfseries Add\+Greater} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a3785f9ac1cc8257ec71b50c05a1447ff}\label{classtflite_1_1_micro_mutable_op_resolver_a3785f9ac1cc8257ec71b50c05a1447ff}} 
+Tf\+Lite\+Status {\bfseries Add\+Greater\+Equal} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_af507a134b17900b08f491c9425df8ef0}\label{classtflite_1_1_micro_mutable_op_resolver_af507a134b17900b08f491c9425df8ef0}} 
+Tf\+Lite\+Status {\bfseries Add\+Hard\+Swish} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a910609471ee895c87926077bd2ef2584}\label{classtflite_1_1_micro_mutable_op_resolver_a910609471ee895c87926077bd2ef2584}} 
+Tf\+Lite\+Status {\bfseries Add\+If} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_adb174b56f0cf0ad458c26af131908934}\label{classtflite_1_1_micro_mutable_op_resolver_adb174b56f0cf0ad458c26af131908934}} 
+Tf\+Lite\+Status {\bfseries Add\+L2\+Normalization} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a53121516cc7e42388f9dcb874bd81dce}\label{classtflite_1_1_micro_mutable_op_resolver_a53121516cc7e42388f9dcb874bd81dce}} 
+Tf\+Lite\+Status {\bfseries Add\+L2\+Pool2D} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a9a5a81ff886b7618250c504f7cf2a8e3}\label{classtflite_1_1_micro_mutable_op_resolver_a9a5a81ff886b7618250c504f7cf2a8e3}} 
+Tf\+Lite\+Status {\bfseries Add\+Leaky\+Relu} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_adffccaef19b22f5b9e2c147a06a6a810}\label{classtflite_1_1_micro_mutable_op_resolver_adffccaef19b22f5b9e2c147a06a6a810}} 
+Tf\+Lite\+Status {\bfseries Add\+Less} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_abaab9495903439c1b025db58e74bd344}\label{classtflite_1_1_micro_mutable_op_resolver_abaab9495903439c1b025db58e74bd344}} 
+Tf\+Lite\+Status {\bfseries Add\+Less\+Equal} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ae6166f7a49552ddcd045ff891d8adf00}\label{classtflite_1_1_micro_mutable_op_resolver_ae6166f7a49552ddcd045ff891d8adf00}} 
+Tf\+Lite\+Status {\bfseries Add\+Log} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a1dcf4d4f01df72595faed8686bd1843f}\label{classtflite_1_1_micro_mutable_op_resolver_a1dcf4d4f01df72595faed8686bd1843f}} 
+Tf\+Lite\+Status {\bfseries Add\+Logical\+And} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ad119b136eaad90cf50ec4c8a66e61f59}\label{classtflite_1_1_micro_mutable_op_resolver_ad119b136eaad90cf50ec4c8a66e61f59}} 
+Tf\+Lite\+Status {\bfseries Add\+Logical\+Not} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a325af879f9790705eced6a3c6b5fef6d}\label{classtflite_1_1_micro_mutable_op_resolver_a325af879f9790705eced6a3c6b5fef6d}} 
+Tf\+Lite\+Status {\bfseries Add\+Logical\+Or} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a217a00f3e672333bd9f896bfc5207148}\label{classtflite_1_1_micro_mutable_op_resolver_a217a00f3e672333bd9f896bfc5207148}} 
+Tf\+Lite\+Status {\bfseries Add\+Logistic} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a36d7d2de9ce65e515e540f34491755e1}\label{classtflite_1_1_micro_mutable_op_resolver_a36d7d2de9ce65e515e540f34491755e1}} 
+Tf\+Lite\+Status {\bfseries Add\+Maximum} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a60248088ea410295e46d80ddaf32d657}\label{classtflite_1_1_micro_mutable_op_resolver_a60248088ea410295e46d80ddaf32d657}} 
+Tf\+Lite\+Status {\bfseries Add\+Max\+Pool2D} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aabc5c48704d4915a9401d662068c434d}\label{classtflite_1_1_micro_mutable_op_resolver_aabc5c48704d4915a9401d662068c434d}} 
+Tf\+Lite\+Status {\bfseries Add\+Mean} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aa752e14fe023bcaff3a81889395dc20e}\label{classtflite_1_1_micro_mutable_op_resolver_aa752e14fe023bcaff3a81889395dc20e}} 
+Tf\+Lite\+Status {\bfseries Add\+Minimum} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_adf455ec028d8c87a4f09867f843e7045}\label{classtflite_1_1_micro_mutable_op_resolver_adf455ec028d8c87a4f09867f843e7045}} 
+Tf\+Lite\+Status {\bfseries Add\+Mul} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a6a0bc1c7668b7dc727dacc18aa3c9453}\label{classtflite_1_1_micro_mutable_op_resolver_a6a0bc1c7668b7dc727dacc18aa3c9453}} 
+Tf\+Lite\+Status {\bfseries Add\+Neg} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a2f1d838209a3da71ff27ef614511c848}\label{classtflite_1_1_micro_mutable_op_resolver_a2f1d838209a3da71ff27ef614511c848}} 
+Tf\+Lite\+Status {\bfseries Add\+Not\+Equal} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ac3378b5534046c1a3f85d034e8d1fee1}\label{classtflite_1_1_micro_mutable_op_resolver_ac3378b5534046c1a3f85d034e8d1fee1}} 
+Tf\+Lite\+Status {\bfseries Add\+Pack} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a8b5b7193a7a1ac2af7c4726f93ec3378}\label{classtflite_1_1_micro_mutable_op_resolver_a8b5b7193a7a1ac2af7c4726f93ec3378}} 
+Tf\+Lite\+Status {\bfseries Add\+Pad} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a87d8f6d8f10ad1380e280e77696ca68c}\label{classtflite_1_1_micro_mutable_op_resolver_a87d8f6d8f10ad1380e280e77696ca68c}} 
+Tf\+Lite\+Status {\bfseries Add\+Pad\+V2} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a09243aec694ada9a8dd5df051558c74a}\label{classtflite_1_1_micro_mutable_op_resolver_a09243aec694ada9a8dd5df051558c74a}} 
+Tf\+Lite\+Status {\bfseries Add\+Prelu} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a413f87e85a162189855edaac006e7408}\label{classtflite_1_1_micro_mutable_op_resolver_a413f87e85a162189855edaac006e7408}} 
+Tf\+Lite\+Status {\bfseries Add\+Quantize} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a541f9f3aed2f110d78a11482fafcc880}\label{classtflite_1_1_micro_mutable_op_resolver_a541f9f3aed2f110d78a11482fafcc880}} 
+Tf\+Lite\+Status {\bfseries Add\+Reduce\+Max} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a87d6048003f02c0a5fa962ff35d79c33}\label{classtflite_1_1_micro_mutable_op_resolver_a87d6048003f02c0a5fa962ff35d79c33}} 
+Tf\+Lite\+Status {\bfseries Add\+Relu} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a62a59fc43b153df42a770070b714495b}\label{classtflite_1_1_micro_mutable_op_resolver_a62a59fc43b153df42a770070b714495b}} 
+Tf\+Lite\+Status {\bfseries Add\+Relu6} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aab3822a934543ff1cc17745a678f3278}\label{classtflite_1_1_micro_mutable_op_resolver_aab3822a934543ff1cc17745a678f3278}} 
+Tf\+Lite\+Status {\bfseries Add\+Reshape} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_afddb96778012a15229f25a6babfe84b8}\label{classtflite_1_1_micro_mutable_op_resolver_afddb96778012a15229f25a6babfe84b8}} 
+Tf\+Lite\+Status {\bfseries Add\+Resize\+Bilinear} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ac1aaee97f15c01a46b56395da717377e}\label{classtflite_1_1_micro_mutable_op_resolver_ac1aaee97f15c01a46b56395da717377e}} 
+Tf\+Lite\+Status {\bfseries Add\+Resize\+Nearest\+Neighbor} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a751a61d6cad31967e3359057cb49da1f}\label{classtflite_1_1_micro_mutable_op_resolver_a751a61d6cad31967e3359057cb49da1f}} 
+Tf\+Lite\+Status {\bfseries Add\+Round} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_aebcd17a56800843635fb4a10f391e834}\label{classtflite_1_1_micro_mutable_op_resolver_aebcd17a56800843635fb4a10f391e834}} 
+Tf\+Lite\+Status {\bfseries Add\+Rsqrt} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ae7e1aa162f3c72f46b3694795d2068c4}\label{classtflite_1_1_micro_mutable_op_resolver_ae7e1aa162f3c72f46b3694795d2068c4}} 
+Tf\+Lite\+Status {\bfseries Add\+Shape} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a0c4e4b92041193a3e9c84230fcc00ebe}\label{classtflite_1_1_micro_mutable_op_resolver_a0c4e4b92041193a3e9c84230fcc00ebe}} 
+Tf\+Lite\+Status {\bfseries Add\+Sin} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_afcb66ef48b781d74203210ca4749e2a5}\label{classtflite_1_1_micro_mutable_op_resolver_afcb66ef48b781d74203210ca4749e2a5}} 
+Tf\+Lite\+Status {\bfseries Add\+Softmax} (const \mbox{\hyperlink{struct_tf_lite_registration}{Tf\+Lite\+Registration}} \&registration=Register\+\_\+\+S\+O\+F\+T\+M\+AX())
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_acd6998250f885352f5d7b1e24bbdbd4b}\label{classtflite_1_1_micro_mutable_op_resolver_acd6998250f885352f5d7b1e24bbdbd4b}} 
+Tf\+Lite\+Status {\bfseries Add\+Space\+To\+Batch\+Nd} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ab7cac96f11b1edf12edcceaa055f3ea4}\label{classtflite_1_1_micro_mutable_op_resolver_ab7cac96f11b1edf12edcceaa055f3ea4}} 
+Tf\+Lite\+Status {\bfseries Add\+Split} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a0d5294270036c156a699bc105afb614f}\label{classtflite_1_1_micro_mutable_op_resolver_a0d5294270036c156a699bc105afb614f}} 
+Tf\+Lite\+Status {\bfseries Add\+SplitV} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a5747d08ad97307fc572a23c2101acfd2}\label{classtflite_1_1_micro_mutable_op_resolver_a5747d08ad97307fc572a23c2101acfd2}} 
+Tf\+Lite\+Status {\bfseries Add\+Squeeze} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a591b6e91081ef0715ff3f9e4305f6d48}\label{classtflite_1_1_micro_mutable_op_resolver_a591b6e91081ef0715ff3f9e4305f6d48}} 
+Tf\+Lite\+Status {\bfseries Add\+Sqrt} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_afe3cd96615a55ba6c03569476c773f2d}\label{classtflite_1_1_micro_mutable_op_resolver_afe3cd96615a55ba6c03569476c773f2d}} 
+Tf\+Lite\+Status {\bfseries Add\+Square} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ac4f3525bdd0bfe42c3e5fbb1c9337503}\label{classtflite_1_1_micro_mutable_op_resolver_ac4f3525bdd0bfe42c3e5fbb1c9337503}} 
+Tf\+Lite\+Status {\bfseries Add\+Strided\+Slice} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a1091aeeed6a5c73368569427be3249ef}\label{classtflite_1_1_micro_mutable_op_resolver_a1091aeeed6a5c73368569427be3249ef}} 
+Tf\+Lite\+Status {\bfseries Add\+Sub} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a86cb796f926830b2f2622eaf13e337bb}\label{classtflite_1_1_micro_mutable_op_resolver_a86cb796f926830b2f2622eaf13e337bb}} 
+Tf\+Lite\+Status {\bfseries Add\+Svdf} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a32d8f3eb3bf78895f3a7f727ac8495d7}\label{classtflite_1_1_micro_mutable_op_resolver_a32d8f3eb3bf78895f3a7f727ac8495d7}} 
+Tf\+Lite\+Status {\bfseries Add\+Tanh} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_acc0094a26527b6e1d349d82ff139e160}\label{classtflite_1_1_micro_mutable_op_resolver_acc0094a26527b6e1d349d82ff139e160}} 
+Tf\+Lite\+Status {\bfseries Add\+Transpose\+Conv} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_ae1ab361feca3a47ec1bf145aed67aa08}\label{classtflite_1_1_micro_mutable_op_resolver_ae1ab361feca3a47ec1bf145aed67aa08}} 
+Tf\+Lite\+Status {\bfseries Add\+Transpose} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_abfc27c27f6ae80986cdca5a3b5ec80e8}\label{classtflite_1_1_micro_mutable_op_resolver_abfc27c27f6ae80986cdca5a3b5ec80e8}} 
+Tf\+Lite\+Status {\bfseries Add\+Unpack} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a3b8ed18f5a087c3110b7bcc4ab7d0858}\label{classtflite_1_1_micro_mutable_op_resolver_a3b8ed18f5a087c3110b7bcc4ab7d0858}} 
+Tf\+Lite\+Status {\bfseries Add\+Zeros\+Like} ()
+\item 
+\mbox{\Hypertarget{classtflite_1_1_micro_mutable_op_resolver_a9508c1c61afb5a429f035b47f3a9642c}\label{classtflite_1_1_micro_mutable_op_resolver_a9508c1c61afb5a429f035b47f3a9642c}} 
+unsigned int {\bfseries Get\+Registration\+Length} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/micro\+\_\+mutable\+\_\+op\+\_\+resolver.\+h\end{DoxyCompactItemize}

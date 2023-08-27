@@ -1,0 +1,2309 @@
+\hypertarget{classflatbuffers_1_1_flat_buffer_builder}{}\doxysection{flatbuffers\+::Flat\+Buffer\+Builder Class Reference}
+\label{classflatbuffers_1_1_flat_buffer_builder}\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+
+
+Helper class to hold data needed in creation of a Flat\+Buffer. To serialize data, you typically call one of the {\ttfamily Create$\ast$()} functions in the generated code, which in turn call a sequence of {\ttfamily Start\+Table}/ {\ttfamily Push\+Element}/{\ttfamily Add\+Element}/{\ttfamily End\+Table}, or the builtin {\ttfamily Create\+String}/ {\ttfamily Create\+Vector} functions. Do this is depth-\/first order to build up a tree to the root. {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}{Finish()}}} wraps up the buffer ready for transport.  
+
+
+
+
+{\ttfamily \#include $<$flatbuffers.\+h$>$}
+
+
+
+Collaboration diagram for flatbuffers\+::Flat\+Buffer\+Builder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classflatbuffers_1_1_flat_buffer_builder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structflatbuffers_1_1_flat_buffer_builder_1_1_field_loc}{Field\+Loc}}
+\item 
+struct \mbox{\hyperlink{structflatbuffers_1_1_flat_buffer_builder_1_1_string_offset_compare}{String\+Offset\+Compare}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ab0173786ea4ec3e4ae10555639b2996c}{Flat\+Buffer\+Builder}} (size\+\_\+t initial\+\_\+size=1024, \mbox{\hyperlink{classflatbuffers_1_1_allocator}{Allocator}} $\ast$allocator=nullptr, bool own\+\_\+allocator=false, size\+\_\+t buffer\+\_\+minalign=Align\+Of$<$ largest\+\_\+scalar\+\_\+t $>$())
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a86e1a348b7474fd5d239016ae97afc56}\label{classflatbuffers_1_1_flat_buffer_builder_a86e1a348b7474fd5d239016ae97afc56}} 
+\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a86e1a348b7474fd5d239016ae97afc56}{Flat\+Buffer\+Builder}} (\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move constructor for \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ae65f0619ecb7715ffdae399ebfc56e38}\label{classflatbuffers_1_1_flat_buffer_builder_ae65f0619ecb7715ffdae399ebfc56e38}} 
+\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \& \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ae65f0619ecb7715ffdae399ebfc56e38}{operator=}} (\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a59f39e7a4d9b0b32a805c77bffed245a}\label{classflatbuffers_1_1_flat_buffer_builder_a59f39e7a4d9b0b32a805c77bffed245a}} 
+void {\bfseries Swap} (\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&other)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a952495120d5c56d600640091334b5341}\label{classflatbuffers_1_1_flat_buffer_builder_a952495120d5c56d600640091334b5341}} 
+void {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ae94b94ba71ea0aeb2d9a98c43b713412}\label{classflatbuffers_1_1_flat_buffer_builder_ae94b94ba71ea0aeb2d9a98c43b713412}} 
+void \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ae94b94ba71ea0aeb2d9a98c43b713412}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Reset all the state in this \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} so it can be reused to construct another buffer. \end{DoxyCompactList}\item 
+uoffset\+\_\+t \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a66c8fd33ab9b3b237954c9ea38648f7f}{Get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em The current size of the serialized buffer, counting from the end. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ab81ab8aa273c270b0942fd81489cad83}{Get\+Buffer\+Pointer}} () const
+\begin{DoxyCompactList}\small\item\em Get the serialized buffer (after you call {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}{Finish()}}}). \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a099810f03046139d1854d20a1c2a2e41}{Get\+Current\+Buffer\+Pointer}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to an unfinished buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a5fcede355ddb6a347edf8b189ada2e42}{F\+L\+A\+T\+B\+U\+F\+F\+E\+R\+S\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE}} (deprecated(\char`\"{}use \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a5e2c3a1e47f0ab4a3a3f07a07a52fb45}{Release}}() instead\char`\"{})) Detached\+Buffer Release\+Buffer\+Pointer()
+\begin{DoxyCompactList}\small\item\em Get the released pointer to the serialized buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classflatbuffers_1_1_detached_buffer}{Detached\+Buffer}} \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a5e2c3a1e47f0ab4a3a3f07a07a52fb45}{Release}} ()
+\begin{DoxyCompactList}\small\item\em Get the released \mbox{\hyperlink{classflatbuffers_1_1_detached_buffer}{Detached\+Buffer}}. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_aa090a68856f7b554cc7cac3c279fb416}{Release\+Raw}} (size\+\_\+t \&size, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Get the released pointer to the serialized buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a402b9180357e7e73546833982b27177e}\label{classflatbuffers_1_1_flat_buffer_builder_a402b9180357e7e73546833982b27177e}} 
+size\+\_\+t \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a402b9180357e7e73546833982b27177e}{Get\+Buffer\+Min\+Alignment}} () const
+\begin{DoxyCompactList}\small\item\em get the minimum alignment this buffer needs to be accessed properly. This is only known once all elements have been written (after you call \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}{Finish()}}). You can use this information if you need to embed a Flat\+Buffer in some other buffer, such that you can later read it without first having to copy it into its own buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a16a8fd46b34ad7727406c37b65b6b27a}{Force\+Defaults}} (bool fd)
+\begin{DoxyCompactList}\small\item\em In order to save space, fields that are set to their default value don\textquotesingle{}t get serialized into the buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_aa905b29dce19a1795c7bce375cf29961}{Dedup\+Vtables}} (bool dedup)
+\begin{DoxyCompactList}\small\item\em By default vtables are deduped in order to save space. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_aec6f9df2a0366b540b24822414d92cbe}{Create\+String}} (const char $\ast$str, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_aad93d113ac24e86ed04b5236b3f4c0c5}{Create\+String}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which is null-\/terminated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ac51db9083ac815eb81420b6d51f42154}{Create\+String}} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which is null-\/terminated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a8c3af55e64f5cda9aefa38ac5287ef9f}{Create\+String}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ac0b6a1c5d949f20ad84367fc0f9e1506}{Create\+String}} (const \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $\ast$str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ab77d800e77fa76bc758a6c399fd37685}{Create\+String}} (const T \&str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ab478a645216d2d613fc7b7c29b0ff9d1}{Create\+Shared\+String}} (const char $\ast$str, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a3eb68613e5883dc4b8fff6cf7d1223d7}{Create\+Shared\+String}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which null-\/terminated. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a10e8ec7d1c8fbdc21b1c7047bbbe38d9}{Create\+Shared\+String}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a840b769fbb4148f97d3eed266e4690c3}{Create\+Shared\+String}} (const \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $\ast$str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a2cca5c89246a53e80e6ad9487f4c36f3}{Create\+Vector}} (const T $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a44960c5aca0227f960c96a7ed4b881b4}\label{classflatbuffers_1_1_flat_buffer_builder_a44960c5aca0227f960c96a7ed4b881b4}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $>$ $>$ {\bfseries Create\+Vector} (const \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $\ast$v, size\+\_\+t len)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_af715dd24dd37cb0151dc7a980ad0f207}{Create\+Vector}} (const std\+::vector$<$ T $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector} into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a274b1afcfa16bab2c884129b2788db19}\label{classflatbuffers_1_1_flat_buffer_builder_a274b1afcfa16bab2c884129b2788db19}} 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ uint8\+\_\+t $>$ $>$ {\bfseries Create\+Vector} (const std\+::vector$<$ bool $>$ \&v)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a1080c9e370e2d9d9d872dadd1131436b}{Create\+Vector}} (size\+\_\+t vector\+\_\+size, const std\+::function$<$ T(size\+\_\+t i)$>$ \&f)
+\begin{DoxyCompactList}\small\item\em Serialize values returned by a function into a Flat\+Buffer {\ttfamily vector}. This is a convenience function that takes care of iteration for you. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename F , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a53504fc2cab681a7980b03260f8b2f7a}{Create\+Vector}} (size\+\_\+t vector\+\_\+size, F f, S $\ast$state)
+\begin{DoxyCompactList}\small\item\em Serialize values returned by a function into a Flat\+Buffer {\ttfamily vector}. This is a convenience function that takes care of iteration for you. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a592110519a6c8db1926f1365bf2a58e6}{Create\+Vector\+Of\+Strings}} (const std\+::vector$<$ std\+::string $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector$<$std\+::string$>$} into a Flat\+Buffer {\ttfamily vector}. This is a convenience function for a common case. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_afede51fd9c32d146cbb1832f57c5e1b7}{Create\+Vector\+Of\+Structs}} (const T $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a3d57074082aaab8cdeb8474ff9df0b53}{Create\+Vector\+Of\+Native\+Structs}} (const S $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array of native structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a6e90ada59d9553636f72ce8e4a892f72}{Create\+Vector\+Of\+Structs}} (size\+\_\+t vector\+\_\+size, const std\+::function$<$ void(size\+\_\+t i, T $\ast$)$>$ \&filler)
+\begin{DoxyCompactList}\small\item\em Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename F , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a9cc09fa59ff9732e972877cfe911c8a5}{Create\+Vector\+Of\+Structs}} (size\+\_\+t vector\+\_\+size, F f, S $\ast$state)
+\begin{DoxyCompactList}\small\item\em Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename Alloc $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a110c2a3298aebef1a9dfa3c44ee84f42}{Create\+Vector\+Of\+Structs}} (const std\+::vector$<$ T, Alloc $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector} of structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a11c291ccd2159604c149600ee6180b95}{Create\+Vector\+Of\+Native\+Structs}} (const std\+::vector$<$ S $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector} of native structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a7cc10b709dfa3e72083843d1a5e36c15}{Create\+Vector\+Of\+Sorted\+Structs}} (std\+::vector$<$ T $>$ $\ast$v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector} of structs into a Flat\+Buffer {\ttfamily vector} in sorted order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a23aa4c910e053446cc404bc486012e54}{Create\+Vector\+Of\+Sorted\+Native\+Structs}} (std\+::vector$<$ S $>$ $\ast$v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector} of native structs into a Flat\+Buffer {\ttfamily vector} in sorted order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ab1f44cc1b130e13b41e9a80de76e25cf}{Create\+Vector\+Of\+Sorted\+Structs}} (T $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array of structs into a Flat\+Buffer {\ttfamily vector} in sorted order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a799701af34c398d8eb86e049b73bcecf}{Create\+Vector\+Of\+Sorted\+Native\+Structs}} (S $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array of native structs into a Flat\+Buffer {\ttfamily vector} in sorted order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a2130ef232ff405eebe2e7f184ecd06e6}{Create\+Vector\+Of\+Sorted\+Tables}} (\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array of {\ttfamily table} offsets as a {\ttfamily vector} in the buffer in sorted order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ac64d11c219559ea51567eab556e13135}{Create\+Vector\+Of\+Sorted\+Tables}} (std\+::vector$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$$>$ $\ast$v)
+\begin{DoxyCompactList}\small\item\em Serialize an array of {\ttfamily table} offsets as a {\ttfamily vector} in the buffer in sorted order. \end{DoxyCompactList}\item 
+uoffset\+\_\+t \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ac2b96292fa0fb1534fe7fd218a094d0c}{Create\+Uninitialized\+Vector}} (size\+\_\+t len, size\+\_\+t elemsize, uint8\+\_\+t $\ast$$\ast$buf)
+\begin{DoxyCompactList}\small\item\em Specialized version of {\ttfamily Create\+Vector} for non-\/copying use cases. Write the data any time later to the returned buffer pointer {\ttfamily buf}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a2305b63d367845972b51669dd995cc50}{Create\+Uninitialized\+Vector}} (size\+\_\+t len, T $\ast$$\ast$buf)
+\begin{DoxyCompactList}\small\item\em Specialized version of {\ttfamily Create\+Vector} for non-\/copying use cases. Write the data any time later to the returned buffer pointer {\ttfamily buf}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a88b9be99b1abf1356857f91c24c5b22b}\label{classflatbuffers_1_1_flat_buffer_builder_a88b9be99b1abf1356857f91c24c5b22b}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ {\bfseries Create\+Uninitialized\+Vector\+Of\+Structs} (size\+\_\+t len, T $\ast$$\ast$buf)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a8f4ce606347c10854ab05cf0ef7e8b2c}\label{classflatbuffers_1_1_flat_buffer_builder_a8f4ce606347c10854ab05cf0ef7e8b2c}} 
+{\footnotesize template$<$typename T , typename U $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ {\bfseries Create\+Vector\+Scalar\+Cast} (const U $\ast$v, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a43f51ba9c8f4f24ea2247a3979d095b8}\label{classflatbuffers_1_1_flat_buffer_builder_a43f51ba9c8f4f24ea2247a3979d095b8}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ const T $\ast$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a43f51ba9c8f4f24ea2247a3979d095b8}{Create\+Struct}} (const T \&structobj)
+\begin{DoxyCompactList}\small\item\em Write a struct by itself, typically to be part of a union. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}{Finish}} (\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ root, const char $\ast$file\+\_\+identifier=nullptr)
+\begin{DoxyCompactList}\small\item\em Finish serializing a buffer by writing the root offset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a7ba8462e408431054c99d25120326220}\label{classflatbuffers_1_1_flat_buffer_builder_a7ba8462e408431054c99d25120326220}} 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a7ba8462e408431054c99d25120326220}{Finish\+Size\+Prefixed}} (\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ root, const char $\ast$file\+\_\+identifier=nullptr)
+\begin{DoxyCompactList}\small\item\em Finish a buffer with a 32 bit size field pre-\/fixed (size of the buffer following the size field). These buffers are N\+OT compatible with standard buffers created by Finish, i.\+e. you can\textquotesingle{}t call Get\+Root on them, you have to use Get\+Size\+Prefixed\+Root instead. All $>$32 bit quantities in this buffer will be aligned when the whole size pre-\/fixed buffer is aligned. These kinds of buffers are useful for creating a stream of Flat\+Buffers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_acbb6de9402ccd756acb912f839f5c112}\label{classflatbuffers_1_1_flat_buffer_builder_acbb6de9402ccd756acb912f839f5c112}} 
+void {\bfseries Swap\+Buf\+Allocator} (\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&other)
+\item 
+\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ab0173786ea4ec3e4ae10555639b2996c}{Flat\+Buffer\+Builder}} (size\+\_\+t initial\+\_\+size=1024, \mbox{\hyperlink{classflatbuffers_1_1_allocator}{Allocator}} $\ast$allocator=nullptr, bool own\+\_\+allocator=false, size\+\_\+t buffer\+\_\+minalign=Align\+Of$<$ largest\+\_\+scalar\+\_\+t $>$())
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a86e1a348b7474fd5d239016ae97afc56}\label{classflatbuffers_1_1_flat_buffer_builder_a86e1a348b7474fd5d239016ae97afc56}} 
+\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a86e1a348b7474fd5d239016ae97afc56}{Flat\+Buffer\+Builder}} (\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move constructor for \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ae65f0619ecb7715ffdae399ebfc56e38}\label{classflatbuffers_1_1_flat_buffer_builder_ae65f0619ecb7715ffdae399ebfc56e38}} 
+\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \& \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ae65f0619ecb7715ffdae399ebfc56e38}{operator=}} (\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a59f39e7a4d9b0b32a805c77bffed245a}\label{classflatbuffers_1_1_flat_buffer_builder_a59f39e7a4d9b0b32a805c77bffed245a}} 
+void {\bfseries Swap} (\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&other)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a952495120d5c56d600640091334b5341}\label{classflatbuffers_1_1_flat_buffer_builder_a952495120d5c56d600640091334b5341}} 
+void {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ae94b94ba71ea0aeb2d9a98c43b713412}\label{classflatbuffers_1_1_flat_buffer_builder_ae94b94ba71ea0aeb2d9a98c43b713412}} 
+void \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ae94b94ba71ea0aeb2d9a98c43b713412}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Reset all the state in this \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} so it can be reused to construct another buffer. \end{DoxyCompactList}\item 
+uoffset\+\_\+t \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a66c8fd33ab9b3b237954c9ea38648f7f}{Get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em The current size of the serialized buffer, counting from the end. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ab81ab8aa273c270b0942fd81489cad83}{Get\+Buffer\+Pointer}} () const
+\begin{DoxyCompactList}\small\item\em Get the serialized buffer (after you call {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}{Finish()}}}). \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a099810f03046139d1854d20a1c2a2e41}{Get\+Current\+Buffer\+Pointer}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to an unfinished buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a5fcede355ddb6a347edf8b189ada2e42}{F\+L\+A\+T\+B\+U\+F\+F\+E\+R\+S\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE}} (deprecated(\char`\"{}use \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a5e2c3a1e47f0ab4a3a3f07a07a52fb45}{Release}}() instead\char`\"{})) Detached\+Buffer Release\+Buffer\+Pointer()
+\begin{DoxyCompactList}\small\item\em Get the released pointer to the serialized buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classflatbuffers_1_1_detached_buffer}{Detached\+Buffer}} \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a5e2c3a1e47f0ab4a3a3f07a07a52fb45}{Release}} ()
+\begin{DoxyCompactList}\small\item\em Get the released \mbox{\hyperlink{classflatbuffers_1_1_detached_buffer}{Detached\+Buffer}}. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_aa090a68856f7b554cc7cac3c279fb416}{Release\+Raw}} (size\+\_\+t \&size, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Get the released pointer to the serialized buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a402b9180357e7e73546833982b27177e}\label{classflatbuffers_1_1_flat_buffer_builder_a402b9180357e7e73546833982b27177e}} 
+size\+\_\+t \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a402b9180357e7e73546833982b27177e}{Get\+Buffer\+Min\+Alignment}} () const
+\begin{DoxyCompactList}\small\item\em get the minimum alignment this buffer needs to be accessed properly. This is only known once all elements have been written (after you call \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}{Finish()}}). You can use this information if you need to embed a Flat\+Buffer in some other buffer, such that you can later read it without first having to copy it into its own buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a16a8fd46b34ad7727406c37b65b6b27a}{Force\+Defaults}} (bool fd)
+\begin{DoxyCompactList}\small\item\em In order to save space, fields that are set to their default value don\textquotesingle{}t get serialized into the buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_aa905b29dce19a1795c7bce375cf29961}{Dedup\+Vtables}} (bool dedup)
+\begin{DoxyCompactList}\small\item\em By default vtables are deduped in order to save space. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_aec6f9df2a0366b540b24822414d92cbe}{Create\+String}} (const char $\ast$str, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_aad93d113ac24e86ed04b5236b3f4c0c5}{Create\+String}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which is null-\/terminated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ac51db9083ac815eb81420b6d51f42154}{Create\+String}} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which is null-\/terminated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a8c3af55e64f5cda9aefa38ac5287ef9f}{Create\+String}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ac0b6a1c5d949f20ad84367fc0f9e1506}{Create\+String}} (const \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $\ast$str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ab77d800e77fa76bc758a6c399fd37685}{Create\+String}} (const T \&str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ab478a645216d2d613fc7b7c29b0ff9d1}{Create\+Shared\+String}} (const char $\ast$str, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a3eb68613e5883dc4b8fff6cf7d1223d7}{Create\+Shared\+String}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which null-\/terminated. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a10e8ec7d1c8fbdc21b1c7047bbbe38d9}{Create\+Shared\+String}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a840b769fbb4148f97d3eed266e4690c3}{Create\+Shared\+String}} (const \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $\ast$str)
+\begin{DoxyCompactList}\small\item\em Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a2cca5c89246a53e80e6ad9487f4c36f3}{Create\+Vector}} (const T $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a44960c5aca0227f960c96a7ed4b881b4}\label{classflatbuffers_1_1_flat_buffer_builder_a44960c5aca0227f960c96a7ed4b881b4}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $>$ $>$ {\bfseries Create\+Vector} (const \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $\ast$v, size\+\_\+t len)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_af715dd24dd37cb0151dc7a980ad0f207}{Create\+Vector}} (const std\+::vector$<$ T $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector} into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a274b1afcfa16bab2c884129b2788db19}\label{classflatbuffers_1_1_flat_buffer_builder_a274b1afcfa16bab2c884129b2788db19}} 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ uint8\+\_\+t $>$ $>$ {\bfseries Create\+Vector} (const std\+::vector$<$ bool $>$ \&v)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a1080c9e370e2d9d9d872dadd1131436b}{Create\+Vector}} (size\+\_\+t vector\+\_\+size, const std\+::function$<$ T(size\+\_\+t i)$>$ \&f)
+\begin{DoxyCompactList}\small\item\em Serialize values returned by a function into a Flat\+Buffer {\ttfamily vector}. This is a convenience function that takes care of iteration for you. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename F , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a53504fc2cab681a7980b03260f8b2f7a}{Create\+Vector}} (size\+\_\+t vector\+\_\+size, F f, S $\ast$state)
+\begin{DoxyCompactList}\small\item\em Serialize values returned by a function into a Flat\+Buffer {\ttfamily vector}. This is a convenience function that takes care of iteration for you. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a592110519a6c8db1926f1365bf2a58e6}{Create\+Vector\+Of\+Strings}} (const std\+::vector$<$ std\+::string $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector$<$std\+::string$>$} into a Flat\+Buffer {\ttfamily vector}. This is a convenience function for a common case. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_afede51fd9c32d146cbb1832f57c5e1b7}{Create\+Vector\+Of\+Structs}} (const T $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a3d57074082aaab8cdeb8474ff9df0b53}{Create\+Vector\+Of\+Native\+Structs}} (const S $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array of native structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a6e90ada59d9553636f72ce8e4a892f72}{Create\+Vector\+Of\+Structs}} (size\+\_\+t vector\+\_\+size, const std\+::function$<$ void(size\+\_\+t i, T $\ast$)$>$ \&filler)
+\begin{DoxyCompactList}\small\item\em Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename F , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a9cc09fa59ff9732e972877cfe911c8a5}{Create\+Vector\+Of\+Structs}} (size\+\_\+t vector\+\_\+size, F f, S $\ast$state)
+\begin{DoxyCompactList}\small\item\em Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename Alloc $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a110c2a3298aebef1a9dfa3c44ee84f42}{Create\+Vector\+Of\+Structs}} (const std\+::vector$<$ T, Alloc $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector} of structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a11c291ccd2159604c149600ee6180b95}{Create\+Vector\+Of\+Native\+Structs}} (const std\+::vector$<$ S $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector} of native structs into a Flat\+Buffer {\ttfamily vector}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a7cc10b709dfa3e72083843d1a5e36c15}{Create\+Vector\+Of\+Sorted\+Structs}} (std\+::vector$<$ T $>$ $\ast$v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector} of structs into a Flat\+Buffer {\ttfamily vector} in sorted order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a23aa4c910e053446cc404bc486012e54}{Create\+Vector\+Of\+Sorted\+Native\+Structs}} (std\+::vector$<$ S $>$ $\ast$v)
+\begin{DoxyCompactList}\small\item\em Serialize a {\ttfamily std\+::vector} of native structs into a Flat\+Buffer {\ttfamily vector} in sorted order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ab1f44cc1b130e13b41e9a80de76e25cf}{Create\+Vector\+Of\+Sorted\+Structs}} (T $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array of structs into a Flat\+Buffer {\ttfamily vector} in sorted order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a799701af34c398d8eb86e049b73bcecf}{Create\+Vector\+Of\+Sorted\+Native\+Structs}} (S $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array of native structs into a Flat\+Buffer {\ttfamily vector} in sorted order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a2130ef232ff405eebe2e7f184ecd06e6}{Create\+Vector\+Of\+Sorted\+Tables}} (\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $\ast$v, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Serialize an array of {\ttfamily table} offsets as a {\ttfamily vector} in the buffer in sorted order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ac64d11c219559ea51567eab556e13135}{Create\+Vector\+Of\+Sorted\+Tables}} (std\+::vector$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$$>$ $\ast$v)
+\begin{DoxyCompactList}\small\item\em Serialize an array of {\ttfamily table} offsets as a {\ttfamily vector} in the buffer in sorted order. \end{DoxyCompactList}\item 
+uoffset\+\_\+t \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_ac2b96292fa0fb1534fe7fd218a094d0c}{Create\+Uninitialized\+Vector}} (size\+\_\+t len, size\+\_\+t elemsize, uint8\+\_\+t $\ast$$\ast$buf)
+\begin{DoxyCompactList}\small\item\em Specialized version of {\ttfamily Create\+Vector} for non-\/copying use cases. Write the data any time later to the returned buffer pointer {\ttfamily buf}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a2305b63d367845972b51669dd995cc50}{Create\+Uninitialized\+Vector}} (size\+\_\+t len, T $\ast$$\ast$buf)
+\begin{DoxyCompactList}\small\item\em Specialized version of {\ttfamily Create\+Vector} for non-\/copying use cases. Write the data any time later to the returned buffer pointer {\ttfamily buf}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a88b9be99b1abf1356857f91c24c5b22b}\label{classflatbuffers_1_1_flat_buffer_builder_a88b9be99b1abf1356857f91c24c5b22b}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ const T $\ast$ $>$ $>$ {\bfseries Create\+Uninitialized\+Vector\+Of\+Structs} (size\+\_\+t len, T $\ast$$\ast$buf)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a8f4ce606347c10854ab05cf0ef7e8b2c}\label{classflatbuffers_1_1_flat_buffer_builder_a8f4ce606347c10854ab05cf0ef7e8b2c}} 
+{\footnotesize template$<$typename T , typename U $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$ T $>$ $>$ {\bfseries Create\+Vector\+Scalar\+Cast} (const U $\ast$v, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a43f51ba9c8f4f24ea2247a3979d095b8}\label{classflatbuffers_1_1_flat_buffer_builder_a43f51ba9c8f4f24ea2247a3979d095b8}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ const T $\ast$ $>$ \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a43f51ba9c8f4f24ea2247a3979d095b8}{Create\+Struct}} (const T \&structobj)
+\begin{DoxyCompactList}\small\item\em Write a struct by itself, typically to be part of a union. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}{Finish}} (\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ root, const char $\ast$file\+\_\+identifier=nullptr)
+\begin{DoxyCompactList}\small\item\em Finish serializing a buffer by writing the root offset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a7ba8462e408431054c99d25120326220}\label{classflatbuffers_1_1_flat_buffer_builder_a7ba8462e408431054c99d25120326220}} 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a7ba8462e408431054c99d25120326220}{Finish\+Size\+Prefixed}} (\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ root, const char $\ast$file\+\_\+identifier=nullptr)
+\begin{DoxyCompactList}\small\item\em Finish a buffer with a 32 bit size field pre-\/fixed (size of the buffer following the size field). These buffers are N\+OT compatible with standard buffers created by Finish, i.\+e. you can\textquotesingle{}t call Get\+Root on them, you have to use Get\+Size\+Prefixed\+Root instead. All $>$32 bit quantities in this buffer will be aligned when the whole size pre-\/fixed buffer is aligned. These kinds of buffers are useful for creating a stream of Flat\+Buffers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_acbb6de9402ccd756acb912f839f5c112}\label{classflatbuffers_1_1_flat_buffer_builder_acbb6de9402ccd756acb912f839f5c112}} 
+void {\bfseries Swap\+Buf\+Allocator} (\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a2b7b7bbd959d70cd7cf0e466dd16b619}\label{classflatbuffers_1_1_flat_buffer_builder_a2b7b7bbd959d70cd7cf0e466dd16b619}} 
+static const size\+\_\+t \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a2b7b7bbd959d70cd7cf0e466dd16b619}{k\+File\+Identifier\+Length}} = 4
+\begin{DoxyCompactList}\small\item\em The length of a Flat\+Buffer file header. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a9190cb2d5a4324ab0c52263b834fff09}\label{classflatbuffers_1_1_flat_buffer_builder_a9190cb2d5a4324ab0c52263b834fff09}} 
+typedef std\+::set$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$, \mbox{\hyperlink{structflatbuffers_1_1_flat_buffer_builder_1_1_string_offset_compare}{String\+Offset\+Compare}} $>$ {\bfseries String\+Offset\+Map}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a9190cb2d5a4324ab0c52263b834fff09}\label{classflatbuffers_1_1_flat_buffer_builder_a9190cb2d5a4324ab0c52263b834fff09}} 
+typedef std\+::set$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $>$, \mbox{\hyperlink{structflatbuffers_1_1_flat_buffer_builder_1_1_string_offset_compare}{String\+Offset\+Compare}} $>$ {\bfseries String\+Offset\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ace4606286a25d3fedfb1532934d4cea1}\label{classflatbuffers_1_1_flat_buffer_builder_ace4606286a25d3fedfb1532934d4cea1}} 
+{\bfseries Flat\+Buffer\+Builder} (const \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a376bb6858e8b1baab9a437f3f9f0b334}\label{classflatbuffers_1_1_flat_buffer_builder_a376bb6858e8b1baab9a437f3f9f0b334}} 
+\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \& {\bfseries operator=} (const \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a2e4de5642bad6dcd01eb7e7eaf719c89}\label{classflatbuffers_1_1_flat_buffer_builder_a2e4de5642bad6dcd01eb7e7eaf719c89}} 
+void {\bfseries Finish} (uoffset\+\_\+t root, const char $\ast$file\+\_\+identifier, bool size\+\_\+prefix)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ace4606286a25d3fedfb1532934d4cea1}\label{classflatbuffers_1_1_flat_buffer_builder_ace4606286a25d3fedfb1532934d4cea1}} 
+{\bfseries Flat\+Buffer\+Builder} (const \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a376bb6858e8b1baab9a437f3f9f0b334}\label{classflatbuffers_1_1_flat_buffer_builder_a376bb6858e8b1baab9a437f3f9f0b334}} 
+\mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \& {\bfseries operator=} (const \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} \&)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a2e4de5642bad6dcd01eb7e7eaf719c89}\label{classflatbuffers_1_1_flat_buffer_builder_a2e4de5642bad6dcd01eb7e7eaf719c89}} 
+void {\bfseries Finish} (uoffset\+\_\+t root, const char $\ast$file\+\_\+identifier, bool size\+\_\+prefix)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a9a3886be63710d8bb88f2ade4ac8420d}\label{classflatbuffers_1_1_flat_buffer_builder_a9a3886be63710d8bb88f2ade4ac8420d}} 
+\mbox{\hyperlink{classflatbuffers_1_1vector__downward}{vector\+\_\+downward}} {\bfseries buf\+\_\+}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_adb473c5fd1305213b91eecaa779ecafa}\label{classflatbuffers_1_1_flat_buffer_builder_adb473c5fd1305213b91eecaa779ecafa}} 
+uoffset\+\_\+t {\bfseries num\+\_\+field\+\_\+loc}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a5e604e3caf95fd0f0e74545af5a8420a}\label{classflatbuffers_1_1_flat_buffer_builder_a5e604e3caf95fd0f0e74545af5a8420a}} 
+voffset\+\_\+t {\bfseries max\+\_\+voffset\+\_\+}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_add6d502accf426e35f91f2539baff6b2}\label{classflatbuffers_1_1_flat_buffer_builder_add6d502accf426e35f91f2539baff6b2}} 
+bool {\bfseries nested}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab2cc618aeb6f6c411c7ab734649e1a81}\label{classflatbuffers_1_1_flat_buffer_builder_ab2cc618aeb6f6c411c7ab734649e1a81}} 
+bool {\bfseries finished}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab9942e76ff29eefc702b006b19ce02ba}\label{classflatbuffers_1_1_flat_buffer_builder_ab9942e76ff29eefc702b006b19ce02ba}} 
+size\+\_\+t {\bfseries minalign\+\_\+}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a89c2d7c686a2df8014cb453ec70fdccd}\label{classflatbuffers_1_1_flat_buffer_builder_a89c2d7c686a2df8014cb453ec70fdccd}} 
+bool {\bfseries force\+\_\+defaults\+\_\+}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a6b31b32fb478a9ec68164e1579c7ebe7}\label{classflatbuffers_1_1_flat_buffer_builder_a6b31b32fb478a9ec68164e1579c7ebe7}} 
+bool {\bfseries dedup\+\_\+vtables\+\_\+}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a235220ea7fb48a49f595a87b26331a52}\label{classflatbuffers_1_1_flat_buffer_builder_a235220ea7fb48a49f595a87b26331a52}} 
+String\+Offset\+Map $\ast$ {\bfseries string\+\_\+pool}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper class to hold data needed in creation of a Flat\+Buffer. To serialize data, you typically call one of the {\ttfamily Create$\ast$()} functions in the generated code, which in turn call a sequence of {\ttfamily Start\+Table}/ {\ttfamily Push\+Element}/{\ttfamily Add\+Element}/{\ttfamily End\+Table}, or the builtin {\ttfamily Create\+String}/ {\ttfamily Create\+Vector} functions. Do this is depth-\/first order to build up a tree to the root. {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}{Finish()}}} wraps up the buffer ready for transport. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab0173786ea4ec3e4ae10555639b2996c}\label{classflatbuffers_1_1_flat_buffer_builder_ab0173786ea4ec3e4ae10555639b2996c}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!FlatBufferBuilder@{FlatBufferBuilder}}
+\index{FlatBufferBuilder@{FlatBufferBuilder}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{FlatBufferBuilder()}{FlatBufferBuilder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Flat\+Buffer\+Builder (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{initial\+\_\+size = {\ttfamily 1024},  }\item[{\mbox{\hyperlink{classflatbuffers_1_1_allocator}{Allocator}} $\ast$}]{allocator = {\ttfamily nullptr},  }\item[{bool}]{own\+\_\+allocator = {\ttfamily false},  }\item[{size\+\_\+t}]{buffer\+\_\+minalign = {\ttfamily AlignOf$<$largest\+\_\+scalar\+\_\+t$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Default constructor for \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em initial\+\_\+size} & The initial size of the buffer, in bytes. Defaults to {\ttfamily 1024}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em allocator} & An {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_allocator}{Allocator}}} to use. If null will use {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_default_allocator}{Default\+Allocator}}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em own\+\_\+allocator} & Whether the builder/vector should own the allocator. Defaults to / {\ttfamily false}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer\+\_\+minalign} & Force the buffer to be aligned to the given minimum alignment upon reallocation. Only needed if you intend to store types with custom alignment A\+ND you wish to read the buffer in-\/place directly after creation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab0173786ea4ec3e4ae10555639b2996c}\label{classflatbuffers_1_1_flat_buffer_builder_ab0173786ea4ec3e4ae10555639b2996c}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!FlatBufferBuilder@{FlatBufferBuilder}}
+\index{FlatBufferBuilder@{FlatBufferBuilder}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{FlatBufferBuilder()}{FlatBufferBuilder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Flat\+Buffer\+Builder (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{initial\+\_\+size = {\ttfamily 1024},  }\item[{\mbox{\hyperlink{classflatbuffers_1_1_allocator}{Allocator}} $\ast$}]{allocator = {\ttfamily nullptr},  }\item[{bool}]{own\+\_\+allocator = {\ttfamily false},  }\item[{size\+\_\+t}]{buffer\+\_\+minalign = {\ttfamily AlignOf$<$largest\+\_\+scalar\+\_\+t$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Default constructor for \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em initial\+\_\+size} & The initial size of the buffer, in bytes. Defaults to {\ttfamily 1024}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em allocator} & An {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_allocator}{Allocator}}} to use. If null will use {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_default_allocator}{Default\+Allocator}}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em own\+\_\+allocator} & Whether the builder/vector should own the allocator. Defaults to / {\ttfamily false}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer\+\_\+minalign} & Force the buffer to be aligned to the given minimum alignment upon reallocation. Only needed if you intend to store types with custom alignment A\+ND you wish to read the buffer in-\/place directly after creation. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a3eb68613e5883dc4b8fff6cf7d1223d7}\label{classflatbuffers_1_1_flat_buffer_builder_a3eb68613e5883dc4b8fff6cf7d1223d7}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateSharedString@{CreateSharedString}}
+\index{CreateSharedString@{CreateSharedString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateSharedString()}{CreateSharedString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Shared\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which null-\/terminated. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const char pointer to a C-\/string to add to the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a3eb68613e5883dc4b8fff6cf7d1223d7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a3eb68613e5883dc4b8fff6cf7d1223d7}\label{classflatbuffers_1_1_flat_buffer_builder_a3eb68613e5883dc4b8fff6cf7d1223d7}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateSharedString@{CreateSharedString}}
+\index{CreateSharedString@{CreateSharedString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateSharedString()}{CreateSharedString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Shared\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which null-\/terminated. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const char pointer to a C-\/string to add to the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a3eb68613e5883dc4b8fff6cf7d1223d7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab478a645216d2d613fc7b7c29b0ff9d1}\label{classflatbuffers_1_1_flat_buffer_builder_ab478a645216d2d613fc7b7c29b0ff9d1}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateSharedString@{CreateSharedString}}
+\index{CreateSharedString@{CreateSharedString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateSharedString()}{CreateSharedString()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Shared\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const char pointer to the data to be stored as a string. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of bytes that should be stored from {\ttfamily str}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ab478a645216d2d613fc7b7c29b0ff9d1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab478a645216d2d613fc7b7c29b0ff9d1}\label{classflatbuffers_1_1_flat_buffer_builder_ab478a645216d2d613fc7b7c29b0ff9d1}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateSharedString@{CreateSharedString}}
+\index{CreateSharedString@{CreateSharedString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateSharedString()}{CreateSharedString()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Shared\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const char pointer to the data to be stored as a string. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of bytes that should be stored from {\ttfamily str}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ab478a645216d2d613fc7b7c29b0ff9d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ab478a645216d2d613fc7b7c29b0ff9d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a10e8ec7d1c8fbdc21b1c7047bbbe38d9}\label{classflatbuffers_1_1_flat_buffer_builder_a10e8ec7d1c8fbdc21b1c7047bbbe38d9}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateSharedString@{CreateSharedString}}
+\index{CreateSharedString@{CreateSharedString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateSharedString()}{CreateSharedString()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Shared\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const reference to a std\+::string to store in the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a10e8ec7d1c8fbdc21b1c7047bbbe38d9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a10e8ec7d1c8fbdc21b1c7047bbbe38d9}\label{classflatbuffers_1_1_flat_buffer_builder_a10e8ec7d1c8fbdc21b1c7047bbbe38d9}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateSharedString@{CreateSharedString}}
+\index{CreateSharedString@{CreateSharedString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateSharedString()}{CreateSharedString()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Shared\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const reference to a std\+::string to store in the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a10e8ec7d1c8fbdc21b1c7047bbbe38d9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a840b769fbb4148f97d3eed266e4690c3}\label{classflatbuffers_1_1_flat_buffer_builder_a840b769fbb4148f97d3eed266e4690c3}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateSharedString@{CreateSharedString}}
+\index{CreateSharedString@{CreateSharedString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateSharedString()}{CreateSharedString()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Shared\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const pointer to a {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_string}{String}}} struct to add to the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a840b769fbb4148f97d3eed266e4690c3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a840b769fbb4148f97d3eed266e4690c3}\label{classflatbuffers_1_1_flat_buffer_builder_a840b769fbb4148f97d3eed266e4690c3}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateSharedString@{CreateSharedString}}
+\index{CreateSharedString@{CreateSharedString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateSharedString()}{CreateSharedString()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Shared\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const pointer to a {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_string}{String}}} struct to add to the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a840b769fbb4148f97d3eed266e4690c3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ac51db9083ac815eb81420b6d51f42154}\label{classflatbuffers_1_1_flat_buffer_builder_ac51db9083ac815eb81420b6d51f42154}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which is null-\/terminated. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A char pointer to a C-\/string to add to the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ac51db9083ac815eb81420b6d51f42154_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ac51db9083ac815eb81420b6d51f42154}\label{classflatbuffers_1_1_flat_buffer_builder_ac51db9083ac815eb81420b6d51f42154}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which is null-\/terminated. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A char pointer to a C-\/string to add to the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ac51db9083ac815eb81420b6d51f42154_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_aad93d113ac24e86ed04b5236b3f4c0c5}\label{classflatbuffers_1_1_flat_buffer_builder_aad93d113ac24e86ed04b5236b3f4c0c5}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which is null-\/terminated. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const char pointer to a C-\/string to add to the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_aad93d113ac24e86ed04b5236b3f4c0c5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_aad93d113ac24e86ed04b5236b3f4c0c5}\label{classflatbuffers_1_1_flat_buffer_builder_aad93d113ac24e86ed04b5236b3f4c0c5}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which is null-\/terminated. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const char pointer to a C-\/string to add to the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_aad93d113ac24e86ed04b5236b3f4c0c5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_aec6f9df2a0366b540b24822414d92cbe}\label{classflatbuffers_1_1_flat_buffer_builder_aec6f9df2a0366b540b24822414d92cbe}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const char pointer to the data to be stored as a string. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of bytes that should be stored from {\ttfamily str}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_aec6f9df2a0366b540b24822414d92cbe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_aec6f9df2a0366b540b24822414d92cbe}\label{classflatbuffers_1_1_flat_buffer_builder_aec6f9df2a0366b540b24822414d92cbe}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const char pointer to the data to be stored as a string. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of bytes that should be stored from {\ttfamily str}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_aec6f9df2a0366b540b24822414d92cbe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_aec6f9df2a0366b540b24822414d92cbe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a8c3af55e64f5cda9aefa38ac5287ef9f}\label{classflatbuffers_1_1_flat_buffer_builder_a8c3af55e64f5cda9aefa38ac5287ef9f}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const reference to a std\+::string to store in the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a8c3af55e64f5cda9aefa38ac5287ef9f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a8c3af55e64f5cda9aefa38ac5287ef9f}\label{classflatbuffers_1_1_flat_buffer_builder_a8c3af55e64f5cda9aefa38ac5287ef9f}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const reference to a std\+::string to store in the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a8c3af55e64f5cda9aefa38ac5287ef9f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ac0b6a1c5d949f20ad84367fc0f9e1506}\label{classflatbuffers_1_1_flat_buffer_builder_ac0b6a1c5d949f20ad84367fc0f9e1506}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const pointer to a {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_string}{String}}} struct to add to the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ac0b6a1c5d949f20ad84367fc0f9e1506_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ac0b6a1c5d949f20ad84367fc0f9e1506}\label{classflatbuffers_1_1_flat_buffer_builder_ac0b6a1c5d949f20ad84367fc0f9e1506}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const pointer to a {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_string}{String}}} struct to add to the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ac0b6a1c5d949f20ad84367fc0f9e1506_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab77d800e77fa76bc758a6c399fd37685}\label{classflatbuffers_1_1_flat_buffer_builder_ab77d800e77fa76bc758a6c399fd37685}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{const T \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const reference to a std\+::string like type with support of T\+::c\+\_\+str() and T\+::length() to store in the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ab77d800e77fa76bc758a6c399fd37685_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab77d800e77fa76bc758a6c399fd37685}\label{classflatbuffers_1_1_flat_buffer_builder_ab77d800e77fa76bc758a6c399fd37685}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateString@{CreateString}}
+\index{CreateString@{CreateString}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateString()}{CreateString()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+String (\begin{DoxyParamCaption}\item[{const T \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store a string in the buffer, which can contain any binary data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & A const reference to a std\+::string like type with support of T\+::c\+\_\+str() and T\+::length() to store in the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the offset in the buffer where the string starts. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ab77d800e77fa76bc758a6c399fd37685_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ac2b96292fa0fb1534fe7fd218a094d0c}\label{classflatbuffers_1_1_flat_buffer_builder_ac2b96292fa0fb1534fe7fd218a094d0c}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateUninitializedVector@{CreateUninitializedVector}}
+\index{CreateUninitializedVector@{CreateUninitializedVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateUninitializedVector()}{CreateUninitializedVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily uoffset\+\_\+t flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Uninitialized\+Vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{len,  }\item[{size\+\_\+t}]{elemsize,  }\item[{uint8\+\_\+t $\ast$$\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Specialized version of {\ttfamily Create\+Vector} for non-\/copying use cases. Write the data any time later to the returned buffer pointer {\ttfamily buf}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to store in the {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em elemsize} & The size of each element in the {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em buf} & A pointer to a {\ttfamily uint8\+\_\+t} pointer that can be written to at a later time to serialize the data into a {\ttfamily vector} in the buffer. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ac2b96292fa0fb1534fe7fd218a094d0c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ac2b96292fa0fb1534fe7fd218a094d0c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ac2b96292fa0fb1534fe7fd218a094d0c}\label{classflatbuffers_1_1_flat_buffer_builder_ac2b96292fa0fb1534fe7fd218a094d0c}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateUninitializedVector@{CreateUninitializedVector}}
+\index{CreateUninitializedVector@{CreateUninitializedVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateUninitializedVector()}{CreateUninitializedVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily uoffset\+\_\+t flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Uninitialized\+Vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{len,  }\item[{size\+\_\+t}]{elemsize,  }\item[{uint8\+\_\+t $\ast$$\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Specialized version of {\ttfamily Create\+Vector} for non-\/copying use cases. Write the data any time later to the returned buffer pointer {\ttfamily buf}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to store in the {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em elemsize} & The size of each element in the {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em buf} & A pointer to a {\ttfamily uint8\+\_\+t} pointer that can be written to at a later time to serialize the data into a {\ttfamily vector} in the buffer. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ac2b96292fa0fb1534fe7fd218a094d0c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a2305b63d367845972b51669dd995cc50}\label{classflatbuffers_1_1_flat_buffer_builder_a2305b63d367845972b51669dd995cc50}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateUninitializedVector@{CreateUninitializedVector}}
+\index{CreateUninitializedVector@{CreateUninitializedVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateUninitializedVector()}{CreateUninitializedVector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$T$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Uninitialized\+Vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{len,  }\item[{T $\ast$$\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Specialized version of {\ttfamily Create\+Vector} for non-\/copying use cases. Write the data any time later to the returned buffer pointer {\ttfamily buf}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the data that will be stored in the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to store in the {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em buf} & A pointer to a pointer of type {\ttfamily T} that can be written to at a later time to serialize the data into a {\ttfamily vector} in the buffer. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a2305b63d367845972b51669dd995cc50_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a2305b63d367845972b51669dd995cc50}\label{classflatbuffers_1_1_flat_buffer_builder_a2305b63d367845972b51669dd995cc50}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateUninitializedVector@{CreateUninitializedVector}}
+\index{CreateUninitializedVector@{CreateUninitializedVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateUninitializedVector()}{CreateUninitializedVector()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$T$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Uninitialized\+Vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{len,  }\item[{T $\ast$$\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Specialized version of {\ttfamily Create\+Vector} for non-\/copying use cases. Write the data any time later to the returned buffer pointer {\ttfamily buf}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the data that will be stored in the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to store in the {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em buf} & A pointer to a pointer of type {\ttfamily T} that can be written to at a later time to serialize the data into a {\ttfamily vector} in the buffer. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a2305b63d367845972b51669dd995cc50_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_af715dd24dd37cb0151dc7a980ad0f207}\label{classflatbuffers_1_1_flat_buffer_builder_af715dd24dd37cb0151dc7a980ad0f207}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVector@{CreateVector}}
+\index{CreateVector@{CreateVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVector()}{CreateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$T$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector} into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A const reference to the {\ttfamily std\+::vector} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_af715dd24dd37cb0151dc7a980ad0f207_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_af715dd24dd37cb0151dc7a980ad0f207}\label{classflatbuffers_1_1_flat_buffer_builder_af715dd24dd37cb0151dc7a980ad0f207}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVector@{CreateVector}}
+\index{CreateVector@{CreateVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVector()}{CreateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$T$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector} into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A const reference to the {\ttfamily std\+::vector} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_af715dd24dd37cb0151dc7a980ad0f207_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a2cca5c89246a53e80e6ad9487f4c36f3}\label{classflatbuffers_1_1_flat_buffer_builder_a2cca5c89246a53e80e6ad9487f4c36f3}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVector@{CreateVector}}
+\index{CreateVector@{CreateVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVector()}{CreateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$T$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector (\begin{DoxyParamCaption}\item[{const T $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A pointer to the array of type {\ttfamily T} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a2cca5c89246a53e80e6ad9487f4c36f3}\label{classflatbuffers_1_1_flat_buffer_builder_a2cca5c89246a53e80e6ad9487f4c36f3}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVector@{CreateVector}}
+\index{CreateVector@{CreateVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVector()}{CreateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$T$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector (\begin{DoxyParamCaption}\item[{const T $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A pointer to the array of type {\ttfamily T} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a2cca5c89246a53e80e6ad9487f4c36f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a1080c9e370e2d9d9d872dadd1131436b}\label{classflatbuffers_1_1_flat_buffer_builder_a1080c9e370e2d9d9d872dadd1131436b}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVector@{CreateVector}}
+\index{CreateVector@{CreateVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVector()}{CreateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$T$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{vector\+\_\+size,  }\item[{const std\+::function$<$ T(size\+\_\+t i)$>$ \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize values returned by a function into a Flat\+Buffer {\ttfamily vector}. This is a convenience function that takes care of iteration for you. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & A function that takes the current iteration 0..vector\+\_\+size-\/1 and returns any type that you can construct a Flat\+Buffers vector out of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a1080c9e370e2d9d9d872dadd1131436b}\label{classflatbuffers_1_1_flat_buffer_builder_a1080c9e370e2d9d9d872dadd1131436b}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVector@{CreateVector}}
+\index{CreateVector@{CreateVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVector()}{CreateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$T$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{vector\+\_\+size,  }\item[{const std\+::function$<$ T(size\+\_\+t i)$>$ \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize values returned by a function into a Flat\+Buffer {\ttfamily vector}. This is a convenience function that takes care of iteration for you. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & A function that takes the current iteration 0..vector\+\_\+size-\/1 and returns any type that you can construct a Flat\+Buffers vector out of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a53504fc2cab681a7980b03260f8b2f7a}\label{classflatbuffers_1_1_flat_buffer_builder_a53504fc2cab681a7980b03260f8b2f7a}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVector@{CreateVector}}
+\index{CreateVector@{CreateVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVector()}{CreateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename T , typename F , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$T$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{vector\+\_\+size,  }\item[{F}]{f,  }\item[{S $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize values returned by a function into a Flat\+Buffer {\ttfamily vector}. This is a convenience function that takes care of iteration for you. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & A function that takes the current iteration 0..vector\+\_\+size-\/1, and the state parameter returning any type that you can construct a Flat\+Buffers vector out of. \\
+\hline
+{\em state} & State passed to f. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a53504fc2cab681a7980b03260f8b2f7a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a53504fc2cab681a7980b03260f8b2f7a}\label{classflatbuffers_1_1_flat_buffer_builder_a53504fc2cab681a7980b03260f8b2f7a}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVector@{CreateVector}}
+\index{CreateVector@{CreateVector}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVector()}{CreateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename T , typename F , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$T$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{vector\+\_\+size,  }\item[{F}]{f,  }\item[{S $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize values returned by a function into a Flat\+Buffer {\ttfamily vector}. This is a convenience function that takes care of iteration for you. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & A function that takes the current iteration 0..vector\+\_\+size-\/1, and the state parameter returning any type that you can construct a Flat\+Buffers vector out of. \\
+\hline
+{\em state} & State passed to f. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a53504fc2cab681a7980b03260f8b2f7a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a3d57074082aaab8cdeb8474ff9df0b53}\label{classflatbuffers_1_1_flat_buffer_builder_a3d57074082aaab8cdeb8474ff9df0b53}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfNativeStructs@{CreateVectorOfNativeStructs}}
+\index{CreateVectorOfNativeStructs@{CreateVectorOfNativeStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfNativeStructs()}{CreateVectorOfNativeStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Native\+Structs (\begin{DoxyParamCaption}\item[{const S $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of native structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+{\em S} & The data type of the native struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A pointer to the array of type {\ttfamily S} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a3d57074082aaab8cdeb8474ff9df0b53}\label{classflatbuffers_1_1_flat_buffer_builder_a3d57074082aaab8cdeb8474ff9df0b53}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfNativeStructs@{CreateVectorOfNativeStructs}}
+\index{CreateVectorOfNativeStructs@{CreateVectorOfNativeStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfNativeStructs()}{CreateVectorOfNativeStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Native\+Structs (\begin{DoxyParamCaption}\item[{const S $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of native structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+{\em S} & The data type of the native struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A pointer to the array of type {\ttfamily S} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a11c291ccd2159604c149600ee6180b95}\label{classflatbuffers_1_1_flat_buffer_builder_a11c291ccd2159604c149600ee6180b95}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfNativeStructs@{CreateVectorOfNativeStructs}}
+\index{CreateVectorOfNativeStructs@{CreateVectorOfNativeStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfNativeStructs()}{CreateVectorOfNativeStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Native\+Structs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ S $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector} of native structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} struct elements. \\
+\hline
+{\em S} & The data type of the {\ttfamily std\+::vector} native struct elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A const reference to the {\ttfamily std\+::vector} of structs to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a11c291ccd2159604c149600ee6180b95}\label{classflatbuffers_1_1_flat_buffer_builder_a11c291ccd2159604c149600ee6180b95}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfNativeStructs@{CreateVectorOfNativeStructs}}
+\index{CreateVectorOfNativeStructs@{CreateVectorOfNativeStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfNativeStructs()}{CreateVectorOfNativeStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Native\+Structs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ S $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector} of native structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} struct elements. \\
+\hline
+{\em S} & The data type of the {\ttfamily std\+::vector} native struct elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A const reference to the {\ttfamily std\+::vector} of structs to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a799701af34c398d8eb86e049b73bcecf}\label{classflatbuffers_1_1_flat_buffer_builder_a799701af34c398d8eb86e049b73bcecf}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedNativeStructs@{CreateVectorOfSortedNativeStructs}}
+\index{CreateVectorOfSortedNativeStructs@{CreateVectorOfSortedNativeStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedNativeStructs()}{CreateVectorOfSortedNativeStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Native\+Structs (\begin{DoxyParamCaption}\item[{S $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of native structs into a Flat\+Buffer {\ttfamily vector} in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+{\em S} & The data type of the native struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A pointer to the array of type {\ttfamily S} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a799701af34c398d8eb86e049b73bcecf}\label{classflatbuffers_1_1_flat_buffer_builder_a799701af34c398d8eb86e049b73bcecf}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedNativeStructs@{CreateVectorOfSortedNativeStructs}}
+\index{CreateVectorOfSortedNativeStructs@{CreateVectorOfSortedNativeStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedNativeStructs()}{CreateVectorOfSortedNativeStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Native\+Structs (\begin{DoxyParamCaption}\item[{S $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of native structs into a Flat\+Buffer {\ttfamily vector} in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+{\em S} & The data type of the native struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A pointer to the array of type {\ttfamily S} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a23aa4c910e053446cc404bc486012e54}\label{classflatbuffers_1_1_flat_buffer_builder_a23aa4c910e053446cc404bc486012e54}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedNativeStructs@{CreateVectorOfSortedNativeStructs}}
+\index{CreateVectorOfSortedNativeStructs@{CreateVectorOfSortedNativeStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedNativeStructs()}{CreateVectorOfSortedNativeStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Native\+Structs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ S $>$ $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector} of native structs into a Flat\+Buffer {\ttfamily vector} in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} struct elements. \\
+\hline
+{\em S} & The data type of the {\ttfamily std\+::vector} native struct elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A const reference to the {\ttfamily std\+::vector} of structs to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a23aa4c910e053446cc404bc486012e54}\label{classflatbuffers_1_1_flat_buffer_builder_a23aa4c910e053446cc404bc486012e54}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedNativeStructs@{CreateVectorOfSortedNativeStructs}}
+\index{CreateVectorOfSortedNativeStructs@{CreateVectorOfSortedNativeStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedNativeStructs()}{CreateVectorOfSortedNativeStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Native\+Structs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ S $>$ $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector} of native structs into a Flat\+Buffer {\ttfamily vector} in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} struct elements. \\
+\hline
+{\em S} & The data type of the {\ttfamily std\+::vector} native struct elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A const reference to the {\ttfamily std\+::vector} of structs to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a7cc10b709dfa3e72083843d1a5e36c15}\label{classflatbuffers_1_1_flat_buffer_builder_a7cc10b709dfa3e72083843d1a5e36c15}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedStructs@{CreateVectorOfSortedStructs}}
+\index{CreateVectorOfSortedStructs@{CreateVectorOfSortedStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedStructs()}{CreateVectorOfSortedStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Structs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector} of structs into a Flat\+Buffer {\ttfamily vector} in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} struct elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A const reference to the {\ttfamily std\+::vector} of structs to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classflatbuffers_1_1_flat_buffer_builder_a7cc10b709dfa3e72083843d1a5e36c15_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a7cc10b709dfa3e72083843d1a5e36c15}\label{classflatbuffers_1_1_flat_buffer_builder_a7cc10b709dfa3e72083843d1a5e36c15}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedStructs@{CreateVectorOfSortedStructs}}
+\index{CreateVectorOfSortedStructs@{CreateVectorOfSortedStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedStructs()}{CreateVectorOfSortedStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Structs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector} of structs into a Flat\+Buffer {\ttfamily vector} in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} struct elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A const reference to the {\ttfamily std\+::vector} of structs to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classflatbuffers_1_1_flat_buffer_builder_a7cc10b709dfa3e72083843d1a5e36c15_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab1f44cc1b130e13b41e9a80de76e25cf}\label{classflatbuffers_1_1_flat_buffer_builder_ab1f44cc1b130e13b41e9a80de76e25cf}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedStructs@{CreateVectorOfSortedStructs}}
+\index{CreateVectorOfSortedStructs@{CreateVectorOfSortedStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedStructs()}{CreateVectorOfSortedStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Structs (\begin{DoxyParamCaption}\item[{T $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of structs into a Flat\+Buffer {\ttfamily vector} in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A pointer to the array of type {\ttfamily T} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ab1f44cc1b130e13b41e9a80de76e25cf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab1f44cc1b130e13b41e9a80de76e25cf}\label{classflatbuffers_1_1_flat_buffer_builder_ab1f44cc1b130e13b41e9a80de76e25cf}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedStructs@{CreateVectorOfSortedStructs}}
+\index{CreateVectorOfSortedStructs@{CreateVectorOfSortedStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedStructs()}{CreateVectorOfSortedStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Structs (\begin{DoxyParamCaption}\item[{T $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of structs into a Flat\+Buffer {\ttfamily vector} in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A pointer to the array of type {\ttfamily T} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ab1f44cc1b130e13b41e9a80de76e25cf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a2130ef232ff405eebe2e7f184ecd06e6}\label{classflatbuffers_1_1_flat_buffer_builder_a2130ef232ff405eebe2e7f184ecd06e6}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedTables@{CreateVectorOfSortedTables}}
+\index{CreateVectorOfSortedTables@{CreateVectorOfSortedTables}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedTables()}{CreateVectorOfSortedTables()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$T$>$ $>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Tables (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of {\ttfamily table} offsets as a {\ttfamily vector} in the buffer in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type that the offset refers to. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & An array of type {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$T$>$} that contains the {\ttfamily table} offsets to store in the buffer in sorted order. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to store in the {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a2130ef232ff405eebe2e7f184ecd06e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a2130ef232ff405eebe2e7f184ecd06e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a2130ef232ff405eebe2e7f184ecd06e6}\label{classflatbuffers_1_1_flat_buffer_builder_a2130ef232ff405eebe2e7f184ecd06e6}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedTables@{CreateVectorOfSortedTables}}
+\index{CreateVectorOfSortedTables@{CreateVectorOfSortedTables}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedTables()}{CreateVectorOfSortedTables()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$T$>$ $>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Tables (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$ $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of {\ttfamily table} offsets as a {\ttfamily vector} in the buffer in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type that the offset refers to. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & An array of type {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$T$>$} that contains the {\ttfamily table} offsets to store in the buffer in sorted order. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to store in the {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a2130ef232ff405eebe2e7f184ecd06e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ac64d11c219559ea51567eab556e13135}\label{classflatbuffers_1_1_flat_buffer_builder_ac64d11c219559ea51567eab556e13135}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedTables@{CreateVectorOfSortedTables}}
+\index{CreateVectorOfSortedTables@{CreateVectorOfSortedTables}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedTables()}{CreateVectorOfSortedTables()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$T$>$ $>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Tables (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$$>$ $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of {\ttfamily table} offsets as a {\ttfamily vector} in the buffer in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type that the offset refers to. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & An array of type {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$T$>$} that contains the {\ttfamily table} offsets to store in the buffer in sorted order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ac64d11c219559ea51567eab556e13135_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ac64d11c219559ea51567eab556e13135}\label{classflatbuffers_1_1_flat_buffer_builder_ac64d11c219559ea51567eab556e13135}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfSortedTables@{CreateVectorOfSortedTables}}
+\index{CreateVectorOfSortedTables@{CreateVectorOfSortedTables}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfSortedTables()}{CreateVectorOfSortedTables()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$T$>$ $>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Sorted\+Tables (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$$>$ $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of {\ttfamily table} offsets as a {\ttfamily vector} in the buffer in sorted order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type that the offset refers to. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & An array of type {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$T$>$} that contains the {\ttfamily table} offsets to store in the buffer in sorted order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_ac64d11c219559ea51567eab556e13135_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a592110519a6c8db1926f1365bf2a58e6}\label{classflatbuffers_1_1_flat_buffer_builder_a592110519a6c8db1926f1365bf2a58e6}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfStrings@{CreateVectorOfStrings}}
+\index{CreateVectorOfStrings@{CreateVectorOfStrings}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfStrings()}{CreateVectorOfStrings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ $>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Strings (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector$<$std\+::string$>$} into a Flat\+Buffer {\ttfamily vector}. This is a convenience function for a common case. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A const reference to the {\ttfamily std\+::vector} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a592110519a6c8db1926f1365bf2a58e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a592110519a6c8db1926f1365bf2a58e6}\label{classflatbuffers_1_1_flat_buffer_builder_a592110519a6c8db1926f1365bf2a58e6}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfStrings@{CreateVectorOfStrings}}
+\index{CreateVectorOfStrings@{CreateVectorOfStrings}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfStrings()}{CreateVectorOfStrings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{structflatbuffers_1_1_string}{String}}$>$ $>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Strings (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector$<$std\+::string$>$} into a Flat\+Buffer {\ttfamily vector}. This is a convenience function for a common case. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A const reference to the {\ttfamily std\+::vector} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a592110519a6c8db1926f1365bf2a58e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a110c2a3298aebef1a9dfa3c44ee84f42}\label{classflatbuffers_1_1_flat_buffer_builder_a110c2a3298aebef1a9dfa3c44ee84f42}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfStructs@{CreateVectorOfStructs}}
+\index{CreateVectorOfStructs@{CreateVectorOfStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfStructs()}{CreateVectorOfStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Structs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T, Alloc $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector} of structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} struct elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A const reference to the {\ttfamily std\+::vector} of structs to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a110c2a3298aebef1a9dfa3c44ee84f42_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a110c2a3298aebef1a9dfa3c44ee84f42}\label{classflatbuffers_1_1_flat_buffer_builder_a110c2a3298aebef1a9dfa3c44ee84f42}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfStructs@{CreateVectorOfStructs}}
+\index{CreateVectorOfStructs@{CreateVectorOfStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfStructs()}{CreateVectorOfStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Structs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T, Alloc $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a {\ttfamily std\+::vector} of structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the {\ttfamily std\+::vector} struct elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A const reference to the {\ttfamily std\+::vector} of structs to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a110c2a3298aebef1a9dfa3c44ee84f42_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_afede51fd9c32d146cbb1832f57c5e1b7}\label{classflatbuffers_1_1_flat_buffer_builder_afede51fd9c32d146cbb1832f57c5e1b7}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfStructs@{CreateVectorOfStructs}}
+\index{CreateVectorOfStructs@{CreateVectorOfStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfStructs()}{CreateVectorOfStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Structs (\begin{DoxyParamCaption}\item[{const T $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A pointer to the array of type {\ttfamily T} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_afede51fd9c32d146cbb1832f57c5e1b7}\label{classflatbuffers_1_1_flat_buffer_builder_afede51fd9c32d146cbb1832f57c5e1b7}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfStructs@{CreateVectorOfStructs}}
+\index{CreateVectorOfStructs@{CreateVectorOfStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfStructs()}{CreateVectorOfStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Structs (\begin{DoxyParamCaption}\item[{const T $\ast$}]{v,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & A pointer to the array of type {\ttfamily T} to serialize into the buffer as a {\ttfamily vector}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The number of elements to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_afede51fd9c32d146cbb1832f57c5e1b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a6e90ada59d9553636f72ce8e4a892f72}\label{classflatbuffers_1_1_flat_buffer_builder_a6e90ada59d9553636f72ce8e4a892f72}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfStructs@{CreateVectorOfStructs}}
+\index{CreateVectorOfStructs@{CreateVectorOfStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfStructs()}{CreateVectorOfStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Structs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{vector\+\_\+size,  }\item[{const std\+::function$<$ void(size\+\_\+t i, T $\ast$)$>$ \&}]{filler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filler} & A function that takes the current iteration 0..vector\+\_\+size-\/1 and a pointer to the struct that must be filled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. This is mostly useful when flatbuffers are generated with mutation accessors. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a6e90ada59d9553636f72ce8e4a892f72}\label{classflatbuffers_1_1_flat_buffer_builder_a6e90ada59d9553636f72ce8e4a892f72}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfStructs@{CreateVectorOfStructs}}
+\index{CreateVectorOfStructs@{CreateVectorOfStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfStructs()}{CreateVectorOfStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Structs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{vector\+\_\+size,  }\item[{const std\+::function$<$ void(size\+\_\+t i, T $\ast$)$>$ \&}]{filler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filler} & A function that takes the current iteration 0..vector\+\_\+size-\/1 and a pointer to the struct that must be filled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. This is mostly useful when flatbuffers are generated with mutation accessors. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a9cc09fa59ff9732e972877cfe911c8a5}\label{classflatbuffers_1_1_flat_buffer_builder_a9cc09fa59ff9732e972877cfe911c8a5}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfStructs@{CreateVectorOfStructs}}
+\index{CreateVectorOfStructs@{CreateVectorOfStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfStructs()}{CreateVectorOfStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename T , typename F , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Structs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{vector\+\_\+size,  }\item[{F}]{f,  }\item[{S $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & A function that takes the current iteration 0..vector\+\_\+size-\/1, a pointer to the struct that must be filled and the state argument. \\
+\hline
+\mbox{\texttt{ in}}  & {\em state} & Arbitrary state to pass to f. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. This is mostly useful when flatbuffers are generated with mutation accessors. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a9cc09fa59ff9732e972877cfe911c8a5}\label{classflatbuffers_1_1_flat_buffer_builder_a9cc09fa59ff9732e972877cfe911c8a5}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!CreateVectorOfStructs@{CreateVectorOfStructs}}
+\index{CreateVectorOfStructs@{CreateVectorOfStructs}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateVectorOfStructs()}{CreateVectorOfStructs()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename T , typename F , typename S $>$ \\
+\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$\mbox{\hyperlink{classflatbuffers_1_1_vector}{Vector}}$<$const T $\ast$$>$ $>$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Create\+Vector\+Of\+Structs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{vector\+\_\+size,  }\item[{F}]{f,  }\item[{S $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an array of structs into a Flat\+Buffer {\ttfamily vector}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the struct array elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & A function that takes the current iteration 0..vector\+\_\+size-\/1, a pointer to the struct that must be filled and the state argument. \\
+\hline
+\mbox{\texttt{ in}}  & {\em state} & Arbitrary state to pass to f. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a typed {\ttfamily \mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}} into the serialized data indicating where the vector is stored. This is mostly useful when flatbuffers are generated with mutation accessors. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_aa905b29dce19a1795c7bce375cf29961}\label{classflatbuffers_1_1_flat_buffer_builder_aa905b29dce19a1795c7bce375cf29961}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!DedupVtables@{DedupVtables}}
+\index{DedupVtables@{DedupVtables}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{DedupVtables()}{DedupVtables()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Dedup\+Vtables (\begin{DoxyParamCaption}\item[{bool}]{dedup }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+By default vtables are deduped in order to save space. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dedup} & When set to {\ttfamily true}, dedup vtables. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_aa905b29dce19a1795c7bce375cf29961}\label{classflatbuffers_1_1_flat_buffer_builder_aa905b29dce19a1795c7bce375cf29961}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!DedupVtables@{DedupVtables}}
+\index{DedupVtables@{DedupVtables}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{DedupVtables()}{DedupVtables()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Dedup\+Vtables (\begin{DoxyParamCaption}\item[{bool}]{dedup }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+By default vtables are deduped in order to save space. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dedup} & When set to {\ttfamily true}, dedup vtables. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}\label{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!Finish@{Finish}}
+\index{Finish@{Finish}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{Finish()}{Finish()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$}]{root,  }\item[{const char $\ast$}]{file\+\_\+identifier = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finish serializing a buffer by writing the root offset. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+\_\+identifier} & If a {\ttfamily file\+\_\+identifier} is given, the buffer will be prefixed with a standard Flat\+Buffers file header. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}\label{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!Finish@{Finish}}
+\index{Finish@{Finish}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{Finish()}{Finish()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structflatbuffers_1_1_offset}{Offset}}$<$ T $>$}]{root,  }\item[{const char $\ast$}]{file\+\_\+identifier = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finish serializing a buffer by writing the root offset. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+\_\+identifier} & If a {\ttfamily file\+\_\+identifier} is given, the buffer will be prefixed with a standard Flat\+Buffers file header. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a5fcede355ddb6a347edf8b189ada2e42}\label{classflatbuffers_1_1_flat_buffer_builder_a5fcede355ddb6a347edf8b189ada2e42}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!FLATBUFFERS\_ATTRIBUTE@{FLATBUFFERS\_ATTRIBUTE}}
+\index{FLATBUFFERS\_ATTRIBUTE@{FLATBUFFERS\_ATTRIBUTE}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{FLATBUFFERS\_ATTRIBUTE()}{FLATBUFFERS\_ATTRIBUTE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+F\+L\+A\+T\+B\+U\+F\+F\+E\+R\+S\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE (\begin{DoxyParamCaption}\item[{deprecated(\char`\"{}use \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a5e2c3a1e47f0ab4a3a3f07a07a52fb45}{Release}}() instead\char`\"{})}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the released pointer to the serialized buffer. 
+
+\begin{DoxyWarning}{Warning}
+Do N\+OT attempt to use this \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} afterwards! 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+A {\ttfamily Flat\+Buffer} that owns the buffer and its allocator and behaves similar to a {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1unique__ptr}{unique\+\_\+ptr}}} with a deleter. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a5fcede355ddb6a347edf8b189ada2e42}\label{classflatbuffers_1_1_flat_buffer_builder_a5fcede355ddb6a347edf8b189ada2e42}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!FLATBUFFERS\_ATTRIBUTE@{FLATBUFFERS\_ATTRIBUTE}}
+\index{FLATBUFFERS\_ATTRIBUTE@{FLATBUFFERS\_ATTRIBUTE}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{FLATBUFFERS\_ATTRIBUTE()}{FLATBUFFERS\_ATTRIBUTE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+F\+L\+A\+T\+B\+U\+F\+F\+E\+R\+S\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE (\begin{DoxyParamCaption}\item[{deprecated(\char`\"{}use \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a5e2c3a1e47f0ab4a3a3f07a07a52fb45}{Release}}() instead\char`\"{})}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the released pointer to the serialized buffer. 
+
+\begin{DoxyWarning}{Warning}
+Do N\+OT attempt to use this \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder}{Flat\+Buffer\+Builder}} afterwards! 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+A {\ttfamily Flat\+Buffer} that owns the buffer and its allocator and behaves similar to a {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1unique__ptr}{unique\+\_\+ptr}}} with a deleter. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a16a8fd46b34ad7727406c37b65b6b27a}\label{classflatbuffers_1_1_flat_buffer_builder_a16a8fd46b34ad7727406c37b65b6b27a}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!ForceDefaults@{ForceDefaults}}
+\index{ForceDefaults@{ForceDefaults}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{ForceDefaults()}{ForceDefaults()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Force\+Defaults (\begin{DoxyParamCaption}\item[{bool}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+In order to save space, fields that are set to their default value don\textquotesingle{}t get serialized into the buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fd} & When set to {\ttfamily true}, always serializes default values that are set. Optional fields which are not set explicitly, will still not be serialized. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a16a8fd46b34ad7727406c37b65b6b27a}\label{classflatbuffers_1_1_flat_buffer_builder_a16a8fd46b34ad7727406c37b65b6b27a}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!ForceDefaults@{ForceDefaults}}
+\index{ForceDefaults@{ForceDefaults}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{ForceDefaults()}{ForceDefaults()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Force\+Defaults (\begin{DoxyParamCaption}\item[{bool}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+In order to save space, fields that are set to their default value don\textquotesingle{}t get serialized into the buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fd} & When set to {\ttfamily true}, always serializes default values that are set. Optional fields which are not set explicitly, will still not be serialized. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab81ab8aa273c270b0942fd81489cad83}\label{classflatbuffers_1_1_flat_buffer_builder_ab81ab8aa273c270b0942fd81489cad83}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!GetBufferPointer@{GetBufferPointer}}
+\index{GetBufferPointer@{GetBufferPointer}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{GetBufferPointer()}{GetBufferPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Get\+Buffer\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the serialized buffer (after you call {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}{Finish()}}}). 
+
+\begin{DoxyReturn}{Returns}
+Returns an {\ttfamily uint8\+\_\+t} pointer to the Flat\+Buffer data inside the buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_ab81ab8aa273c270b0942fd81489cad83}\label{classflatbuffers_1_1_flat_buffer_builder_ab81ab8aa273c270b0942fd81489cad83}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!GetBufferPointer@{GetBufferPointer}}
+\index{GetBufferPointer@{GetBufferPointer}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{GetBufferPointer()}{GetBufferPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Get\+Buffer\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the serialized buffer (after you call {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_flat_buffer_builder_a0c9e507b373d598b51052fab4fa34912}{Finish()}}}). 
+
+\begin{DoxyReturn}{Returns}
+Returns an {\ttfamily uint8\+\_\+t} pointer to the Flat\+Buffer data inside the buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a099810f03046139d1854d20a1c2a2e41}\label{classflatbuffers_1_1_flat_buffer_builder_a099810f03046139d1854d20a1c2a2e41}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!GetCurrentBufferPointer@{GetCurrentBufferPointer}}
+\index{GetCurrentBufferPointer@{GetCurrentBufferPointer}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{GetCurrentBufferPointer()}{GetCurrentBufferPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Get\+Current\+Buffer\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a pointer to an unfinished buffer. 
+
+\begin{DoxyReturn}{Returns}
+Returns a {\ttfamily uint8\+\_\+t} pointer to the unfinished buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a099810f03046139d1854d20a1c2a2e41}\label{classflatbuffers_1_1_flat_buffer_builder_a099810f03046139d1854d20a1c2a2e41}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!GetCurrentBufferPointer@{GetCurrentBufferPointer}}
+\index{GetCurrentBufferPointer@{GetCurrentBufferPointer}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{GetCurrentBufferPointer()}{GetCurrentBufferPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Get\+Current\+Buffer\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a pointer to an unfinished buffer. 
+
+\begin{DoxyReturn}{Returns}
+Returns a {\ttfamily uint8\+\_\+t} pointer to the unfinished buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a66c8fd33ab9b3b237954c9ea38648f7f}\label{classflatbuffers_1_1_flat_buffer_builder_a66c8fd33ab9b3b237954c9ea38648f7f}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uoffset\+\_\+t flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The current size of the serialized buffer, counting from the end. 
+
+\begin{DoxyReturn}{Returns}
+Returns an {\ttfamily uoffset\+\_\+t} with the current size of the buffer. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflatbuffers_1_1_flat_buffer_builder_a66c8fd33ab9b3b237954c9ea38648f7f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a66c8fd33ab9b3b237954c9ea38648f7f}\label{classflatbuffers_1_1_flat_buffer_builder_a66c8fd33ab9b3b237954c9ea38648f7f}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uoffset\+\_\+t flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The current size of the serialized buffer, counting from the end. 
+
+\begin{DoxyReturn}{Returns}
+Returns an {\ttfamily uoffset\+\_\+t} with the current size of the buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a5e2c3a1e47f0ab4a3a3f07a07a52fb45}\label{classflatbuffers_1_1_flat_buffer_builder_a5e2c3a1e47f0ab4a3a3f07a07a52fb45}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!Release@{Release}}
+\index{Release@{Release}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_detached_buffer}{Detached\+Buffer}} flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the released \mbox{\hyperlink{classflatbuffers_1_1_detached_buffer}{Detached\+Buffer}}. 
+
+\begin{DoxyReturn}{Returns}
+A {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_detached_buffer}{Detached\+Buffer}}} that owns the buffer and its allocator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_a5e2c3a1e47f0ab4a3a3f07a07a52fb45}\label{classflatbuffers_1_1_flat_buffer_builder_a5e2c3a1e47f0ab4a3a3f07a07a52fb45}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!Release@{Release}}
+\index{Release@{Release}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_detached_buffer}{Detached\+Buffer}} flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the released \mbox{\hyperlink{classflatbuffers_1_1_detached_buffer}{Detached\+Buffer}}. 
+
+\begin{DoxyReturn}{Returns}
+A {\ttfamily \mbox{\hyperlink{classflatbuffers_1_1_detached_buffer}{Detached\+Buffer}}} that owns the buffer and its allocator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_aa090a68856f7b554cc7cac3c279fb416}\label{classflatbuffers_1_1_flat_buffer_builder_aa090a68856f7b554cc7cac3c279fb416}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!ReleaseRaw@{ReleaseRaw}}
+\index{ReleaseRaw@{ReleaseRaw}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{ReleaseRaw()}{ReleaseRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Release\+Raw (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{size,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the released pointer to the serialized buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the memory block containing the serialized {\ttfamily Flat\+Buffer}. \\
+\hline
+{\em offset} & The offset from the released pointer where the finished {\ttfamily Flat\+Buffer} starts. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A raw pointer to the start of the memory block containing the serialized {\ttfamily Flat\+Buffer}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+If the allocator is owned, it gets deleted when the destructor is called.. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classflatbuffers_1_1_flat_buffer_builder_aa090a68856f7b554cc7cac3c279fb416}\label{classflatbuffers_1_1_flat_buffer_builder_aa090a68856f7b554cc7cac3c279fb416}} 
+\index{flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}!ReleaseRaw@{ReleaseRaw}}
+\index{ReleaseRaw@{ReleaseRaw}!flatbuffers::FlatBufferBuilder@{flatbuffers::FlatBufferBuilder}}
+\doxysubsubsection{\texorpdfstring{ReleaseRaw()}{ReleaseRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ flatbuffers\+::\+Flat\+Buffer\+Builder\+::\+Release\+Raw (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{size,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the released pointer to the serialized buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the memory block containing the serialized {\ttfamily Flat\+Buffer}. \\
+\hline
+{\em offset} & The offset from the released pointer where the finished {\ttfamily Flat\+Buffer} starts. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A raw pointer to the start of the memory block containing the serialized {\ttfamily Flat\+Buffer}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+If the allocator is owned, it gets deleted when the destructor is called.. 
+\end{DoxyRemark}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/third\+\_\+party/flatbuffers/include/flatbuffers/flatbuffers.\+h\end{DoxyCompactItemize}

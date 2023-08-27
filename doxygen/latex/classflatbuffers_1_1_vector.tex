@@ -1,0 +1,241 @@
+\hypertarget{classflatbuffers_1_1_vector}{}\doxysection{flatbuffers\+::Vector$<$ T $>$ Class Template Reference}
+\label{classflatbuffers_1_1_vector}\index{flatbuffers::Vector$<$ T $>$@{flatbuffers::Vector$<$ T $>$}}
+
+
+Inheritance diagram for flatbuffers\+::Vector$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classflatbuffers_1_1_vector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for flatbuffers\+::Vector$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classflatbuffers_1_1_vector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a0eeca1798d12e29e1003e6f831668986}\label{classflatbuffers_1_1_vector_a0eeca1798d12e29e1003e6f831668986}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{Vector\+Iterator}}$<$ T, typename \mbox{\hyperlink{structflatbuffers_1_1_indirect_helper}{Indirect\+Helper}}$<$ T $>$\+::mutable\+\_\+return\+\_\+type $>$ {\bfseries iterator}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a66212ee5146550ed418a358a8b756dc6}\label{classflatbuffers_1_1_vector_a66212ee5146550ed418a358a8b756dc6}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{Vector\+Iterator}}$<$ T, typename \mbox{\hyperlink{structflatbuffers_1_1_indirect_helper}{Indirect\+Helper}}$<$ T $>$\+::return\+\_\+type $>$ {\bfseries const\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_aebe9837cb57e88212975ec5187f37c55}\label{classflatbuffers_1_1_vector_aebe9837cb57e88212975ec5187f37c55}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{Vector\+Reverse\+Iterator}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{iterator}} $>$ {\bfseries reverse\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_aff94a022cb6a11c6704e6a624f2c285a}\label{classflatbuffers_1_1_vector_aff94a022cb6a11c6704e6a624f2c285a}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{Vector\+Reverse\+Iterator}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{const\+\_\+iterator}} $>$ {\bfseries const\+\_\+reverse\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a28dab085738663f5c866cf6570bb6289}\label{classflatbuffers_1_1_vector_a28dab085738663f5c866cf6570bb6289}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_indirect_helper}{Indirect\+Helper}}$<$ T $>$\+::return\+\_\+type {\bfseries return\+\_\+type}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a7703f4b1cbb1f99087b48cd58abb740e}\label{classflatbuffers_1_1_vector_a7703f4b1cbb1f99087b48cd58abb740e}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_indirect_helper}{Indirect\+Helper}}$<$ T $>$\+::mutable\+\_\+return\+\_\+type {\bfseries mutable\+\_\+return\+\_\+type}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a0eeca1798d12e29e1003e6f831668986}\label{classflatbuffers_1_1_vector_a0eeca1798d12e29e1003e6f831668986}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{Vector\+Iterator}}$<$ T, typename \mbox{\hyperlink{structflatbuffers_1_1_indirect_helper}{Indirect\+Helper}}$<$ T $>$\+::mutable\+\_\+return\+\_\+type $>$ {\bfseries iterator}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a66212ee5146550ed418a358a8b756dc6}\label{classflatbuffers_1_1_vector_a66212ee5146550ed418a358a8b756dc6}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{Vector\+Iterator}}$<$ T, typename \mbox{\hyperlink{structflatbuffers_1_1_indirect_helper}{Indirect\+Helper}}$<$ T $>$\+::return\+\_\+type $>$ {\bfseries const\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_aebe9837cb57e88212975ec5187f37c55}\label{classflatbuffers_1_1_vector_aebe9837cb57e88212975ec5187f37c55}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{Vector\+Reverse\+Iterator}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{iterator}} $>$ {\bfseries reverse\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_aff94a022cb6a11c6704e6a624f2c285a}\label{classflatbuffers_1_1_vector_aff94a022cb6a11c6704e6a624f2c285a}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{Vector\+Reverse\+Iterator}}$<$ \mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{const\+\_\+iterator}} $>$ {\bfseries const\+\_\+reverse\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a28dab085738663f5c866cf6570bb6289}\label{classflatbuffers_1_1_vector_a28dab085738663f5c866cf6570bb6289}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_indirect_helper}{Indirect\+Helper}}$<$ T $>$\+::return\+\_\+type {\bfseries return\+\_\+type}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a7703f4b1cbb1f99087b48cd58abb740e}\label{classflatbuffers_1_1_vector_a7703f4b1cbb1f99087b48cd58abb740e}} 
+typedef \mbox{\hyperlink{structflatbuffers_1_1_indirect_helper}{Indirect\+Helper}}$<$ T $>$\+::mutable\+\_\+return\+\_\+type {\bfseries mutable\+\_\+return\+\_\+type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a602e093850b2984a95581edc0b47b2f3}\label{classflatbuffers_1_1_vector_a602e093850b2984a95581edc0b47b2f3}} 
+uoffset\+\_\+t {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a1761e25f7960e8b71a9a393b5d538d57}\label{classflatbuffers_1_1_vector_a1761e25f7960e8b71a9a393b5d538d57}} 
+{\bfseries F\+L\+A\+T\+B\+U\+F\+F\+E\+R\+S\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE} (deprecated(\char`\"{}use size() instead\char`\"{})) uoffset\+\_\+t Length() const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a0c322798bd0cebd2d20b0b0f92de2f9b}\label{classflatbuffers_1_1_vector_a0c322798bd0cebd2d20b0b0f92de2f9b}} 
+return\+\_\+type {\bfseries Get} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_ac3ac8d3a0c31f1c822d8f2d37e8099cc}\label{classflatbuffers_1_1_vector_ac3ac8d3a0c31f1c822d8f2d37e8099cc}} 
+return\+\_\+type {\bfseries operator\mbox{[}$\,$\mbox{]}} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a22b4449883dc8e24e87cde27839294c4}\label{classflatbuffers_1_1_vector_a22b4449883dc8e24e87cde27839294c4}} 
+{\footnotesize template$<$typename E $>$ }\\E {\bfseries Get\+Enum} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a36bbc83839910913cb0dd0699b1cccf7}\label{classflatbuffers_1_1_vector_a36bbc83839910913cb0dd0699b1cccf7}} 
+{\footnotesize template$<$typename U $>$ }\\const U $\ast$ {\bfseries Get\+As} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a161e5fb2aa923fbf2ce210ceea785942}\label{classflatbuffers_1_1_vector_a161e5fb2aa923fbf2ce210ceea785942}} 
+const \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $\ast$ {\bfseries Get\+As\+String} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a1dc52eb3974e0484a5421752589d436b}\label{classflatbuffers_1_1_vector_a1dc52eb3974e0484a5421752589d436b}} 
+const void $\ast$ {\bfseries Get\+Struct\+From\+Offset} (size\+\_\+t o) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_ac1ab40cdffad6cd50c222fe42c51437b}\label{classflatbuffers_1_1_vector_ac1ab40cdffad6cd50c222fe42c51437b}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{iterator}} {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_ac4633f563a5a52980ff0b56fa683a4de}\label{classflatbuffers_1_1_vector_ac4633f563a5a52980ff0b56fa683a4de}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{const\+\_\+iterator}} {\bfseries begin} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a53e9c0cb1d27e4bd355034dbd43f0127}\label{classflatbuffers_1_1_vector_a53e9c0cb1d27e4bd355034dbd43f0127}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{iterator}} {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a9fcfb2e218f49d6d66a8b4a22aa58755}\label{classflatbuffers_1_1_vector_a9fcfb2e218f49d6d66a8b4a22aa58755}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{const\+\_\+iterator}} {\bfseries end} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a87adb1d483cc7b57aa1a792271ecef6d}\label{classflatbuffers_1_1_vector_a87adb1d483cc7b57aa1a792271ecef6d}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{reverse\+\_\+iterator}} {\bfseries rbegin} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a1e75de0fd258865cf18c504fc8ed1a86}\label{classflatbuffers_1_1_vector_a1e75de0fd258865cf18c504fc8ed1a86}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{const\+\_\+reverse\+\_\+iterator}} {\bfseries rbegin} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a921bd6ee4b999b1c9ec9abc339c377b2}\label{classflatbuffers_1_1_vector_a921bd6ee4b999b1c9ec9abc339c377b2}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{reverse\+\_\+iterator}} {\bfseries rend} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a5d61bd0fd7d9017b1d62c45416666669}\label{classflatbuffers_1_1_vector_a5d61bd0fd7d9017b1d62c45416666669}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{const\+\_\+reverse\+\_\+iterator}} {\bfseries rend} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_aa690e1a3a5fb68942b508952801b6209}\label{classflatbuffers_1_1_vector_aa690e1a3a5fb68942b508952801b6209}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{const\+\_\+iterator}} {\bfseries cbegin} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_af85a734b2feb15c6279784b5b81f009b}\label{classflatbuffers_1_1_vector_af85a734b2feb15c6279784b5b81f009b}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{const\+\_\+iterator}} {\bfseries cend} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a422c0671cb2c884865cb09f09141fc1f}\label{classflatbuffers_1_1_vector_a422c0671cb2c884865cb09f09141fc1f}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{const\+\_\+reverse\+\_\+iterator}} {\bfseries crbegin} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a0f25c70b8f279c53a93141a91dff5d1e}\label{classflatbuffers_1_1_vector_a0f25c70b8f279c53a93141a91dff5d1e}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{const\+\_\+reverse\+\_\+iterator}} {\bfseries crend} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a8342962f2f9d5e872c90abdeaea8d24e}\label{classflatbuffers_1_1_vector_a8342962f2f9d5e872c90abdeaea8d24e}} 
+void {\bfseries Mutate} (uoffset\+\_\+t i, const T \&val)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a29803cd584a620bf076a69b6e97ecf5c}\label{classflatbuffers_1_1_vector_a29803cd584a620bf076a69b6e97ecf5c}} 
+void {\bfseries Mutate\+Offset} (uoffset\+\_\+t i, const uint8\+\_\+t $\ast$val)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_ad806c60362e99576ec5706aef30c2a67}\label{classflatbuffers_1_1_vector_ad806c60362e99576ec5706aef30c2a67}} 
+mutable\+\_\+return\+\_\+type {\bfseries Get\+Mutable\+Object} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_aa754e17cb08c36fb8442784c6bc442da}\label{classflatbuffers_1_1_vector_aa754e17cb08c36fb8442784c6bc442da}} 
+const uint8\+\_\+t $\ast$ {\bfseries Data} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a0ab8113b331fb069dbaa0a108f6077e1}\label{classflatbuffers_1_1_vector_a0ab8113b331fb069dbaa0a108f6077e1}} 
+uint8\+\_\+t $\ast$ {\bfseries Data} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_ae8e4163ff0781720c5ddb3a6f625d435}\label{classflatbuffers_1_1_vector_ae8e4163ff0781720c5ddb3a6f625d435}} 
+const T $\ast$ {\bfseries data} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a874b185e7dec18bb24b1f0ee42afb7cb}\label{classflatbuffers_1_1_vector_a874b185e7dec18bb24b1f0ee42afb7cb}} 
+T $\ast$ {\bfseries data} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_abf919e27aa3e9b60ac30386972c94e65}\label{classflatbuffers_1_1_vector_abf919e27aa3e9b60ac30386972c94e65}} 
+{\footnotesize template$<$typename K $>$ }\\return\+\_\+type {\bfseries Lookup\+By\+Key} (K key) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a602e093850b2984a95581edc0b47b2f3}\label{classflatbuffers_1_1_vector_a602e093850b2984a95581edc0b47b2f3}} 
+uoffset\+\_\+t {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a1761e25f7960e8b71a9a393b5d538d57}\label{classflatbuffers_1_1_vector_a1761e25f7960e8b71a9a393b5d538d57}} 
+{\bfseries F\+L\+A\+T\+B\+U\+F\+F\+E\+R\+S\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE} (deprecated(\char`\"{}use size() instead\char`\"{})) uoffset\+\_\+t Length() const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a0c322798bd0cebd2d20b0b0f92de2f9b}\label{classflatbuffers_1_1_vector_a0c322798bd0cebd2d20b0b0f92de2f9b}} 
+return\+\_\+type {\bfseries Get} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_ac3ac8d3a0c31f1c822d8f2d37e8099cc}\label{classflatbuffers_1_1_vector_ac3ac8d3a0c31f1c822d8f2d37e8099cc}} 
+return\+\_\+type {\bfseries operator\mbox{[}$\,$\mbox{]}} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a22b4449883dc8e24e87cde27839294c4}\label{classflatbuffers_1_1_vector_a22b4449883dc8e24e87cde27839294c4}} 
+{\footnotesize template$<$typename E $>$ }\\E {\bfseries Get\+Enum} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a36bbc83839910913cb0dd0699b1cccf7}\label{classflatbuffers_1_1_vector_a36bbc83839910913cb0dd0699b1cccf7}} 
+{\footnotesize template$<$typename U $>$ }\\const U $\ast$ {\bfseries Get\+As} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a161e5fb2aa923fbf2ce210ceea785942}\label{classflatbuffers_1_1_vector_a161e5fb2aa923fbf2ce210ceea785942}} 
+const \mbox{\hyperlink{structflatbuffers_1_1_string}{String}} $\ast$ {\bfseries Get\+As\+String} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a1dc52eb3974e0484a5421752589d436b}\label{classflatbuffers_1_1_vector_a1dc52eb3974e0484a5421752589d436b}} 
+const void $\ast$ {\bfseries Get\+Struct\+From\+Offset} (size\+\_\+t o) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_ac1ab40cdffad6cd50c222fe42c51437b}\label{classflatbuffers_1_1_vector_ac1ab40cdffad6cd50c222fe42c51437b}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{iterator}} {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_ac4633f563a5a52980ff0b56fa683a4de}\label{classflatbuffers_1_1_vector_ac4633f563a5a52980ff0b56fa683a4de}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{const\+\_\+iterator}} {\bfseries begin} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a53e9c0cb1d27e4bd355034dbd43f0127}\label{classflatbuffers_1_1_vector_a53e9c0cb1d27e4bd355034dbd43f0127}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{iterator}} {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a9fcfb2e218f49d6d66a8b4a22aa58755}\label{classflatbuffers_1_1_vector_a9fcfb2e218f49d6d66a8b4a22aa58755}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{const\+\_\+iterator}} {\bfseries end} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a87adb1d483cc7b57aa1a792271ecef6d}\label{classflatbuffers_1_1_vector_a87adb1d483cc7b57aa1a792271ecef6d}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{reverse\+\_\+iterator}} {\bfseries rbegin} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a1e75de0fd258865cf18c504fc8ed1a86}\label{classflatbuffers_1_1_vector_a1e75de0fd258865cf18c504fc8ed1a86}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{const\+\_\+reverse\+\_\+iterator}} {\bfseries rbegin} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a921bd6ee4b999b1c9ec9abc339c377b2}\label{classflatbuffers_1_1_vector_a921bd6ee4b999b1c9ec9abc339c377b2}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{reverse\+\_\+iterator}} {\bfseries rend} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a5d61bd0fd7d9017b1d62c45416666669}\label{classflatbuffers_1_1_vector_a5d61bd0fd7d9017b1d62c45416666669}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{const\+\_\+reverse\+\_\+iterator}} {\bfseries rend} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_aa690e1a3a5fb68942b508952801b6209}\label{classflatbuffers_1_1_vector_aa690e1a3a5fb68942b508952801b6209}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{const\+\_\+iterator}} {\bfseries cbegin} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_af85a734b2feb15c6279784b5b81f009b}\label{classflatbuffers_1_1_vector_af85a734b2feb15c6279784b5b81f009b}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_iterator}{const\+\_\+iterator}} {\bfseries cend} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a422c0671cb2c884865cb09f09141fc1f}\label{classflatbuffers_1_1_vector_a422c0671cb2c884865cb09f09141fc1f}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{const\+\_\+reverse\+\_\+iterator}} {\bfseries crbegin} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a0f25c70b8f279c53a93141a91dff5d1e}\label{classflatbuffers_1_1_vector_a0f25c70b8f279c53a93141a91dff5d1e}} 
+\mbox{\hyperlink{structflatbuffers_1_1_vector_reverse_iterator}{const\+\_\+reverse\+\_\+iterator}} {\bfseries crend} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a8342962f2f9d5e872c90abdeaea8d24e}\label{classflatbuffers_1_1_vector_a8342962f2f9d5e872c90abdeaea8d24e}} 
+void {\bfseries Mutate} (uoffset\+\_\+t i, const T \&val)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a29803cd584a620bf076a69b6e97ecf5c}\label{classflatbuffers_1_1_vector_a29803cd584a620bf076a69b6e97ecf5c}} 
+void {\bfseries Mutate\+Offset} (uoffset\+\_\+t i, const uint8\+\_\+t $\ast$val)
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_ad806c60362e99576ec5706aef30c2a67}\label{classflatbuffers_1_1_vector_ad806c60362e99576ec5706aef30c2a67}} 
+mutable\+\_\+return\+\_\+type {\bfseries Get\+Mutable\+Object} (uoffset\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_aa754e17cb08c36fb8442784c6bc442da}\label{classflatbuffers_1_1_vector_aa754e17cb08c36fb8442784c6bc442da}} 
+const uint8\+\_\+t $\ast$ {\bfseries Data} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a0ab8113b331fb069dbaa0a108f6077e1}\label{classflatbuffers_1_1_vector_a0ab8113b331fb069dbaa0a108f6077e1}} 
+uint8\+\_\+t $\ast$ {\bfseries Data} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_ae8e4163ff0781720c5ddb3a6f625d435}\label{classflatbuffers_1_1_vector_ae8e4163ff0781720c5ddb3a6f625d435}} 
+const T $\ast$ {\bfseries data} () const
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a874b185e7dec18bb24b1f0ee42afb7cb}\label{classflatbuffers_1_1_vector_a874b185e7dec18bb24b1f0ee42afb7cb}} 
+T $\ast$ {\bfseries data} ()
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_abf919e27aa3e9b60ac30386972c94e65}\label{classflatbuffers_1_1_vector_abf919e27aa3e9b60ac30386972c94e65}} 
+{\footnotesize template$<$typename K $>$ }\\return\+\_\+type {\bfseries Lookup\+By\+Key} (K key) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflatbuffers_1_1_vector_a62170e531ab5fcef8b4c717c0e84553d}\label{classflatbuffers_1_1_vector_a62170e531ab5fcef8b4c717c0e84553d}} 
+uoffset\+\_\+t {\bfseries length\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/third\+\_\+party/flatbuffers/include/flatbuffers/flatbuffers.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="flatbuffers::FlatBufferBuilder::CreateVectorOfStructs" name="flatbuffers::FlatBufferBuilder::CreateVectorOfStructs">
+<area shape="rect" id="node1" title="Serialize a std::vector of structs into a FlatBuffer vector." alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node2" href="$classflatbuffers_1_1_flat_buffer_builder.html#afede51fd9c32d146cbb1832f57c5e1b7" title="Serialize an array of structs into a FlatBuffer vector." alt="" coords="260,5,467,47"/>
+</map>

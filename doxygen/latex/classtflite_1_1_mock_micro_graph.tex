@@ -1,0 +1,101 @@
+\hypertarget{classtflite_1_1_mock_micro_graph}{}\doxysection{tflite\+::Mock\+Micro\+Graph Class Reference}
+\label{classtflite_1_1_mock_micro_graph}\index{tflite::MockMicroGraph@{tflite::MockMicroGraph}}
+
+
+Inheritance diagram for tflite\+::Mock\+Micro\+Graph\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classtflite_1_1_mock_micro_graph__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tflite\+::Mock\+Micro\+Graph\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classtflite_1_1_mock_micro_graph__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a5fc33e418423e281f5c9634f37567eb2}\label{classtflite_1_1_mock_micro_graph_a5fc33e418423e281f5c9634f37567eb2}} 
+{\bfseries Mock\+Micro\+Graph} (\mbox{\hyperlink{classtflite_1_1_simple_memory_allocator}{Simple\+Memory\+Allocator}} $\ast$allocator)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a49409ba1735b34364537dfe2cfbe946b}\label{classtflite_1_1_mock_micro_graph_a49409ba1735b34364537dfe2cfbe946b}} 
+Tf\+Lite\+Status {\bfseries Invoke\+Subgraph} (int subgraph\+\_\+idx) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a6d8a8272fedecbeb570f3e78ac368ab8}\label{classtflite_1_1_mock_micro_graph_a6d8a8272fedecbeb570f3e78ac368ab8}} 
+Tf\+Lite\+Status {\bfseries Reset\+Variable\+Tensors} () override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_add1b2d42947f3246ce331d7d385fa8a6}\label{classtflite_1_1_mock_micro_graph_add1b2d42947f3246ce331d7d385fa8a6}} 
+size\+\_\+t {\bfseries Num\+Subgraph\+Inputs} (int subgraph\+\_\+idx) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a121960de65bacd08a70fe97d0ffb7096}\label{classtflite_1_1_mock_micro_graph_a121960de65bacd08a70fe97d0ffb7096}} 
+\mbox{\hyperlink{struct_tf_lite_eval_tensor}{Tf\+Lite\+Eval\+Tensor}} $\ast$ {\bfseries Get\+Subgraph\+Input} (int subgraph\+\_\+idx, int tensor\+\_\+idx) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a9f2c5def280b6e340971b4e8f252006c}\label{classtflite_1_1_mock_micro_graph_a9f2c5def280b6e340971b4e8f252006c}} 
+size\+\_\+t {\bfseries Num\+Subgraph\+Outputs} (int subgraph\+\_\+idx) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a791d2a029b3f284e3735948c77a0c6f7}\label{classtflite_1_1_mock_micro_graph_a791d2a029b3f284e3735948c77a0c6f7}} 
+\mbox{\hyperlink{struct_tf_lite_eval_tensor}{Tf\+Lite\+Eval\+Tensor}} $\ast$ {\bfseries Get\+Subgraph\+Output} (int subgraph\+\_\+idx, int tensor\+\_\+idx) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a122f065712c4b2b5ce23263cdde235c3}\label{classtflite_1_1_mock_micro_graph_a122f065712c4b2b5ce23263cdde235c3}} 
+int {\bfseries Num\+Subgraphs} () override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a18111956827cf9140d49b7ec042e8fba}\label{classtflite_1_1_mock_micro_graph_a18111956827cf9140d49b7ec042e8fba}} 
+int {\bfseries get\+\_\+init\+\_\+count} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a880ec9f6042822632697b9bdf822b97e}\label{classtflite_1_1_mock_micro_graph_a880ec9f6042822632697b9bdf822b97e}} 
+int {\bfseries get\+\_\+prepare\+\_\+count} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a3029bb8e0feb96b6c484b49eecd75d2a}\label{classtflite_1_1_mock_micro_graph_a3029bb8e0feb96b6c484b49eecd75d2a}} 
+int {\bfseries get\+\_\+free\+\_\+count} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a0b2b4547a00c8cd4c9d1b1488db4a609}\label{classtflite_1_1_mock_micro_graph_a0b2b4547a00c8cd4c9d1b1488db4a609}} 
+int {\bfseries get\+\_\+invoke\+\_\+count} (int subgraph\+\_\+idx) const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a5fc33e418423e281f5c9634f37567eb2}\label{classtflite_1_1_mock_micro_graph_a5fc33e418423e281f5c9634f37567eb2}} 
+{\bfseries Mock\+Micro\+Graph} (\mbox{\hyperlink{classtflite_1_1_simple_memory_allocator}{Simple\+Memory\+Allocator}} $\ast$allocator)
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a49409ba1735b34364537dfe2cfbe946b}\label{classtflite_1_1_mock_micro_graph_a49409ba1735b34364537dfe2cfbe946b}} 
+Tf\+Lite\+Status {\bfseries Invoke\+Subgraph} (int subgraph\+\_\+idx) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a6d8a8272fedecbeb570f3e78ac368ab8}\label{classtflite_1_1_mock_micro_graph_a6d8a8272fedecbeb570f3e78ac368ab8}} 
+Tf\+Lite\+Status {\bfseries Reset\+Variable\+Tensors} () override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_add1b2d42947f3246ce331d7d385fa8a6}\label{classtflite_1_1_mock_micro_graph_add1b2d42947f3246ce331d7d385fa8a6}} 
+size\+\_\+t {\bfseries Num\+Subgraph\+Inputs} (int subgraph\+\_\+idx) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a13726f33e94313a89e06064510e4dbb8}\label{classtflite_1_1_mock_micro_graph_a13726f33e94313a89e06064510e4dbb8}} 
+\mbox{\hyperlink{struct_tf_lite_eval_tensor}{Tf\+Lite\+Eval\+Tensor}} $\ast$ {\bfseries Get\+Subgraph\+Input} (int subgraph\+\_\+idx, int tensor\+\_\+idx) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a9f2c5def280b6e340971b4e8f252006c}\label{classtflite_1_1_mock_micro_graph_a9f2c5def280b6e340971b4e8f252006c}} 
+size\+\_\+t {\bfseries Num\+Subgraph\+Outputs} (int subgraph\+\_\+idx) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_ab8063f926a64e30baf7502a320bdbfb4}\label{classtflite_1_1_mock_micro_graph_ab8063f926a64e30baf7502a320bdbfb4}} 
+\mbox{\hyperlink{struct_tf_lite_eval_tensor}{Tf\+Lite\+Eval\+Tensor}} $\ast$ {\bfseries Get\+Subgraph\+Output} (int subgraph\+\_\+idx, int tensor\+\_\+idx) override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a122f065712c4b2b5ce23263cdde235c3}\label{classtflite_1_1_mock_micro_graph_a122f065712c4b2b5ce23263cdde235c3}} 
+int {\bfseries Num\+Subgraphs} () override
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a18111956827cf9140d49b7ec042e8fba}\label{classtflite_1_1_mock_micro_graph_a18111956827cf9140d49b7ec042e8fba}} 
+int {\bfseries get\+\_\+init\+\_\+count} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a880ec9f6042822632697b9bdf822b97e}\label{classtflite_1_1_mock_micro_graph_a880ec9f6042822632697b9bdf822b97e}} 
+int {\bfseries get\+\_\+prepare\+\_\+count} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a3029bb8e0feb96b6c484b49eecd75d2a}\label{classtflite_1_1_mock_micro_graph_a3029bb8e0feb96b6c484b49eecd75d2a}} 
+int {\bfseries get\+\_\+free\+\_\+count} () const
+\item 
+\mbox{\Hypertarget{classtflite_1_1_mock_micro_graph_a0b2b4547a00c8cd4c9d1b1488db4a609}\label{classtflite_1_1_mock_micro_graph_a0b2b4547a00c8cd4c9d1b1488db4a609}} 
+int {\bfseries get\+\_\+invoke\+\_\+count} (int subgraph\+\_\+idx) const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/mock\+\_\+micro\+\_\+graph.\+h\item 
+/home/yarib/work/github/tensorflow-\/lite-\/fpga-\/delegate/tensorflow\+\_\+lite/arduino/src/tensorflow/lite/micro/mock\+\_\+micro\+\_\+graph.\+cpp\end{DoxyCompactItemize}

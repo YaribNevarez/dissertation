@@ -1,0 +1,4 @@
+<map id="flatbuffers::FlatBufferBuilder::Finish" name="flatbuffers::FlatBufferBuilder::Finish">
+<area shape="rect" id="node1" title="Finish serializing a buffer by writing the root offset." alt="" coords="260,29,467,71"/>
+<area shape="rect" id="node2" href="$classflatbuffers_1_1_flat_buffer_builder.html#a7ba8462e408431054c99d25120326220" title="Finish a buffer with a 32 bit size field pre&#45;fixed (size of the buffer following the size field)...." alt="" coords="5,29,212,71"/>
+</map>

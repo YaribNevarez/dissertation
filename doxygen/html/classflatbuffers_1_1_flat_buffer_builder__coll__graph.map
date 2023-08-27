@@ -1,0 +1,4 @@
+<map id="flatbuffers::FlatBufferBuilder" name="flatbuffers::FlatBufferBuilder">
+<area shape="rect" id="node1" title="Helper class to hold data needed in creation of a FlatBuffer. To serialize data, you typically call o..." alt="" coords="5,307,212,736"/>
+<area shape="rect" id="node2" href="$classflatbuffers_1_1vector__downward.html" title=" " alt="" coords="22,5,195,244"/>
+</map>

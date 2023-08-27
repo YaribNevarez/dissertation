@@ -1,0 +1,13 @@
+<map id="TensorProcessor" name="TensorProcessor">
+<area shape="rect" id="node1" title=" " alt="" coords="408,851,587,1192"/>
+<area shape="rect" id="node8" href="$struct_tensor_processor_1_1_processor_array.html" title=" " alt="" coords="398,1255,597,1347"/>
+<area shape="rect" id="node2" href="$class_processing_unit.html" title=" " alt="" coords="313,564,490,788"/>
+<area shape="rect" id="node3" href="$struct_processing_unit_1_1_transaction.html" title=" " alt="" coords="387,321,589,472"/>
+<area shape="rect" id="node9" href="$struct_tensor_processor_1_1_task.html" title=" " alt="" coords="514,637,678,715"/>
+<area shape="rect" id="node4" href="$struct_processing_unit_1_1_profile.html" title=" " alt="" coords="195,307,363,487"/>
+<area shape="rect" id="node5" href="$struct_d_m_a_hardware_vtbl.html" title=" " alt="" coords="5,5,173,244"/>
+<area shape="rect" id="node6" href="$struct_hardware_vtbl.html" title=" " alt="" coords="197,13,360,237"/>
+<area shape="rect" id="node7" href="$struct_memory_block.html" title=" " alt="" coords="384,71,504,178"/>
+<area shape="rect" id="node10" href="$struct___event.html" title=" " alt="" coords="613,329,750,465"/>
+<area shape="rect" id="node11" href="$struct_timer.html" title=" " alt="" coords="617,71,745,178"/>
+</map>
