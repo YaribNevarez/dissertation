@@ -1,13 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{TensorFlow Lite Delegate Implementation and Operation}
-
-TensorFlow, as an open-source framework, provides extensible interfaces to optimize the execution of specific parts of a model on various hardware types. Within this structure, delegates are critical components that help TensorFlow Lite to efficiently reroute specific tensor operations to be run on specialized hardware accelerators, rather than the default \gls{cpu}.
+\label{chap:appendix_delegate}
+TensorFlow, as an open-source framework, provides extensible interfaces to optimize the execution of specific parts of a model on various hardware types. Within this structure, delegates are components that help TensorFlow Lite to efficiently reroute specific tensor operations to be run on specialized hardware accelerators, rather than the default \gls{cpu}.
 
 This appendix dives into the implementation and operation of the TensorFlow Lite delegate interface for the proposed \gls{tp}.
 
 \subsection{Implementation}
 
-In the TensorFlow ecosystem, a delegate serves as a bridge connecting hardware and software, illustrated in \Fig{fig:sw_stack_appendix}. In this framework, specific tensor operations are offloaded to specialized hardware like \glspl{gpu}, \glspl{npu}, and custom accelerators such as the \gls{tp}. To harness the full potential of the proposed \gls{tp}, it is imperative to provide a tailored TensorFlow Lite delegate.
+In the TensorFlow ecosystem, a delegate serves as a bridge connecting hardware and software, illustrated in \Fig{fig:sw_stack_appendix}. In this framework, specific tensor operations are offloaded to specialized hardware like \glspl{gpu}, \glspl{npu}, and custom accelerators such as the \gls{tp}. To harness the full potential of the proposed \gls{tp}, it is needed to provide a tailored TensorFlow Lite delegate.
 
 \begin{figure}[h!]
 	\centering
@@ -25,23 +25,33 @@ The delegate interface identifies operations eligible for offloading and redirec
 	\label{fig:sw_stack_flowchart_apendix}
 \end{figure}
 
+\subsubsection{Software Classes}
 
-\subsection{Initialization}
+The collaboration diagram in \Fig{fig:sw_tp_delegate} offers a visual representation of the relationships between the delegate class implemented for the \gls{tp}. This diagram is instrumental in understanding the interactions between classes and can be insightful for developers and researchers who aim to customize or extend the TensorFlow Lite delegate for specialized use-cases.
 
-As depicted in \Fig{fig:sw_tf_delegate_initialize}, the process commences by enabling the delegate interface at the application layer. Subsequently, the MicroInterpreter module creates and initializes the \gls{tp} delegate instance. During this phase, the \gls{tp} and \gls{dma} hardware drivers are also instantiated and set up.
+In this diagram, the central class is the `TPDelegate`, representing the delegate designed for the proposed custom \gls{tp}. This delegate interacts with a variety of other classes, facilitating execution of tensor operations and its memory/hardware management.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{./figures/sequence_initialize_tf_delagate.pdf}
+	\includegraphics[width=\textwidth]{./figures/class_t_p_delegate__coll__graph.png}
+	\caption{Collaboration diagram of TensorFlow delegate classes.}
+	\label{fig:sw_tp_delegate}
+\end{figure}
+\FloatBarrier
+\subsection{Initialization}
+
+As depicted in \Fig{fig:sw_tf_delegate_initialize}, the process commences by enabling the delegate interface at the application layer. Subsequently, the MicroInterpreter module creates and initializes the \gls{tp} delegate instance. During this phase, the \gls{tp} and \gls{dma} hardware drivers are also instantiated and initialized.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./figures/sequence_tfl_delegate_initialization.pdf}
 	\caption{Sequence diagram of TensorFlow delegate initialization.}
 	\label{fig:sw_tf_delegate_initialize}
 \end{figure}
-
+\FloatBarrier
 \subsection{Operation}
 
-During operation, TensorFlow executes the computational graph or model graph. The graph is a \gls{ml} model presentation, where nodes represent operations and edges symbolize the tensors that flow between these operations. Essentially, this graph provides a visual representation of how data is processed and transformed as it moves through the various operations of a \gls{ml} model.
-
-The execution of the compute graph is depicted in \Fig{fig:sw_tf_delegate_execution}. Driven by the application layer, the MicroInterpreter module invokes the subgraph execution. The procedure involves:
+During operation, TensorFlow Lite executes the model/computation graph. Essentially, this graph provides a representation of how data is processed and transformed as it moves through the various operations of a \gls{ml} model. The execution of the computation graph is depicted in \Fig{fig:sw_tf_delegate_execution}. Triggered by the application layer, the MicroInterpreter module invokes the subgraph execution. The procedure involves:
 
 \begin{enumerate}
 	\item Traversing through each node in the compute graph.
@@ -55,11 +65,11 @@ The execution of the compute graph is depicted in \Fig{fig:sw_tf_delegate_execut
 	\label{fig:sw_tf_delegate_execution}
 \end{figure}
 
-When the delegate operates the \gls{tp}, it creates a 'Job' object. This object, serving as a container, consists of multiple tasks tailored for the \gls{tp}. Each task contains two data movement transactions that orchestrates:
+When the delegate operates the \gls{tp}, it creates a 'Job' object that serves as a tasks container for the \gls{tp}. In this case, it contains \textit{Conv2D} operation task. Each task contains two data transactions:
 
 \begin{itemize}
-	\item \textbf{Setup Transaction:} Here, the \gls{dma} transfers the setup buffer (as illustrated in \Fig{fig:setup_transaction}) from the \gls{ram} to the \gls{tp} to establish a groundwork for the upcoming computations. See \Fig{fig:sw_tp_delegate_job} (a).
-	\item \textbf{Compute Transaction:} As the core of the operation, the input tensor gets streamed to the \gls{tp} via the \gls{dma} TX channel. Concurrently, the output tensor flows out from the \gls{tp}, to the \gls{dram} through the \gls{dma} RX channel. See \Fig{fig:sw_tp_delegate_job} (b).
+	\item \textbf{Setup Transaction:} Here, the \gls{dma} transfers the setup buffer (as depicted in \Fig{fig:setup_transaction}) from its memory source to the \gls{tp}, to establish a groundwork for the upcoming \textit{Conv2D} execution. See \Fig{fig:sw_tp_delegate_job} (a). During this transaction, the \gls{tp} operates in its \textit{configuration} mode.
+	\item \textbf{Compute Transaction:} As the core of the operation, the input tensor gets streamed to the \gls{tp} via the \gls{dma} TX channel from its memory source. Concurrently, the output tensor flows out from the \gls{tp}, to its memory destine through the \gls{dma} RX channel. See \Fig{fig:sw_tp_delegate_job} (b). During this transaction, the \gls{tp} operates in its \textit{execution} mode.
 \end{itemize}
 
 \begin{figure}[h!]
@@ -76,22 +86,9 @@ When the delegate operates the \gls{tp}, it creates a 'Job' object. This object,
 	\label{fig:setup_transaction}
 \end{figure}
 
-\subsection{Software Classes}
-The collaboration diagram in \Fig{fig:sw_tp_delegate} offers a visual representation of the relationships between the delegate class implemented for the \gls{tp}. This diagram instrumental in understanding the interactions between classes and can be insightful for developers and researchers who aim to customize or extend the TensorFlow Lite delegate for specialized use-cases.
-
-In this diagram, the central class is the `TPDelegate`, representing the delegate designed for the proposed custom \gls{tp}. This delegate interacts with a variety of other classes, facilitating tensor operations, memory management, and hardware tasks.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{./figures/class_t_p_delegate__coll__graph.png}
-	\caption{Collaboration diagram of TensorFlow delegate classes.}
-	\label{fig:sw_tp_delegate}
-\end{figure}
-
-
 In conclusion, the TensorFlow Lite delegate for \gls{tp} encapsulates the mechanisms of software-hardware synergy, pushing the efficient neural network execution on custom hardware platforms.
-%%%%%%%%%%%%%%%%%%%%
 
+\FloatBarrier
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{SbS algorithm}
 \label{chap:appendix}

@@ -18,11 +18,11 @@
 \contentsline {table}{\numberline {3.10}{\ignorespaces Platform implementations.\relax }}{73}{table.caption.94}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Low-Power Conv2D Tensor Accelerator: Hybrid 6-bit Floating-Point Computation}{75}{chapter.4}%
-\contentsline {table}{\numberline {4.1}{\ignorespaces Resource utilization and power dissipation on the Zynq-7007S SoC.\relax }}{97}{table.caption.130}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Compute performance of the CPU and TP on each Conv2D tensor operation. This table presents: tensor operation, computational cost in mega floating-point operations (MFLOP), latency, throughput, power efficiency, and estimated energy consumption as the energy delay product (EDP).\relax }}{98}{table.caption.131}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Resource utilization and power dissipation of individual multiplier and adder floating-point (IEEE 754) operator cores (Xilinx LogiCORE IP).\relax }}{98}{table.caption.133}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Comparison of hardware implementation with related work.\relax }}{102}{table.caption.142}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Resource utilization and power dissipation on the Zynq-7007S SoC.\relax }}{99}{table.caption.130}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Compute performance of the CPU and TP on each Conv2D tensor operation. This table presents: tensor operation, computational cost in mega floating-point operations (MFLOP), latency, throughput, power efficiency, and estimated energy consumption as the energy delay product (EDP).\relax }}{99}{table.caption.131}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Resource utilization and power dissipation of individual multiplier and adder floating-point (IEEE 754) operator cores (Xilinx LogiCORE IP).\relax }}{100}{table.caption.133}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Comparison of hardware implementation with related work.\relax }}{104}{table.caption.142}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusion and Outlook}{105}{chapter.5}%
+\contentsline {xchapter}{Conclusion and Outlook}{107}{chapter.5}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Appendix}{109}{appendix.A}%
+\contentsline {xchapter}{Appendix}{111}{appendix.A}%

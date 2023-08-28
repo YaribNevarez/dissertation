@@ -36,26 +36,26 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces (a) Dot-product hardware module with Hybrid-Float6 MAC, (b) bias accumulation, (c) activation and normalization to IEEE754.\relax }}{81}{figure.caption.103}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Hybrid-Float6 multiply-accumulate hardware design.\relax }}{82}{figure.caption.105}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Design parameters for on-chip memory buffers on the TP.\relax }}{83}{figure.caption.107}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces High level embedded software architecture.\relax }}{86}{figure.caption.113}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Software flowchart.\relax }}{86}{figure.caption.114}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Experimental setup for sensor analytics on structural health monitoring, all lengths are in meters (m).\relax }}{90}{figure.caption.117}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Spectrograms of sensors $S_1, S_2$ converted to grayscale for pulses at $x =0.105$ m, $y = 0.109$ m with noise disturbance.\relax }}{91}{figure.caption.118}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces CNN-regression model for sensor analytics.\relax }}{92}{figure.caption.120}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Training results.\relax }}{93}{figure.caption.122}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Performance of the model with different data representations.\relax }}{94}{figure.caption.123}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Inference acceleration and power reduction on the TP with floating-point and HF6 vs. CPU on the Zynq-7007S SoC.\relax }}{97}{figure.caption.132}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Run-time inference of TensorFlow Lite on the Zynq-7007S SoC. (a) CPU ARM Cortex-A9 at $\unit [666]{MHz}$, (b) cooperative CPU + TP with floating-point Xilinx LogiCORE IP at $\unit [200]{MHz}$, and (c) cooperative CPU + TP with Hybrid-Float6 at $\unit [200]{MHz}$.\relax }}{99}{figure.caption.135}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces 2D error distribution of three CNN-regression models.\relax }}{101}{figure.caption.137}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Hardware resource utilization on the Zynq-7007S SoC.\relax }}{101}{figure.caption.139}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Estimated power dissipation on the Zynq-7007S SoC with PS at $\unit [666]{MHz}$ and PL at $\unit [200]{MHz}$.\relax }}{101}{figure.caption.140}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces High level embedded software architecture.\relax }}{89}{figure.caption.113}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Software flowchart.\relax }}{89}{figure.caption.114}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Experimental setup for sensor analytics on structural health monitoring, all lengths are in meters (m).\relax }}{91}{figure.caption.117}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Spectrograms of sensors $S_1, S_2$ converted to grayscale for pulses at $x =0.105$ m, $y = 0.109$ m with noise disturbance.\relax }}{93}{figure.caption.118}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces CNN-regression model for sensor analytics.\relax }}{94}{figure.caption.120}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Training results.\relax }}{95}{figure.caption.122}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Performance of the model with different data representations.\relax }}{96}{figure.caption.123}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Inference acceleration and power reduction on the TP with floating-point and HF6 vs. CPU on the Zynq-7007S SoC.\relax }}{99}{figure.caption.132}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Run-time inference of TensorFlow Lite on the Zynq-7007S SoC. (a) CPU ARM Cortex-A9 at $\unit [666]{MHz}$, (b) cooperative CPU + TP with floating-point Xilinx LogiCORE IP at $\unit [200]{MHz}$, and (c) cooperative CPU + TP with Hybrid-Float6 at $\unit [200]{MHz}$.\relax }}{101}{figure.caption.135}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces 2D error distribution of three CNN-regression models.\relax }}{102}{figure.caption.137}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Hardware resource utilization on the Zynq-7007S SoC.\relax }}{103}{figure.caption.139}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Estimated power dissipation on the Zynq-7007S SoC with PS at $\unit [666]{MHz}$ and PL at $\unit [200]{MHz}$.\relax }}{103}{figure.caption.140}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusion and Outlook}{105}{chapter.5}%
+\contentsline {xchapter}{Conclusion and Outlook}{107}{chapter.5}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Appendix}{109}{appendix.A}%
-\contentsline {figure}{\numberline {A.1}{\ignorespaces High level embedded software architecture.\relax }}{109}{figure.caption.143}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Software flowchart.\relax }}{110}{figure.caption.144}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Sequence diagram of TensorFlow delegate initialization.\relax }}{110}{figure.caption.145}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Sequence diagram of TensorFlow delegate execution.\relax }}{111}{figure.caption.146}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Tensor Processor task execution. (a) Setup transaction. (b) Compute transaction.\relax }}{112}{figure.caption.147}%
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Setup transaction buffer stream.\relax }}{112}{figure.caption.148}%
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Collaboration diagram of TensorFlow delegate classes.\relax }}{113}{figure.caption.149}%
+\contentsline {xchapter}{Appendix}{111}{appendix.A}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces High level embedded software architecture.\relax }}{111}{figure.caption.143}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Software flowchart.\relax }}{112}{figure.caption.144}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Collaboration diagram of TensorFlow delegate classes.\relax }}{113}{figure.caption.146}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Sequence diagram of TensorFlow delegate initialization.\relax }}{114}{figure.caption.147}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Sequence diagram of TensorFlow delegate execution.\relax }}{115}{figure.caption.148}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Tensor Processor task execution. (a) Setup transaction. (b) Compute transaction.\relax }}{116}{figure.caption.149}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Setup transaction buffer stream.\relax }}{116}{figure.caption.150}%

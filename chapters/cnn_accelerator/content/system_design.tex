@@ -2,7 +2,7 @@
 \label{sec:system_design}
 The system design is a hardware/software co-design framework for low-power \gls{ml} analytics. This architecture allows design exploration for dedicated hardware in embedded systems. For \gls{ml} compatibility, the proposed framework integrates TensorFlow Lite micro.
 
-\subsection{Base embedded system architecture}
+\subsection{Base Embedded System Architecture}
 The embedded system architecture consists of a cooperative hardware-software platform. See \Fig{fig:system_architecture}. The embedded \gls{cpu} delegates low-level compute-bound tensor operations to the \glspl{tp}. The \glspl{tp} employ AXI-Lite interface for configuration and AXI-Stream interfaces via \gls{dma} for data movement from off-chip memory. Each \gls{tp} and \gls{dma} pair asserts interrupt flags once its compute job/transaction completes. Interrupt events are handled by the embedded \gls{cpu} to use the results and to start a new compute job/transaction. The hardware architecture can vary its resource utilization by customizing the \glspl{tp} prior to the hardware synthesis.
 \begin{figure}[h!]
 	\centering
@@ -10,7 +10,8 @@ The embedded system architecture consists of a cooperative hardware-software pla
 	\caption{Base embedded system architecture.}
 	\label{fig:system_architecture}
 \end{figure}
-\subsection{Tensor processor}
+\FloatBarrier
+\subsection{Tensor Processor}
 The \gls{tp} is a dedicated hardware module to compute tensor operations. This implements high performance communication with AXI-Stream, direct \gls{cpu} communication with AXI-Lite, and on-chip storage utilizing BRAM. This hardware architecture is implemented with \gls{hls}. The tensor operations are implemented based on the C++ TensorFlow Lite micro kernels. See \fig{fig:accelerator}. This research focuses on the \emph{Conv2D} tensor operation that computes 2D convolution layers.
 
 \begin{figure}[h!]
@@ -19,14 +20,15 @@ The \gls{tp} is a dedicated hardware module to compute tensor operations. This i
 	\caption{High level hardware architecture of the proposed tensor processor.}
 	\label{fig:accelerator}
 \end{figure}
-\subsubsection{Modes of operation}
+\FloatBarrier
+\subsubsection{Modes of Operation}
 The \gls{tp} has two modes of operation: \emph{configuration} and \emph{execution}.
 \begin{itemize}
 	\item In \emph{configuration} mode, the \gls{tp} receives the hyperparameters of the tensor operation: stride, dilation, padding, offset, activation, depth-multiplier, input shape, filter shape, bias shape, and output shape. Afterwards, in the same data stream, the \gls{tp} receives filter and bias tensors. These are locally stored in BRAM for data re-usage. The filter and bias tensors are transferred using standard \gls{fp} format wrapping the 6-bit \gls{fp} representation, which is extracted by the \gls{tp} for local on-chip storage.
 	
 	\item In \emph{execution} mode, the \gls{tp} executes the tensor operation according to the hyperparameters given in the configuration mode. During execution, the input and output tensors are moved via \gls{dma}.
 \end{itemize}
-\subsubsection{Dot-product with hybrid floating-point}
+\subsubsection{Dot-product with Hybrid Floating-Point}
 \label{sec:dot_product}
 It is implemented the floating-point computation adopting the dot-product with hybrid custom floating-point~\cite{nevarez2021accelerating}. The hardware dot-product is illustrated in \Fig{fig:dot_product} and \Fig{fig:dot_product_loop}(a). This design instantiates a HF6 \gls{mac} with an internal accumulator register of 64-bit fixed-point with 23-bit fraction. During operation, the feature map and filter values are extracted from on-chip memory (BRAM). Both values have to be different than zero to enable the \gls{mac} operation. The result is biased by accumulating a denormalized bias value. Since the bias is stored with 6-bit \gls{fp}, its fractional part has to be aligned with the 23-bit fraction of the accumulator, see \Fig{fig:dot_product_loop}(b). The ReLu activation is applied to the accumulator and its result is normalized to convert it to IEEE 754 standard \gls{fp}, see \Fig{fig:dot_product_loop}(c).
 
@@ -65,7 +67,7 @@ Special cases, such as Infinity and \gls{nan}, are not considered in this design
 The approximation error is defined by the difference between \Equ{eq:float} and \Equ{eq:float_subnorm} when $E=0$ and $M=2^{-1}$. The result defines the error as $e=2^{-B-1}$. Then, from \Equ{eq:float_bias} with $E_{size}=4$, gives $B=7$. Hence, $e=3.9\mathrm{e}{-3}$. This error is produced when having the subnormal case $E=0$ and $M=2^{-1}$, which corresponds to the value $\pm7.8\mathrm{e}{-3}$ deviated to $\pm1.17\mathrm{e}{-2}$. This approximation leverages the intrinsic error tolerance of \gls{cnn} to reduce hardware resource utilization and energy consumption~\cite{du2014leveraging}.
 
 
-\subsubsection{On-chip memory utilization}
+\subsubsection{On-chip Memory Utilization}
 \label{sec:memory_utilization}
 The total on-chip memory utilization on the \gls{tp} is defined by \Equ{eq:tp_memory}, where $TP_B$ and $V_{M}$ represent the tensor buffers required for \emph{Conv} operation and local registers required for the logic, respectively. \Equ{eq:tp_memory_buffer} defines the tensor buffers, where $Input_{M}$ is the \emph{input buffer}, $Filter_{M}$ is the \emph{filter buffer}, $Bias_{M}$ is the \emph{bias buffer}. These on-chip memory buffers are defined in bits. \fig{fig:accelerator_buffers} illustrates the convolution operation utilizing the on-chip memory buffers.
 \begin{figure}
@@ -102,7 +104,7 @@ C_{O}=\frac{TP_{M}-V_{M}-K_{H}W_{I}C_{I}BitSize_{I}}{C_{I}K_{W}K_{H}BitSize_{F}+
 \end{eqnarray}
 
 The floating-point formats implemented in the \gls{tp} are defined by $BitSize_F$, $BitSize_B$ and $BitSize_I$. The HF6 defines 6-bit for $BitSize_F$ and $BitSize_B$, and 32-bit for $BitSize_I$. These are design parameters defined before hardware synthesis. This allows fine control of BRAM utilization, which is suitable for resource-limited devices.
-
+\FloatBarrier
 \subsection{Training Method}
 The training method consists of two separate stages: (1) training with iterative early stop and (2) quantization-aware training.
  
@@ -226,24 +228,29 @@ The quantization method uses rounding strategy to reduce the \gls{fp} representa
 		\ENDFOR
 	\end{algorithmic}
 \end{algorithm}
-\begin{figure}[t!]
-	\centering
-	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/sw_stack.pdf}
-	\caption{High level embedded software architecture.}
-	\label{fig:sw_stack}
-\end{figure}
 
-\begin{figure}[t!]
-	\centering
-	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/sw_stack_flowchart.pdf}
-	\caption{Software flowchart.}
-	\label{fig:sw_stack_flowchart}
-\end{figure}
-
-\subsection{Embedded software architecture}
+\FloatBarrier
+\subsection{Embedded Software Architecture}
 The software architecture is a layered object-oriented application framework written in C++, see \fig{fig:sw_stack} and \fig{fig:sw_stack_flowchart}. Description of the software layers is as follows:
 \begin{itemize}
 	\item \emph{Application}: As the highest level of abstraction, this software layer implements the analytics application, this invokes the \gls{ml} library.
 	\item \emph{Machine learning library}: This software layer offers a comprehensive high level \gls{api} for \gls{ml} inference. This layer consist of TensorFlow Lite micro, this is modified to implement the delegate software interfaces for the proposed hardware accelerator.
 	\item \emph{Hardware abstraction layer}: This layer consist of the hardware drivers used in the TFLite delegate interfaces. This software layer handles initialization and runtime operation of the \gls{tp} and \gls{dma}.
 \end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/sw_stack.pdf}
+	\caption{High level embedded software architecture.}
+	\label{fig:sw_stack}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{./chapters/cnn_accelerator/figures/sw_stack_flowchart.pdf}
+	\caption{Software flowchart.}
+	\label{fig:sw_stack_flowchart}
+\end{figure}
+
+A detailed description of the TensorFlow Lite delegate implementation and operation is presented in the Appendix~\ref{chap:appendix_delegate}
+\FloatBarrier
