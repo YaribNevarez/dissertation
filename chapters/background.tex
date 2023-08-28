@@ -441,6 +441,8 @@ improve the performance under noise even more.
 Neural network accelerators are specialized hardware components or platforms designed to accelerate the computationally intensive tasks associated with neural networks. Their primary goal is to enhance performance, reduce power consumption, and provide real-time processing capabilities for \gls{ai}/\gls{ml} applications~\cite{sze2017efficient}.
 
 \subsection{The Need for Accelerators}
+Neural networks come with intensive computational and memory demands due to their deep architectures and vast numbers of parameters:
+
 \begin{itemize}
 	\item \textbf{Compute Cost}: \gls{ai}/\gls{ml} models, especially \glspl{cnn} and transformers, are characterized by their deep architectures. Each layer involves a large number of weights and activations. In the forward pass (inference), for each neuron, the input activations are multiplied by corresponding weights, and then all these products are accumulated to produce the neuron output. Similarly, during training, the backpropagation algorithm is also computation-costly.
 	
@@ -475,11 +477,13 @@ Neural network accelerators are specialized hardware components or platforms des
 		\item \textbf{Operational Continuity in Low-Power Devices}: Many edge devices, such as sensors, are expected to operate continuously. These devices might be located in hard-to-reach places, making frequent battery replacements impractical. Thus, energy efficiency is crucial for operational viability and application feasibility.
 	\end{enumerate}
 	
-	Consequently, when deploying neural network models on such devices, it is essential to consider optimizations at both the software and hardware levels to ensure that the power budget is adhered without compromising performance.
-	
 \end{itemize}
 
+Given these challenges, it is needed to optimize neural network deployments on such devices at both software and hardware levels to achieve desired performance within the power constraints.
+
 \subsection{Types of Accelerators}
+
+In the dynamic landscape of \gls{ai}/\gls{ai}, various hardware accelerators, including \glspl{gpu}, \glspl{asic}, \glspl{fpga}, and \glspl{npu}, have emerged to optimize and facilitate neural network computations.
 \begin{itemize}
 	\item \textbf{\glspl{gpu}}: Historically designed for the purpose of graphics rendering, \glspl{gpu} have architecture that naturally perform parallel computing. This parallelism is especially beneficial for neural network computations involving repetitive and simultaneous operations. As a result, \glspl{gpu} have become a cornerstone for deep learning training and inference.
 	
@@ -507,6 +511,8 @@ Neural network accelerators are specialized hardware components or platforms des
 \end{itemize}
 
 \subsection{Design Considerations}
+For neural network accelerator design, it is important to address key considerations such as precision, memory hierarchy, scalability, and flexibility, each of which plays a crucial role in ensuring optimal performance and adaptability in the evolving \gls{ai}/\gls{ml} domain.
+
 \begin{itemize}
 	\item \textbf{Precision}: In neural network accelerator design, the precision of arithmetic operations plays a pivotal role. Employing reduced precision arithmetic offers dual advantages: it can markedly accelerate computations and simultaneously diminish power consumption. However, it is crucial to preserve a balance to ensure that the reduced precision does not compromise the accuracy and reliability of the neural network model.
 	
@@ -521,7 +527,7 @@ Neural network accelerators are specialized hardware components or platforms des
 	
 \end{itemize}
 
-\section{Precision}
+\section{Precision and Effect in Training}
 
 Conventional neural networks typically rely on regular \gls{fp} arithmetic. However, to optimize computational speed, minimize memory footprint, and reduce energy consumption, hardware accelerators adopt lower precision formats. While this can speed up operations and reduce resource demands, there is a trade-off as reduced precision might affect the model accuracy. Therefore, balancing precision and performance is crucial, with techniques such as mixed-precision and dynamic/custom arithmetic being employed to navigate these trade-offs~\cite{micikevicius2017mixed}.
 \subsection{Fixed-Point}

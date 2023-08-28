@@ -29,22 +29,22 @@
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}The Need for Accelerators}{\reset@font\mtcSSfont 29}{subsection.2.3.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}Types of Accelerators}{\reset@font\mtcSSfont 31}{subsection.2.3.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.3}Design Considerations}{\reset@font\mtcSSfont 32}{subsection.2.3.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Precision}{\reset@font\mtcSfont 33}{section.2.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Precision and Effect in Training}{\reset@font\mtcSfont 33}{section.2.4}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.1}Fixed-Point}{\reset@font\mtcSSfont 33}{subsection.2.4.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.2}Floating-Point}{\reset@font\mtcSSfont 34}{subsection.2.4.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.3}Post-Training Quantization}{\reset@font\mtcSSfont 36}{subsection.2.4.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.4}Quantization-Aware Training}{\reset@font\mtcSSfont 36}{subsection.2.4.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Dataflow Taxonomy}{\reset@font\mtcSfont 37}{section.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.4}Quantization-Aware Training}{\reset@font\mtcSSfont 37}{subsection.2.4.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Dataflow Taxonomy}{\reset@font\mtcSfont 38}{section.2.5}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.6}Multiply-Accumulate Unit}{\reset@font\mtcSfont 39}{section.2.6}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.6.1}Design Considerations}{\reset@font\mtcSSfont 39}{subsection.2.6.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.7}Related Work}{\reset@font\mtcSfont 40}{section.2.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.6.1}Design Considerations}{\reset@font\mtcSSfont 40}{subsection.2.6.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.7}Related Work}{\reset@font\mtcSfont 41}{section.2.7}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.1}Aggressive Quantization}{\reset@font\mtcSSfont 41}{subsection.2.7.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.2}Spiking Neural Network Accelerators}{\reset@font\mtcSSfont 41}{subsection.2.7.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Classical Approximate Computing}{\reset@font\mtcSSSfont 41}{section*.50}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Classical Approximate Computing}{\reset@font\mtcSSSfont 42}{section*.50}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Spike-by-Spike Neural Network Accelerators}{\reset@font\mtcSSSfont 42}{section*.51}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.3}Convolutional Neural Network Accelerators with Custom Floating-Point Computation on \gls {fpga}}{\reset@font\mtcSSfont 42}{subsection.2.7.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Hybrid Custom Floating-Point}{\reset@font\mtcSSSfont 42}{section*.52}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Hybrid Custom Floating-Point}{\reset@font\mtcSSSfont 43}{section*.52}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Low-Precision Floating-Point}{\reset@font\mtcSSSfont 43}{section*.53}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Low-Power Architectures for \gls {iot} Deployments}{\reset@font\mtcSSSfont 43}{section*.54}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.4}Neural Network Accelerators for Training and Inference with 8-bit Floating-Point Computation on \gls {asic}}{\reset@font\mtcSSfont 43}{subsection.2.7.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.5}Training Techniques with 8-bit Floating-Point Quantization}{\reset@font\mtcSSfont 44}{subsection.2.7.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.4}Neural Network Accelerators for Training and Inference with 8-bit Floating-Point Computation on \gls {asic}}{\reset@font\mtcSSfont 44}{subsection.2.7.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.5}Training Techniques with 8-bit Floating-Point Quantization}{\reset@font\mtcSSfont 45}{subsection.2.7.5}}
