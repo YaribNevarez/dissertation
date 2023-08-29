@@ -15,44 +15,6 @@
 \newlabel{chap.background}{{2}{15}{Background and Related Work}{chapter.2}{}}
 \newlabel{chap.background@cref}{{[chapter][2][]2}{[1][15][]15}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction}{15}{section.2.1}\protected@file@percent }
-\citation{rosenblatt1958perceptron}
-\citation{rumelhart1986learning}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Neural Networks}{16}{section.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Architecture}{16}{subsection.2.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Layers}{16}{section*.19}\protected@file@percent }
-\citation{glorot2010understanding}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Weights and Bias}{17}{section*.20}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Activation Functions}{17}{section*.21}\protected@file@percent }
-\citation{maas2013rectifier}
-\citation{he2015delving}
-\citation{bottou2010large}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Training Process}{19}{subsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Stochastic Gradient Descent}{19}{section*.22}\protected@file@percent }
-\citation{bottou2010large}
-\citation{bottou2018optimization}
-\citation{sutskever2013importance}
-\citation{duchi2011adaptive}
-\citation{goodfellow2016deep}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Multi-Layer Perceptron}{20}{subsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Key Components}{20}{section*.23}\protected@file@percent }
-\citation{lecun1998gradient}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Convolutional Neural Networks}{21}{subsection.2.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Key Components}{21}{section*.24}\protected@file@percent }
-\citation{gu2018recent}
-\citation{goodfellow2016deep}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Conv2D Tensor Operation}{22}{section*.25}\protected@file@percent }
-\newlabel{eq:conv2D}{{2.2}{22}{Conv2D Tensor Operation}{equation.2.2.2}{}}
-\newlabel{eq:conv2D@cref}{{[subsection][4][2,2]2.2.4}{[1][22][]22}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Computational Cost of a Convolution Layer}{22}{section*.26}\protected@file@percent }
-\citation{han2015deep}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Definitions}{23}{section*.27}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Computations Per Output Element}{23}{section*.28}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Output Dimensions}{23}{section*.29}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Total Computations}{23}{section*.30}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Error Tolerance in Convolution Layers}{24}{section*.31}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Sources of Error}{24}{section*.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Error Compensating Mechanisms}{24}{section*.33}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Exploiting Error Tolerance for Optimization}{24}{section*.34}\protected@file@percent }
 \citation{gerstner2014neuronal}
 \citation{merolla2014million}
 \citation{neftci2019surrogate}
@@ -60,68 +22,106 @@
 \citation{neftci2019surrogate}
 \citation{masquelier2007unsupervised}
 \citation{ernst2007efficient}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Spiking Neural Networks}{25}{subsection.2.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Spike-by-Spike Neural Networks}{25}{section*.35}\protected@file@percent }
-\newlabel{sec:sbs}{{2.2.5}{25}{Spike-by-Spike Neural Networks}{section*.35}{}}
-\newlabel{sec:sbs@cref}{{[subsection][5][2,2]2.2.5}{[1][25][]25}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Spiking Neural Networks}{16}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Spike-by-Spike Neural Networks}{16}{section*.19}\protected@file@percent }
+\newlabel{sec:sbs}{{2.2}{16}{Spike-by-Spike Neural Networks}{section*.19}{}}
+\newlabel{sec:sbs@cref}{{[section][2][2]2.2}{[1][16][]16}}
 \citation{ernst2007efficient}
 \citation{rotermund2019Backpropagation}
+\newlabel{eq:sbs_update}{{2.2}{17}{Spike-by-Spike Neural Networks}{equation.2.2.2}{}}
+\newlabel{eq:sbs_update@cref}{{[section][2][2]2.2}{[1][17][]17}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Basic Network Overview}{17}{section*.20}\protected@file@percent }
 \citation{izhikevich2004model}
-\newlabel{eq:sbs_update}{{2.9}{26}{Spike-by-Spike Neural Networks}{equation.2.2.9}{}}
-\newlabel{eq:sbs_update@cref}{{[subsection][5][2,2]2.2.5}{[1][26][]26}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Basic Network Overview}{26}{section*.36}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces SbS layer update.\relax }}{27}{algocf.1}\protected@file@percent }
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{alg:sbs}{{1}{27}{Basic Network Overview}{algocf.1}{}}
-\newlabel{alg:sbs@cref}{{[algocf][1][]1}{[1][26][]27}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces \gls {sbs} network architecture for handwritten digit classification task.\relax }}{27}{figure.caption.38}\protected@file@percent }
-\newlabel{fig:sbs_network}{{2.1}{27}{\gls {sbs} network architecture for handwritten digit classification task.\relax }{figure.caption.38}{}}
-\newlabel{fig:sbs_network@cref}{{[figure][1][2]2.1}{[1][26][]27}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces \gls {sbs} network architecture for handwritten digit classification task.\relax }}{27}{table.caption.39}\protected@file@percent }
-\newlabel{tab:sbs_network}{{2.1}{27}{\gls {sbs} network architecture for handwritten digit classification task.\relax }{table.caption.39}{}}
-\newlabel{tab:sbs_network@cref}{{[table][1][2]2.1}{[1][26][]27}}
 \citation{lecun1998mnist}
 \citation{rotermund2019Backpropagation}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces \gls {sbs} network architecture for handwritten digit classification task.\relax }}{18}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:sbs_network}{{2.1}{18}{\gls {sbs} network architecture for handwritten digit classification task.\relax }{figure.caption.22}{}}
+\newlabel{fig:sbs_network@cref}{{[figure][1][2]2.1}{[1][18][]18}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces SbS layer update.\relax }}{18}{algocf.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{alg:sbs}{{1}{18}{Basic Network Overview}{algocf.1}{}}
+\newlabel{alg:sbs@cref}{{[algocf][1][]1}{[1][18][]18}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Computational Cost}{18}{section*.24}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces \gls {sbs} network architecture for handwritten digit classification task.\relax }}{19}{table.caption.23}\protected@file@percent }
+\newlabel{tab:sbs_network}{{2.1}{19}{\gls {sbs} network architecture for handwritten digit classification task.\relax }{table.caption.23}{}}
+\newlabel{tab:sbs_network@cref}{{[table][1][2]2.1}{[1][18][]19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces \gls {sbs} \glspl {ip_sbs} as independent computational entities, (a) illustrates an input layer with a massive amount of \glspl {ip_sbs} operating as independent computational entities, (b) shows a hidden layer with an arbitrary amount of \glspl {ip_sbs} as independent computational entities, (c) exhibits a set of neurons grouped in an \gls {ip_sbs}.\relax }}{19}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:SbS_layer}{{2.2}{19}{\gls {sbs} \glspl {ip_sbs} as independent computational entities, (a) illustrates an input layer with a massive amount of \glspl {ip_sbs} operating as independent computational entities, (b) shows a hidden layer with an arbitrary amount of \glspl {ip_sbs} as independent computational entities, (c) exhibits a set of neurons grouped in an \gls {ip_sbs}.\relax }{figure.caption.25}{}}
+\newlabel{fig:SbS_layer@cref}{{[figure][2][2]2.2}{[1][18][]19}}
+\citation{rosenblatt1958perceptron}
+\citation{rumelhart1986learning}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces (a) Performance classification of \gls {sbs} NN versus equivalent \gls {cnn}, and (b) example of the first pattern in the MNIST test data set with different amounts of positive additive uniformly distributed noise.\relax }}{20}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:robustnes_sbs}{{2.3}{20}{(a) Performance classification of \gls {sbs} NN versus equivalent \gls {cnn}, and (b) example of the first pattern in the MNIST test data set with different amounts of positive additive uniformly distributed noise.\relax }{figure.caption.27}{}}
+\newlabel{fig:robustnes_sbs@cref}{{[figure][3][2]2.3}{[1][20][]20}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Error Tolerance}{20}{section*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Artificial Neural Networks}{20}{section.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Architecture}{21}{subsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Layers}{21}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Weights and Bias}{21}{section*.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Activation Functions}{21}{section*.30}\protected@file@percent }
+\citation{glorot2010understanding}
+\citation{maas2013rectifier}
+\citation{he2015delving}
+\citation{bottou2010large}
+\citation{bottou2010large}
+\citation{bottou2018optimization}
+\citation{sutskever2013importance}
+\citation{duchi2011adaptive}
+\citation{goodfellow2016deep}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Training Process}{24}{subsection.2.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Stochastic Gradient Descent}{24}{section*.31}\protected@file@percent }
+\citation{lecun1998gradient}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Multi-Layer Perceptron}{25}{subsection.2.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Key Components}{25}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Convolutional Neural Networks}{25}{subsection.2.3.4}\protected@file@percent }
+\citation{gu2018recent}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Key Components}{26}{section*.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Conv2D Tensor Operation}{26}{section*.34}\protected@file@percent }
+\citation{goodfellow2016deep}
+\newlabel{eq:conv2D}{{2.4}{27}{Conv2D Tensor Operation}{equation.2.3.4}{}}
+\newlabel{eq:conv2D@cref}{{[subsection][4][2,3]2.3.4}{[1][27][]27}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Computational Cost of a Convolution Layer}{27}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Definitions}{27}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Computations Per Output Element}{27}{section*.37}\protected@file@percent }
+\citation{han2015deep}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Output Dimensions}{28}{section*.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Total Computations}{28}{section*.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Error Tolerance in Convolution Layers}{28}{section*.40}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Sources of Error}{28}{section*.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Error Compensating Mechanisms}{28}{section*.42}\protected@file@percent }
 \citation{sze2017efficient}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces \gls {sbs} \glspl {ip_sbs} as independent computational entities, (a) illustrates an input layer with a massive amount of \glspl {ip_sbs} operating as independent computational entities, (b) shows a hidden layer with an arbitrary amount of \glspl {ip_sbs} as independent computational entities, (c) exhibits a set of neurons grouped in an \gls {ip_sbs}.\relax }}{28}{figure.caption.41}\protected@file@percent }
-\newlabel{fig:SbS_layer}{{2.2}{28}{\gls {sbs} \glspl {ip_sbs} as independent computational entities, (a) illustrates an input layer with a massive amount of \glspl {ip_sbs} operating as independent computational entities, (b) shows a hidden layer with an arbitrary amount of \glspl {ip_sbs} as independent computational entities, (c) exhibits a set of neurons grouped in an \gls {ip_sbs}.\relax }{figure.caption.41}{}}
-\newlabel{fig:SbS_layer@cref}{{[figure][2][2]2.2}{[1][28][]28}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Computational Cost}{28}{section*.40}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Error Tolerance}{28}{section*.42}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Neural Network Accelerators}{28}{section.2.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces (a) Performance classification of \gls {sbs} NN versus equivalent \gls {cnn}, and (b) example of the first pattern in the MNIST test data set with different amounts of positive additive uniformly distributed noise.\relax }}{29}{figure.caption.43}\protected@file@percent }
-\newlabel{fig:robustnes_sbs}{{2.3}{29}{(a) Performance classification of \gls {sbs} NN versus equivalent \gls {cnn}, and (b) example of the first pattern in the MNIST test data set with different amounts of positive additive uniformly distributed noise.\relax }{figure.caption.43}{}}
-\newlabel{fig:robustnes_sbs@cref}{{[figure][3][2]2.3}{[1][28][]29}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}The Need for Accelerators}{29}{subsection.2.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Types of Accelerators}{31}{subsection.2.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Design Considerations}{32}{subsection.2.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Exploiting Error Tolerance for Optimization}{29}{section*.43}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Neural Network Accelerators}{29}{section.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}The Need for Accelerators}{29}{subsection.2.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Types of Accelerators}{31}{subsection.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Design Considerations}{32}{subsection.2.4.3}\protected@file@percent }
 \citation{micikevicius2017mixed}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Precision and Effect in Training}{33}{section.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Fixed-Point}{33}{subsection.2.4.1}\protected@file@percent }
 \citation{courbariaux2014training}
 \citation{jacob2018quantization}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Floating-Point}{34}{subsection.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Precision and Effect in Training}{34}{section.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.1}Fixed-Point}{34}{subsection.2.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}Floating-Point}{35}{subsection.2.5.2}\protected@file@percent }
+\newlabel{eq:float}{{2.10}{35}{Floating-Point}{equation.2.5.10}{}}
+\newlabel{eq:float@cref}{{[subsection][2][2,5]2.5.2}{[1][35][]35}}
+\newlabel{eq:float_bias}{{2.11}{35}{Floating-Point}{equation.2.5.11}{}}
+\newlabel{eq:float_bias@cref}{{[subsection][2][2,5]2.5.2}{[1][35][]35}}
 \citation{zuras2008ieee}
-\newlabel{eq:float}{{2.10}{35}{Floating-Point}{equation.2.4.10}{}}
-\newlabel{eq:float@cref}{{[subsection][2][2,4]2.4.2}{[1][35][]35}}
-\newlabel{eq:float_bias}{{2.11}{35}{Floating-Point}{equation.2.4.11}{}}
-\newlabel{eq:float_bias@cref}{{[subsection][2][2,4]2.4.2}{[1][35][]35}}
 \citation{krishnamoorthi2018quantizing}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Floating-point number representation.\relax }}{36}{figure.caption.44}\protected@file@percent }
 \newlabel{fig:floating}{{2.4}{36}{Floating-point number representation.\relax }{figure.caption.44}{}}
-\newlabel{fig:floating@cref}{{[figure][4][2]2.4}{[1][35][]36}}
-\newlabel{eq:float_subnorm}{{2.12}{36}{Floating-Point}{equation.2.4.12}{}}
-\newlabel{eq:float_subnorm@cref}{{[subsection][2][2,4]2.4.2}{[1][36][]36}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Post-Training Quantization}{36}{subsection.2.4.3}\protected@file@percent }
+\newlabel{fig:floating@cref}{{[figure][4][2]2.4}{[1][36][]36}}
+\newlabel{eq:float_subnorm}{{2.12}{36}{Floating-Point}{equation.2.5.12}{}}
+\newlabel{eq:float_subnorm@cref}{{[subsection][2][2,5]2.5.2}{[1][36][]36}}
 \citation{krishnamoorthi2018quantizing}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.3}Post-Training Quantization}{37}{subsection.2.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.4}Quantization-Aware Training}{37}{subsection.2.5.4}\protected@file@percent }
 \citation{sze2017efficient}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Quantization-Aware Training}{37}{subsection.2.4.4}\protected@file@percent }
 \@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Custom floating-point quantizer.\relax }}{38}{algocf.2}\protected@file@percent }
 \newlabel{alg:quantizr}{{2}{38}{Quantization-Aware Training}{algocf.2}{}}
 \newlabel{alg:quantizr@cref}{{[algocf][2][]2}{[1][37][]38}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}Dataflow Taxonomy}{38}{section.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.6}Multiply-Accumulate Unit}{40}{section.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.1}Design Considerations}{40}{subsection.2.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Dataflow Taxonomy}{39}{section.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.7}Multiply-Accumulate Unit}{40}{section.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.1}Design Considerations}{41}{subsection.2.7.1}\protected@file@percent }
 \citation{bouvier2019spiking}
 \citation{courbariaux2015binaryconnect}
 \citation{han2015deep}
@@ -132,7 +132,6 @@
 \citation{molchanov2016pruning}
 \citation{li2016pruning}
 \citation{liu2018rethinking}
-\@writefile{toc}{\contentsline {section}{\numberline {2.7}Related Work}{41}{section.2.7}\protected@file@percent }
 \citation{moons20160}
 \citation{whatmough201714}
 \citation{rastegari2016xnor}
@@ -148,46 +147,47 @@
 \citation{chen20184096}
 \citation{sheik2016synaptic}
 \citation{jerry2017ultra}
+\@writefile{toc}{\contentsline {section}{\numberline {2.8}Related Work}{42}{section.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.1}Aggressive Quantization}{42}{subsection.2.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.2}Spiking Neural Network Accelerators}{42}{subsection.2.8.2}\protected@file@percent }
 \citation{zhang2018survey}
 \citation{han2013approximate}
 \citation{han2013approximate}
 \citation{kim2013energy}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.1}Aggressive Quantization}{42}{subsection.2.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.2}Spiking Neural Network Accelerators}{42}{subsection.2.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Classical Approximate Computing}{42}{section*.51}\protected@file@percent }
 \citation{he2016deep}
 \citation{russakovsky2015imagenet}
 \citation{rastegari2016xnor}
 \citation{rotermund2018massively}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Classical Approximate Computing}{43}{section*.51}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Spike-by-Spike Neural Network Accelerators}{43}{section*.52}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.3}Convolutional Neural Network Accelerators with Custom Floating-Point Computation on \gls {fpga}}{43}{subsection.2.8.3}\protected@file@percent }
+\newlabel{sec:related_work}{{2.8.3}{43}{Convolutional Neural Network Accelerators with Custom Floating-Point Computation on \gls {fpga}}{subsection.2.8.3}{}}
+\newlabel{sec:related_work@cref}{{[subsection][3][2,8]2.8.3}{[1][43][]43}}
 \citation{lai2017deep}
 \citation{settle2018quantizing}
 \citation{lai2017deep}
 \citation{settle2018quantizing}
 \citation{lian2019high}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Spike-by-Spike Neural Network Accelerators}{43}{section*.52}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.3}Convolutional Neural Network Accelerators with Custom Floating-Point Computation on \gls {fpga}}{43}{subsection.2.7.3}\protected@file@percent }
-\newlabel{sec:related_work}{{2.7.3}{43}{Convolutional Neural Network Accelerators with Custom Floating-Point Computation on \gls {fpga}}{subsection.2.7.3}{}}
-\newlabel{sec:related_work@cref}{{[subsection][3][2,7]2.7.3}{[1][43][]43}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Hybrid Custom Floating-Point}{43}{section*.53}\protected@file@percent }
 \citation{mei2017200mhz}
 \citation{wu2021low}
 \citation{meloni2019cnn}
-\citation{gao2020edgedrnn}
-\citation{wu2020phoenix}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Hybrid Custom Floating-Point}{44}{section*.53}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Low-Precision Floating-Point}{44}{section*.54}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Low-Power Architectures for \gls {iot} Deployments}{44}{section*.55}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.4}Neural Network Accelerators for Training and Inference with 8-bit Floating-Point Computation on \gls {asic}}{44}{subsection.2.7.4}\protected@file@percent }
+\citation{gao2020edgedrnn}
+\citation{wu2020phoenix}
 \citation{park2021neural}
 \citation{venkataramani2021rapid}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.4}Neural Network Accelerators for Training and Inference with 8-bit Floating-Point Computation on \gls {asic}}{45}{subsection.2.8.4}\protected@file@percent }
 \citation{venkataramanaiah202228nm}
 \citation{gallus2018handwritten}
 \citation{wang2018training}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.5}Training Techniques with 8-bit Floating-Point Quantization}{45}{subsection.2.7.5}\protected@file@percent }
 \citation{sun2019hybrid}
 \citation{mellempudi2019mixed}
 \citation{liu2021improving}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.5}Training Techniques with 8-bit Floating-Point Quantization}{46}{subsection.2.8.5}\protected@file@percent }
 \@setckpt{./chapters/background}{
-\setcounter{page}{47}
+\setcounter{page}{48}
 \setcounter{equation}{16}
 \setcounter{enumi}{5}
 \setcounter{enumii}{0}
@@ -197,7 +197,7 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{2}
-\setcounter{section}{7}
+\setcounter{section}{8}
 \setcounter{subsection}{5}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
