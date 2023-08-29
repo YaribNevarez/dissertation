@@ -612,17 +612,49 @@ While \gls{ptq} offers the benefit of simplicity, the resultant quantized model 
 
 \gls{qat} is a technique developed to optimize neural networks for deployment on platforms with limited numerical precision. This quantization maps weights to a lower precision \( Q(W) \), similarly as in \gls{ptq}. Moreover, \gls{qat} integrates this process into the training phase, ensuring that the resultant model is resilient to potential accuracy degradation~\cite{krishnamoorthi2018quantizing}. Such adaptations are relevant when targeting resource-constrained devices or specialized hardware accelerators that rely on reduced precision for improved computational efficiency and accuracy.
 
-For neural networks with custom reduced \gls{fp} formats, \gls{qat} exhibits even greater versatility. Such custom formats, often denoted as \( FP_{M,E} \), allocate specific bit-lengths for the mantissa \( M \) and the exponent \( E \). The quantization function for such a format can potentially take the form:
-\begin{equation}
-Q_{FP}(W) = \text{round}\left(M\right) \times 2^{\text{round}\left(E\right)}
-\end{equation}
-Where \( M \) and \( E \) are derived from the mantissa and exponent parts of \( W \), respectively.
+For neural networks with custom reduced \gls{fp} formats, \gls{qat} exhibits even greater versatility. Such custom formats, often denoted as \( FP_{M,E} \), allocate specific bit-lengths for the mantissa \( M \) and the exponent \( E \). The function for this quantization format is detailed in \Algo{alg:quantizr}. This algorithm converts full-precision values into their corresponding quantized \gls{fp} representation using custom-defined exponent and mantissa bit lengths.
+
+\begin{algorithm}[h!]
+	\caption{Custom floating-point quantizer.}
+	\label{alg:quantizr}
+	\begin{algorithmic}
+		\SetAlgoLined
+		\renewcommand{\algorithmicrequire}{\textbf{input:}}
+		\renewcommand{\algorithmicensure}{\textbf{output:}}
+		\REQUIRE $X_{FP}$ as the \gls{fp} value.
+		\REQUIRE $E_{size}$ as the target exponent bit size.
+		\REQUIRE $M_{size}$ as the target mantissa bits size.
+		\REQUIRE $STDM_{size}$ as the IEEE 754 mantissa bit size.
+		\ENSURE $X_{CFP}$ as the custom \gls{fp} value.
+		
+		\STATE $sign \gets GetSign(X_{FP})$
+		\STATE $exp \gets GetExponent(X_{FP})$
+		\STATE $fullexp \gets 2^{E_{size}-1}-1$ // Get full range value
+		\STATE $cman \gets GetCustomMantissa(X_{FP}, M_{size})$
+		\STATE $leftman \gets GetLeftoverMantissa(X_{FP}, M_{size})$
+		\IF {$exp <-fullexp$}
+		\STATE$X_{CFP}\gets0$
+		\ELSIF{$exp > fullexp$}
+		\STATE$X_{CFP}\gets (-1)^{sign}\cdot2^{fullexp}\cdot(1+(1-2^{-M{size}}))$
+		\ELSE
+		\IF {$2^{STDM_{size}-M_{size}-1}-1<leftman$}
+		\STATE $cman \gets cman+1$ // Above halfway
+		\IF{$2^{M_{size}}-1<cman$}
+		\STATE $cman \gets 0$ // Correct mantissa overflow
+		\STATE $exp \gets exp + 1$
+		\ENDIF
+		\ENDIF
+		\STATE // Build custom \gls{fp} representation
+		\STATE$X_{CFP}\gets (-1)^{sign}\cdot2^{exp}\cdot(1+cman\cdot2^{-M_{size}})$
+		\ENDIF
+	\end{algorithmic}
+\end{algorithm}
+
 During training, each forward pass applies the aforementioned quantization, simulating the operational conditions of the reduced precision. The backward pass, essential for gradient-based optimization, is conducted with a higher precision. If \( \nabla W \) symbolizes the computed gradients, the weight update rule in gradient descent is typically:
 \begin{equation}
 W_{t+1} = W_t - \eta \nabla W
 \end{equation}
 Here, \( \eta \) represents the learning rate. However, with \gls{qat}, the model remains cognizant of \( Q(W) \) or \( Q_{FP}(W) \) during forward computations, a factor that influences gradient dynamics. Post-\gls{qat}, calibration using a validation dataset aids in refining scaling factors or biases, this improves the model for optimal performance in its intended deployment environment. Assessments against a full-precision baseline are important to ensure that the trade-offs in precision do not compromise the model efficacy.
-
 
 \section{Dataflow Taxonomy}
 Dataflow taxonomy refers to the classification of various schemes that determine how data (weights, activations, and partial results) moves through the accelerator during computation. The way data is moved and reused can have an impact on the energy efficiency and throughput of the accelerator. These strategies aim to maximize performance and energy efficiency by optimizing data movement, which is often more energy-intensive than computation itself. When choosing or designing a dataflow, it is essential to consider the specific neural network workload, the memory hierarchy, and the architectural details of the hardware to ensure an optimal match~\cite{sze2017efficient}.
@@ -732,12 +764,14 @@ In \cite{lai2017deep}, Liangzhen Lai \textit{et al.} proposed a mixed data repre
 In \cite{lian2019high}, Xiaocong Lian \textit{et al.} proposed a hardware accelerator with optimized block floating-point (BFP). In this design the activations and weights are represented by 16-bit and 8-bit \gls{fp} formats, respectively. This design is demonstrated on Xilinx VC709 evaluation board. This implementation achieves throughput and power efficiency of \unit[760.83]{GOP/s} and \unit[82.88]{GOP/s/W}, respectively. However, this design is not suitable for low-power resource-constrained embedded \glspl{fpga}.
 
 \subsubsection{Low-Precision Floating-Point}
-In \cite{mei2017200mhz}, Chunsheng Mei \textit{et al.} presented a hardware accelerator for VGG16 model using half-precision \gls{fp} (16-bit). This design is demonstrated on Xilinx Virtex-7 (XC7VX690T) with PCIe interface. This implementation achieves throughput and power efficiency of \unit[202.8]{GFLOP/s} and \unit[18.72]{GFLOP/s/W}, respectively. In \cite{wu2021low}, Chen Wu \textit{et al.} proposed a low-precision (8-bit) floating-point (LPFP) quantization method for \gls{fpga}-based acceleration. This design is demonstrated on Xilinx Kintex 7 and Ultrascale/Ultrascale+. This implementation achieves throughput and power efficiency of \unit[1086.8]{GOP/s} and \unit[115.4]{GOP/s/W}, respectively. While these research works focus on low-precision \gls{fp}, they are not suitable for inference in low-power devices.
+In \cite{mei2017200mhz}, Chunsheng Mei \textit{et al.} presented a hardware accelerator for VGG16 model using half-precision \gls{fp} (16-bit). This design is demonstrated on Xilinx Virtex-7 (XC7VX690T) with PCIe interface. This implementation achieves throughput and power efficiency of \unit[202.8]{GFLOP/s} and \unit[18.72]{GFLOP/s/W}, respectively. In \cite{wu2021low}, Chen Wu \textit{et al.} proposed a low-precision (8-bit) floating-point (LPFP) quantization method for \gls{fpga}-based acceleration. This design is demonstrated on Xilinx Kintex 7 and Ultrascale/Ultrascale+. This implementation achieves throughput and power efficiency of \unit[1086.8]{GOP/s} and \unit[115.4]{GOP/s/W}, respectively. While these studies concentrate on low-precision \gls{fp}, they are not optimal for inference on low-power devices due to their size, power consumption, and cost.
 
 \subsubsection{Low-Power Architectures for \gls{iot} Deployments}
-Two research papers have been reported hardware accelerators targeting XC7Z007S. This is the smallest and most inexpensive device from Zynq-7000 SoC family. In \cite{meloni2019cnn}, Paolo Meloni \textit{et al.} presented a \gls{cnn} inference accelerator for compact and cost-optimized devices. However, this implementation uses fixed-point to process light-weight \gls{cnn} architectures with a power efficiency between \unit[2.49] to \unit[2.98]{GOPS/s/W}.
+Two research papers have showcased hardware accelerator designs for the XC7Z007S, the most resource-constrained and low-power device in the Zynq-7000 \gls{soc} \gls{fpga} series. Its development board, MiniZed, is priced at USD 89.00. This device serves as the central target of this dissertation for low-power \gls{cnn} acceleration.
 
-In \cite{gao2020edgedrnn}, Chang Gao \textit{et al.} presented EdgeDRNN, a \gls{rnn} accelerator for edge inference. This implementation adopts the \gls{snn} inspired delta network algorithm to exploit temporal sparsity in \glspl{rnn}.
+In \cite{meloni2019cnn}, Paolo Meloni \textit{et al.} presented a \gls{cnn} inference accelerator for compact and cost-optimized devices. However, this implementation uses fixed-point to process light-weight \gls{cnn} architectures with a power efficiency between \unit[2.49] to \unit[2.98]{GOPS/s/W}.
+
+In \cite{gao2020edgedrnn}, Chang Gao \textit{et al.} presented EdgeDRNN, a \gls{rnn} accelerator for edge inference. This implementation adopts the \gls{snn} inspired delta network algorithm to exploit temporal sparsity in \glspl{rnn}. However, this implementation does not include \gls{fp} computation.
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 
