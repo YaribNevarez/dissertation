@@ -691,6 +691,30 @@ As the name suggests, in this dataflow, there is minimal local data reuse. All d
 This is a specialized dataflow developed for systolic array architectures. In RS, a row of the systolic array holds the activations stationary while weights are propagated horizontally and partial sums propagate vertically.
 
 
+\section{Flynn's Taxonomy}
+
+In the quest to comprehend the various computational architectures, especially when focusing on neural network accelerators and their efficiency, it is important to grasp the foundational classification of computer architectures. Flynn's Taxonomy, introduced by Michael J. Flynn in 1966, provides a categorical breakdown of architectures based on their simultaneous instruction and data streams handling capability.
+
+\subsection*{SISD (Single Instruction, Single Data)}
+
+This category represents the classic sequential computer architecture, where a single instruction operates on a single data stream. Most conventional \glspl{cpu} can be categorized here, though modern designs often include multiple cores (making them multiprocessors).
+
+\subsection*{SIMD (Single Instruction, Multiple Data)}
+
+Under \gls{simd}, a single instruction processes multiple data streams concurrently. This design is prevalent in vector processors and \glspl{gpu}. Given the parallel nature of neural network computations, \gls{simd} architectures, particularly \glspl{gpu}, have gained popularity for deep learning and neural network tasks due to their ability to process multiple data points in parallel using the same operation.
+
+\subsection*{MISD (Multiple Instruction, Single Data)}
+
+This architecture is less common and represent systems where multiple instructions operate on a single data stream. Some fault-tolerant machines adopt this strategy, applying different operations to replicate the data to ensure reliability.
+
+\subsection*{MIMD (Multiple Instruction, Multiple Data)}
+
+These systems are where multiple processors operate independently on different instructions and different data. Multi-core \glspl{cpu}, clusters, and many supercomputers belong to this category. Each processor can be assigned a unique task, making them suitable for a broader range of applications compared to \gls{simd}.
+
+\subsection*{Relevance to Neural Network Accelerators}
+
+When discussing low-power neural network accelerators with custom reduced \gls{fp} computation, \gls{simd} architectures often stand out. The parallel nature of neural networks leverages the capabilities of \gls{simd} to handle multiple data points concurrently.
+
 \section{Multiply-Accumulate Unit}
 
 In the context of this dissertation, the terms 'dot-product' and '\gls{mac}' are used interchangeably, reflecting their deeply associated roles in computational processes. The dot-product, a pivotal operation in neural network computation, entails a sequence of multiplications culminating in a summation. This procedure aligns seamlessly with the series of \gls{mac} operations, a cornerstone in the field of digital signal processing. The \gls{mac} operation, with its inherent structure and efficiency, stands as a central pillar in the architecture and optimization of neural network accelerators. Formally, the \gls{mac} operation can be expressed as:
@@ -799,7 +823,7 @@ In the continued pursuit of refining neural network training, the application of
 
 One of the early explorations into this field was the use of 8-bit \gls{fp} for training the LeNeT-5 model for handwritten digit classification, achieving a commendable 97.10\% accuracy (2\% degradation) while reducing space complexity by 75\% \cite{gallus2018handwritten}. A similar work demonstrated the feasibility of training, for the first time, deep neural networks using 8-bit \gls{fp} numbers, introducing novel techniques such as chunk-based accumulation and \gls{fp} stochastic rounding, which holds the potential for up to 4 times improved throughput in future hardware platforms \cite{wang2018training}.
 
-A significant milestone is the hybrid 8-bit \gls{fp} (HFP8) format, which was specifically crafted for deep learning applications ranging from image classification to language processing--AlexNet, ResNet, MobileNetV2, DenseNet121, LSTMs, Transformer, MaskRCNN, and SSD-Lite--trained on datasets like ImageNet, PennTreeBank, WMT14 En-De, SWB300, COCO, and VOC, highlighting minimal accuracy degradations when transitioning from baseline FP32 to Hybrid FP8 training. \cite{sun2019hybrid}. This was further optimized in a mixed precision training approach that utilized an enhanced loss scaling method and a stochastic rounding technique to address gradient noise, reporting even better accuracies than full precision across multiple data sets (imagenet-1K, WMT16) and a broader set of workloads (Resnet-18/34/50, GNMT, Transformer) \cite{mellempudi2019mixed}.
+A significant milestone is the hybrid 8-bit \gls{fp} (HFP8) format, which was specifically crafted for deep learning applications ranging from image classification to language processing -- AlexNet, ResNet, MobileNetV2, DenseNet121, LSTMs, Transformer, MaskRCNN, and SSD-Lite -- trained on datasets like ImageNet, PennTreeBank, WMT14 En-De, SWB300, COCO, and VOC, highlighting minimal accuracy degradations when transitioning from baseline FP32 to Hybrid FP8 training. \cite{sun2019hybrid}. This was further optimized in a mixed precision training approach that utilized an enhanced loss scaling method and a stochastic rounding technique to address gradient noise, reporting even better accuracies than full precision across multiple data sets (imagenet-1K, WMT16) and a broader set of workloads (Resnet-18/34/50, GNMT, Transformer) \cite{mellempudi2019mixed}.
 
 Taking a different approach, adaptive floating-point (AFP) post-training quantization emerged as a promising approach, offering compression rates and inference efficiency, avoiding the need for computationally intensive \gls{qat}, this work presents a framework to automatically optimize and choose the adequate AFP configuration for each layer, thus maximizing the compression efficacy. This approach demonstrates that AFP-encoded ResNet-50/MobileNet-v2 only has 0.04/0.6\% accuracy degradation wrt its full-precision counterpart \cite{liu2021improving}.
 

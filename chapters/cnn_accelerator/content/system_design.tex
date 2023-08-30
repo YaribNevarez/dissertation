@@ -1,6 +1,6 @@
 \section{Design Technique}
 \label{sec:system_design}
-The system design is a hardware/software co-design framework for low-power \gls{ml} analytics. This architecture allows design exploration for dedicated hardware in embedded systems. For \gls{ml} compatibility, the proposed framework integrates TensorFlow Lite micro.
+The system design is a hardware/software co-design framework for low-power \gls{ml} analytics. This architecture allows design exploration for dedicated hardware accelerators in embedded systems. For \gls{ml} compatibility, the proposed framework integrates TensorFlow Lite Micro.
 
 \subsection{Base Embedded System Architecture}
 The embedded system architecture consists of a cooperative hardware-software platform. See \Fig{fig:system_architecture}. The embedded \gls{cpu} delegates low-level compute-bound tensor operations to the \glspl{tp}. The \glspl{tp} employ AXI-Lite interface for configuration and AXI-Stream interfaces via \gls{dma} for data movement from off-chip memory. Each \gls{tp} and \gls{dma} pair asserts interrupt flags once its compute job/transaction completes. Interrupt events are handled by the embedded \gls{cpu} to use the results and to start a new compute job/transaction. The hardware architecture can vary its resource utilization by customizing the \glspl{tp} prior to the hardware synthesis.
@@ -12,7 +12,15 @@ The embedded system architecture consists of a cooperative hardware-software pla
 \end{figure}
 \FloatBarrier
 \subsection{Tensor Processor}
-The \gls{tp} is a dedicated hardware module to compute tensor operations. This implements high performance communication with AXI-Stream, direct \gls{cpu} communication with AXI-Lite, and on-chip storage utilizing BRAM. This hardware architecture is implemented with \gls{hls}. The tensor operations are implemented based on the C++ TensorFlow Lite micro kernels. See \fig{fig:accelerator}. This research focuses on the \emph{Conv2D} tensor operation that computes 2D convolution layers.
+The \gls{tp} is a dedicated hardware module designed for the computation of tensor operations. This architecture employs AXI-Stream for high-performance communication with \gls{ram}, direct \gls{cpu} interface with AXI-Lite, and on-chip storage utilizing BRAM. Developed using \gls{hls}, its foundational tensor operations are based on the C++ TensorFlow Lite Micro kernels operators.  \Fig{fig:accelerator} provides a comprehensive visualization of the high-level hardware architecture.
+
+Central to the design philosophy of the \gls{tp} is its adherence to the stationary weight taxonomy. This choice ensures that weights remain consistently stored in BRAM throughout computations. This strategy enhances performance by maximizing data reuse and minimizing data movement.
+
+Operational efficiency is further achieved through a stream-oriented approach. In this paradigm, the \gls{tp} performs its processing as soon as the initial segment (receptive field) of the input tensor data is received. This ensures a continuous outflow of results, even before the complete input tensor is ingested. This operational approach reduces latency, aligning closely with the principles of the \gls{simd} category.
+	
+At the functional level, the \gls{tp} is designed for executing \textit{Conv2D} and \textit{DepthwiseConv2D} tensor operations, which are predominantly compute-bound tasks and constitute the computational backbone of \gls{ann}. The \gls{tp} supports both floating-point and fixed-point formats. Furthermore, its modular design allows the implementation of further tensor operations, enhancing its functionality and potential for future research.
+
+This investigation concentrates on the custom floating-point \emph{Conv2D} tensor operation, this accelerates 2D convolution layers.
 
 \begin{figure}[h!]
 	\centering
@@ -21,16 +29,40 @@ The \gls{tp} is a dedicated hardware module to compute tensor operations. This i
 	\label{fig:accelerator}
 \end{figure}
 \FloatBarrier
+
 \subsubsection{Modes of Operation}
-The \gls{tp} has two modes of operation: \emph{configuration} and \emph{execution}.
+The \gls{tp} functions in two primary modes: \textit{configuration} and \textit{execution}. The embedded \gls{cpu} establishes the mode of operation through the AXI-Lite interface. Each mode serves specific roles in the operation of the accelerator as detailed below:
 \begin{itemize}
-	\item In \emph{configuration} mode, the \gls{tp} receives the hyperparameters of the tensor operation: stride, dilation, padding, offset, activation, depth-multiplier, input shape, filter shape, bias shape, and output shape. Afterwards, in the same data stream, the \gls{tp} receives filter and bias tensors. These are locally stored in BRAM for data re-usage. The filter and bias tensors are transferred using standard \gls{fp} format wrapping the 6-bit \gls{fp} representation, which is extracted by the \gls{tp} for local on-chip storage.
+	\item \textbf{Configuration}: Here, the \gls{tp} first acquires a setup buffer detailing the tensor operation profile, including parameters such as stride, dilation, padding, offset, activation, quantized activation, depth-multiplier, tensor operation ID, and shapes for input, filter, bias, and output. The \gls{tp} then receives the filter and bias tensors, storing them in BRAM for both configuration and data reuse. These tensors are transferred in the standard \gls{fp} format, enveloping the 6-bit \gls{fp} representation, which the \gls{tp} extracts for optimized on-chip storage. During this phase, data is transferred from the off-chip DRAM to the on-chip BRAM, adhering to a stationary weight taxonomy.
 	
-	\item In \emph{execution} mode, the \gls{tp} executes the tensor operation according to the hyperparameters given in the configuration mode. During execution, the input and output tensors are moved via \gls{dma}.
+	\Fig{fig:setup_transaction_chapter} illustrates the setup transaction buffer. Within the buffer, as shown in \Fig{fig:setup_transaction_chapter}(c), the tensor operator ID field indicates the type of operation, be it \textit{Conv2D} or \textit{DepthwiseConv2D}. \Fig{fig:sw_tp_delegate_job_chapter}(a) depicts the configuration mode and its associated setup buffer stream.
+	
+	\item \textbf{Execution}: In this mode, the \gls{tp} performs the tensor operation as dictated by the setup received in the previous configuration mode. During the execution of the tensor operation, input and output tensors are streamed using \gls{dma}. \Fig{fig:sw_tp_delegate_job_chapter}(b) highlights the execution mode, emphasizing the simultaneous movement of input and output tensor buffer streams. 
+	During this phase, the \gls{tp} operates in a stream-oriented manner, performing the tensor operation as input tensor data is received and aligning with the \gls{simd} paradigm.
+	
+
 \end{itemize}
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./figures/setup_transaction_buffer_stream.pdf}
+	\caption{Setup transaction buffer stream.}
+	\label{fig:setup_transaction_chapter}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{./figures/task_execution.pdf}
+	\caption{Tensor Processor task execution. (a) Depicts the configuration mode along with its corresponding setup buffer stream. (b) Illustrates the execution mode, showcasing concurrent input and output tensor buffer streams.}
+	\label{fig:sw_tp_delegate_job_chapter}
+\end{figure}
+
+
+\FloatBarrier
 \subsubsection{Dot-product with Hybrid Floating-Point}
 \label{sec:dot_product}
-It is implemented the floating-point computation adopting the dot-product with hybrid custom floating-point~\cite{nevarez2021accelerating}. The hardware dot-product is illustrated in \Fig{fig:dot_product} and \Fig{fig:dot_product_loop}(a). This design instantiates a HF6 \gls{mac} with an internal accumulator register of 64-bit fixed-point with 23-bit fraction. During operation, the feature map and filter values are extracted from on-chip memory (BRAM). Both values have to be different than zero to enable the \gls{mac} operation. The result is biased by accumulating a denormalized bias value. Since the bias is stored with 6-bit \gls{fp}, its fractional part has to be aligned with the 23-bit fraction of the accumulator, see \Fig{fig:dot_product_loop}(b). The ReLu activation is applied to the accumulator and its result is normalized to convert it to IEEE 754 standard \gls{fp}, see \Fig{fig:dot_product_loop}(c).
+It is implemented the floating-point computation adopting the dot-product with hybrid custom floating-point~\cite{nevarez2021accelerating}. The hardware dot-product is illustrated in \Fig{fig:dot_product} and \Fig{fig:dot_product_loop}(a). This design instantiates a \gls{hf6} \gls{mac} with an internal accumulator register of 64-bit fixed-point with 23-bit fraction. During operation, the feature map and filter values are extracted from on-chip memory (BRAM). Both values have to be different than zero to enable the \gls{mac} operation. The result is biased by accumulating a denormalized bias value. Since the bias is stored with 6-bit \gls{fp}, its fractional part has to be aligned with the 23-bit fraction of the accumulator, see \Fig{fig:dot_product_loop}(b). The ReLu activation is applied to the accumulator and its result is normalized to convert it to IEEE 754 standard \gls{fp}, see \Fig{fig:dot_product_loop}(c).
 
 Rather than a parallelized hardware structure, this approach is a pipelined hardware design suitable for resource-limited devices. The latency in clock cycles of this hardware module is defined by \equ{eq:dot_custom_float_latency}, where $N$ is the length for the vector dot-product. This latency equation is obtained from the general pipelined hardware latency formula: $L=\left(N-1\right)II+IL$, where $II$ is the initiation interval, and $IL$ is the iteration latency. Both $II$ and $IL$ are obtained from the \gls{hls} results. Both the exponent and mantissa bit widths of the filter and bias are set to 4-bit exponent and 1-bit mantissa (E4M1), which corresponds to float6 quantization.
 
@@ -109,13 +141,13 @@ The floating-point formats implemented in the \gls{tp} are defined by $BitSize_F
 The training method consists of two separate stages: (1) training with iterative early stop and (2) quantization-aware training.
  
 \subsubsection{Training with Iterative Early Stop}
-To achieve better performance on \gls{cnn}-regression models, it implemented a training procedure with iterative early stop cycle. This allows to reach better local minima. This process consists of four steps:
+To achieve better performance on \gls{cnn}-regression models, it is implemented a training procedure with iterative early stop cycle. This allows to reach better local minima. This process consists of four steps:
 
 \begin{enumerate}
 	\item A model is obtained with an initial training with standard early stop monitoring.
-	\item The model is iteratively re-trained with standard early stop. This process iteratively restarts the moving averages of the optimizer to search for better local minima.
+	\item The model is iteratively re-trained (refined) with standard early stop. This process iteratively restarts the moving averages of the optimizer to search for better local minima.
 	\item In case of a better local minimum, the model is saved and used as a base for subsequent search iterations, otherwise it is a discarded search.
-	\item The cyclic process stops automatically with a given number of searches without a better local minimum, this is denoted as stop patience. This allows to set a maximum number of unsuccessful search trials before the stop.
+	\item The cyclic process stops automatically with a given number of searches without a better local minimum, this number of searches is denoted as the \textit{stop patience}. This allows to set a maximum number of unsuccessful search trials before the stop.
 \end{enumerate}
 
 This method is described in \Algo{alg:training}.
@@ -233,9 +265,9 @@ The quantization method uses rounding strategy to reduce the \gls{fp} representa
 \subsection{Embedded Software Architecture}
 The software architecture is a layered object-oriented application framework written in C++, see \fig{fig:sw_stack} and \fig{fig:sw_stack_flowchart}. Description of the software layers is as follows:
 \begin{itemize}
-	\item \emph{Application}: As the highest level of abstraction, this software layer implements the analytics application, this invokes the \gls{ml} library.
-	\item \emph{Machine learning library}: This software layer offers a comprehensive high level \gls{api} for \gls{ml} inference. This layer consist of TensorFlow Lite micro, this is modified to implement the delegate software interfaces for the proposed hardware accelerator.
-	\item \emph{Hardware abstraction layer}: This layer consist of the hardware drivers used in the TFLite delegate interfaces. This software layer handles initialization and runtime operation of the \gls{tp} and \gls{dma}.
+	\item \textbf{Application}: As the highest level of abstraction, this software layer implements the analytics application, this invokes the \gls{ml} library.
+	\item \textbf{Machine Learning Library}: This software layer offers a comprehensive high level \gls{api} for \gls{ml} inference. This layer consist of TensorFlow Lite Micro, this is modified to implement the delegate software interfaces for the proposed hardware accelerator.
+	\item \textbf{Hardware Abstraction Layer}: This layer consist of the hardware drivers used in the TFLite delegate interfaces. This software layer handles initialization and runtime operation of the \gls{tp} and \gls{dma}.
 \end{itemize}
 
 \begin{figure}[h!]
@@ -252,5 +284,78 @@ The software architecture is a layered object-oriented application framework wri
 	\label{fig:sw_stack_flowchart}
 \end{figure}
 
-A detailed description of the TensorFlow Lite delegate implementation and operation is presented in the Appendix~\ref{chap:appendix_delegate}
+\paragraph{Model Deployment}
+
+In TensorFlow, model creation, training, and evaluation typically proceed through the use of the Keras API. Once the model has been evaluated for performance, there are two primary methods for deployment:
+
+\begin{itemize}
+	\item \textbf{SD Card Method:} The trained model is saved in the .tflite format and stored on an SD card. This card is then inserted into the \gls{soc} \gls{fpga} slot.
+	
+	\item \textbf{Embedded Software Method:} Alternatively, the model can be embedded directly into the code of the embedded software by converting it into a hex dump (using xxd tool). This is then compiled into the application, eliminating the need for external storage.
+\end{itemize}
+
+This dual-method approach provides flexibility for a range of deployment scenarios.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{TensorFlow Lite Delegate Implementation and Operation}
+TensorFlow, as an open-source framework, provides extensible interfaces to optimize the execution of specific parts of a model on various hardware types. Within this structure, delegates are components that help TensorFlow Lite to efficiently reroute specific tensor operations to be run on specialized hardware accelerators, rather than the default \gls{cpu}.
+
+
+\paragraph{Implementation}
+
+In the TensorFlow ecosystem, a delegate serves as a bridge connecting hardware and software, illustrated in \Fig{fig:sw_stack}. In this framework, specific tensor operations are offloaded to specialized hardware like \glspl{gpu}, \glspl{npu}, and custom accelerators such as the \gls{tp}. To harness the full potential of the proposed \gls{tp}, it is needed to implement a tailored TensorFlow Lite delegate.
+
+The delegate interface identifies operations eligible for offloading and redirects them to the specialized hardware, as depicted in \Fig{fig:sw_stack_flowchart}.
+
+\paragraph{Software Classes}
+
+The collaboration diagram in \Fig{fig:sw_tp_delegate_diagram} offers a visual representation of the relationships between the delegate class implemented for the \gls{tp}. This diagram is instrumental in understanding the interactions between classes and can be insightful for developers and researchers who aim to customize or extend the TensorFlow Lite delegate for specialized use-cases.
+
+In this diagram, the central class is the \textit{TPDelegate}, representing the delegate designed for the proposed custom \gls{tp}. This delegate interacts with a variety of other classes, facilitating execution of tensor operations and its memory/hardware management.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./figures/class_t_p_delegate__coll__graph.png}
+	\caption{Collaboration diagram of TensorFlow delegate classes.}
+	\label{fig:sw_tp_delegate_diagram}
+\end{figure}
+\FloatBarrier
+
+\paragraph{Initialization}
+
+As depicted in \Fig{fig:sw_tf_delegate_initialize_diagram}, the process commences by enabling the delegate interface at the application layer. Subsequently, the \textit{MicroInterpreter} module creates and initializes a \textit{TPDelegate} instance. During this phase, the \gls{tp} and \gls{dma} hardware drivers are also instantiated and initialized.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./figures/sequence_tfl_delegate_initialization.pdf}
+	\caption{Sequence diagram of TensorFlow delegate initialization.}
+	\label{fig:sw_tf_delegate_initialize_diagram}
+\end{figure}
+\FloatBarrier
+
+\paragraph{Operation}
+During operation, TensorFlow Lite executes the model graph. Essentially, this graph provides a representation of how data is processed and transformed as it moves through the various operations of a \gls{ml} model. 
+The execution of the computation graph is depicted in \Fig{fig:sw_tf_delegate_execution_diagram}. Called by the application layer, the \textit{MicroInterpreter} module invokes the subgraph execution. As depicted in \Fig{fig:sw_stack_flowchart}, the process involves the following steps:
+
+\begin{enumerate}
+	\item Traversing through each node in the compute graph.
+	\item Assessing the tensor operator of each node and delegating the computation of \textit{Conv2D} operations to the \gls{tp}.
+\end{enumerate}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{./figures/sequence_tfl_delegate_acceleration.pdf}
+	\caption{Sequence diagram of TensorFlow delegate execution.}
+	\label{fig:sw_tf_delegate_execution_diagram}
+\end{figure}
+
+When the delegate operates the \gls{tp}, it creates a \textit{Job} object that serves as a tasks container for the \gls{tp}. In this case, it contains \textit{Conv2D} operation task. Each task contains two data transactions:
+
+\begin{itemize}
+	\item \textbf{Setup Transaction:} Here, the \gls{dma} transfers the setup buffer (as depicted in \Fig{fig:setup_transaction_chapter}) from its memory source to the \gls{tp}, to establish a groundwork for the upcoming \textit{Conv2D} execution. Refer to \Fig{fig:sw_tp_delegate_job_chapter}(a). During this transaction, the \gls{tp} operates in its \textit{configuration} mode.
+	\item \textbf{Compute Transaction:} As the core of the operation, the input tensor gets streamed to the \gls{tp} via the \gls{dma} TX channel from its memory source. Concurrently, the output tensor flows out from the \gls{tp}, to its memory destination through the \gls{dma} RX channel. Refer to \Fig{fig:sw_tp_delegate_job_chapter}(b). During this transaction, the \gls{tp} operates in its \textit{execution} mode.
+\end{itemize}
+
+The TensorFlow Lite delegate implementation encapsulates the mechanisms of software-hardware synergy, pushing the efficient neural network execution on custom hardware platforms. The TensorFlow Lite delegate C++ code integration is presented in the Appendix~\ref{chap:appendix_delegate}
 \FloatBarrier
