@@ -325,6 +325,47 @@ Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla
 \newblock {\em Advances in neural information processing systems},
   33:1877--1901, 2020.
 
+\bibitem{gerstner2014neuronal}
+Wulfram Gerstner, Werner~M Kistler, Richard Naud, and Liam Paninski.
+\newblock {\em Neuronal dynamics: From single neurons to networks and models of
+  cognition}.
+\newblock Cambridge University Press, 2014.
+
+\bibitem{merolla2014million}
+Paul~A Merolla, John~V Arthur, Rodrigo Alvarez-Icaza, Andrew~S Cassidy, Jun
+  Sawada, Filipp Akopyan, Bryan~L Jackson, Nabil Imam, Chen Guo, Yutaka
+  Nakamura, et~al.
+\newblock A million spiking-neuron integrated circuit with a scalable
+  communication network and interface.
+\newblock {\em Science}, 345(6197):668--673, 2014.
+
+\bibitem{neftci2019surrogate}
+Emre~O Neftci, Hesham Mostafa, and Friedemann Zenke.
+\newblock Surrogate gradient learning in spiking neural networks: Bringing the
+  power of gradient-based optimization to spiking neural networks.
+\newblock {\em IEEE Signal Processing Magazine}, 36(6):51--63, 2019.
+
+\bibitem{lee2016training}
+Jun~Haeng Lee, Tobi Delbruck, and Michael Pfeiffer.
+\newblock Training deep spiking neural networks using backpropagation.
+\newblock {\em Frontiers in neuroscience}, 10:508, 2016.
+
+\bibitem{masquelier2007unsupervised}
+Timoth{\'e}e Masquelier and Simon~J Thorpe.
+\newblock Unsupervised learning of visual features through spike timing
+  dependent plasticity.
+\newblock {\em PLoS computational biology}, 3(2):e31, 2007.
+
+\bibitem{izhikevich2004model}
+Eugene~M Izhikevich.
+\newblock Which model to use for cortical spiking neurons?
+\newblock {\em IEEE transactions on neural networks}, 15(5):1063--1070, 2004.
+
+\bibitem{lecun1998mnist}
+Yann LeCun.
+\newblock The mnist database of handwritten digits.
+\newblock {\em http://yann. lecun. com/exdb/mnist/}, 1998.
+
 \bibitem{rosenblatt1958perceptron}
 Frank Rosenblatt.
 \newblock The perceptron: a probabilistic model for information storage and
@@ -395,47 +436,6 @@ Jiuxiang Gu, Zhenhua Wang, Jason Kuen, Lianyang Ma, Amir Shahroudy, Bing Shuai,
   Ting Liu, Xingxing Wang, Gang Wang, Jianfei Cai, et~al.
 \newblock Recent advances in convolutional neural networks.
 \newblock {\em Pattern Recognition}, 77:354--377, 2018.
-
-\bibitem{gerstner2014neuronal}
-Wulfram Gerstner, Werner~M Kistler, Richard Naud, and Liam Paninski.
-\newblock {\em Neuronal dynamics: From single neurons to networks and models of
-  cognition}.
-\newblock Cambridge University Press, 2014.
-
-\bibitem{merolla2014million}
-Paul~A Merolla, John~V Arthur, Rodrigo Alvarez-Icaza, Andrew~S Cassidy, Jun
-  Sawada, Filipp Akopyan, Bryan~L Jackson, Nabil Imam, Chen Guo, Yutaka
-  Nakamura, et~al.
-\newblock A million spiking-neuron integrated circuit with a scalable
-  communication network and interface.
-\newblock {\em Science}, 345(6197):668--673, 2014.
-
-\bibitem{neftci2019surrogate}
-Emre~O Neftci, Hesham Mostafa, and Friedemann Zenke.
-\newblock Surrogate gradient learning in spiking neural networks: Bringing the
-  power of gradient-based optimization to spiking neural networks.
-\newblock {\em IEEE Signal Processing Magazine}, 36(6):51--63, 2019.
-
-\bibitem{lee2016training}
-Jun~Haeng Lee, Tobi Delbruck, and Michael Pfeiffer.
-\newblock Training deep spiking neural networks using backpropagation.
-\newblock {\em Frontiers in neuroscience}, 10:508, 2016.
-
-\bibitem{masquelier2007unsupervised}
-Timoth{\'e}e Masquelier and Simon~J Thorpe.
-\newblock Unsupervised learning of visual features through spike timing
-  dependent plasticity.
-\newblock {\em PLoS computational biology}, 3(2):e31, 2007.
-
-\bibitem{izhikevich2004model}
-Eugene~M Izhikevich.
-\newblock Which model to use for cortical spiking neurons?
-\newblock {\em IEEE transactions on neural networks}, 15(5):1063--1070, 2004.
-
-\bibitem{lecun1998mnist}
-Yann LeCun.
-\newblock The mnist database of handwritten digits.
-\newblock {\em http://yann. lecun. com/exdb/mnist/}, 1998.
 
 \bibitem{sze2017efficient}
 Vivienne Sze, Yu-Hsin Chen, Tien-Ju Yang, and Joel~S Emer.
@@ -633,25 +633,17 @@ Chang Gao, Antonio Rios-Navarro, Xi~Chen, Shih-Chii Liu, and Tobi Delbruck.
 \newblock {\em IEEE Journal on Emerging and Selected Topics in Circuits and
   Systems}, 10(4):419--432, 2020.
 
-\bibitem{venkataramanaiah202228nm}
-Shreyas~Kolala Venkataramanaiah, Jian Meng, Han-Sok Suh, Injune Yeo, Jyotishman
-  Saikia, Sai~Kiran Cherupally, Yichi Zhang, Zhiru Zhang, and Jae-sun Seo.
-\newblock A 28nm 8-bit floating-point tensor core based cnn training processor
-  with dynamic activation/weight sparsification.
-\newblock In {\em ESSCIRC 2022-IEEE 48th European Solid State Circuits
-  Conference (ESSCIRC)}, pages 89--92. IEEE, 2022.
+\bibitem{wu2020phoenix}
+Chen Wu, Mingyu Wang, Xiayu Li, Jicheng Lu, Kun Wang, and Lei He.
+\newblock Phoenix: A low-precision floating-point quantization oriented
+  architecture for convolutional neural networks.
+\newblock {\em arXiv preprint arXiv:2003.02628}, 2020.
 
 \bibitem{park2021neural}
 Jeongwoo Park, Sunwoo Lee, and Dongsuk Jeon.
 \newblock A neural network training processor with 8-bit shared exponent bias
   floating point and multiple-way fused multiply-add trees.
 \newblock {\em IEEE Journal of Solid-State Circuits}, 57(3):965--977, 2021.
-
-\bibitem{wu2020phoenix}
-Chen Wu, Mingyu Wang, Xiayu Li, Jicheng Lu, Kun Wang, and Lei He.
-\newblock Phoenix: A low-precision floating-point quantization oriented
-  architecture for convolutional neural networks.
-\newblock {\em arXiv preprint arXiv:2003.02628}, 2020.
 
 \bibitem{venkataramani2021rapid}
 Swagath Venkataramani, Vijayalakshmi Srinivasan, Wei Wang, Sanchari Sen, Jintao
@@ -661,22 +653,19 @@ Swagath Venkataramani, Vijayalakshmi Srinivasan, Wei Wang, Sanchari Sen, Jintao
 \newblock In {\em 2021 ACM/IEEE 48th Annual International Symposium on Computer
   Architecture (ISCA)}, pages 153--166. IEEE, 2021.
 
-\bibitem{noune20228}
-Badreddine Noune, Philip Jones, Daniel Justus, Dominic Masters, and Carlo
-  Luschi.
-\newblock 8-bit numerical formats for deep neural networks.
-\newblock {\em arXiv preprint arXiv:2206.02915}, 2022.
+\bibitem{venkataramanaiah202228nm}
+Shreyas~Kolala Venkataramanaiah, Jian Meng, Han-Sok Suh, Injune Yeo, Jyotishman
+  Saikia, Sai~Kiran Cherupally, Yichi Zhang, Zhiru Zhang, and Jae-sun Seo.
+\newblock A 28nm 8-bit floating-point tensor core based cnn training processor
+  with dynamic activation/weight sparsification.
+\newblock In {\em ESSCIRC 2022-IEEE 48th European Solid State Circuits
+  Conference (ESSCIRC)}, pages 89--92. IEEE, 2022.
 
 \bibitem{gallus2018handwritten}
 Michal Gallus and Alberto Nannarelli.
 \newblock Handwritten digit classification using 8-bit floating point based
   convolutional neural networks.
 \newblock Technical report, DTU Compute Technical Report, 2018.
-
-\bibitem{mellempudi2019mixed}
-Naveen Mellempudi, Sudarshan Srinivasan, Dipankar Das, and Bharat Kaul.
-\newblock Mixed precision training with 8-bit floating point.
-\newblock {\em arXiv preprint arXiv:1905.12334}, 2019.
 
 \bibitem{wang2018training}
 Naigang Wang, Jungwook Choi, Daniel Brand, Chia-Yu Chen, and Kailash
@@ -691,6 +680,11 @@ Xiao Sun, Jungwook Choi, Chia-Yu Chen, Naigang Wang, Swagath Venkataramani,
 \newblock Hybrid 8-bit floating point (hfp8) training and inference for deep
   neural networks.
 \newblock {\em Advances in neural information processing systems}, 32, 2019.
+
+\bibitem{mellempudi2019mixed}
+Naveen Mellempudi, Sudarshan Srinivasan, Dipankar Das, and Bharat Kaul.
+\newblock Mixed precision training with 8-bit floating point.
+\newblock {\em arXiv preprint arXiv:1905.12334}, 2019.
 
 \bibitem{liu2021improving}
 Fangxin Liu, Wenbo Zhao, Zhezhi He, Yanzhi Wang, Zongwu Wang, Changzhi Dai,

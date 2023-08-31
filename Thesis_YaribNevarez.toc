@@ -78,75 +78,80 @@
 \contentsline {subsubsection}{\nonumberline Spike-by-Spike Neural Network Accelerators}{44}{section*.57}%
 \contentsline {subsection}{\numberline {2.9.3}Convolutional Neural Network Accelerators with Custom Floating-Point Computation on \gls {fpga}}{45}{subsection.2.9.3}%
 \contentsline {subsubsection}{\nonumberline Hybrid Custom Floating-Point}{45}{section*.58}%
-\contentsline {subsubsection}{\nonumberline Low-Precision Floating-Point}{45}{section*.59}%
-\contentsline {subsubsection}{\nonumberline Low-Power Architectures for \gls {iot} Deployments}{46}{section*.60}%
-\contentsline {subsection}{\numberline {2.9.4}Neural Network Accelerators for Training and Inference with 8-bit Floating-Point Computation on \gls {asic}}{46}{subsection.2.9.4}%
-\contentsline {subsection}{\numberline {2.9.5}Training Techniques with 8-bit Floating-Point Quantization}{47}{subsection.2.9.5}%
-\contentsline {chapter}{\numberline {3}Acceleration with Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{49}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{50}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Design Technique}{53}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Hardware Architecture}{54}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Conv Processing Unit}{55}{subsection.3.2.2}%
-\contentsline {subsubsection}{\nonumberline Configuration Mode}{55}{section*.65}%
-\contentsline {subsubsection}{\nonumberline Computation Mode}{56}{section*.66}%
-\contentsline {subsection}{\numberline {3.2.3}Hybrid Custom Floating-Point Multiply-Accumulate Unit: Vector Dot-Product Approximation}{56}{subsection.3.2.3}%
-\contentsline {subsubsection}{\nonumberline Dot-Product with Standard Floating-Point Computation}{58}{section*.68}%
-\contentsline {subsubsection}{\nonumberline Dot-Product with Hybrid Custom Floating-Point and Logarithmic Computation}{59}{section*.70}%
-\contentsline {section}{\numberline {3.3}Experimental Results}{62}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Performance Benchmark}{63}{subsection.3.3.1}%
-\contentsline {subsubsection}{\nonumberline Benchmark on Embedded CPU}{63}{section*.73}%
-\contentsline {subsubsection}{\nonumberline Benchmark on Processing Units with Standard Floating-Point Computation}{64}{section*.76}%
-\contentsline {subsubsection}{\nonumberline Benchmark on Noise Tolerance Plot}{67}{section*.83}%
-\contentsline {subsection}{\numberline {3.3.2}Design Exploration with Hybrid Custom Floating-Point and Logarithmic Computation}{68}{subsection.3.3.2}%
-\contentsline {subsubsection}{\nonumberline Parameters for Numeric Representation of Synaptic Weight Matrix}{69}{section*.85}%
-\contentsline {subsubsection}{\nonumberline Design Exploration for Dot-product with Hybrid Custom Floating-Point Computation}{70}{section*.87}%
-\contentsline {subsubsection}{\nonumberline Design Exploration for Dot-Product whit Hybrid Logarithmic Computation}{70}{section*.92}%
-\contentsline {subsection}{\numberline {3.3.3}Results and Discussion}{73}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Conclusions}{75}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Low-Power Conv2D Tensor Accelerator: Hybrid 6-bit Floating-Point Computation}{79}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{80}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Design Technique}{82}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Base Embedded System Architecture}{82}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Tensor Processor}{83}{subsection.4.2.2}%
-\contentsline {subsubsection}{\nonumberline Modes of Operation}{84}{section*.106}%
-\contentsline {subsubsection}{\nonumberline Dot-product with Hybrid Floating-Point}{85}{section*.109}%
-\contentsline {subsubsection}{\nonumberline Multiply-Accumulate Unit}{86}{section*.112}%
-\contentsline {subsubsection}{\nonumberline On-chip Memory Utilization}{88}{section*.114}%
-\contentsline {subsection}{\numberline {4.2.3}Training Method}{90}{subsection.4.2.3}%
-\contentsline {subsubsection}{\nonumberline Training with Iterative Early Stop}{90}{section*.116}%
-\contentsline {subsubsection}{\nonumberline Quantization-Aware Training}{90}{section*.117}%
-\contentsline {subsection}{\numberline {4.2.4}Embedded Software Architecture}{94}{subsection.4.2.4}%
-\contentsline {paragraph}{\nonumberline Model Deployment}{95}{section*.123}%
-\contentsline {subsubsection}{\nonumberline TensorFlow Lite Delegate Implementation and Operation}{95}{section*.124}%
-\contentsline {paragraph}{\nonumberline Implementation}{95}{section*.125}%
-\contentsline {paragraph}{\nonumberline Software Classes}{95}{section*.126}%
-\contentsline {paragraph}{\nonumberline Initialization}{96}{section*.128}%
-\contentsline {paragraph}{\nonumberline Operation}{97}{section*.130}%
-\contentsline {section}{\numberline {4.3}Experimental Results}{98}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Sensor Analytics Application}{99}{subsection.4.3.1}%
-\contentsline {subsubsection}{\nonumberline Experimental Setup}{99}{section*.132}%
-\contentsline {subsubsection}{\nonumberline Data Sets}{99}{section*.133}%
-\contentsline {subsubsection}{\nonumberline CNN-Regression Model}{102}{section*.136}%
-\contentsline {subsection}{\numberline {4.3.2}Training}{102}{subsection.4.3.2}%
-\contentsline {subsubsection}{\nonumberline Base Model}{102}{section*.138}%
-\contentsline {subsubsection}{\nonumberline TensorFlow Lite 8-bit Quantization}{105}{section*.141}%
-\contentsline {subsubsection}{\nonumberline Inference of Non-Quantized Models on HF6 Hardware}{105}{section*.142}%
-\contentsline {subsubsection}{\nonumberline Quantization-Aware Training for HF6 Hardware}{105}{section*.143}%
-\contentsline {subsubsection}{\nonumberline Quantization-Aware Training for Hybrid-Logarithmic 6-bit}{106}{section*.144}%
-\contentsline {subsection}{\numberline {4.3.3}Hardware Design Exploration}{106}{subsection.4.3.3}%
-\contentsline {subsubsection}{\nonumberline Benchmark on Embedded CPU}{106}{section*.145}%
-\contentsline {subsubsection}{\nonumberline Benchmark on Tensor Processor Synthesized with Xilinx LogiCORE IP for Floating-Point Computation}{107}{section*.146}%
-\contentsline {subsubsection}{\nonumberline Tensor Processor Synthesized with Hybrid-Float6 Hardware Architecture}{108}{section*.151}%
-\contentsline {subsection}{\numberline {4.3.4}Discussion}{109}{subsection.4.3.4}%
-\contentsline {subsubsection}{\nonumberline Training and Quantization}{109}{section*.153}%
-\contentsline {subsubsection}{\nonumberline Implementation and Performance}{111}{section*.155}%
-\contentsline {subsubsection}{\nonumberline SoC Design and Compatibility}{112}{section*.158}%
-\contentsline {section}{\numberline {4.4}Conclusions}{113}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Conclusion and Outlook}{115}{chapter.5}%
-\contentsline {section}{\numberline {5.1}State-of-the-art challenges and solutions}{115}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Specific Contributions}{115}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Future Directions}{116}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Final Remarks}{116}{section.5.4}%
-\contentsline {chapter}{\numberline {A}Appendix}{119}{appendix.A}%
-\contentsline {section}{\numberline {A.1}TensorFlow Lite Delegate C++ Code Integration}{119}{section.A.1}%
-\contentsline {section}{\numberline {A.2}SbS algorithm}{119}{section.A.2}%
+\contentsline {subsubsection}{\nonumberline Low-Precision Floating-Point}{46}{section*.60}%
+\contentsline {subsubsection}{\nonumberline Low-Power Architectures for \gls {iot} Deployments}{47}{section*.63}%
+\contentsline {subsection}{\numberline {2.9.4}Neural Network Accelerators for Training and Inference with 8-bit Floating-Point Computation on \gls {asic}}{48}{subsection.2.9.4}%
+\contentsline {subsection}{\numberline {2.9.5}Training Techniques with 8-bit Floating-Point Quantization}{49}{subsection.2.9.5}%
+\contentsline {chapter}{\numberline {3}Acceleration with Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{51}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{52}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Design Technique}{55}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Hardware Architecture}{56}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Conv Processing Unit}{57}{subsection.3.2.2}%
+\contentsline {subsubsection}{\nonumberline Configuration Mode}{57}{section*.69}%
+\contentsline {subsubsection}{\nonumberline Computation Mode}{58}{section*.70}%
+\contentsline {subsection}{\numberline {3.2.3}Hybrid Custom Floating-Point Multiply-Accumulate Unit: Vector Dot-Product Approximation}{58}{subsection.3.2.3}%
+\contentsline {subsubsection}{\nonumberline Dot-Product with Standard Floating-Point Computation}{60}{section*.72}%
+\contentsline {subsubsection}{\nonumberline Dot-Product with Hybrid Custom Floating-Point and Logarithmic Computation}{61}{section*.74}%
+\contentsline {section}{\numberline {3.3}Experimental Results}{64}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Performance Benchmark}{65}{subsection.3.3.1}%
+\contentsline {subsubsection}{\nonumberline Benchmark on Embedded CPU}{65}{section*.77}%
+\contentsline {subsubsection}{\nonumberline Benchmark on Processing Units with Standard Floating-Point Computation}{66}{section*.80}%
+\contentsline {subsubsection}{\nonumberline Benchmark on Noise Tolerance Plot}{69}{section*.87}%
+\contentsline {subsection}{\numberline {3.3.2}Design Exploration with Hybrid Custom Floating-Point and Logarithmic Computation}{70}{subsection.3.3.2}%
+\contentsline {subsubsection}{\nonumberline Parameters for Numeric Representation of Synaptic Weight Matrix}{71}{section*.89}%
+\contentsline {subsubsection}{\nonumberline Design Exploration for Dot-product with Hybrid Custom Floating-Point Computation}{72}{section*.91}%
+\contentsline {subsubsection}{\nonumberline Design Exploration for Dot-Product whit Hybrid Logarithmic Computation}{72}{section*.96}%
+\contentsline {subsection}{\numberline {3.3.3}Results and Discussion}{75}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Conclusions}{77}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Low-Power Conv2D Tensor Accelerator: Hybrid 6-bit Floating-Point Computation}{81}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{82}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Design Technique}{84}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Base Embedded System Architecture}{84}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Tensor Processor}{85}{subsection.4.2.2}%
+\contentsline {subsubsection}{\nonumberline Modes of Operation}{86}{section*.110}%
+\contentsline {subsubsection}{\nonumberline Dot-product with Hybrid Floating-Point}{87}{section*.113}%
+\contentsline {subsubsection}{\nonumberline Multiply-Accumulate Unit}{88}{section*.116}%
+\contentsline {subsubsection}{\nonumberline On-chip Memory Utilization}{90}{section*.118}%
+\contentsline {subsection}{\numberline {4.2.3}Training Method}{92}{subsection.4.2.3}%
+\contentsline {subsubsection}{\nonumberline Training with Iterative Early Stop}{92}{section*.120}%
+\contentsline {subsubsection}{\nonumberline Quantization-Aware Training}{92}{section*.121}%
+\contentsline {subsection}{\numberline {4.2.4}Embedded Software Architecture}{96}{subsection.4.2.4}%
+\contentsline {paragraph}{\nonumberline Model Deployment}{97}{section*.127}%
+\contentsline {subsubsection}{\nonumberline TensorFlow Lite Delegate Implementation and Operation}{97}{section*.128}%
+\contentsline {paragraph}{\nonumberline Implementation}{97}{section*.129}%
+\contentsline {paragraph}{\nonumberline Software Classes}{97}{section*.130}%
+\contentsline {paragraph}{\nonumberline Initialization}{98}{section*.132}%
+\contentsline {paragraph}{\nonumberline Operation}{99}{section*.134}%
+\contentsline {section}{\numberline {4.3}Experimental Results}{100}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Sensor Analytics Application}{101}{subsection.4.3.1}%
+\contentsline {subsubsection}{\nonumberline Experimental Setup}{101}{section*.136}%
+\contentsline {subsubsection}{\nonumberline Data Sets}{101}{section*.137}%
+\contentsline {subsubsection}{\nonumberline CNN-Regression Model}{104}{section*.140}%
+\contentsline {subsection}{\numberline {4.3.2}Training}{104}{subsection.4.3.2}%
+\contentsline {subsubsection}{\nonumberline Base Model}{104}{section*.142}%
+\contentsline {subsubsection}{\nonumberline TensorFlow Lite 8-bit Quantization}{107}{section*.145}%
+\contentsline {subsubsection}{\nonumberline Inference of Non-Quantized Models on HF6 Hardware}{107}{section*.146}%
+\contentsline {subsubsection}{\nonumberline Quantization-Aware Training for HF6 Hardware}{107}{section*.147}%
+\contentsline {subsubsection}{\nonumberline Quantization-Aware Training for Hybrid-Logarithmic 6-bit}{108}{section*.148}%
+\contentsline {subsection}{\numberline {4.3.3}Hardware Design Exploration}{108}{subsection.4.3.3}%
+\contentsline {subsubsection}{\nonumberline Benchmark on Embedded CPU}{108}{section*.149}%
+\contentsline {subsubsection}{\nonumberline Benchmark on Tensor Processor Synthesized with Xilinx LogiCORE IP for Floating-Point Computation}{109}{section*.150}%
+\contentsline {subsubsection}{\nonumberline Tensor Processor Synthesized with Hybrid-Float6 Hardware Architecture}{110}{section*.155}%
+\contentsline {subsection}{\numberline {4.3.4}Discussion}{111}{subsection.4.3.4}%
+\contentsline {subsubsection}{\nonumberline Training and Quantization}{111}{section*.157}%
+\contentsline {subsubsection}{\nonumberline Implementation and Performance}{113}{section*.159}%
+\contentsline {subsubsection}{\nonumberline SoC Design and Compatibility}{114}{section*.162}%
+\contentsline {section}{\numberline {4.4}Conclusions}{115}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Conclusion and Outlook}{117}{chapter.5}%
+\contentsline {section}{\numberline {5.1}State-of-the-art challenges and solutions}{117}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Specific Contributions}{117}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Future Directions}{118}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Final Remarks}{118}{section.5.4}%
+\contentsline {chapter}{\numberline {A}Appendix}{121}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Tensor Processor Delegate and Hardware Drivers}{121}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Tensor Processor Delegate}{122}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Hardware Drivers}{123}{subsection.A.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}ARM Generic Interrupt Controller}{124}{subsection.A.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Supporting Classes}{124}{subsection.A.1.4}%
+\contentsline {section}{\numberline {A.2}TensorFlow Lite Integration}{125}{section.A.2}%
+\contentsline {section}{\numberline {A.3}SbS algorithm}{138}{section.A.3}%

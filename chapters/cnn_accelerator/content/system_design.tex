@@ -357,5 +357,7 @@ When the delegate operates the \gls{tp}, it creates a \textit{Job} object that s
 	\item \textbf{Compute Transaction:} As the core of the operation, the input tensor gets streamed to the \gls{tp} via the \gls{dma} TX channel from its memory source. Concurrently, the output tensor flows out from the \gls{tp}, to its memory destination through the \gls{dma} RX channel. Refer to \Fig{fig:sw_tp_delegate_job_chapter}(b). During this transaction, the \gls{tp} operates in its \textit{execution} mode.
 \end{itemize}
 
-The TensorFlow Lite delegate implementation encapsulates the mechanisms of software-hardware synergy, pushing the efficient neural network execution on custom hardware platforms. The TensorFlow Lite delegate C++ code integration is presented in the Appendix~\ref{chap:appendix_delegate}
+The TensorFlow Lite delegate implementation encapsulates the mechanisms of software-hardware synergy, pushing the efficient neural network execution on custom hardware platforms.
+
+Details on the delegate interface implementation and associated hardware drivers are provided in Appendix~\ref{chap:appendix_delegate}, while modifications to TensorFlow Lite library are presented in Appendix~\ref{chap:code_changes}.
 \FloatBarrier
