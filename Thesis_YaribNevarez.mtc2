@@ -1,52 +1,52 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Introduction}{\reset@font\mtcSfont 15}{section.2.1}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Spiking Neural Networks}{\reset@font\mtcSfont 16}{section.2.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Spike-by-Spike Neural Networks}{\reset@font\mtcSSSfont 16}{section*.19}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Basic Network Overview}{\reset@font\mtcPfont 17}{section*.20}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Computational Cost}{\reset@font\mtcPfont 18}{section*.24}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Spike-by-Spike Neural Networks}{\reset@font\mtcSSSfont 17}{section*.19}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Basic Network Overview}{\reset@font\mtcPfont 18}{section*.20}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Computational Cost}{\reset@font\mtcPfont 20}{section*.24}}
 {\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Error Tolerance}{\reset@font\mtcPfont 20}{section*.26}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Artificial Neural Networks}{\reset@font\mtcSfont 20}{section.2.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}Architecture}{\reset@font\mtcSSfont 21}{subsection.2.3.1}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Layers}{\reset@font\mtcSSSfont 21}{section*.28}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Weights and Bias}{\reset@font\mtcSSSfont 21}{section*.29}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Activation Functions}{\reset@font\mtcSSSfont 21}{section*.30}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Weights and Bias}{\reset@font\mtcSSSfont 22}{section*.29}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Activation Functions}{\reset@font\mtcSSSfont 22}{section*.30}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}Training Process}{\reset@font\mtcSSfont 24}{subsection.2.3.2}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Stochastic Gradient Descent}{\reset@font\mtcSSSfont 24}{section*.31}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.3}Multi-Layer Perceptron}{\reset@font\mtcSSfont 25}{subsection.2.3.3}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Key Components}{\reset@font\mtcSSSfont 25}{section*.32}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.4}Convolutional Neural Networks}{\reset@font\mtcSSfont 25}{subsection.2.3.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.4}Convolutional Neural Networks}{\reset@font\mtcSSfont 26}{subsection.2.3.4}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Key Components}{\reset@font\mtcSSSfont 26}{section*.33}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Conv2D Tensor Operation}{\reset@font\mtcSSSfont 26}{section*.34}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Conv2D Tensor Operation}{\reset@font\mtcSSSfont 27}{section*.34}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Computational Cost of a Convolution Layer}{\reset@font\mtcSSSfont 27}{section*.35}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Definitions}{\reset@font\mtcPfont 27}{section*.36}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Computations Per Output Element}{\reset@font\mtcPfont 27}{section*.37}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Definitions}{\reset@font\mtcPfont 28}{section*.36}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Computations Per Output Element}{\reset@font\mtcPfont 28}{section*.37}}
 {\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Output Dimensions}{\reset@font\mtcPfont 28}{section*.38}}
 {\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Total Computations}{\reset@font\mtcPfont 28}{section*.39}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Error Tolerance in Convolution Layers}{\reset@font\mtcSSSfont 28}{section*.40}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Sources of Error}{\reset@font\mtcPfont 28}{section*.41}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Error Compensating Mechanisms}{\reset@font\mtcPfont 28}{section*.42}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Error Tolerance in Convolution Layers}{\reset@font\mtcSSSfont 29}{section*.40}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Sources of Error}{\reset@font\mtcPfont 29}{section*.41}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Error Compensating Mechanisms}{\reset@font\mtcPfont 29}{section*.42}}
 {\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \nonumberline Exploiting Error Tolerance for Optimization}{\reset@font\mtcPfont 29}{section*.43}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Neural Network Accelerators}{\reset@font\mtcSfont 29}{section.2.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.1}The Need for Accelerators}{\reset@font\mtcSSfont 29}{subsection.2.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.2}Types of Accelerators}{\reset@font\mtcSSfont 31}{subsection.2.4.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.3}Design Considerations}{\reset@font\mtcSSfont 32}{subsection.2.4.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Neural Network Accelerators}{\reset@font\mtcSfont 30}{section.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.1}The Need for Accelerators}{\reset@font\mtcSSfont 30}{subsection.2.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.2}Types of Accelerators}{\reset@font\mtcSSfont 32}{subsection.2.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.3}Design Considerations}{\reset@font\mtcSSfont 33}{subsection.2.4.3}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Precision and Effect in Training}{\reset@font\mtcSfont 34}{section.2.5}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.1}Fixed-Point}{\reset@font\mtcSSfont 34}{subsection.2.5.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.2}Floating-Point}{\reset@font\mtcSSfont 35}{subsection.2.5.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.3}Post-Training Quantization}{\reset@font\mtcSSfont 37}{subsection.2.5.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.4}Quantization-Aware Training}{\reset@font\mtcSSfont 37}{subsection.2.5.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.4}Quantization-Aware Training}{\reset@font\mtcSSfont 38}{subsection.2.5.4}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.6}Dataflow Taxonomy}{\reset@font\mtcSfont 39}{section.2.6}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.7}Flynn's Taxonomy}{\reset@font\mtcSfont 40}{section.2.7}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.8}Multiply-Accumulate Unit}{\reset@font\mtcSfont 41}{section.2.8}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.8.1}Design Considerations}{\reset@font\mtcSSfont 42}{subsection.2.8.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.7}Flynn's Taxonomy}{\reset@font\mtcSfont 41}{section.2.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.8}Multiply-Accumulate Unit}{\reset@font\mtcSfont 42}{section.2.8}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.8.1}Design Considerations}{\reset@font\mtcSSfont 43}{subsection.2.8.1}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.9}Related Work}{\reset@font\mtcSfont 43}{section.2.9}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.9.1}Aggressive Quantization}{\reset@font\mtcSSfont 43}{subsection.2.9.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.9.1}Aggressive Quantization}{\reset@font\mtcSSfont 44}{subsection.2.9.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.9.2}Spiking Neural Network Accelerators}{\reset@font\mtcSSfont 44}{subsection.2.9.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Classical Approximate Computing}{\reset@font\mtcSSSfont 44}{section*.56}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Spike-by-Spike Neural Network Accelerators}{\reset@font\mtcSSSfont 44}{section*.57}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Classical Approximate Computing}{\reset@font\mtcSSSfont 45}{section*.56}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Spike-by-Spike Neural Network Accelerators}{\reset@font\mtcSSSfont 45}{section*.57}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.9.3}Convolutional Neural Network Accelerators with Custom Floating-Point Computation on \gls {fpga}}{\reset@font\mtcSSfont 45}{subsection.2.9.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline High-Performance FPGA-Based CNN Accelerator With Block-Floating-Point Arithmetic}{\reset@font\mtcSSSfont 45}{section*.58}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline A 200MHZ 202.4GFLOPS@10.8W VGG16 accelerator in Xilinx VX690T}{\reset@font\mtcSSSfont 46}{section*.60}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Low-precision Floating-point Arithmetic for High-performance FPGA-based CNN Acceleration}{\reset@font\mtcSSSfont 47}{section*.62}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline CNN hardware acceleration on a low-power and low-cost APSoC}{\reset@font\mtcSSSfont 48}{section*.64}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.9.4}Neural Network Accelerators for Training and Inference with 8-bit Floating-Point Computation on \gls {asic}}{\reset@font\mtcSSfont 49}{subsection.2.9.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.9.5}Training Techniques with 8-bit Floating-Point Quantization}{\reset@font\mtcSSfont 50}{subsection.2.9.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline High-Performance FPGA-Based CNN Accelerator With Block-Floating-Point Arithmetic}{\reset@font\mtcSSSfont 46}{section*.58}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline A 200MHZ 202.4GFLOPS@10.8W VGG16 accelerator in Xilinx VX690T}{\reset@font\mtcSSSfont 47}{section*.60}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Low-precision Floating-point Arithmetic for High-performance FPGA-based CNN Acceleration}{\reset@font\mtcSSSfont 48}{section*.62}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline CNN hardware acceleration on a low-power and low-cost APSoC}{\reset@font\mtcSSSfont 49}{section*.64}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.9.4}Neural Network Accelerators for Training and Inference with 8-bit Floating-Point Computation on \gls {asic}}{\reset@font\mtcSSfont 50}{subsection.2.9.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.9.5}Training Techniques with 8-bit Floating-Point Quantization}{\reset@font\mtcSSfont 51}{subsection.2.9.5}}

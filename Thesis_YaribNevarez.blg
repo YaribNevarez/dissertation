@@ -12,239 +12,239 @@ A level-1 auxiliary file: ./chapters/conclusion.aux
 A level-1 auxiliary file: ./chapters/appendix.aux
 The style file: unsrt.bst
 Database file #1: ./bibliography/mybib.bib
-Repeated entry---line 1021 of file ./bibliography/mybib.bib
+Repeated entry---line 1085 of file ./bibliography/mybib.bib
  : @article{ernst2007efficient
  :                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2485 of file ./bibliography/mybib.bib
+Repeated entry---line 2566 of file ./bibliography/mybib.bib
  : @inproceedings{du2014leveraging
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2503 of file ./bibliography/mybib.bib
+Repeated entry---line 2584 of file ./bibliography/mybib.bib
  : @inproceedings{nevarez2020accelerator
  :                                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2536 of file ./bibliography/mybib.bib
+Repeated entry---line 2617 of file ./bibliography/mybib.bib
  : @article{lecun1989optimal
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2545 of file ./bibliography/mybib.bib
+Repeated entry---line 2626 of file ./bibliography/mybib.bib
  : @article{hassibi1992second
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2554 of file ./bibliography/mybib.bib
+Repeated entry---line 2635 of file ./bibliography/mybib.bib
  : @article{molchanov2016pruning
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2561 of file ./bibliography/mybib.bib
+Repeated entry---line 2642 of file ./bibliography/mybib.bib
  : @article{li2016pruning
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2568 of file ./bibliography/mybib.bib
+Repeated entry---line 2649 of file ./bibliography/mybib.bib
  : @article{liu2018rethinking
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2578 of file ./bibliography/mybib.bib
+Repeated entry---line 2659 of file ./bibliography/mybib.bib
  : @article{schmidhuber2015deep
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2588 of file ./bibliography/mybib.bib
+Repeated entry---line 2669 of file ./bibliography/mybib.bib
  : @inproceedings{Taigman_2014_CVPR
  :                                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2608 of file ./bibliography/mybib.bib
+Repeated entry---line 2689 of file ./bibliography/mybib.bib
  : @inproceedings {nevarez2020accelerator
  :                                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2626 of file ./bibliography/mybib.bib
+Repeated entry---line 2707 of file ./bibliography/mybib.bib
  : @article{SNN_Survey_Trans19
  :                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2648 of file ./bibliography/mybib.bib
+Repeated entry---line 2729 of file ./bibliography/mybib.bib
  : @article{Spinnaker_Trans13
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2735 of file ./bibliography/mybib.bib
+Repeated entry---line 2816 of file ./bibliography/mybib.bib
  : @article{ernst2007efficient
  :                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2747 of file ./bibliography/mybib.bib
+Repeated entry---line 2828 of file ./bibliography/mybib.bib
  : @article {rotermund2018massively
  :                                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2765 of file ./bibliography/mybib.bib
+Repeated entry---line 2846 of file ./bibliography/mybib.bib
  : @article{rotermund2019Backpropagation
  :                                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2778 of file ./bibliography/mybib.bib
+Repeated entry---line 2859 of file ./bibliography/mybib.bib
  : @article {rotermund2019recurrentsbs
  :                                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2789 of file ./bibliography/mybib.bib
+Repeated entry---line 2870 of file ./bibliography/mybib.bib
  : @article{zhang2018survey
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2800 of file ./bibliography/mybib.bib
+Repeated entry---line 2881 of file ./bibliography/mybib.bib
  : @article{lotrivc2012applicability
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2810 of file ./bibliography/mybib.bib
+Repeated entry---line 2891 of file ./bibliography/mybib.bib
  : @inproceedings{sarwar2016multiplier
  :                                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2819 of file ./bibliography/mybib.bib
+Repeated entry---line 2900 of file ./bibliography/mybib.bib
  : @inproceedings{mrazek2016design
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2827 of file ./bibliography/mybib.bib
+Repeated entry---line 2908 of file ./bibliography/mybib.bib
  : @inproceedings{du2014leveraging
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2836 of file ./bibliography/mybib.bib
+Repeated entry---line 2917 of file ./bibliography/mybib.bib
  : @article{park2009dynamic
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2847 of file ./bibliography/mybib.bib
+Repeated entry---line 2928 of file ./bibliography/mybib.bib
  : @article{bouvier2019spiking
  :                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2859 of file ./bibliography/mybib.bib
+Repeated entry---line 2940 of file ./bibliography/mybib.bib
  : @inproceedings{han2013approximate
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2868 of file ./bibliography/mybib.bib
+Repeated entry---line 2949 of file ./bibliography/mybib.bib
  : @inproceedings{gupta2011impact
  :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2877 of file ./bibliography/mybib.bib
+Repeated entry---line 2958 of file ./bibliography/mybib.bib
  : @article{mittal2016survey
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2888 of file ./bibliography/mybib.bib
+Repeated entry---line 2969 of file ./bibliography/mybib.bib
  : @inproceedings{venkataramani2015approximate
  :                                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2897 of file ./bibliography/mybib.bib
+Repeated entry---line 2978 of file ./bibliography/mybib.bib
  : @inproceedings{courbariaux2015binaryconnect
  :                                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2904 of file ./bibliography/mybib.bib
+Repeated entry---line 2985 of file ./bibliography/mybib.bib
  : @article{hubara2017quantized
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2914 of file ./bibliography/mybib.bib
+Repeated entry---line 2995 of file ./bibliography/mybib.bib
  : @inproceedings{rastegari2016xnor
  :                                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3216 of file ./bibliography/mybib.bib
+Repeated entry---line 3297 of file ./bibliography/mybib.bib
  : @article{izhikevich2004model
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3432 of file ./bibliography/mybib.bib
+Repeated entry---line 3513 of file ./bibliography/mybib.bib
  : @article{amunts2019human
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3454 of file ./bibliography/mybib.bib
+Repeated entry---line 3535 of file ./bibliography/mybib.bib
  : @article{TrueNorth_Trans15
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3501 of file ./bibliography/mybib.bib
+Repeated entry---line 3582 of file ./bibliography/mybib.bib
  : @article{davies2018loihi
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3522 of file ./bibliography/mybib.bib
+Repeated entry---line 3603 of file ./bibliography/mybib.bib
  : @article{roy2019towards
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3534 of file ./bibliography/mybib.bib
+Repeated entry---line 3615 of file ./bibliography/mybib.bib
  : @article{young2019review
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3586 of file ./bibliography/mybib.bib
+Repeated entry---line 3667 of file ./bibliography/mybib.bib
  : @inproceedings{du2014leveraging
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3738 of file ./bibliography/mybib.bib
+Repeated entry---line 3819 of file ./bibliography/mybib.bib
  : @article{courbariaux2015binaryconnect
  :                                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4037 of file ./bibliography/mybib.bib
+Repeated entry---line 4118 of file ./bibliography/mybib.bib
  : @article{wang2019deep
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4048 of file ./bibliography/mybib.bib
+Repeated entry---line 4129 of file ./bibliography/mybib.bib
  : @article{hubara2017quantized
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4079 of file ./bibliography/mybib.bib
+Repeated entry---line 4160 of file ./bibliography/mybib.bib
  : @misc{xilinx2015zynq
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4122 of file ./bibliography/mybib.bib
+Repeated entry---line 4203 of file ./bibliography/mybib.bib
  : @inproceedings{venkataramani2015approximate
  :                                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4131 of file ./bibliography/mybib.bib
+Repeated entry---line 4212 of file ./bibliography/mybib.bib
  : @article{hrica2012floating
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4138 of file ./bibliography/mybib.bib
+Repeated entry---line 4219 of file ./bibliography/mybib.bib
  : @article{park2009dynamic
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4149 of file ./bibliography/mybib.bib
+Repeated entry---line 4230 of file ./bibliography/mybib.bib
  : @article{mittal2016survey
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4160 of file ./bibliography/mybib.bib
+Repeated entry---line 4241 of file ./bibliography/mybib.bib
  : @techreport{xilinx2015zynq
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4176 of file ./bibliography/mybib.bib
+Repeated entry---line 4257 of file ./bibliography/mybib.bib
  : @inproceedings{venkataramani2015approximate
  :                                            ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in gillani2020exploiting
 Warning--can't use both volume and number fields in maas2013rectifier
-You've used 137 entries,
+You've used 143 entries,
             1791 wiz_defined-function locations,
-            1210 strings with 34917 characters,
-and the built_in function-call counts, 38307 in all, are:
-= -- 3283
-> -- 2213
+            1239 strings with 35340 characters,
+and the built_in function-call counts, 39648 in all, are:
+= -- 3415
+> -- 2252
 < -- 42
-+ -- 787
-- -- 650
-* -- 2764
-:= -- 6058
-add.period$ -- 439
-call.type$ -- 137
-change.case$ -- 135
++ -- 802
+- -- 659
+* -- 2861
+:= -- 6267
+add.period$ -- 457
+call.type$ -- 143
+change.case$ -- 141
 chr.to.int$ -- 0
-cite$ -- 139
-duplicate$ -- 1653
-empty$ -- 3406
-format.name$ -- 650
-if$ -- 8553
+cite$ -- 145
+duplicate$ -- 1707
+empty$ -- 3546
+format.name$ -- 659
+if$ -- 8850
 int.to.chr$ -- 0
-int.to.str$ -- 137
-missing$ -- 138
-newline$ -- 687
-num.names$ -- 137
-pop$ -- 424
+int.to.str$ -- 143
+missing$ -- 144
+newline$ -- 717
+num.names$ -- 143
+pop$ -- 428
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 849
+skip$ -- 875
 stack$ -- 0
-substring$ -- 2469
-swap$ -- 512
+substring$ -- 2601
+swap$ -- 518
 text.length$ -- 42
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 353
-width$ -- 140
-write$ -- 1507
+while$ -- 368
+width$ -- 146
+write$ -- 1574
 (There were 48 error messages)

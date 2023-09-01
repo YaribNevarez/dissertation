@@ -7,24 +7,34 @@ However, the explosive growth and complexity of neural networks have also given 
 
 Neural networks accelerators such as \glspl{gpu}, \glspl{tpu}, specialized \gls{asic}, and \gls{fpga}-based implementations have emerged as important players, providing the needed horsepower to drive neural computations swiftly and efficiently. As the quest for speed and efficiency continues, there is a growing interest in further refining these accelerators, particularly through custom numerical representations such as custom floating-point computation. This avenue promises a harmonious blend of performance and power efficiency, potentially announcing a new era for neural network engines.
 
-This chapter examines the world of neural networks, starting with \glspl{snn} which mimic biological neuron behavior using time-sensitive spikes for communication. It then transitions into traditional \glspl{ann} to present the specifics of \glspl{cnn} that use continuous values. The discussion further explores their indelible mark on modern computation and the imperatives driving the development of dedicated hardware accelerators. Through this exploration, it is provided the background stage into low-power neural network accelerators leveraging custom floating-point computation a frontier at the nexus of \gls{ai} potential and practicality.
+This chapter examines the world of neural networks, starting with \glspl{snn} which mimic biological neuron behavior using time-sensitive spikes for communication. It then transitions into traditional \glspl{ann} to present the specifics of \glspl{cnn} that use continuous values. The discussion further explores their indelible mark on modern computation and the imperatives driving the development of dedicated hardware accelerators. Through this exploration, it is provided the background stage into low-power neural network accelerators leveraging custom floating-point computation a frontier at the nexus of \gls{ai} potential and versatility.
 
 \section{Spiking Neural Networks}
 
-\glspl{snn} offer an alternative paradigm in the neural computation landscape. Diverging from traditional \glspl{ann}, they emulate the temporal dynamics of biological neurons. Each neuron in an \gls{snn} accumulates input until a threshold is reached, upon which it emits a spike and resets. This behavior can be mathematically described by models such as the \gls{lif}~\cite{gerstner2014neuronal}:
+
+\glspl{snn} are a subclass of \glspl{ann} that are more closely aligned with the behavior of biological neurons. Unlike the traditional \gls{ann} neurons, which transmit information through real-valued outputs, neurons in \glspl{snn} communicate using discrete spikes or "action potentials". This spiking behavior allows \glspl{snn} to process information in a temporal domain, which are potentially more energy-efficient and closer to biological realism than traditional \glspl{ann} like \glspl{mlp}, \glspl{cnn}, \glspl{rnn}, and \glspl{lstm}, among others.
+
+The primary distinction between \glspl{snn} and conventional \glspl{ann} centers on their neuron modeling approach. While conventional \glspl{ann} rely on activation functions for a continuous output, \glspl{snn} model the temporal dynamics of spiking behavior. This makes \glspl{snn} especially relevant in neuromorphic engineering, where researchers aim to develop hardware that mimics the behavior and efficiency of biological brains.
+
+\glspl{snn} exhibit inherent robustness comparable to the brain, operating reliably using inherently non-reliable mechanisms like stochastic synapses \cite{smetters1996synaptic}. Despite utilizing unreliable and stochastic elements, \glspl{snn} demonstrate remarkable reliability \cite{mcdonnell2011benefits} and superior robustness against input noise and adversarial attacks \cite{ernst2007efficient, Dapello2020.06.16.154542}. Beyond robustness, \glspl{snn} offer benefits such as higher energy efficiency and more efficient asynchronous parallelization. For instance, Intel's Loihi \cite{davies2018loihi} achieves over three orders of magnitude better energy-delay product than conventional approaches, motivating substantial research efforts by major companies and pan-European projects \cite{Spinnaker_TransSolid_13}.
+
+While the advantages of \glspl{snn} are compelling, they come with higher computational demands that necessitate specialized hardware architectures \cite{roy2019towards, bouvier2019spiking, young2019review, TrueNorth_Trans15, Spinnaker_TransSolid_13, davies2018loihi}. The level of detail in biological emulation directly impacts computational complexity \cite{izhikevich2004model, amunts2019human}.
+
+In an \gls{snn}, each neuron accumulates input until a threshold is reached, upon which it emits a spike and resets. This behavior can be mathematically described by models such as the \gls{lif}~\cite{gerstner2014neuronal}:
 \begin{equation}
 \tau_m \frac{du(t)}{dt} = -u(t) + RI(t)
 \end{equation}
 where \( u(t) \) is the neuron membrane potential, \( \tau_m \) its time constant, \( R \) its resistance, and \( I(t) \) the input current. A spike is emitted when \( u(t) \) surpasses a threshold \( u_{\text{th}} \), followed by a reset.
 
-Potential advantages of \glspl{snn} include energy efficiency, especially on neuromorphic hardware, and competence for processing temporal data~\cite{merolla2014million}. However, training \glspl{snn} presents challenges due to the non-differentiable nature of spikes~\cite{neftci2019surrogate}. Techniques range from gradient approximations for backpropagation~\cite{lee2016training}, surrogate gradient methods~\cite{neftci2019surrogate}, and unsupervised methods such as \gls{stdp}~\cite{masquelier2007unsupervised}.
+While \glspl{snn} offer advantages such as energy efficiency -- particularly on neuromorphic hardware -- and competence in processing temporal data~\cite{merolla2014million}, their training poses challenges due to the non-differentiable nature of spikes~\cite{neftci2019surrogate}. A range of techniques has been developed to address this, including gradient approximations for backpropagation~\cite{lee2016training}, surrogate gradient methods~\cite{neftci2019surrogate}, and unsupervised approaches like \gls{stdp}~\cite{masquelier2007unsupervised}.
+
 
 \subsubsection{Spike-by-Spike Neural Networks} 
-
 \label{sec:sbs}
 
-\gls{sbs} is a spiking neural network based on a
-generative probabilistic model. It iteratively finds an estimate of
+Towards lower biological realism \cite{rotermund2019back, ernst2007efficient}, \gls{sbs} networks retain the robustness advantages of \glspl{snn} by utilizing stochastic spikes for information transmission between neuron populations. Derived from Poisson distributed spikes, comparable to observations from specific regions of the visual cortex \cite{shadlen1994noise, softky1993highly}, \gls{sbs} networks simplify the inner dynamics of neuronal populations considerably compared to other \glspl{snn}. However, \gls{sbs} populations are designed to adopt competitive behavior among neurons, resembling compressed sensing strategies \cite{ganguli2012compressed, ganguli2010statistical}. This trade-off between biological realism and computational efficiency is justified by the lower computational demand per spike, offering hardware efficiency benefits compared to other spiking neuron types \cite{pfeiffer2018deep}.
+
+The \gls{sbs} model operates as a spiking neural network founded on a generative probabilistic model. It iteratively finds an estimate of
 its input probability distribution $p(s)$ (i.e. the probability of
 input node $s$ to stochastically send a spike) by its latent variables
 via $r(s) = \sum_i h(i) W(s|i)$, 

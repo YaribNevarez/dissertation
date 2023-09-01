@@ -3,14 +3,14 @@
 \contentsline {xchapter}{Introduction}{1}{chapter.1}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Background and Related Work}{15}{chapter.2}%
-\contentsline {figure}{\numberline {2.1}{\ignorespaces \gls {sbs} network architecture for handwritten digit classification task.\relax }}{18}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces \gls {sbs} \glspl {ip_sbs} as independent computational entities, (a) illustrates an input layer with a massive amount of \glspl {ip_sbs} operating as independent computational entities, (b) shows a hidden layer with an arbitrary amount of \glspl {ip_sbs} as independent computational entities, (c) exhibits a set of neurons grouped in an \gls {ip_sbs}.\relax }}{19}{figure.caption.25}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces (a) Performance classification of \gls {sbs} NN versus equivalent \gls {cnn}, and (b) example of the first pattern in the MNIST test data set with different amounts of positive additive uniformly distributed noise.\relax }}{20}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Floating-point number representation.\relax }}{36}{figure.caption.44}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces (a) System architecture. (b) Processing element array.\relax }}{46}{figure.caption.59}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces (a) System architecture. (b) Convolution accelerator.\relax }}{47}{figure.caption.61}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces (a) System architecture. (b) Processing element.\relax }}{48}{figure.caption.63}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces (a) System architecture. (b) Convolution engine.\relax }}{49}{figure.caption.65}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \gls {sbs} network architecture for handwritten digit classification task.\relax }}{19}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \gls {sbs} \glspl {ip_sbs} as independent computational entities, (a) illustrates an input layer with a massive amount of \glspl {ip_sbs} operating as independent computational entities, (b) shows a hidden layer with an arbitrary amount of \glspl {ip_sbs} as independent computational entities, (c) exhibits a set of neurons grouped in an \gls {ip_sbs}.\relax }}{20}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces (a) Performance classification of \gls {sbs} NN versus equivalent \gls {cnn}, and (b) example of the first pattern in the MNIST test data set with different amounts of positive additive uniformly distributed noise.\relax }}{21}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Floating-point number representation.\relax }}{37}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces (a) System architecture. (b) Processing element array.\relax }}{47}{figure.caption.59}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces (a) System architecture. (b) Convolution accelerator.\relax }}{48}{figure.caption.61}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces (a) System architecture. (b) Processing element.\relax }}{49}{figure.caption.63}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces (a) System architecture. (b) Convolution engine.\relax }}{50}{figure.caption.65}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Acceleration with Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{53}{chapter.3}%
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Dot-product hardware module with (a) standard floating-point (IEEE 754) arithmetic, (b) hybrid custom floating-point approximation, and (c) hybrid logarithmic approximation.\relax }}{56}{figure.caption.67}%
