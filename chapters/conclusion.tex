@@ -17,10 +17,13 @@ Prominent \gls{ai}\gls{ml} algorithms, notably \glspl{snn} and \glspl{cnn}, come
 \begin{itemize}
 	\item \textbf{Efficiency Improvements}: Exploring reduced architectures using lower-bit formats such as Bfloat16 in feature maps can optimize memory usage and energy consumption.
 	
-	\item \textbf{Enhanced Throughput}: There is scope in boosting computational throughput by transitioning from pipeline computation to parallel structures, incorporating wider memory channels, and potentially \gls{asic} implementations for greater efficiency.
+	\item \textbf{Enhanced Throughput}: There is scope in boosting computational throughput by transitioning from pipeline computation to parallel structures, incorporating wider memory channels.
 	
 	\item \textbf{Broadened Application Scope}: While the current emphasis is on sensor analytics, future designs will target the comprehensive spectrum of \gls{ai}/\gls{ml} models for inference and learning.
 \end{itemize}
+
+These future directions are concentrated in a study aimed at accelerating \gls{fl} by leveraging hybrid 8-bit \gls{fp} for energy-efficient \gls{dnn} training.
+
 
 \section{Final Remarks}
 Given neural networks' inherent flexibility regarding precision, approximate computing offers remarkable improvements in processing efficiency with minor accuracy degradation. This dissertation examines deep into designs leveraging the intrinsic error resilience of \gls{ml} algorithms, aiming for optimal \gls{fp} inference on energy-efficient embedded systems. The proposed methodologies possess the adaptability and resilience for both low-power on-device training and scaling up to the high computational demands of data centers. Key takeaways include:
@@ -32,7 +35,5 @@ Given neural networks' inherent flexibility regarding precision, approximate com
 	
 	
 	\item The \gls{hf6} quantization approach, harmoniously integrating with \gls{fp} standards and TensorFlow Lite, establishes a foundation not only for diverse applications but also across the complete spectrum of \gls{ai}/\gls{ml} models, highlighting the synergy between innovative solutions and industry significance.
-	
-	\item Collectively, the methodologies and designs proposed here mark a pivotal step towards the development of a sustainable next-gen neural network processor ecosystem, properly supporting an interconnected world, spanning from individual devices to expansive data centers.
 \end{enumerate}
 

@@ -133,17 +133,17 @@ This appendix subsection details the modifications made to the TensorFlow Lite l
 
 This file defines the data types employed within the TensorFlow Lite library, including compute nodes, tensors, quantization types, delegates, and the execution context. Within the execution context structure, the \textit{GetDelegate()} function pointer has been introduced to access to the custom delegate instance during execution.
 
-\begin{verbatim}
+\begin{lstlisting}
 typedef struct TfLiteContext {
   // ...
   void * (*GetDelegate) (const struct TfLiteContext* context);
 } TfLiteContext;
-\end{verbatim}
+\end{lstlisting}
 
 \subsection*{conv.cpp}
 This file contains the \textit{Conv2D} tensor operator. Within it, the allocation and initialization of the Job instance have been incorporated. This instance carries the essential parameters required to execute this tensor operation on the \gls{tp} via the delegate. The Job object is instantiated based on the tensor data type, whether it is floating-point or fixed-point. For a more generic \gls{tp}, this mechanism would be positioned at a higher level to circumvent direct modifications to specific tensor operator modules.
 
-\begin{verbatim}
+\begin{lstlisting}
 #include "tp_delegate.h"
 // ...
 void* Init(TfLiteContext* context, const char* buffer, size_t length)
@@ -152,9 +152,9 @@ void* Init(TfLiteContext* context, const char* buffer, size_t length)
   return context->AllocatePersistentBuffer (context, 
     sizeof(OpDataConv) + sizeof(TPDelegate::Job));
 }
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 TfLiteStatus Eval(TfLiteContext* context, TfLiteNode* node)
 {
   TPDelegate * delegate = reinterpret_cast<TPDelegate *>
@@ -218,13 +218,13 @@ TfLiteStatus Eval(TfLiteContext* context, TfLiteNode* node)
     // ...
   }
 // ...
-\end{verbatim}
+\end{lstlisting}
 
 \subsection*{depthwise\_conv.cpp}
 
 This file contains the \textit{DepthwiseConv2D} tensor operator. Within it, the allocation and initialization of the Job instance have been incorporated. This instance carries the essential parameters required to execute this tensor operation on the \gls{tp} via the delegate. The Job object is instantiated based on the tensor data type, whether it is floating-point or fixed-point. For a more generic \gls{tp}, this mechanism would be positioned at a higher level to circumvent direct modifications to specific tensor operator modules.
 
-\begin{verbatim}
+\begin{lstlisting}
 #include "tp_delegate.h"
 // ...
 void* Init(TfLiteContext* context, const char* buffer, size_t length)
@@ -233,9 +233,9 @@ void* Init(TfLiteContext* context, const char* buffer, size_t length)
   return context->AllocatePersistentBuffer (context,
     sizeof(OpDataConv) + sizeof(TPDelegate::Job));
 }
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 TfLiteStatus Eval(TfLiteContext* context, TfLiteNode* node)
 {
   TPDelegate * delegate = reinterpret_cast<TPDelegate *>
@@ -299,30 +299,30 @@ TfLiteStatus Eval(TfLiteContext* context, TfLiteNode* node)
     // ...
   }
 // ...
-\end{verbatim}
+\end{lstlisting}
 
 \subsection*{kernel\_util.cpp}
 This source file contains utility functions employed by the kernels or tensor operators during execution. Within this file, a wrapper function has been added to retrieve the delegate instance from the execution context.
 
-\begin{verbatim}
+\begin{lstlisting}
 // ...
 void * GetDelegate (const TfLiteContext* context)
 {
   TFLITE_DCHECK(context != nullptr);
   return context->GetDelegate (context);
 }
-\end{verbatim}
+\end{lstlisting}
 
 \subsection*{kernel\_util.h}
 This header file outlines the prototypes of utility functions used by the kernels or tensor operators during execution. It is added the prototype for the wrapper function designed to extract the delegate instance from the execution context.
-\begin{verbatim}
+\begin{lstlisting}
 // ...
 void* GetDelegate (const TfLiteContext* context);
-\end{verbatim}
+\end{lstlisting}
 
 \subsection*{micro\_graph.cpp}
 This source file contains the code associated with traversing and execution of the computational graph or model. It incorporates functions for the allocation, initialization, preparation, execution, and disposal of the model graph. An event logger has been introduced to this class, logging each compute node activity, offering detailed timing data for performance analysis.
-\begin{verbatim}
+\begin{lstlisting}
 #include "event.h"
 // ...
 MicroGraph::~MicroGraph ()
@@ -394,11 +394,11 @@ void MicroGraph::DisposeEventLogger (void)
   }
 }
 
-\end{verbatim}
+\end{lstlisting}
 
 \subsection*{micro\_graph.h}
 In this header file, the event functions and data members have been integrated into the \textit{MicroGraph} class.
-\begin{verbatim}
+\begin{lstlisting}
 // ...
 class MicroGraph
 {
@@ -414,13 +414,13 @@ private:
   size_t event_array_len_ = 0;
   // ...
 };
-\end{verbatim}
+\end{lstlisting}
 
 \subsection*{micro\_interpreter.cpp}
 This source file implements the \textit{MicroInterpreter} class, which acts as the container for the computational graph. The class prepares the compute nodes by registering tensor operators to each node and allocating tensors. Furthermore, it provides compute graph execution and access to the model tensors. An instance of this class is utilized by the application to invoke model execution and access tensors.
 
 In this class, an enable function for the delegate was introduced, this can be accessed by the application layer. When invoked, it creates and initializes a \textit{TPDelegate} instance, which subsequently initializes the hardware drivers. Additionally, event logging has been incorporated into the class for performance tracking.
-\begin{verbatim}
+\begin{lstlisting}
 #include "tp_delegate.h"
 // ...
 MicroInterpreter::~MicroInterpreter()
@@ -496,12 +496,12 @@ std::string MicroInterpreter::get_eventLog(void)
 
   return "";
 }
-\end{verbatim}
+\end{lstlisting}
 
 \subsection*{micro\_interpreter.h}
 This header file outlines the \textit{MicroInterpreter} class. Within it, the \textit{enable\_delegate()} and \textit{get\_eventLog()} member functions have been added as public methods for the application layer to access. Additionally, private accessors for the delegate -- provided as a callback to the execution context object -- as well as the event and delegate pointers have been added.
 
-\begin{verbatim}
+\begin{lstlisting}
 // ...
 class MicroInterpreter
 {
@@ -518,11 +518,11 @@ private:
   void * event_ = nullptr;
   void * delegate_ = nullptr;
 };
-\end{verbatim}
+\end{lstlisting}
 
 \subsection*{application.cpp}
 In the application layer, the delegate can be activated for hardware acceleration. Subsequently, the inference can be initiated. After which, access to the performance logging is available.
-\begin{verbatim}
+\begin{lstlisting}
   // ...
   // Enable delegate
   interpreter->enable_delegate(true);
@@ -537,7 +537,7 @@ In the application layer, the delegate can be activated for hardware acceleratio
   // Get performance logging
   performance = interpreter->get_eventLog ();
   // ...
-\end{verbatim}
+\end{lstlisting}
 %%%%%%%%%%%%%%%%%%
 
 
