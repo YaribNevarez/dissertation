@@ -37,7 +37,7 @@
 \contentsline {paragraph}{\nonumberline Basic Network Overview}{18}{section*.20}%
 \contentsline {paragraph}{\nonumberline Computational Cost}{20}{section*.24}%
 \contentsline {paragraph}{\nonumberline Error Tolerance}{20}{section*.26}%
-\contentsline {section}{\numberline {2.3}Artificial Neural Networks}{20}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Conventional Artificial Neural Networks}{21}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Architecture}{21}{subsection.2.3.1}%
 \contentsline {subsubsection}{\nonumberline Layers}{21}{section*.28}%
 \contentsline {subsubsection}{\nonumberline Weights and Bias}{22}{section*.29}%
@@ -49,40 +49,40 @@
 \contentsline {subsection}{\numberline {2.3.4}Convolutional Neural Networks}{26}{subsection.2.3.4}%
 \contentsline {subsubsection}{\nonumberline Key Components}{26}{section*.33}%
 \contentsline {subsubsection}{\nonumberline Conv2D Tensor Operation}{27}{section*.34}%
-\contentsline {subsubsection}{\nonumberline Computational Cost of a Convolution Layer}{27}{section*.35}%
+\contentsline {subsubsection}{\nonumberline Computational Cost of a Convolution Layer}{28}{section*.35}%
 \contentsline {paragraph}{\nonumberline Definitions}{28}{section*.36}%
 \contentsline {paragraph}{\nonumberline Computations Per Output Element}{28}{section*.37}%
-\contentsline {paragraph}{\nonumberline Output Dimensions}{28}{section*.38}%
-\contentsline {paragraph}{\nonumberline Total Computations}{28}{section*.39}%
+\contentsline {paragraph}{\nonumberline Output Dimensions}{29}{section*.38}%
+\contentsline {paragraph}{\nonumberline Total Computations}{29}{section*.39}%
 \contentsline {subsubsection}{\nonumberline Error Tolerance in Convolution Layers}{29}{section*.40}%
 \contentsline {paragraph}{\nonumberline Sources of Error}{29}{section*.41}%
 \contentsline {paragraph}{\nonumberline Error Compensating Mechanisms}{29}{section*.42}%
-\contentsline {paragraph}{\nonumberline Exploiting Error Tolerance for Optimization}{29}{section*.43}%
+\contentsline {paragraph}{\nonumberline Exploiting Error Tolerance for Optimization}{30}{section*.43}%
 \contentsline {section}{\numberline {2.4}Neural Network Accelerators}{30}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}The Need for Accelerators}{30}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Types of Accelerators}{32}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Design Considerations}{33}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Precision and Effect in Training}{34}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Fixed-Point}{34}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Floating-Point}{35}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Post-Training Quantization}{37}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.5}Precision and Effect in Training}{35}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Fixed-Point}{35}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Floating-Point}{36}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Post-Training Quantization}{38}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Quantization-Aware Training}{38}{subsection.2.5.4}%
-\contentsline {section}{\numberline {2.6}Dataflow Taxonomy}{39}{section.2.6}%
+\contentsline {section}{\numberline {2.6}Dataflow Taxonomy}{40}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Flynn's Taxonomy}{41}{section.2.7}%
 \contentsline {section}{\numberline {2.8}Multiply-Accumulate Unit}{42}{section.2.8}%
 \contentsline {subsection}{\numberline {2.8.1}Design Considerations}{43}{subsection.2.8.1}%
-\contentsline {section}{\numberline {2.9}Related Work}{43}{section.2.9}%
+\contentsline {section}{\numberline {2.9}Related Work}{44}{section.2.9}%
 \contentsline {subsection}{\numberline {2.9.1}Aggressive Quantization}{44}{subsection.2.9.1}%
-\contentsline {subsection}{\numberline {2.9.2}Spiking Neural Network Accelerators}{44}{subsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.2}Spiking Neural Network Accelerators}{45}{subsection.2.9.2}%
 \contentsline {subsubsection}{\nonumberline Classical Approximate Computing}{45}{section*.56}%
-\contentsline {subsubsection}{\nonumberline Spike-by-Spike Neural Network Accelerators}{45}{section*.57}%
-\contentsline {subsection}{\numberline {2.9.3}Convolutional Neural Network Accelerators with Custom Floating-Point Computation on \gls {fpga}}{45}{subsection.2.9.3}%
+\contentsline {subsubsection}{\nonumberline Spike-by-Spike Neural Network Accelerators}{46}{section*.57}%
+\contentsline {subsection}{\numberline {2.9.3}Convolutional Neural Network Accelerators with Custom Floating-Point Computation on \gls {fpga}}{46}{subsection.2.9.3}%
 \contentsline {subsubsection}{\nonumberline High-Performance FPGA-Based CNN Accelerator With Block-Floating-Point Arithmetic}{46}{section*.58}%
-\contentsline {subsubsection}{\nonumberline A 200MHZ 202.4GFLOPS@10.8W VGG16 accelerator in Xilinx VX690T}{47}{section*.60}%
+\contentsline {subsubsection}{\nonumberline A 200MHZ 202.4GFLOPS@10.8W VGG16 Accelerator in Xilinx VX690T}{47}{section*.60}%
 \contentsline {subsubsection}{\nonumberline Low-precision Floating-point Arithmetic for High-performance FPGA-based CNN Acceleration}{48}{section*.62}%
-\contentsline {subsubsection}{\nonumberline CNN hardware acceleration on a low-power and low-cost APSoC}{49}{section*.64}%
+\contentsline {subsubsection}{\nonumberline CNN Hardware Acceleration on a Low-Power and Low-Cost APSoC}{49}{section*.64}%
 \contentsline {subsection}{\numberline {2.9.4}Neural Network Accelerators for Training and Inference with 8-bit Floating-Point Computation on \gls {asic}}{50}{subsection.2.9.4}%
-\contentsline {subsection}{\numberline {2.9.5}Training Techniques with 8-bit Floating-Point Quantization}{51}{subsection.2.9.5}%
+\contentsline {subsection}{\numberline {2.9.5}Advancements in Neural Network Training: Industrial Research on 8-bit Floating-Point Quantization Techniques}{51}{subsection.2.9.5}%
 \contentsline {chapter}{\numberline {3}Acceleration with Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{53}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Introduction}{54}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Design Technique}{57}{section.3.2}%

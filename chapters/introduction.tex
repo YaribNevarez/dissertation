@@ -28,7 +28,7 @@ In mission-critical applications such as medical devices, autonomous vehicles, a
 For applications such as autonomous vehicles, drones, and robotics, immediate processing of sensor data (such as images and LIDAR data) is necessary. Low-power accelerators can process this data on-device in real time, reducing latency compared to cloud-based solutions. Real-time processing is crucial for responsive and adaptive system behavior, which is essential for the smooth functioning of \gls{iot} systems.
 
 \subsubsection{Data Privacy and Security}
-Processing data on-device, rather than sending it to a central server or cloud, can substantially mitigate the risk of data interception or tampering. With the increasing scrutiny and regulations around data privacy (e.g., \gls{gdpr}), processing data locally on a device is a critical advantage, enabling compliance with data protection laws. For sensitive applications such as smart home devices or wearables that handle personal data, on-device processing with low-power neural network accelerators maintains user privacy.
+Processing data on-device, rather than sending it to a central server or cloud, can substantially mitigate the risk of data interception or manipulation. With the increasing scrutiny and regulations around data privacy (e.g., \gls{gdpr}), processing data locally on a device is a critical advantage, enabling compliance with data protection laws. For sensitive applications such as smart home devices or wearables that handle personal data, on-device processing with low-power neural network accelerators maintains user privacy.
 
 \subsubsection{Offline Operation Capabilities}
 Low-power neural network accelerators enable IoT and embedded devices to operate independently of network connectivity, allowing for effective functioning in remote or disconnected environments. These accelerators allow for continuous operation without reliance on a central server, which is critical in situations where connectivity is inconsistent, costly, or non-existent, such as in agricultural or maritime contexts.
@@ -68,7 +68,7 @@ Approximate computing techniques allow substantial enhancement in processing eff
 
 % Problem to solve
 \section{Problem Statement}
-A fundamental problem for the rise of \gls{ai} in Industry 4.0 is the fact that \gls{ml} models, are highly computational and data intensive. This brings significant challenges across the spectrum of computing hardware, specially in the scope of embedded systems~\cite{venkataramani2016efficient}. The most deployed models and also some of the most computationally and energy expensive are for computer vision using \glspl{cnn}. Compared to the conventional image processing methods, the accuracy of \gls{cnn} has improved significantly that by 2015, a human can no longer beat a computer in image classification~\cite{loh20201}. The early development of \glspl{cnn} before 2016 mainly focused on accuracy enhancement without considering computational costs. While accuracy of deep \gls{cnn} for image classification improved 24\% between 2012 and 2016, the demand on hardware resources increased more than $10\times$. Starting from 2017, significant attention was paid to improve hardware efficiency in terms of compute power, memory bandwidth, and power consumption, while maintaining accuracy at a similar level to human perception~\cite{venkataramani2016efficient}.
+A fundamental problem for the rise of \gls{ai} in Industry 4.0 is the fact that \gls{ml} models, are highly computational and data intensive. This brings significant challenges across the spectrum of computing hardware, specially in the scope of embedded systems~\cite{venkataramani2016efficient}. The most deployed models and also some of the most computationally and energy expensive are \glspl{cnn} for computer vision applications. Compared to the conventional image processing methods, the accuracy of \gls{cnn} has improved significantly that by 2015, a human can no longer beat a computer in image classification~\cite{loh20201}. The early development of \glspl{cnn} before 2016 mainly focused on accuracy enhancement without considering computational costs. While accuracy of deep \gls{cnn} for image classification improved 24\% between 2012 and 2016, the demand on hardware resources increased more than $10\times$. Starting from 2017, significant attention was paid to improve hardware efficiency in terms of compute power, memory bandwidth, and power consumption, while maintaining accuracy at a similar level to human perception~\cite{venkataramani2016efficient}.
 
 \subsection{Power Dissipation}
 Consequently, the recent breakthroughs in \gls{ai}/\gls{ml} applications have brought significant advancements in neural network processors~\cite{jouppi2017datacenter}. To bring the inference speed to an acceptable level, \gls{asic} with \gls{npu} are becoming ubiquitous in both embedded and general purpose computing. \glspl{npu} perform several tera operations per second in a confined area, as a consequence, they become subject to elevated on-chip power densities that rapidly result in excessive on-chip temperatures during operation~\cite{amrouch2020npu}. Subsequently, the elevated power supply, physical dimensions, heat sink and air cooling requirements demand a balance between the benefits of \gls{ml} against its financial and environmental costs. This outcome is delivered by parallel computing techniques, yet unsustainable in resource-constrained devices.
@@ -96,7 +96,7 @@ Under this central hypothesis, the proposed neural network accelerator design, w
 	\item \textbf{Efficient Hardware Operation:} Minimization of power consumption and thermal output, enabling sustained and efficient hardware operation~\cite{lai2017deep}.
 	\item \textbf{High Inference Quality:} Preservation of high-quality inference results by maintaining standard \gls{fp} precision in activation maps, despite reduced precision in weights and biases.
 	\item \textbf{Enhanced Hardware Efficiency:} Improvement in the hardware efficiency of the accelerator, facilitated by faster arithmetic operations and decreased memory bandwidth requirements, due to the hybrid precision approach~\cite{lai2017deep}.
-	\item \textbf{Compatibility and Interoperability:} Ability to efficiently handle various precision levels for weights, biases, and activation maps, ensuring compatibility and integration across diverse software frameworks and hardware platforms.
+	\item \textbf{Compatibility and Interoperability:} Ability to efficiently handle various precision levels for weights, biases, and activation maps, ensuring compatibility and integration across diverse industry standard software frameworks and hardware platforms.
 	\item \textbf{Accuracy Preservation via \gls{qat}:} Utilization of \gls{qat} to adapt neural network models to the hybrid precision, maintaining high model accuracy despite reduced precision components.
 \end{enumerate}
 
@@ -136,13 +136,13 @@ This primary objective can be decomposed into specific sub-objectives and key as
 	Investigate scalability solutions that can adeptly handle diverse neural network models and sizes, promoting broader applicability.
 	
 	\item \textbf{Comparative Analysis with Alternative Techniques:} 
-	Conduct feature comparisons with other energy-efficient neural network accelerators to emphasize the unique advantages and strengths of the proposed custom \gls{fp} computation approaches.
+	Conduct comparisons with other energy-efficient neural network accelerators to emphasize the unique advantages and strengths of the proposed custom \gls{fp} computation approaches.
 	
 	\item \textbf{Performance Evaluation and Benchmarking:} 
 	Perform rigorous evaluation and benchmarking against the existing state-of-the-art, aiming to highlight the benefits in terms of energy efficiency and computational performance.
 	
 	\item \textbf{Practical Application Demonstrations:} 
-	Showcase the practical applicability of the proposed methodologies in actual low-power and resource-constrained scenarios, such as \gls{iot} devices and sensor analytics.
+	Showcase the practical applicability of the proposed methodologies in low-power and resource-constrained scenarios, such as \gls{iot} devices and sensor analytics.
 	
 	\item \textbf{Directions for Future Research:} 
 	Offer valuable insights into potential future research paths for further refining energy-efficient neural network accelerators with custom \gls{fp} computation for learning purposes.
@@ -153,7 +153,7 @@ This primary objective can be decomposed into specific sub-objectives and key as
 \begin{itemize}
 	\item \textbf{Quality Preservation}: Ensure that reduced precision does not compromise the accuracy and reliability.
 	\item \textbf{Versatility}: Design accelerators adaptable to diverse neural network tasks and deployment scenarios.
-	\item \textbf{Compatibility}: Facilitate seamless integration of the proposed accelerator designs with existing systems and software frameworks.
+	\item \textbf{Compatibility}: Facilitate integration of the proposed accelerator designs with existing systems and software frameworks.
 \end{itemize}
 
 Overall, this research aims to significantly contribute to the evolving development of energy-efficient neural network accelerators, targeting an advancement of the state-of-the-art in this field.
@@ -192,7 +192,7 @@ This research produces hardware design methodologies for low-power hardware acce
 \subsection{Accelerating Spike-by-Spike Neural Networks with Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}
 \begin{enumerate}
 	\item \textbf{Optimized \gls{mac} Design}: 
-	An optimized \gls{fp} \gls{mac} design with hybrid precision is presented. It utilizes the IEEE 754 single-precision \gls{fp} for feature maps and a custom \gls{fp} representation for weights, which significantly enhances efficiency through reduced latency, minimized hardware resources, and a smaller memory footprint, while upholding \gls{qor}.
+	An optimized \gls{fp} \gls{mac} design with hybrid precision is presented. It utilizes the IEEE 754 single-precision \gls{fp} for feature maps and a custom \gls{fp} representation for weights, which significantly enhances efficiency through reduced latency, minimized hardware resources, and a smaller memory footprint, while maintaining \gls{qor}.
 	
 	\item \textbf{Design Exploration and Evaluation}: 
 	A comprehensive design exploration for 8 and 4-bit input weight \gls{fp} representation is detailed. Evaluations report runtime, accuracy degradation, hardware resource utilization, and power consumption. A significant latency improvement and minimal accuracy degradation were measured.
@@ -212,7 +212,7 @@ This research produces hardware design methodologies for low-power hardware acce
 	\item \textbf{Custom Hardware/Software Co-design Framework}: 
 	A co-design framework for \gls{cnn} sensor analytics applications has been developed, targeting resource-constrained \gls{soc} \glspl{fpga}. This architecture incorporates TensorFlow Lite.
 	
-	\item \textbf{Customizable Tensor Processing with \gls{hf6}}: 
+	\item \textbf{Customizable Tensor Processor with \gls{hf6}}: 
 	A customizable \gls{tp} is demonstrated as a proof of concept with \gls{hf6}. Significant acceleration is achieved for the \emph{Conv2D} tensor operation without accuracy degradation employing \gls{qat}.
 	
 	\item \textbf{Demonstration and Design Exploration}: 
