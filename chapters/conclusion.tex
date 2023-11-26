@@ -1,39 +1,35 @@
 \chapter{Conclusion and Outlook}
 \label{chap.conclusion}
 \minitoc
-Artificial intelligence is launching an era defined by ubiquitous connected devices. To ensure the sustainability of this transformation, it is essential to merge accurate computational results with economical system designs. This dissertation emphasizes refining the efficiency of \gls{ai} hardware engines and enhancing portability.
+The field of artificial intelligence is launching an era characterized by the prevalence of ubiquitous connected devices. To ensure the sustainability of this transformation, it is crucial to harmonize computational accuracy with energy efficiency and the compatibility of hardware solutions. This dissertation focuses on enhancing the efficiency of AI hardware engines, taking into account these considerations.
 
 \section{State-of-the-art challenges and solutions}
-Prominent \gls{ai}\gls{ml} algorithms, notably \glspl{snn} and \glspl{cnn}, come with elevated computational and energy demands. The intrinsic error resilience of these algorithms brings "approximate computing" paradigms, such as quantization, to the forefront, offering vital efficiency enhancements. This research delineates cutting-edge methodologies centered on low-power neural network accelerator designs employing custom \gls{fp} computation.
+Widely used \gls{ai}/\gls{ml} algorithms, \glspl{snn} and \glspl{cnn}, come with elevated computational and energy demands. The intrinsic error resilience of these algorithms brings "approximate computing" paradigms, such as quantization, to the forefront, offering efficiency enhancements. This research presents cutting-edge methodologies centered on low-power neural network accelerator designs employing custom \gls{fp} computation.
 
-\section{Specific Contributions}
+\section{Key Contributions}
 \begin{itemize}
-	\item \textbf{\gls{snn}}: A hardware design methodology is presented for low-power \gls{sbs} neural networks targeting embedded applications. This approach leverages the intrinsic error resilience of \gls{sbs}, emphasizing a balance between performance and hardware complexity. Significant reductions in run-time, memory footprint, and power consumption are realized, with minimal accuracy trade-offs.
+	\item \textbf{Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}: A hardware design methodology is presented for low-power \gls{sbs} neural networks targeting embedded applications. This approach leverages the intrinsic error resilience of \gls{sbs}, emphasizing a balance between performance and hardware complexity. Significant reductions in run-time, memory footprint, and power consumption are realized, with minimal accuracy trade-offs.
 	
-	\item \textbf{\gls{cnn}}: A novel low-power hardware design technique tailored resource-constrained applications is presented. The \gls{hf6} quantization strategy, its specialized hardware \gls{mac} unit and tensor processor is showcased. Compatibility with TensorFlow Lite demonstrates its industry relevance and potential for broader adoption.
+	\item \textbf{Hybrid 6-bit Floating-Point Computation}: A novel low-power hardware design technique tailored for resource-constrained applications is presented. The \gls{hf6} quantization strategy, its specialized hardware \gls{mac} unit and tensor processor is showcased. Compatibility with TensorFlow Lite demonstrates its industry relevance and potential for broader adoption.
 \end{itemize}
 
 \section{Future Directions}
-\begin{itemize}
-	\item \textbf{Efficiency Improvements}: Exploring reduced architectures using lower-bit formats such as Bfloat16 in feature maps can optimize memory usage and energy consumption.
-	
-	\item \textbf{Enhanced Throughput}: There is scope in boosting computational throughput by transitioning from pipeline computation to parallel structures, incorporating wider memory channels.
-	
-	\item \textbf{Broadened Application Scope}: While the current emphasis is on sensor analytics, future designs will target the comprehensive spectrum of \gls{ai}/\gls{ml} models for inference and learning.
-\end{itemize}
 
-These future directions focus on accelerating \gls{fl} through the use of hybrid 8-bit \gls{fp} to achieve energy-efficient on-device learning.
+Future directions focus on optimizing energy efficiency and computational performance for on-device learning techniques. Key strategies include reduced gradient formats for optimized data processing, and exploring reduced hardware architectures with lower-bit formats like Bfloat16 in feature maps. This can significantly optimize memory usage and reduce energy consumption while maintaining \gls{qor}.
+
+Additionally, in this work, there is potential to boost computational throughput by shifting from pipeline to parallel computation structures, augmented by wider memory channels. This approach not only enhances processing speed but also broadens the application scope beyond sensor analytics to a comprehensive range of \gls{ai}/\gls{ml} models for both inference and learning. The goal is to leverage hybrid reduced \gls{fp} quantization, aligning with the need for more energy-efficient on-device learning in various \gls{ai}/\gls{ml} applications.
 
 
 \section{Final Remarks}
-Given neural networks' inherent flexibility regarding precision, approximate computing offers remarkable improvements in processing efficiency with minor accuracy degradation. This dissertation examines deep into designs leveraging the intrinsic error resilience of \gls{ml} algorithms, aiming for optimal \gls{fp} inference on energy-efficient embedded systems. The proposed methodologies possess the adaptability and resilience for both low-power on-device training and scaling up to the high computational demands of data centers. Key takeaways include:
+This dissertation delves into design techniques that exploit the intrinsic error resilience of \gls{ai}/\gls{ml} algorithms, focusing on optimal \gls{fp} inference acceleration in resource-constrained embedded systems. Key takeaways include:
 
 \begin{enumerate}
-	\item Approximate computing techniques, especially quantization, are set to revolutionize hardware designs by optimizing computation acceleration, energy efficiency, and chip area.
+	\item Quantization techniques, particularly those involving reduced floating-point formats, are set to significantly improve hardware designs. These enhancements include acceleration of computation, increased energy efficiency, and optimized chip area. Additionally, they positively impact versatility, portability, and compatibility aspects of hardware solutions.
 	
-	\item The proposed \gls{mac} module design offers a perfect blend of computational accuracy and resource efficiency, aligning with the needs of resource-constrained devices.
+	\item The \gls{mac} module designs presented in this work showcase a balance between computational accuracy and resource efficiency, suitable for resource-constrained embedded devices. This approach has relevance and applicability in both academic research and industrial contexts.
 	
+	\item The \gls{hf6} quantization approach has the potential to be applicable across the entire spectrum of \gls{ai}/\gls{ml} models. This method enhances energy efficiency, processing speed, and memory footprint, particularly important in the real-world application of \gls{ai}/\gls{ml} technologies.
 	
-	\item The \gls{hf6} quantization approach, harmoniously integrating with \gls{fp} standards and TensorFlow Lite, establishes a foundation not only for diverse applications but also across the complete spectrum of \gls{ai}/\gls{ml} models, highlighting the synergy between innovative solutions and industry significance.
+	\item The methodologies showcased for low-power inference acceleration hold significant potential for adaptation on the high computational demands of data centers. Training \gls{ai}/\gls{ml} models using reduced-precision floating-point hardware architectures achieves effects akin to those of \gls{qat} methods. Implementing the proposed techniques in data centers could lead to substantial improvements in energy and resource efficiency.
 \end{enumerate}
 
