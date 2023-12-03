@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.31)  2 DEC 2023 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.31)  3 DEC 2023 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2208,27 +2208,27 @@ LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 12.0pt on input line 3.
-) [3
+ [3
 
 
 
 
 
-]
+])
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/sl' will be
+(Font)              scaled to size 12.0pt on input line 138.
+ [4]
 \openout2 = `./chapters/abstract.aux'.
 
- (./chapters/abstract.tex [4
+ (./chapters/abstract.tex
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 4.
+ [5
 
 
 
 
 ]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 4.
- [5]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/sl' will be
-(Font)              scaled to size 12.0pt on input line 17.
-
 [6] [7
 
 
@@ -3416,7 +3416,7 @@ texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf
 type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txs
 ys.pfb>
-Output written on Thesis_YaribNevarez.pdf (180 pages, 7089014 bytes).
+Output written on Thesis_YaribNevarez.pdf (180 pages, 7089402 bytes).
 PDF statistics:
  6745 PDF objects out of 7423 (max. 8388607)
  1276 named destinations out of 1440 (max. 500000)
