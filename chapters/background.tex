@@ -12,9 +12,9 @@ This chapter examines the world of neural networks, starting with \glspl{snn} wh
 \section{Spiking Neural Networks}
 
 
-\glspl{snn} are a subclass of \glspl{ann} that are more closely aligned with the behavior of biological neurons. Unlike the traditional \gls{ann} neurons, which transmit information through real-valued outputs, neurons in \glspl{snn} communicate using discrete spikes or "action potentials". This spiking behavior allows \glspl{snn} to process information in a temporal domain, which are potentially more energy-efficient and closer to biological realism than traditional \glspl{ann} like \glspl{mlp}, \glspl{cnn}, \glspl{rnn}, and \glspl{lstm}, among others.
+\glspl{snn} are a subclass of \glspl{ann} that are more closely aligned with the behavior of biological neurons. Unlike the traditional \gls{ann} neurons, which transmit information through real-valued outputs, neurons in \glspl{snn} communicate using discrete spikes or "action potentials". This spiking behavior allows \glspl{snn} to process information in a temporal domain, which is potentially more energy-efficient and closer to biological realism than traditional \glspl{ann} like \glspl{mlp}, \glspl{cnn}, \glspl{rnn}, and \glspl{lstm}, among others.
 
-The primary distinction between \glspl{snn} and conventional \glspl{ann} centers on their neuron modeling approach. While conventional \glspl{ann} rely on activation functions for a continuous output, \glspl{snn} model the temporal dynamics of spiking behavior. This makes \glspl{snn} especially relevant in neuromorphic engineering, where researchers aim to develop hardware that mimics the behavior and efficiency of biological brains.
+The primary distinction between \glspl{snn} and conventional \glspl{ann} centers on their neuron modeling approach. While conventional \glspl{ann} rely on activation functions for continuous output, \glspl{snn} model the temporal dynamics of spiking behavior. This makes \glspl{snn} especially relevant in neuromorphic engineering, where researchers aim to develop hardware that mimics the behavior and efficiency of biological brains.
 
 \glspl{snn} exhibit inherent robustness comparable to the brain, operating reliably using inherently non-reliable mechanisms like stochastic synapses \cite{smetters1996synaptic}. Despite utilizing unreliable and stochastic elements, \glspl{snn} demonstrate remarkable reliability \cite{mcdonnell2011benefits} and superior robustness against input noise and adversarial attacks \cite{ernst2007efficient, Dapello2020.06.16.154542}. Beyond robustness, \glspl{snn} offer benefits such as higher energy efficiency and more efficient asynchronous parallelization. For instance, Intel's Loihi \cite{davies2018loihi} achieves over three orders of magnitude better energy-delay product than conventional approaches, motivating substantial research efforts by major companies and pan-European projects \cite{Spinnaker_TransSolid_13}.
 
@@ -72,7 +72,7 @@ The inference procedure consists in generating indices $s_t$
 distributed according to a categorical distribution of the input pattern
 $s_t \sim \mathrm{Categorical}(x_{\mu}(0), x_{\mu}(1), ..,
 x_{\mu}(N-1))$. Starting with a random $h$ and executing
-iteratively \Equ{eq:sbs_update} the \gls{sbs} algorithms finds
+iteratively \Equ{eq:sbs_update} the \gls{sbs} algorithm finds
 $h_{\mu}$. The fundamental concept of \gls{sbs} can be extended from vector to matrix
 inputs. In this case, the linear operation $W\, h_\mu$ can be replaced by a
 convolution to obtain a convolutional \gls{sbs} layer. A detailed description of the \gls{sbs} algorithm is presented in the Appendix~\ref{chap.append}
@@ -81,7 +81,7 @@ convolution to obtain a convolutional \gls{sbs} layer. A detailed description of
 
 \gls{sbs} network models can be constructed in sequential layered structures \cite{rotermund2019Backpropagation}. Each layer consists of many \glspl{ip_sbs} (represented by $\vec{h}$), while the communication between them is organized by a low bandwidth signal -- the spikes.
 
-The \gls{sbs} layer update is summarized in Algorithm~\ref{alg:sbs}. This is an iterative algorithm, where the number of spikes are denoted as ($N_{Spk}$), which is the number of iterations. As a generative model, each iteration updates the internal representation ($H$) based on the input spikes ($S^{in}_t$). A basic \gls{sbs} network architecture for handwritten digit classification (MNIST) is shown in \fig{fig:sbs_network} and \Tab{tab:sbs_network}. Each \gls{ip_sbs} is an independent computational entity, this allows to design specialized hardware architectures that can be massively parallelized (see \fig{fig:SbS_layer}).
+The \gls{sbs} layer update is summarized in Algorithm~\ref{alg:sbs}. This is an iterative algorithm, where the number of spikes is denoted as ($N_{Spk}$), which is the number of iterations. As a generative model, each iteration updates the internal representation ($H$) based on the input spikes ($S^{in}_t$). A basic \gls{sbs} network architecture for handwritten digit classification (MNIST) is shown in \fig{fig:sbs_network} and \Tab{tab:sbs_network}. Each \gls{ip_sbs} is an independent computational entity, which allows to design specialized hardware architectures that can be massively parallelized (see \fig{fig:SbS_layer}).
 
 
 \begin{algorithm}
@@ -149,8 +149,8 @@ The number of \gls{mac} operations required for inference of an \gls{sbs} layer 
 
 \paragraph{Error Tolerance}
 
-To illustrate the error tolerance of \gls{sbs} networks, it is presented a classification performance under positive additive uniformly distributed noise as external disturbance. \fig{fig:robustnes_sbs} presents a comparison of the classification performance of an \gls{sbs} network and a standard \gls{cnn}, with the same amount of
-neurons per layer as well as the same layer structure. Both neural networks are trained for handwritten digit classification on MNIST dataset \cite{lecun1998mnist} (see \cite{rotermund2019Backpropagation} for details). The figure shows the correctness for the MNIST test set with its \num[group-separator={,}]{10000} patterns in dependency of the noise level for positive additive
+To illustrate the error tolerance of \gls{sbs} networks, it is presented a classification performance under positive additive uniformly distributed noise as an external disturbance. \fig{fig:robustnes_sbs} presents a comparison of the classification performance of an \gls{sbs} network and a standard \gls{cnn}, with the same amount of
+neurons per layer as well as the same layer structure. Both neural networks are trained for handwritten digit classification on MNIST dataset \cite{lecun1998mnist} (see \cite{rotermund2019Backpropagation} for details). The figure shows the correctness of the MNIST test set with its \num[group-separator={,}]{10000} patterns in dependency of the noise level for positive additive
 uniformly distributed noise. The blue curve shows the performance for
 the \gls{cnn}, while the red curve shows the performance for
 the \gls{sbs} network with \num[group-separator={,}]{1200} spikes (iterations). Beginning
@@ -263,7 +263,7 @@ f'(z) =
 
 One noted benefit of the ReLU function is its computational efficiency, given that it only requires a simple thresholding at zero. This allows models to train faster and requires less computational resources compared to other activation functions like sigmoid or tanh.
 
-However, a potential drawback of the ReLU function is that units can sometimes get "stuck" during training and cease updating, leading to what's known as "dying ReLUs." The dying ReLU phenomenon can be viewed as a specific type of the vanishing gradient problem, where ReLU neurons become non-responsive and consistently output a value of zero, regardless of the input they receive. This is due to the fact that for inputs less than 0, the gradient is 0, which can cause weights to not update during backpropagation. To counteract this, variants like Leaky ReLU~\cite{maas2013rectifier} and Parametric ReLU~\cite{he2015delving} have been proposed.
+However, a potential drawback of the ReLU function is that units can sometimes get "stuck" during training and cease updating, leading to what's known as "dying ReLUs." The dying ReLU phenomenon can be viewed as a specific type of vanishing gradient problem, where ReLU neurons become non-responsive and consistently output a value of zero, regardless of the input they receive. This occurs because inputs less than 0 yield a gradient of 0, potentially preventing weight updates during backpropagation. To counteract this, variants like Leaky ReLU~\cite{maas2013rectifier} and Parametric ReLU~\cite{he2015delving} have been proposed.
 \item \textbf{Softmax}:
 In a neural network for multiclass classification tasks, the softmax function is a common choice for the activation function in the output layer. Given an input vector \( \mathbf{z} \) of length \( K \), representing the raw output (logits) of the \( K \) nodes in the output layer, the softmax function transforms these logits into a probability distribution over \( K \) classes. For each component \( i \) (where \( i = 1, 2, \ldots, K \)), the softmax function \( S(\mathbf{z}) \) is computed as:
 \[
@@ -455,7 +455,7 @@ Neural networks come with intensive computational and memory demands due to thei
 	
 	\item \textbf{Memory Cost}: \gls{ai}/\gls{ml} models, especially those with millions or even billions of parameters, require elevated memory footprint for model storage. During computation, the frequent access to weights, along with the need to read and write intermediate activations, can stress the memory bandwidth. Memory access is also energy-expensive, often more than the actual arithmetic operations.
 	
-	As illustration, the memory requirements for an \gls{mlp} are:
+	As an illustration, the memory requirements for an \gls{mlp} are:
 	\begin{enumerate}
 		\item \textbf{Weights Storage}: Given a deep neural network with \(L\) layers, where each layer \(l\) has \(n_l\) neurons and receives input from \(n_{l-1}\) neurons, the number of weights (excluding biases) is:
 		\begin{align*}
@@ -486,7 +486,7 @@ Neural networks come with intensive computational and memory demands due to thei
 	
 \end{itemize}
 
-Given these challenges, it is needed to optimize neural network deployments on such devices at both software and hardware levels to achieve desired performance within the power constraints.
+Given these challenges, it is needed to optimize neural network deployments on such devices at both software and hardware levels to achieve the desired performance within the power constraints.
 
 \subsection{Types of Accelerators}
 
@@ -537,6 +537,7 @@ For neural network accelerator design, it is important to address key considerat
 \section{Precision and Effect in Training}
 
 Conventional neural networks typically rely on standard \gls{fp} arithmetic. However, to elevate computational speed, minimize memory footprint, and reduce energy consumption, hardware accelerators adopt lower precision formats. While this can speed up operations and reduce resource demands, there is a trade-off as reduced precision might affect the model accuracy. Therefore, balancing precision and performance is crucial, with techniques such as mixed-precision and dynamic/custom arithmetic being employed to navigate these trade-offs~\cite{micikevicius2017mixed}.
+
 \subsection{Fixed-Point}
 
 Fixed-point arithmetic represents numbers with a fixed number of digits before and after the decimal point, in contrast to floating-point where the decimal point can "float". Leveraging fixed-point arithmetic offers distinct advantages. Specifically, fixed-point operations are more resource-efficient, leading to accelerated computations. Additionally, their inherent simplicity in arithmetic operations often translates to diminished power consumption. 
@@ -592,7 +593,7 @@ The most widely used format for \gls{fp} arithmetic is the IEEE 754 standard \ci
 
 Reduced bit size than those specified in the IEEE 754 standard are often sufficient to provide the desired precision. Reduced designs require fewer hardware resources enabling low-power implementations. In custom hardware designs, it is possible to customize the \gls{fp} format implemented. In later sections, the term E$a$M$b$ is used to denote \gls{fp} formats, where $a$ and $b$ are the exponent and mantissa bit size, respectively. For example, E4M1 means 4-bit exponent and 1-bit mantissa, see \Fig{fig:floating}(d).
 
-There are three special definitions in IEEE 754 standard. The first is subnormal numbers when $E=0$, then \Equ{eq:float} is modified to \Equ{eq:float_subnorm}. Infinity and \gls{nan} are the other two special cases but are not used in this research. Infinite and \gls{nan} values often indicate undefined operations or errors in calculations (such as division by zero, logarithm of a negative number, etc.). These values do not represent meaningful information that can be used for learning patterns from data. Consequently, this can lead to simplified hardware complexity in custom \gls{fp} neural network accelerators by streamlining the control logic.
+There are three special definitions in IEEE 754 standard. The first is subnormal numbers when $E=0$, then \Equ{eq:float} is modified to \Equ{eq:float_subnorm}. Infinity and \gls{nan} are the other two special cases but are not used in this research. Infinite and \gls{nan} values often indicate undefined operations or errors in calculations (such as division by zero, the logarithm of a negative number, etc.). These values do not represent meaningful information that can be used for learning patterns from data. Consequently, this can lead to simplified hardware complexity in custom \gls{fp} neural network accelerators by streamlining the control logic.
 
 \begin{eqnarray} \label{eq:float_subnorm}
 (-1)^{S} \times 0.M \times 2^{1-B}
@@ -609,7 +610,7 @@ Q(W) = \text{round}\left(\frac{W}{\Delta}\right) \times \Delta
 \end{equation}
 where \( \Delta \) is a quantization step size, often derived from the range of the weights or activations and the target precision.
 
-One challenge of \gls{ptq} is to ensure minimal loss of accuracy after the conversion. Techniques such as fine-tuning the quantized model, applying regularization during initial training, or using advanced quantization schemes (e.g., mixed precision) can help to preserve the model accuracy.
+One challenge of \gls{ptq} is to ensure minimal loss of accuracy after the conversion. Techniques such as fine-tuning the quantized model, applying regularization during initial training, or using advanced quantization schemes (e.g., mixed precision) can help to preserve accuracy of the model.
 
 While \gls{ptq} offers the benefit of simplicity, the resultant quantized model might not be as robust or accurate as models trained with \gls{qat} techniques. However, for many applications, especially those on resource-constrained devices, the slight trade-off in accuracy is often outweighed by the benefits in computational efficiency, memory usage, and power consumption.
 
@@ -618,7 +619,7 @@ While \gls{ptq} offers the benefit of simplicity, the resultant quantized model 
 
 This quantization maps weights to a lower precision \( Q(W) \), similarly as in \gls{ptq}; moreover, \gls{qat} integrates this process into the training phase, ensuring that the resultant model is resilient to potential accuracy degradation~\cite{krishnamoorthi2018quantizing}. Such adaptations are relevant when targeting resource-constrained devices or specialized hardware accelerators that rely on reduced precision for improved computational efficiency and accuracy.
 
-For neural networks with custom reduced \gls{fp} formats, \gls{qat} exhibits even greater versatility. Such custom formats, often denoted as \( FP_{M,E} \), allocate specific bit-lengths for the mantissa \( M \) and the exponent \( E \). The function for this quantization format is detailed in \Algo{alg:quantizr}. This algorithm converts full-precision values into their corresponding quantized \gls{fp} representation using custom-defined exponent and mantissa bit lengths.
+For neural networks with custom reduced \gls{fp} formats, \gls{qat} exhibits even greater versatility. Such custom formats often denoted as \( FP_{M,E} \), allocate specific bit-lengths for the mantissa \( M \) and the exponent \( E \). The function for this quantization format is detailed in \Algo{alg:quantizr}. This algorithm converts full-precision values into their corresponding quantized \gls{fp} representation using custom-defined exponent and mantissa bit lengths.
 
 \begin{algorithm}[h!]
 	\caption{Custom floating-point quantizer.}
@@ -660,7 +661,7 @@ During training, each forward pass applies the aforementioned quantization, simu
 \begin{equation}
 W_{t+1} = W_t - \eta \nabla W
 \end{equation}
-Here, \( \eta \) represents the learning rate. However, with \gls{qat}, the model remains cognizant of \( Q(W) \) or \( Q_{FP}(W) \) during forward computations, a factor that influences gradient dynamics. Post-\gls{qat} calibration using a validation dataset helps to refine scaling factors or biases, this improves the model for optimal performance in its intended deployment environment. Assessments against a full-precision baseline are important to ensure that the trade-offs in precision do not compromise the model accuracy.
+Here, \( \eta \) represents the learning rate. However, with \gls{qat}, the model remains cognizant of \( Q(W) \) or \( Q_{FP}(W) \) during forward computations, a factor that influences gradient dynamics. Post-\gls{qat} calibration using a validation dataset helps to refine scaling factors or biases, this improves the model for optimal performance in its intended deployment environment. Assessments against a full-precision baseline are important to ensure that the trade-offs in precision do not compromise accuracy of the model.
 
 \section{Dataflow Taxonomy}
 Dataflow taxonomy refers to the classification of various schemes that determine how data (weights, activations, and partial results) moves through the accelerator during computation. The way data is moved and reused can have an impact on the energy efficiency and throughput of the accelerator. These strategies aim to maximize performance and energy efficiency by optimizing data movement, which is often more energy-intensive than computation itself. When choosing or designing a dataflow, it is essential to consider the specific neural network workload, the memory hierarchy, and the architectural details of the hardware to ensure an optimal match~\cite{sze2017efficient}.
@@ -711,7 +712,7 @@ Under \gls{simd}, a single instruction processes multiple data streams concurren
 
 \subsection*{MISD (Multiple Instruction, Single Data)}
 
-This architecture is less common and represent systems where multiple instructions operate on a single data stream. Some fault-tolerant machines adopt this strategy, applying different operations to replicate the data to ensure reliability.
+This architecture is less common and represents systems where multiple instructions operate on a single data stream. Some fault-tolerant machines adopt this strategy, applying different operations to replicate the data to ensure reliability.
 
 \subsection*{MIMD (Multiple Instruction, Multiple Data)}
 
@@ -762,7 +763,7 @@ The \gls{mac} operation holds an essential role in the field of neural network a
 For efficient neural network computation, two main optimization strategies are used, namely network compression and classical approximate computing~\cite{bouvier2019spiking}. Researchers focusing on low-power embedded applications started lowering the precision of weights and activation maps to compress the memory footprint of the large number of parameters representing \glspl{ann}, a method known as network compression or quantization. This practice takes advantage of the intrinsic error-tolerance of neural networks, as well as their ability to compensate for approximation while training. In this way, reduced bit precision causes a small accuracy loss~\cite{courbariaux2015binaryconnect, han2015deep, hubara2017quantized, rastegari2016xnor}.
 
 
-In addition to quantization, network pruning reduces the model size by removing structural portions of the parameters and its associated computations~\cite{lecun1989optimal,hassibi1992second}. This method has been identified as an effective technique to improve the efficiency of \gls{dnn} for applications with limited computational budget~\cite{molchanov2016pruning,li2016pruning, liu2018rethinking}.
+In addition to quantization, network pruning reduces the model size by removing structural portions of the parameters and their associated computations~\cite{lecun1989optimal,hassibi1992second}. This method has been identified as an effective technique to improve the efficiency of \gls{dnn} for applications with limited computational budget~\cite{molchanov2016pruning,li2016pruning, liu2018rethinking}.
 
 
 \subsection{Aggressive Quantization}
@@ -772,10 +773,10 @@ In hardware development, \gls{wq} has shown up to $2\times$ improvement in energ
 
 The aforementioned methods can be used for \glspl{snn} as well. In~\cite{rathi2018stdp}, Rathi \textit{et al.} report up to $3.1\times$ improvement in energy consumption with an accuracy of $90.1\%$ on handwritten number recognition while pruning noncritical connections and quantizing the weights of critical synapses. Weight quantization allows the designer to realize a trade-off between the accuracy of the \gls{snn} application and efficiency of resources. Approximate computing can also be applied at the neuron level, where irrelevant units are deactivated to reduce the computation cost of the \glspl{snn}~\cite{sen2017approximate}. This computation skipping can be applied randomly on synapses, training conventional \glspl{ann} with stochastic synapses improves generalization, resulting in a better accuracy~\cite{srivastava2014dropout, wan2013regularization}. Such methods are compatible with \glspl{snn} and have been tested both during training~\cite{neftci2016stochastic, srinivasan2016magnetic} and operation \cite{buesing2011neural}, and even to define the connectivity between layers \cite{bellec2017deep, chen20184096}. Implementations of spiking neuromorphic systems in \gls{fpga}~\cite{sheik2016synaptic} and hardware~\cite{jerry2017ultra} demonstrated that synaptic stochasticity allows to increase the final accuracy of the networks while reducing memory footprint.
 
-Quantization is therefore a powerful technique to improve energy efficiency and memory requirements of \gls{ann} and \gls{snn} accelerators, with small accuracy degradation. However, this approach requires \gls{qat} methods that, in some cases, are problematic, particularly in emerging deep \gls{snn} algorithms~\cite{zhang2018survey}.
+Quantization is, therefore, a powerful technique to improve energy efficiency and memory requirements of \gls{ann} and \gls{snn} accelerators, with small accuracy degradation. However, this approach requires \gls{qat} methods that, in some cases, are problematic, particularly in emerging deep \gls{snn} algorithms~\cite{zhang2018survey}.
 
 \subsubsection{Classical Approximate Computing}
-Approximate computing has been used in a wide range of applications to increase the computational efficiency in hardware~\cite{han2013approximate}. This approach consists of designing processing elements that approximate their computation by employing modified algorithmic logic units~\cite{han2013approximate}. In~\cite{kim2013energy}, Kim \textit{et al.} have shown \glspl{snn} using carry skip adders achieving $2.4\times$ latency enhancement and $43\%$ more energy efficiency, with an accuracy degradation of 0.97\% on a handwritten digit classification task. Therefore, approximate computing provides important enhancement in energy efficiency and processing speed.
+Approximate computing has been used in a wide range of applications to increase the computational efficiency in hardware~\cite{han2013approximate}. This approach consists of designing processing elements that approximate their computation by employing modified algorithmic logic units~\cite{han2013approximate}. In~\cite{kim2013energy}, Kim \textit{et al.} have shown \glspl{snn} using carry skip adders achieving $2.4\times$ latency enhancement and $43\%$ more energy efficiency, with an accuracy degradation of 0.97\% on a handwritten digit classification task. Therefore, approximate computing provides an important enhancement in energy efficiency and processing speed.
 
 However, as the complexity of the dataset increases, as well as the depth of the network topology, such as ResNet~\cite{he2016deep} on ImageNet~\cite{russakovsky2015imagenet}, the accuracy degradation becomes more important and may not be negligible anymore~\cite{rastegari2016xnor}, especially for critical applications such as autonomous driving. Therefore, it is not certain that network compression techniques and approximate computing are suitable for all applications.
 
@@ -785,13 +786,13 @@ Rotermund \textit{et al.} demonstrated the feasibility of a neuromorphic \gls{sb
 \subsection{Convolutional Neural Network Accelerators with Custom Floating-Point Computation on \gls{fpga}
 }
 \label{sec:related_work}
-In the literature we find plenty of hardware architectures for \gls{cnn} accelerators implemented in \gls{fpga}. Most of the research work implements fixed-point quantization, and very limited research focuses on \gls{fp}. These studies concentrate on low-precision \gls{fp}; however, their applicability for inference on low-power embedded devices is restricted by their size, power consumption, and cost. To the best of my knowledge, there is no research work related to \gls{fp} inference for low-power embedded applications.
+In the literature, we find plenty of hardware architectures for \gls{cnn} accelerators implemented in \gls{fpga}. Most of the research work implements fixed-point quantization, and very limited research focuses on \gls{fp}. These studies concentrate on low-precision \gls{fp}; however, their applicability for inference on low-power embedded devices is restricted by their size, power consumption, and cost. To the best of my knowledge, there is no research work related to \gls{fp} inference for low-power embedded applications.
 
 One research work has presented a \gls{cnn} hardware accelerator implemented on the XC7Z007S, this design focuses on fixed-point computation. The XC7Z007S stands out as the most resource-limited and energy-efficient device within the Zynq-7000 \gls{soc} \gls{fpga} family. Its associated development board, MiniZed, is priced at USD 89.00. This device serves as the central target of this dissertation for low-power \gls{cnn} acceleration.
 
 
 \subsubsection{High-Performance FPGA-Based CNN Accelerator With Block-Floating-Point Arithmetic}
-In \cite{lian2019high}, Xiaocong Lian \textit{et al.} proposed a hardware accelerator with optimized block floating-point (BFP). In this design the activations and weights are represented by 16-bit and 8-bit \gls{fp} formats, respectively. This design is demonstrated on Xilinx VC709 evaluation board. This implementation achieves throughput and power efficiency of \unit[760.83]{GOP/s} and \unit[82.88]{GOP/s/W}, respectively. However, this design is not suitable for low-power resource-constrained embedded \glspl{fpga}.
+In \cite{lian2019high}, Xiaocong Lian \textit{et al.} proposed a hardware accelerator with optimized block floating-point (BFP). In this design, the activations and weights are represented by 16-bit and 8-bit \gls{fp} formats, respectively. This design is demonstrated on the Xilinx VC709 evaluation board. This implementation achieves throughput and power efficiency of \unit[760.83]{GOP/s} and \unit[82.88]{GOP/s/W}, respectively. However, this design is not suitable for low-power resource-constrained embedded \glspl{fpga}.
 
 \Fig{fig:lian2019high}(a) presents the high-level block diagram of the \gls{cnn} accelerator. This accelerator is composed of three main components: a Processing Element Array (PEA), an on-chip buffer, and external memory. During initialization, both input images and network parameters are transferred from the host computer to the on-board DDR3 modules through PCIe3.0x8.
 
@@ -807,7 +808,7 @@ In \cite{lian2019high}, Xiaocong Lian \textit{et al.} proposed a hardware accele
 \FloatBarrier
 
 \subsubsection{A 200MHZ 202.4GFLOPS@10.8W VGG16 Accelerator in Xilinx VX690T}
-In \cite{mei2017200mhz}, Chunsheng Mei \textit{et al.} presented a hardware accelerator for VGG16 model using half-precision \gls{fp} (16-bit). This design is demonstrated on Xilinx Virtex-7 (XC7VX690T) with PCIe interface. This implementation achieves throughput and power efficiency of \unit[202.4]{GFLOP/s} and \unit[18.72]{GFLOP/s/W}, respectively.
+In \cite{mei2017200mhz}, Chunsheng Mei \textit{et al.} presented a hardware accelerator for the VGG16 model using half-precision \gls{fp} (16-bit). This design is demonstrated on Xilinx Virtex-7 (XC7VX690T) with a PCIe interface. This implementation achieves throughput and power efficiency of \unit[202.4]{GFLOP/s} and \unit[18.72]{GFLOP/s/W}, respectively.
 
 \Fig{fig:mei2017200mhz}(a) presents the block diagram of system architecture. Initially, both the network model and input images are transferred to the on-board DDR3 modules (DDR3 M0 and DDR3 M1) using PCle3.0x8. For forward processing, distinct accelerators are allocated for the convolution and fully-connected layers. An image-grain pipeline is scheduled for both the Fully-Connected Layer Accelerator (FLAcc) and the Convolution Layer Accelerator (CLAcc). While FLAcc processes the fully-connected layers of the current image, CLAcc concurrently processes the convolutional computations for the next image. This heterogeneous architecture is constructed on the condition that the convolution layers are suitable for parallelism, while the fully-connected layer are not. To maximize the use of on-board resources, two sets of CLAcc, Convolution Layer Input Buffer (CLIB), Convolution Layer Output Buffer (CLOB), FLAcc, and Fully-Connected Layer Buffer (FLB) were designed to handle two input images simultaneously. The network parameters are consistently shared between these two system accelerators.
 
@@ -826,9 +827,9 @@ Without necessitating network retraining, this design accommodates the model par
 \subsubsection{Low-precision Floating-point Arithmetic for High-performance FPGA-based CNN Acceleration}
 In \cite{wu2021low}, Chen Wu \textit{et al.} proposed a low-precision (8-bit) floating-point (LPFP) quantization method for \gls{fpga}-based acceleration. This design is demonstrated on Xilinx Kintex 7 and Ultrascale/Ultrascale+. This implementation achieves throughput and power efficiency of \unit[1086.8]{GOP/s} and \unit[115.4]{GOP/s/W}, respectively.
 
-\Fig{fig:wu2021low}(a) depicts the overarching system architecture. At its core lies the Floating-Point Function Unit (FPFU), containing an array of Processing Elements (PEs). These PEs are designed to compute layer outputs in parallel. Specifically, each PE within the FPFU is optimized to efficiently handle dot-products using the LPFP data format. The on-chip Memory System (MS) incorporates three distinct buffers: the Input Feature Map Buffer (IFMB), Weight Buffer (WB), and Output Feature Map Buffer (OFMB). Utilizing a ping-pong mechanism, these buffers are designed to mitigate the communication latency between on-chip and off-chip memories, a process facilitated by the \gls{dma} module. Additionally, the Central Control Module (CCM) functions as a arbiter for the different modules, translating instructions from the Instruction RAM (IR) into specific signals for associated modules.
+\Fig{fig:wu2021low}(a) depicts the overarching system architecture. At its core lies the Floating-Point Function Unit (FPFU), containing an array of Processing Elements (PEs). These PEs are designed to compute layer outputs in parallel. Specifically, each PE within the FPFU is optimized to efficiently handle dot-products using the LPFP data format. The on-chip Memory System (MS) incorporates three distinct buffers: the Input Feature Map Buffer (IFMB), Weight Buffer (WB), and Output Feature Map Buffer (OFMB). Utilizing a ping-pong mechanism, these buffers are designed to mitigate the communication latency between on-chip and off-chip memories, a process facilitated by the \gls{dma} module. Additionally, the Central Control Module (CCM) functions as an arbiter for the different modules, translating instructions from the Instruction RAM (IR) into specific signals for associated modules.
 
-\Fig{fig:wu2021low}(b) presents the PE architecture, conceived as a fully pipelined data-flow structure. Upon receiving two vectors, a PE distributes the data among its $N_m$ multipliers. These multipliers then transfer their full precision \gls{fp} results to the Alignment Module (AM). Without truncating any bits, these full precision \gls{fp} products are aligned and transformed into fixed-point numbers. Post alignment, these products are transferred to four fixed-point adder trees, completing four parallel dot-product operations. This simultaneous processing exemplifies the feed-forward mechanism for four pixels across two output channels. The accumulation of partial results (including bias), pooling and activation processes are performed in series inside the Post Process Module (PPM).
+\Fig{fig:wu2021low}(b) presents the PE architecture, conceived as a fully pipelined data-flow structure. Upon receiving two vectors, a PE distributes the data among its $N_m$ multipliers. These multipliers then transfer their full precision \gls{fp} results to the Alignment Module (AM). Without truncating any bits, these full precision \gls{fp} products are aligned and transformed into fixed-point numbers. Post alignment, these products are transferred to four fixed-point adder trees, completing four parallel dot-product operations. This simultaneous processing exemplifies the feed-forward mechanism for four pixels across two output channels. The accumulation of partial results (including bias), pooling, and activation processes are performed in series inside the Post Process Module (PPM).
 
 \begin{figure}[h!]
 	\centering
@@ -867,7 +868,7 @@ Compared with Nvidia TITAN Xp \gls{gpu}, Phoenix consumes
 151$\times$ less energy with single image inference.
 
 In \cite{park2021neural}, Jeongwoo Park \textit{et al.} reported an 8-bit \gls{fp} neural network training processor that leverages shared exponent bias (FP8-SEB) for non-sparse neural networks. This implementation uses multiple-way fused multiply-add (FMA) trees for maintaining high numerical precision and reducing energy consumption, demonstrating improved efficiency against conventional neural network training processors. Fabricated in \unit[40]{nm} LP CMOS, the processor consumes
-\unit[13.1]{mW} at \unit[0.75]{V}, \unit[20]{MHz} with the maximum energy efficiency of \unit[4.81]{TFLOPS/W}, and \unit[230]{mW} at \unit[1.1]{V}, \unit[180]{MHz} with the maximum performance of \unit[567]{GFLOPS} and area efficiency of \unit[90.7]{GFLOPS/mm$^2$}   .
+\unit[13.1]{mW} at \unit[0.75]{V}, \unit[20]{MHz} with the maximum energy efficiency of \unit[4.81]{TFLOPS/W}, and \unit[230]{mW} at \unit[1.1]{V}, \unit[180]{MHz} with the maximum performance of \unit[567]{GFLOPS} and area efficiency of \unit[90.7]{GFLOPS/mm$^2$}.
 
 In \cite{venkataramani2021rapid}, Swagath Venkataramani \textit{et al.} demonstrated a 4-core \gls{ai} chip, called RaPiD, an accelerator that supports various precisions. Notably, the accelerator can handle 16 and 8-bit \gls{fp} computations, as well as 4 and 2-bit fixed-point calculations. Measurements show INT4 inference for batch size of 1 yields 3 - 13.5 (average 7) TOPS/W and FP8 training for a mini-batch of 512 achieves a sustained 102 - 588 (average 203) TFLOPS across a wide range of applications.
 
@@ -884,4 +885,4 @@ In a notable progress presented in \cite{sun2019hybrid} by Xiao Sun \textit{et a
 
 In \cite{liu2021improving}, Fangxin Liu \textit{et al.} adopted a distinct approach by introducing adaptive floating-point (AFP) post-training quantization, which enhances compression rates and inference efficiency without relying on the computationally demanding \gls{qat}. Their work introduces a framework that automatically optimizes and selects the appropriate AFP configuration for each layer, hence maximizing compression effectiveness. This approach results in minimal accuracy degradation (only 0.04\% for ResNet-50 and 0.6\% for MobileNet-v2) compared to their full-precision counterparts.
 
-In conclusion, the adoption of 8-bit floating-point quantization marks a significant advancement in meeting the industry growing demand for compatibility, efficiency, compactness, and precision in neural network training and inference.
+In conclusion, the adoption of 8-bit floating-point quantization marks a significant advancement in meeting the growing demand of industry for compatibility, efficiency, compactness, and precision in neural network training and inference.
