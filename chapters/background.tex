@@ -281,7 +281,7 @@ Neural networks learn by adjusting weights and biases in response to training da
 
 \gls{sgd} is an iterative optimization algorithm used to minimize an objective function that is defined as a sum of differentiable functions. This is particularly well-suited for problems with a large number of training samples~\cite{bottou2010large}.
 
-Given an objective function \( J(\theta) \) which we aim to minimize, the objective is often defined as:
+Given an objective function \( J(\theta) \) that is aimed to be minimized, the objective is often defined as:
 \[
 J(\theta) = \frac{1}{N} \sum_{i=1}^{N} J_i(\theta)
 \]
@@ -734,7 +734,7 @@ Where:
 	\item \( A \) and \( B \): Operands subjected to multiplication.
 \end{itemize}
 
-In neural computations, a substantial number of \gls{mac} operations are executed. To illustrate, consider the convolutional layer in a \gls{cnn}. This layer predominantly requires \gls{mac} operations to compute the weighted sum of inputs and respective weights. If we denote \( x[i] \) as a data array or vector of input values and \( w[i] \) as the weights, an output \( y \) for a specified filter and input position can be delineated as:
+In neural computations, a substantial number of \gls{mac} operations are executed. To illustrate, consider the convolutional layer in a \gls{cnn}. This layer predominantly requires \gls{mac} operations to compute the weighted sum of inputs and respective weights. Denoting \( x[i] \) as a data array or vector of input values and \( w[i] \) as the weights, an output \( y \) for a specified filter and input position can be delineated as:
 \begin{equation}
 y = \sum_{i} x[i] \cdot w[i]
 \end{equation}
@@ -786,7 +786,7 @@ Rotermund \textit{et al.} demonstrated the feasibility of a neuromorphic \gls{sb
 \subsection{Convolutional Neural Network Accelerators with Custom Floating-Point Computation on \gls{fpga}
 }
 \label{sec:related_work}
-In the literature, we find plenty of hardware architectures for \gls{cnn} accelerators implemented in \gls{fpga}. Most of the research work implements fixed-point quantization, and very limited research focuses on \gls{fp}. These studies concentrate on low-precision \gls{fp}; however, their applicability for inference on low-power embedded devices is restricted by their size, power consumption, and cost. To the best of my knowledge, there is no research work related to \gls{fp} inference for low-power embedded applications.
+In the literature, a plenty of hardware architectures for \gls{cnn} accelerators implemented in \gls{fpga} can be found. Most of the research work implements fixed-point quantization, and very limited research focuses on \gls{fp}. These studies concentrate on low-precision \gls{fp}; however, their applicability for inference on low-power embedded devices is restricted by their size, power consumption, and cost. To the best of my knowledge, there is no research work related to \gls{fp} inference for low-power embedded applications.
 
 One research work has presented a \gls{cnn} hardware accelerator implemented on the XC7Z007S, this design focuses on fixed-point computation. The XC7Z007S stands out as the most resource-limited and energy-efficient device within the Zynq-7000 \gls{soc} \gls{fpga} family. Its associated development board, MiniZed, is priced at USD 89.00. This device serves as the central target of this dissertation for low-power \gls{cnn} acceleration.
 

@@ -10,7 +10,7 @@ Widely used \gls{ai}/\gls{ml} algorithms, \glspl{snn} and \glspl{cnn}, come with
 \begin{itemize}
 	\item \textbf{Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}: A hardware design methodology is presented for low-power \gls{sbs} neural networks targeting embedded applications. This approach leverages the intrinsic error resilience of \gls{sbs}, emphasizing a balance between performance and hardware complexity. Significant reductions in run-time, memory footprint, and power consumption are realized, with minimal accuracy trade-offs.
 	
-	\item \textbf{Hybrid 6-bit Floating-Point Computation}: A novel low-power hardware design technique tailored for resource-constrained applications is presented. The \gls{hf6} quantization strategy, its specialized hardware \gls{mac} unit and tensor processor is showcased. Compatibility with TensorFlow Lite demonstrates its industry relevance and potential for broader adoption.
+	\item \textbf{Hybrid 6-bit Floating-Point Computation}: A novel low-power hardware design technique tailored for resource-constrained applications is presented. The \gls{hf6} quantization strategy, its specialized hardware \gls{mac} unit, and the tensor processor are showcased. Compatibility with TensorFlow Lite demonstrates its industry relevance and potential for broader adoption.
 \end{itemize}
 
 \section{Future Directions}
@@ -24,12 +24,12 @@ Additionally, in this work, there is potential to boost computational throughput
 This dissertation delves into design techniques that exploit the intrinsic error resilience of \gls{ai}/\gls{ml} algorithms, focusing on optimal \gls{fp} inference acceleration in resource-constrained embedded systems. Key takeaways include:
 
 \begin{enumerate}
-	\item Quantization techniques, particularly those involving reduced floating-point formats, are set to significantly improve hardware designs. These enhancements include acceleration of computation, increased energy efficiency, and optimized chip area. Additionally, they positively impact versatility, portability, and compatibility aspects of hardware solutions.
+	\item Quantization techniques, particularly those involving reduced floating-point formats, are set to significantly improve hardware designs. These enhancements include acceleration of computation, increased energy efficiency, and optimized chip area. Additionally, they positively impact the versatility, portability, and compatibility aspects of hardware solutions.
 	
 	\item The \gls{mac} module designs presented in this work showcase a balance between computational accuracy and resource efficiency, suitable for resource-constrained embedded devices. This approach has relevance and applicability in both academic research and industrial contexts.
 	
 	\item The \gls{hf6} quantization approach has the potential to be applicable across the entire spectrum of \gls{ai}/\gls{ml} models. This method enhances energy efficiency, processing speed, and memory footprint, particularly important in the real-world application of \gls{ai}/\gls{ml} technologies.
 	
-	\item The methodologies showcased for low-power inference acceleration hold significant potential for adaptation on the high computational demands of data centers. Training \gls{ai}/\gls{ml} models using reduced-precision floating-point hardware architectures achieves effects akin to those of \gls{qat} methods. Implementing the proposed techniques in data centers could lead to substantial improvements in energy and resource efficiency.
+	\item The methodologies showcased for low-power inference acceleration hold significant potential for adaptation to the high computational demands of data centers. Training \gls{ai}/\gls{ml} models using reduced-precision floating-point hardware architectures achieves effects akin to those of \gls{qat} methods. Implementing the proposed techniques in data centers could lead to substantial improvements in energy and resource efficiency.
 \end{enumerate}
 
