@@ -81,7 +81,7 @@ convolution to obtain a convolutional \gls{sbs} layer. A detailed description of
 
 \gls{sbs} network models can be constructed in sequential layered structures \cite{rotermund2019Backpropagation}. Each layer consists of many \glspl{ip_sbs} (represented by $\vec{h}$), while the communication between them is organized by a low bandwidth signal -- the spikes.
 
-The \gls{sbs} layer update is summarized in Algorithm~\ref{alg:sbs}. This is an iterative algorithm, where the number of spikes is denoted as ($N_{Spk}$), which is the number of iterations. As a generative model, each iteration updates the internal representation ($H$) based on the input spikes ($S^{in}_t$). A basic \gls{sbs} network architecture for handwritten digit classification (MNIST) is shown in \fig{fig:sbs_network} and \Tab{tab:sbs_network}. Each \gls{ip_sbs} is an independent computational entity, which allows to design specialized hardware architectures that can be massively parallelized (see \fig{fig:SbS_layer}).
+The \gls{sbs} layer update is summarized in \Algo{alg:sbs}. This is an iterative algorithm, where the number of spikes is denoted as ($N_{Spk}$), which is the number of iterations. As a generative model, each iteration updates the internal representation ($H$) based on the input spikes ($S^{in}_t$). A basic \gls{sbs} network architecture for handwritten digit classification (MNIST) is shown in \fig{fig:sbs_network} and \Tab{tab:sbs_network}. Each \gls{ip_sbs} is an independent computational entity, which allows to design specialized hardware architectures that can be massively parallelized (see \fig{fig:SbS_layer}).
 
 
 \begin{algorithm}
@@ -624,7 +624,7 @@ For neural networks with custom reduced \gls{fp} formats, \gls{qat} exhibits eve
 \begin{algorithm}[h!]
 	\caption{Custom floating-point quantizer.}
 	\label{alg:quantizr}
-	\begin{algorithmic}
+	\begin{algorithmic}[1]
 		\SetAlgoLined
 		\renewcommand{\algorithmicrequire}{\textbf{input:}}
 		\renewcommand{\algorithmicensure}{\textbf{output:}}
