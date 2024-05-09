@@ -1,0 +1,36 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{algorithm2e} % For algorithms
+
+\usepackage{booktabs} % For professional looking tables
+\usepackage{threeparttable} % For table notes
+\usepackage{multirow} % For cells that span multiple rows
+\usepackage{graphicx} % For scaling and rotating content
+\usepackage{glossaries} % In case you use \gls{} in the table
+
+% Define glossary entries if not already defined
+\newglossaryentry{fp}{name={FP}, description={Floating Point}}
+
+
+\mode<presentation> {
+	% Choose the style for your slides:
+	\usetheme{CambridgeUS}
+	\usecolortheme{dolphin}
+}
+
+\title[PhD Defense - Yarib Nevarez]{Low-Power Neural Network Accelerators: Advancements in Custom Floating-Point Techniques}
+\author{Yarib Nevarez}
+\institute{Universität Bremen}
+\date{May 22, 2024}
+
+\begin{document}
+	
+	\input{slides/title.tex}
+
+	\input{slides/introduction.tex}
+	
+	\input{slides/state-of-the-art.tex}
+	
+	\input{slides/sbs_accelerator.tex}
+	
+\end{document}

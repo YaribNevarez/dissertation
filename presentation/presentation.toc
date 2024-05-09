@@ -1,0 +1,2 @@
+\beamer@sectionintoc {3}{State-of-the-Art}{17}{0}{1}
+\beamer@sectionintoc {4}{Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{22}{0}{2}

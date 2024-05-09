@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.31)  12 DEC 2023 12:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  9 MAY 2024 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -430,9 +430,9 @@ File: babel.def 2020/02/14 3.40 Babel common definitions
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
 Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language52) on input line 105.
+(babel)             (\language53) on input line 105.
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language52) on input line 108.
+(babel)             (\language53) on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
@@ -3403,7 +3403,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
 Here is how much of TeX's memory you used:
  64381 strings out of 481239
  1310998 string characters out of 5920377
- 1914399 words of memory out of 5000000
+ 1914400 words of memory out of 5000000
  76954 multiletter control sequences out of 15000+600000
  734256 words of font info for 253 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
