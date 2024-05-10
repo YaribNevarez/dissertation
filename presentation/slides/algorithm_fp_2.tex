@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{geometry}
+
+% Set the page size and margins
+\geometry{paperwidth=13.5cm, paperheight=13.2cm, margin=0.0cm}
+
+\begin{document}
+	\thispagestyle{empty} % Remove page numbers and headers/footers
+	
+	\begin{algorithm}[H]
+		\caption{Custom floating-point quantization.}
+		\DontPrintSemicolon
+		\SetAlgoVlined % Ensures vertical lines are used
+		\KwIn{$MODEL$ as the CNN.}
+		\KwIn{$E_{size}$ as the target exponent bit size.}
+		\KwIn{$M_{size}$ as the target mantissa bits size.}
+		\KwIn{$STDM_{size}$ as the IEEE 754 mantissa bit size.}
+		\KwOut{$MODEL$ as the quantized CNN.}
+		\ForEach{$layer$ in $MODEL$}{
+			\If{$layer$ is $Conv2D$ or $SeparableConv2D$}{
+				$filter, bias \gets GetWeights(layer)$\;
+				\ForEach{$x$ in $filter$ and $bias$}{
+					$sign \gets GetSign(x)$\;
+					$exp \gets GetExponent(x)$\;
+					$fullexp \gets 2^{E_{size}-1}-1$ \tcp{Get full range value}
+					$cman \gets GetCustomMantissa(x, M_{size})$\;
+					$leftman \gets GetLeftoverMantissa(x, M_{size})$\;
+					\eIf{$exp <-fullexp$}{
+						$x\gets0$\;
+					}{
+						\eIf{$exp > fullexp$}{
+							$x\gets (-1)^{sign}\cdot2^{fullexp}\cdot(1+(1-2^{-M_{size}}))$\;
+						}{
+							\If{$2^{STDM_{size}-M_{size}-1}-1<leftman$}{
+								$cman \gets cman+1$ \tcp{Above halfway}
+								\If{$2^{M_{size}}-1<cman$}{
+									$cman \gets 0$ \tcp{Correct mantissa overflow}
+									$exp \gets exp + 1$\;
+								}
+							}
+							$x\gets (-1)^{sign}\cdot2^{exp}\cdot(1+cman\cdot2^{-M_{size}})$\;
+						}
+					}
+				}
+				$SetWeights(layer, filter, bias)$\;
+			}
+		}
+	\end{algorithm}
+\end{document}

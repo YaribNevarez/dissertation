@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{geometry}
+
+% Set the page size and margins
+\geometry{paperwidth=10.5cm, paperheight=11.2cm, margin=0cm, noheadfoot}
+
+\begin{document}
+	\thispagestyle{empty} % Remove page numbers and headers/footers
+	
+	% Set the algorithm counter to start from 2
+	\setcounter{algocf}{1}
+	
+	\begin{algorithm}[H]
+		\caption{Training with iterative early stop cycle.}
+		\DontPrintSemicolon % Suppresses end-of-line semicolons
+		\SetAlgoLined % Enables vertical lines
+		\SetKwInput{KwInput}{Input} % Define input keyword
+		\SetKwInput{KwOutput}{Output} % Define output keyword
+		
+		% Inputs listed individually
+		\KwInput{$MODEL$ as the input model}
+		\KwInput{$D_{train}$ as the training data set}
+		\KwInput{$D_{val}$ as the validation data set}
+		\KwInput{$N_{I}$ as the stop patience for iterative training cycle}
+		\KwInput{$N_{E}$ as the early stop patience (epochs) for training}
+		\KwInput{$B_{size}$ as the mini-batch size}
+		
+		% Output
+		\KwOutput{$MODEL$ as the full-precision output model}
+		
+		% Algorithm steps
+		\BlankLine
+		\tcp{Initial training and evaluation}
+		$Train(MODEL, D_{train}, D_{val}, N_{E}, B_{size})$\;
+		$mse_i \gets Evaluate(MODEL, D_{val})$\; % Initial benchmark
+		$n_I \gets 0$\;
+		
+		\While{$n_I < N_{I}$}{
+			\tcp{Iterative early stop cycle}
+			$Train(MODEL, D_{train}, D_{val}, N_{E}, B_{size})$\;
+			$mse_v \gets Evaluate(MODEL, D_{val})$\;
+			
+			\If{$mse_v < mse_i$}{
+				$Update(MODEL)$\;
+				$mse_i \gets mse_v$\;
+			}
+			\Else{
+				$MODEL \gets LoadPreviousWeights()$\;
+				$n_I \gets n_I + 1$\;
+			}
+		}
+	\end{algorithm}
+	
+\end{document}

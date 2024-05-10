@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{geometry}
+
+% Set the page size and margins
+\geometry{paperwidth=10.5cm, paperheight=8.6cm, margin=0cm, noheadfoot}
+
+\begin{document}
+	\thispagestyle{empty} % Remove page numbers and headers/footers
+	
+	% Set the algorithm counter to start from 2
+	\setcounter{algocf}{1} % algorithm2e uses algocf for counting
+	
+	\begin{algorithm}[H]
+		\caption{OnMiniBatchUpdate\_Callback.}
+		\label{alg:quantization_integration}
+		\SetAlgoLined % This enables vertical lines
+		\DontPrintSemicolon % This omits end of line semicolons
+		\SetKwInput{KwInput}{Input} % Set the Input
+		\SetKwInput{KwOutput}{Output} % Set the Output
+		
+		\KwInput{$MODEL$ as the full-precision input model}
+		\KwInput{$E_{size}$ as the target exponent bits size}
+		\KwInput{$M_{size}$ as the target mantissa bits size}
+		\KwInput{$D_{train}$ as the training data set}
+		\KwInput{$D_{val}$ as the validation data set}
+		\KwInput{$N_{ep}$ as the number of epochs}
+		\KwInput{$B_{size}$ as the mini-batch size}
+		\KwOutput{$MODEL$ as the quantized output model}
+		
+		% Algorithm steps
+		\BlankLine
+		\tcp{Quantize}
+		$MODEL \gets \texttt{QuantizeTraining}(MODEL, E_{size}, M_{size})$\;
+		
+		\If{$1 < epoch$}{
+			\tcp{Update model after first epoch}
+			$mse_v \gets \texttt{Evaluate}(MODEL, D_{val})$\;
+			
+			\If{$mse_v < mse_i$}{
+				\texttt{Update}(MODEL)\;
+				$mse_i \gets mse_v$\;
+			}
+		}
+	\end{algorithm}
+	
+\end{document}

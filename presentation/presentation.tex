@@ -1,12 +1,15 @@
 \documentclass{beamer}
 \usepackage{graphicx}
-\usepackage{algorithm2e} % For algorithms
 
 \usepackage{booktabs} % For professional looking tables
 \usepackage{threeparttable} % For table notes
 \usepackage{multirow} % For cells that span multiple rows
 \usepackage{graphicx} % For scaling and rotating content
 \usepackage{glossaries} % In case you use \gls{} in the table
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
 
 % Define glossary entries if not already defined
 \newglossaryentry{fp}{name={FP}, description={Floating Point}}
@@ -27,10 +30,12 @@
 	
 	\input{slides/title.tex}
 
-	\input{slides/introduction.tex}
+	%\input{slides/introduction.tex}
 	
-	\input{slides/state-of-the-art.tex}
+	%\input{slides/state-of-the-art.tex}
 	
 	\input{slides/sbs_accelerator.tex}
+	
+	\input{slides/cnn_accelerator.tex}
 	
 \end{document}

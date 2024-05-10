@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{geometry}
+
+% Set the page size and margins
+\geometry{paperwidth=12cm, paperheight=14.5cm, margin=0cm}
+
+\begin{document}
+\thispagestyle{empty} % Remove page numbers and headers/footers
+
+\begin{algorithm}[H]
+    \caption{Custom floating-point quantization.}
+    \label{alg:quantize_training}
+    \begin{algorithmic}[1]
+        \renewcommand{\algorithmicrequire}{\textbf{Input:}}
+        \renewcommand{\algorithmicensure}{\textbf{Output:}}
+        \Require $MODEL$ as the CNN.
+        \Require $E_{size}$ as the target exponent bit size.
+        \Require $M_{size}$ as the target mantissa bits size.
+        \Require $STDM_{size}$ as the IEEE 754 mantissa bit size.
+        \Ensure $MODEL$ as the quantized CNN.
+        \For{$layer$ in $MODEL$}
+            \If{$layer$ is $Conv2D$ or $SeparableConv2D$}
+                \State $filter, bias \gets GetWeights(layer)$
+                \For{$x$ in $filter$ and $bias$}
+                    \State $sign \gets GetSign(x)$
+                    \State $exp \gets GetExponent(x)$
+                    \State $fullexp \gets 2^{E_{size}-1}-1$ \Comment{Get full range value}
+                    \State $cman \gets GetCustomMantissa(x, M_{size})$
+                    \State $leftman \gets GetLeftoverMantissa(x, M_{size})$
+                    \If{$exp <-fullexp$}
+                        \State$x\gets0$
+                    \ElsIf{$exp > fullexp$}
+                        \State$x\gets (-1)^{sign}\cdot2^{fullexp}\cdot(1+(1-2^{-M_{size}}))$
+                    \Else
+                        \If{$2^{STDM_{size}-M_{size}-1}-1<leftman$}
+                            \State $cman \gets cman+1$ \Comment{Above halfway}
+                            \If{$2^{M_{size}}-1<cman$}
+                                \State $cman \gets 0$ \Comment{Correct mantissa overflow}
+                                \State $exp \gets exp + 1$
+                            \EndIf
+                        \EndIf
+                        \State$x\gets (-1)^{sign}\cdot2^{exp}\cdot(1+cman\cdot2^{-M_{size}})$
+                    \EndIf
+                \EndFor
+                \State $SetWeights(layer, filter, bias)$
+            \EndIf
+        \EndFor
+    \end{algorithmic}
+\end{algorithm}
+\end{document}

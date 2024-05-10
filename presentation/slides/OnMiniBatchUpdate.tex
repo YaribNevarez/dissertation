@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{geometry}
+
+% Set the page size and margins
+\geometry{paperwidth=10cm, paperheight=8.5cm, margin=0cm, noheadfoot}
+
+\begin{document}
+\thispagestyle{empty} % Remove page numbers and headers/footers
+
+% Set the algorithm counter to start from 2
+\setcounter{algorithm}{1}
+
+\begin{algorithm}[h!]
+    \caption{OnMiniBatchUpdate\_Callback.}
+    \label{alg:quantization_integration}
+    \begin{algorithmic}[1]
+        \renewcommand{\algorithmicrequire}{\textbf{Input:}}
+        \renewcommand{\algorithmicensure}{\textbf{Output:}}
+        \Require $MODEL$ as the full-precision input model.
+        \Require $E_{size}$ as the target exponent bits size.
+        \Require $M_{size}$ as the target mantissa bits size.
+        \Require $D_{train}$ as the training data set.
+        \Require $D_{val}$ as the validation data set.
+        \Require $N_{ep}$ as the number of epochs.
+        \Require $B_{size}$ as the mini-batch size.
+        \Ensure $MODEL$ as the quantized output model.
+        \State // Quantize
+        \State $MODEL \gets$ \Call{QuantizeTraining}{$MODEL$, $E_{size}$, $M_{size}$} 
+        \If {$1 < epoch$}
+            \State // Update model after first epoch
+            \State $mse_v \gets Evaluate(MODEL, D_{val})$
+            \If{$mse_v < mse_i$}
+                \State $Update(MODEL)$
+                \State $mse_i \gets mse_v$
+            \EndIf
+        \EndIf
+    \end{algorithmic}
+\end{algorithm}
+\end{document}
