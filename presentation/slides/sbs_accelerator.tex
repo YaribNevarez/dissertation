@@ -270,20 +270,20 @@
 	\end{columns}
 \end{frame}
 
-\begin{frame}[shrink=25]{Accelerator Implementations} % 'shrink' might be necessary if the table is too large
-	\begin{threeparttable}
-		\centering
-		\caption{\scriptsize Accelerator implementations.}
-		\scriptsize % Smaller font size to fit the table on the slide
-		\begin{tabular}{lrrrrr}
-			\toprule
-			\textbf{Platform implementation} & \textbf{Power (W)} & \textbf{Clk (MHz)} & \textbf{Latency (ms)} & \textbf{Acceleration} & \textbf{Accuracy (\%)} \\
-			\midrule
-			Standard floating-point & 2.420 & 200 & 3.18 & 10.7x & 98.98 \\
-			Hybrid floating-point 8-bit & 2.369 & 200 & 1.67 & 20.5x & 98.97 \\
-			Hybrid Logarithmic 4-bit  & 2.324 & 200 & 1.67 & 20.5x & 98.84 \\
-			\bottomrule
-		\end{tabular}
-	\end{threeparttable}
-
+\begin{frame}[shrink=30]{Accelerator Implementations} % Title of the slide
+	\begin{center} % Ensure the table is centered in the slide
+		\begin{threeparttable}
+			\caption{Accelerator implementations.} % Caption of the table
+			\scriptsize % Reduce the font size of the table
+			\begin{tabular}{lrrrrr}
+				\toprule
+				\textbf{Platform implementation} & \textbf{Power (W)} & \textbf{Clk (MHz)} & \textbf{Latency (ms)} & \textbf{Acceleration} & \textbf{Accuracy (\%)} \\
+				\midrule
+				Standard floating-point & 2.420 & 200 & 3.18 & 10.7x & 98.98 \\
+				Hybrid floating-point 8-bit & 2.369 & 200 & 1.67 & 20.5x & 98.97 \\
+				Hybrid Logarithmic 4-bit & 2.324 & 200 & 1.67 & 20.5x & 98.84 \\
+				\bottomrule
+			\end{tabular}
+		\end{threeparttable}
+	\end{center}
 \end{frame}

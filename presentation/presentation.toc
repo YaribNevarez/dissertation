@@ -1,2 +1,4 @@
-\beamer@sectionintoc {1}{Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{2}{0}{1}
-\beamer@sectionintoc {2}{Hybrid 6-bit Floating-Point Computation}{23}{0}{2}
+\beamer@sectionintoc {3}{State-of-the-Art}{17}{0}{1}
+\beamer@sectionintoc {4}{Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{22}{0}{2}
+\beamer@sectionintoc {5}{Hybrid 6-bit Floating-Point Computation}{43}{0}{3}
+\beamer@sectionintoc {6}{Conclusions and Future Research}{71}{0}{4}

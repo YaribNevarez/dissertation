@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage[numbers]{natbib}
+\usepackage{xcolor}  % For coloring text
+\usepackage{caption} % Import the caption package
+
+
+% Set the geometry to fit the table nicely with small margins
+\geometry{paperwidth=18cm, paperheight=10cm, margin=0cm, centering}
+% Configure the caption package to display "Table" without a number
+\captionsetup[table]{
+	%textformat=empty, % Removes the label format, keeping the label itself
+	labelformat=empty, % Removes the label number
+	labelsep=none % Removes the separator, such as a colon or period
+}
+
+% Remove the bibliography title
+\renewcommand{\bibsection}{}
+
+% Adjust the bibliography font size and color to be smaller and grayscale
+\renewcommand{\bibfont}{\scriptsize\color{gray}} % Makes the bibliography text smaller and gray
+
+% To store bibliography in the document for the sake of this example
+\usepackage{filecontents}
+\begin{filecontents}{\jobname.bib}
+	@inproceedings{mei2017200mhz,
+		title={A 200mhz 202.4 gflops@ 10.8 w vgg16 accelerator in xilinx vx690t},
+		author={Mei, Chunsheng and Liu, Zhenyu and Niu, Yue and Ji, Xiangyang and Zhou, Wei and Wang, Dongsheng},
+		booktitle={2017 IEEE Global Conference on Signal and Information Processing (GlobalSIP)},
+		pages={784--788},
+		year={2017},
+		organization={IEEE}
+	}
+	@article{wu2021low,
+		title={Low-precision Floating-point Arithmetic for High-performance FPGA-based CNN Acceleration},
+		author={Wu, Chen and Wang, Mingyu and Chu, Xinyuan and Wang, Kun and He, Lei},
+		journal={ACM Transactions on Reconfigurable Technology and Systems (TRETS)},
+		volume={15},
+		number={1},
+		pages={1--21},
+		year={2021},
+		publisher={ACM New York, NY}
+	}
+	@article{lian2019high,
+		title={High-performance FPGA-based CNN accelerator with block-floating-point arithmetic},
+		author={Lian, Xiaocong and Liu, Zhenyu and Song, Zhourui and Dai, Jiwu and Zhou, Wei and Ji, Xiangyang},
+		journal={IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
+		volume={27},
+		number={8},
+		pages={1874--1885},
+		year={2019},
+		publisher={IEEE}
+	}
+	@inproceedings{meloni2019cnn,
+		title={CNN hardware acceleration on a low-power and low-cost APSoC},
+		author={Meloni, Paolo and Garufi, Antonio and Deriu, Gianfranco and Carreras, Marco and Loi, Daniela},
+		booktitle={2019 Conference on Design and Architectures for Signal and Image Processing (DASIP)},
+		pages={7--12},
+		year={2019},
+		organization={IEEE}
+	}
+\end{filecontents}
+
+\begin{document}
+	\thispagestyle{empty} % Remove page numbers and headers/footers
+	
+	%\setcounter{table}{1}
+	
+	\begin{center}
+		\begin{table*}[!t]\centering
+			\caption{Comparison with related work with floating-point and fixed-point.}\label{tab:comparison}
+			\scriptsize
+			\begin{tabular}{lrrrrrr}\toprule
+				Platform &Chunsheng \textit{et al.} \cite{mei2017200mhz} &Chen \textit{et al.} \cite{wu2021low} &BFP \cite{lian2019high} &Paolo \textit{et al.} \cite{meloni2019cnn} &This work \\\midrule
+				Device &XC7VX690T &XC7K325T &XC7VX690T &XC7Z007S &XC7Z007S \\
+				Year &2017 &2019 &2019 &2019 &2023 \\
+				Dev. kit cost &\$7,494 &\$1,299 &\$7,494 &\$89 &\$89 \\
+				Format (activation/weight) &FP 16-bit &FP 8-bit / 8-bit &FP 16-bit / 8-bit &INT 16-bit &FP 32-bit / 6-bit \\
+				Frequency (MHz) &200 &200 &200 &80 &200 \\
+				Peak power efficiency (GFLOP/s/W) &18.72 &115.40 &82.88 &2.98 &5.74 \\
+				Peak throughput (GFLOP/s) & 202.42 & 1086.8 & 760.83 &  10.62& 0.482\\
+				Wall plug power (W) &10.81 &9.42 &9.18 &2.5 &2.3 \\
+				BRAM 36Kb utilization &196.5 &234.5 &913 &44 &15 \\
+				DSP utilization &1728 &768 &1027 &54 &20 \\
+				\bottomrule
+			\end{tabular}
+		\end{table*}
+	\end{center}
+	
+	\bibliographystyle{unsrtnat}  % Uses a style that sorts citations numerically as they appear
+	\bibliography{\jobname} % Specify your .bib file here without the extension
+\end{document}

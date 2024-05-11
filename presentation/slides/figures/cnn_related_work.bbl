@@ -1,0 +1,36 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Mei et~al.(2017)Mei, Liu, Niu, Ji, Zhou, and Wang]{mei2017200mhz}
+Chunsheng Mei, Zhenyu Liu, Yue Niu, Xiangyang Ji, Wei Zhou, and Dongsheng Wang.
+\newblock A 200mhz 202.4 gflops@ 10.8 w vgg16 accelerator in xilinx vx690t.
+\newblock In \emph{2017 IEEE Global Conference on Signal and Information
+  Processing (GlobalSIP)}, pages 784--788. IEEE, 2017.
+
+\bibitem[Wu et~al.(2021)Wu, Wang, Chu, Wang, and He]{wu2021low}
+Chen Wu, Mingyu Wang, Xinyuan Chu, Kun Wang, and Lei He.
+\newblock Low-precision floating-point arithmetic for high-performance
+  fpga-based cnn acceleration.
+\newblock \emph{ACM Transactions on Reconfigurable Technology and Systems
+  (TRETS)}, 15\penalty0 (1):\penalty0 1--21, 2021.
+
+\bibitem[Lian et~al.(2019)Lian, Liu, Song, Dai, Zhou, and Ji]{lian2019high}
+Xiaocong Lian, Zhenyu Liu, Zhourui Song, Jiwu Dai, Wei Zhou, and Xiangyang Ji.
+\newblock High-performance fpga-based cnn accelerator with block-floating-point
+  arithmetic.
+\newblock \emph{IEEE Transactions on Very Large Scale Integration (VLSI)
+  Systems}, 27\penalty0 (8):\penalty0 1874--1885, 2019.
+
+\bibitem[Meloni et~al.(2019)Meloni, Garufi, Deriu, Carreras, and
+  Loi]{meloni2019cnn}
+Paolo Meloni, Antonio Garufi, Gianfranco Deriu, Marco Carreras, and Daniela
+  Loi.
+\newblock Cnn hardware acceleration on a low-power and low-cost apsoc.
+\newblock In \emph{2019 Conference on Design and Architectures for Signal and
+  Image Processing (DASIP)}, pages 7--12. IEEE, 2019.
+
+\end{thebibliography}
