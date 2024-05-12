@@ -4,6 +4,6 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {4}{Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{29}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Hybrid 6-bit Floating-Point Computation}{50}{0}{3}
+\beamer@sectionintoc {5}{Hybrid 6-bit Floating-Point Computation}{49}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {6}{Conclusions and Future Research}{78}{0}{4}
+\beamer@sectionintoc {6}{Conclusions and Future Research}{77}{0}{4}

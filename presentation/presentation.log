@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  12 MAY 2024 21:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  13 MAY 2024 00:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1470,7 +1470,7 @@ d on input line 40.
 pdfTeX warning: /usr/bin/pdflatex (file ../chapters/sbs_accelerator/figures/sbs
 _software_component.pdf): PDF inclusion: found PDF version <1.7>, but at most v
 ersion <1.5> allowed
-<../chapters/sbs_accelerator/figures/sbs_software_component.pdf, id=1521, 431.6
+<../chapters/sbs_accelerator/figures/sbs_software_component.pdf, id=1522, 431.6
 125pt x 277.035pt>
 File: ../chapters/sbs_accelerator/figures/sbs_software_component.pdf Graphic fi
 le (type pdf)
@@ -1483,7 +1483,7 @@ nent.pdf  used on input line 62.
 pdfTeX warning: /usr/bin/pdflatex (file ../chapters/sbs_accelerator/figures/sbs
 _hw.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> all
 owed
-<../chapters/sbs_accelerator/figures/sbs_hw.pdf, id=1522, 228.855pt x 139.52126
+<../chapters/sbs_accelerator/figures/sbs_hw.pdf, id=1523, 228.855pt x 139.52126
 pt>
 File: ../chapters/sbs_accelerator/figures/sbs_hw.pdf Graphic file (type pdf)
 <use ../chapters/sbs_accelerator/figures/sbs_hw.pdf>
@@ -1498,14 +1498,14 @@ sbs_accelerator/figures/sbs_hw.pdf>]
 pdfTeX warning: /usr/bin/pdflatex (file ../chapters/sbs_accelerator/figures/sbs
 _conv.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> a
 llowed
-<../chapters/sbs_accelerator/figures/sbs_conv.pdf, id=1581, 296.10625pt x 344.2
+<../chapters/sbs_accelerator/figures/sbs_conv.pdf, id=1582, 296.10625pt x 344.2
 8625pt>
 File: ../chapters/sbs_accelerator/figures/sbs_conv.pdf Graphic file (type pdf)
 <use ../chapters/sbs_accelerator/figures/sbs_conv.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/sbs_conv.pdf  used
  on input line 84.
 (pdftex.def)             Requested size: 121.51775pt x 141.2896pt.
-<../chapters/sbs_accelerator/figures/dot-product_unit.pdf, id=1582, 252.91655pt
+<../chapters/sbs_accelerator/figures/dot-product_unit.pdf, id=1583, 252.91655pt
  x 252.91655pt>
 File: ../chapters/sbs_accelerator/figures/dot-product_unit.pdf Graphic file (ty
 pe pdf)
@@ -1535,7 +1535,7 @@ File: ../chapters/sbs_accelerator/figures/dot-product_unit.pdf Graphic file (ty
 pe pdf)
 <use ../chapters/sbs_accelerator/figures/dot-product_unit.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/dot-product_unit.p
-df  used on input line 118.
+df  used on input line 117.
 (pdftex.def)             Requested size: 156.23672pt x 156.23933pt.
  [36
 
@@ -1544,13 +1544,13 @@ df  used on input line 118.
 pdfTeX warning: /usr/bin/pdflatex (file ../chapters/sbs_accelerator/figures/dot
 _product_float.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
 n <1.5> allowed
-<../chapters/sbs_accelerator/figures/dot_product_float.pdf, id=1707, 460.72125p
+<../chapters/sbs_accelerator/figures/dot_product_float.pdf, id=1709, 460.72125p
 t x 491.8375pt>
 File: ../chapters/sbs_accelerator/figures/dot_product_float.pdf Graphic file (t
 ype pdf)
 <use ../chapters/sbs_accelerator/figures/dot_product_float.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/dot_product_float.
-pdf  used on input line 134.
+pdf  used on input line 132.
 (pdftex.def)             Requested size: 138.87592pt x 148.25034pt.
 [37
 
@@ -1559,13 +1559,13 @@ pdf  used on input line 134.
 pdfTeX warning: /usr/bin/pdflatex (file ../chapters/sbs_accelerator/figures/dot
 _product.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5
 > allowed
-<../chapters/sbs_accelerator/figures/dot_product.pdf, id=1745, 446.66875pt x 47
+<../chapters/sbs_accelerator/figures/dot_product.pdf, id=1747, 446.66875pt x 47
 5.7775pt>
 File: ../chapters/sbs_accelerator/figures/dot_product.pdf Graphic file (type pd
 f)
 <use ../chapters/sbs_accelerator/figures/dot_product.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/dot_product.pdf  u
-sed on input line 150.
+sed on input line 147.
 (pdftex.def)             Requested size: 138.87592pt x 147.92508pt.
 [38
 
@@ -1574,13 +1574,13 @@ sed on input line 150.
 pdfTeX warning: /usr/bin/pdflatex (file ../chapters/sbs_accelerator/figures/dot
 _product_log.pdf): PDF inclusion: found PDF version <1.7>, but at most version 
 <1.5> allowed
-<../chapters/sbs_accelerator/figures/dot_product_log.pdf, id=1801, 445.665pt x 
+<../chapters/sbs_accelerator/figures/dot_product_log.pdf, id=1803, 445.665pt x 
 383.4325pt>
 File: ../chapters/sbs_accelerator/figures/dot_product_log.pdf Graphic file (typ
 e pdf)
 <use ../chapters/sbs_accelerator/figures/dot_product_log.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/dot_product_log.pd
-f  used on input line 166.
+f  used on input line 162.
 (pdftex.def)             Requested size: 138.87592pt x 119.48302pt.
 [39
 
@@ -1589,40 +1589,40 @@ f  used on input line 166.
 pdfTeX warning: /usr/bin/pdflatex (file ../chapters/sbs_accelerator/figures/sbs
 _hw_experimental.pdf): PDF inclusion: found PDF version <1.7>, but at most vers
 ion <1.5> allowed
-<../chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf, id=1851, 180.675p
+<../chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf, id=1853, 180.675p
 t x 117.43875pt>
 File: ../chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf Graphic file 
 (type pdf)
 <use ../chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/sbs_hw_experimenta
-l.pdf  used on input line 215.
+l.pdf  used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 84.62929pt.
-<../chapters/sbs_accelerator/figures/latency_sw.pdf, id=1852, 252.91655pt x 93.
+<../chapters/sbs_accelerator/figures/latency_sw.pdf, id=1854, 252.91655pt x 93.
 92255pt>
 File: ../chapters/sbs_accelerator/figures/latency_sw.pdf Graphic file (type pdf
 )
 <use ../chapters/sbs_accelerator/figures/latency_sw.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_sw.pdf  us
-ed on input line 215.
+ed on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 48.35129pt.
-<../chapters/sbs_accelerator/figures/latency_pu_fp.pdf, id=1853, 252.91655pt x 
+<../chapters/sbs_accelerator/figures/latency_pu_fp.pdf, id=1855, 252.91655pt x 
 115.60355pt>
 File: ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf Graphic file (type 
 pdf)
 <use ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf 
- used on input line 215.
+ used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 59.51266pt.
-<../chapters/sbs_accelerator/figures/latency_fp_cycle.pdf, id=1854, 252.91655pt
+<../chapters/sbs_accelerator/figures/latency_fp_cycle.pdf, id=1856, 252.91655pt
  x 124.99297pt>
 File: ../chapters/sbs_accelerator/figures/latency_fp_cycle.pdf Graphic file (ty
 pe pdf)
 <use ../chapters/sbs_accelerator/figures/latency_fp_cycle.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_fp_cycle.p
-df  used on input line 215.
+df  used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 64.34633pt.
 
-Overfull \vbox (1.7918pt too high) detected at line 215
+Overfull \vbox (1.7918pt too high) detected at line 211
  []
 
 [40
@@ -1644,28 +1644,28 @@ File: ../chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf Graphic file
 (type pdf)
 <use ../chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/sbs_hw_experimenta
-l.pdf  used on input line 215.
+l.pdf  used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 84.62929pt.
 File: ../chapters/sbs_accelerator/figures/latency_sw.pdf Graphic file (type pdf
 )
 <use ../chapters/sbs_accelerator/figures/latency_sw.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_sw.pdf  us
-ed on input line 215.
+ed on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 48.35129pt.
 File: ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf Graphic file (type 
 pdf)
 <use ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf 
- used on input line 215.
+ used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 59.51266pt.
 File: ../chapters/sbs_accelerator/figures/latency_fp_cycle.pdf Graphic file (ty
 pe pdf)
 <use ../chapters/sbs_accelerator/figures/latency_fp_cycle.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_fp_cycle.p
-df  used on input line 215.
+df  used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 64.34633pt.
 
-Overfull \vbox (1.7918pt too high) detected at line 215
+Overfull \vbox (1.7918pt too high) detected at line 211
  []
 
 [41
@@ -1675,28 +1675,28 @@ File: ../chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf Graphic file
 (type pdf)
 <use ../chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/sbs_hw_experimenta
-l.pdf  used on input line 215.
+l.pdf  used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 84.62929pt.
 File: ../chapters/sbs_accelerator/figures/latency_sw.pdf Graphic file (type pdf
 )
 <use ../chapters/sbs_accelerator/figures/latency_sw.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_sw.pdf  us
-ed on input line 215.
+ed on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 48.35129pt.
 File: ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf Graphic file (type 
 pdf)
 <use ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf 
- used on input line 215.
+ used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 59.51266pt.
 File: ../chapters/sbs_accelerator/figures/latency_fp_cycle.pdf Graphic file (ty
 pe pdf)
 <use ../chapters/sbs_accelerator/figures/latency_fp_cycle.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_fp_cycle.p
-df  used on input line 215.
+df  used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 64.34633pt.
 
-Overfull \vbox (1.7918pt too high) detected at line 215
+Overfull \vbox (1.7918pt too high) detected at line 211
  []
 
 [42
@@ -1706,48 +1706,48 @@ File: ../chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf Graphic file
 (type pdf)
 <use ../chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/sbs_hw_experimenta
-l.pdf  used on input line 215.
+l.pdf  used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 84.62929pt.
 File: ../chapters/sbs_accelerator/figures/latency_sw.pdf Graphic file (type pdf
 )
 <use ../chapters/sbs_accelerator/figures/latency_sw.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_sw.pdf  us
-ed on input line 215.
+ed on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 48.35129pt.
 File: ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf Graphic file (type 
 pdf)
 <use ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_pu_fp.pdf 
- used on input line 215.
+ used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 59.51266pt.
 File: ../chapters/sbs_accelerator/figures/latency_fp_cycle.pdf Graphic file (ty
 pe pdf)
 <use ../chapters/sbs_accelerator/figures/latency_fp_cycle.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_fp_cycle.p
-df  used on input line 215.
+df  used on input line 211.
 (pdftex.def)             Requested size: 130.19815pt x 64.34633pt.
 
-Overfull \vbox (1.7918pt too high) detected at line 215
+Overfull \vbox (1.7918pt too high) detected at line 211
  []
 
 [43
 
 ]
-<../chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf, id=2103, 252.91655p
+<../chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf, id=2105, 252.91655p
 t x 252.91655pt>
 File: ../chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf Graphic file (t
 ype pdf)
 <use ../chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_cfp_cycle.
-pdf  used on input line 238.
+pdf  used on input line 234.
 (pdftex.def)             Requested size: 130.19815pt x 130.20137pt.
-<../chapters/sbs_accelerator/figures/latency_log_cycle.pdf, id=2104, 252.91655p
+<../chapters/sbs_accelerator/figures/latency_log_cycle.pdf, id=2106, 252.91655p
 t x 252.91655pt>
 File: ../chapters/sbs_accelerator/figures/latency_log_cycle.pdf Graphic file (t
 ype pdf)
 <use ../chapters/sbs_accelerator/figures/latency_log_cycle.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_log_cycle.
-pdf  used on input line 238.
+pdf  used on input line 234.
 (pdftex.def)             Requested size: 130.19815pt x 130.20137pt.
  [44
 
@@ -1762,41 +1762,41 @@ File: ../chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf Graphic file (t
 ype pdf)
 <use ../chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_cfp_cycle.
-pdf  used on input line 238.
+pdf  used on input line 234.
 (pdftex.def)             Requested size: 130.19815pt x 130.20137pt.
 File: ../chapters/sbs_accelerator/figures/latency_log_cycle.pdf Graphic file (t
 ype pdf)
 <use ../chapters/sbs_accelerator/figures/latency_log_cycle.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/latency_log_cycle.
-pdf  used on input line 238.
+pdf  used on input line 234.
 (pdftex.def)             Requested size: 130.19815pt x 130.20137pt.
  [45
 
 ]
-<../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf, id=2195, 252.
+<../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf, id=2197, 252.
 91655pt x 433.59154pt>
 File: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf Graphic f
 ile (type pdf)
 <use ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_
-pu_fp.pdf  used on input line 271.
+pu_fp.pdf  used on input line 267.
 (pdftex.def)             Requested size: 85.93126pt x 147.31331pt.
 <../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponent_1-
-bit-mantissa).pdf, id=2196, 252.91655pt x 433.59154pt>
+bit-mantissa).pdf, id=2198, 252.91655pt x 433.59154pt>
 File: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-expone
 nt_1-bit-mantissa).pdf Graphic file (type pdf)
 <use ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponen
 t_1-bit-mantissa).pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_
-pu_cfp(4-bit-exponent_1-bit-mantissa).pdf  used on input line 271.
+pu_cfp(4-bit-exponent_1-bit-mantissa).pdf  used on input line 267.
 (pdftex.def)             Requested size: 85.93126pt x 147.31331pt.
-<../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf, id=2197, 252
+<../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf, id=2199, 252
 .91655pt x 433.59154pt>
 File: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf Graphic 
 file (type pdf)
 <use ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_
-pu_log.pdf  used on input line 271.
+pu_log.pdf  used on input line 267.
 (pdftex.def)             Requested size: 85.93126pt x 147.31331pt.
  [46
 
@@ -1817,20 +1817,20 @@ File: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf Graphic f
 ile (type pdf)
 <use ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_
-pu_fp.pdf  used on input line 271.
+pu_fp.pdf  used on input line 267.
 (pdftex.def)             Requested size: 85.93126pt x 147.31331pt.
 File: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-expone
 nt_1-bit-mantissa).pdf Graphic file (type pdf)
 <use ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponen
 t_1-bit-mantissa).pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_
-pu_cfp(4-bit-exponent_1-bit-mantissa).pdf  used on input line 271.
+pu_cfp(4-bit-exponent_1-bit-mantissa).pdf  used on input line 267.
 (pdftex.def)             Requested size: 85.93126pt x 147.31331pt.
 File: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf Graphic 
 file (type pdf)
 <use ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_
-pu_log.pdf  used on input line 271.
+pu_log.pdf  used on input line 267.
 (pdftex.def)             Requested size: 85.93126pt x 147.31331pt.
  [47
 
@@ -1839,43 +1839,41 @@ File: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf Graphic f
 ile (type pdf)
 <use ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_
-pu_fp.pdf  used on input line 271.
+pu_fp.pdf  used on input line 267.
 (pdftex.def)             Requested size: 85.93126pt x 147.31331pt.
 File: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-expone
 nt_1-bit-mantissa).pdf Graphic file (type pdf)
 <use ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponen
 t_1-bit-mantissa).pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_
-pu_cfp(4-bit-exponent_1-bit-mantissa).pdf  used on input line 271.
+pu_cfp(4-bit-exponent_1-bit-mantissa).pdf  used on input line 267.
 (pdftex.def)             Requested size: 85.93126pt x 147.31331pt.
 File: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf Graphic 
 file (type pdf)
 <use ../chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf>
 Package pdftex.def Info: ../chapters/sbs_accelerator/figures/accuracy_vs_noise_
-pu_log.pdf  used on input line 271.
+pu_log.pdf  used on input line 267.
 (pdftex.def)             Requested size: 85.93126pt x 147.31331pt.
  [48
 
-] [49
-
-]) (./slides/cnn_accelerator.tex (./presentation.toc)
-<../figures/convolution.pdf, id=2369, 252.945pt x 144.54pt>
+] Excluding 'comment' comment.) (./slides/cnn_accelerator.tex
+(./presentation.toc)
+<../figures/convolution.pdf, id=2342, 252.945pt x 144.54pt>
 File: ../figures/convolution.pdf Graphic file (type pdf)
 <use ../figures/convolution.pdf>
 Package pdftex.def Info: ../figures/convolution.pdf  used on input line 19.
 (pdftex.def)             Requested size: 173.59755pt x 99.20116pt.
- [50
+ [49
 
-]
-[51 <../figures/convolution.pdf>]
-<../chapters/cnn_accelerator/figures/sw_stack.pdf, id=2445, 252.945pt x 130.086
+] [50 <../figures/convolution.pdf>]
+<../chapters/cnn_accelerator/figures/sw_stack.pdf, id=2422, 252.945pt x 130.086
 pt>
 File: ../chapters/cnn_accelerator/figures/sw_stack.pdf Graphic file (type pdf)
 <use ../chapters/cnn_accelerator/figures/sw_stack.pdf>
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/sw_stack.pdf  used
  on input line 41.
 (pdftex.def)             Requested size: 173.59755pt x 89.28105pt.
-<../chapters/cnn_accelerator/figures/system_design.pdf, id=2446, 252.945pt x 19
+<../chapters/cnn_accelerator/figures/system_design.pdf, id=2423, 252.945pt x 19
 5.129pt>
 File: ../chapters/cnn_accelerator/figures/system_design.pdf Graphic file (type 
 pdf)
@@ -1883,7 +1881,7 @@ pdf)
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/system_design.pdf 
  used on input line 41.
 (pdftex.def)             Requested size: 138.87856pt x 107.13667pt.
- [52
+ [51
 
  <../chapters/cnn_accelerator/figures/sw_stack.pdf> <../chapters/cnn_accelerato
 r/figures/system_design.pdf
@@ -1892,7 +1890,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ../chapters/cnn_accelerator/figures/sys
 tem_design.pdf): PDF inclusion: multiple pdfs with page group included in a sin
 gle page
 >]
-<../chapters/cnn_accelerator/figures/accelerator.pdf, id=2488, 252.945pt x 216.
+<../chapters/cnn_accelerator/figures/accelerator.pdf, id=2464, 252.945pt x 216.
 81pt>
 File: ../chapters/cnn_accelerator/figures/accelerator.pdf Graphic file (type pd
 f)
@@ -1900,7 +1898,7 @@ f)
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/accelerator.pdf  u
 sed on input line 63.
 (pdftex.def)             Requested size: 121.51775pt x 104.16023pt.
-<../chapters/cnn_accelerator/figures/accelerator_buffers.pdf, id=2489, 252.945p
+<../chapters/cnn_accelerator/figures/accelerator_buffers.pdf, id=2465, 252.945p
 t x 144.54pt>
 File: ../chapters/cnn_accelerator/figures/accelerator_buffers.pdf Graphic file 
 (type pdf)
@@ -1908,7 +1906,7 @@ File: ../chapters/cnn_accelerator/figures/accelerator_buffers.pdf Graphic file
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/accelerator_buffer
 s.pdf  used on input line 63.
 (pdftex.def)             Requested size: 156.23672pt x 89.27863pt.
- [53
+ [52
 
  <../chapters/cnn_accelerator/figures/accelerator.pdf> <../chapters/cnn_acceler
 ator/figures/accelerator_buffers.pdf
@@ -1929,7 +1927,7 @@ File: ../chapters/cnn_accelerator/figures/accelerator_buffers.pdf Graphic file
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/accelerator_buffer
 s.pdf  used on input line 63.
 (pdftex.def)             Requested size: 156.23672pt x 89.27863pt.
- [54
+ [53
 
 ]
 File: ../chapters/cnn_accelerator/figures/accelerator_buffers.pdf Graphic file 
@@ -1938,10 +1936,10 @@ File: ../chapters/cnn_accelerator/figures/accelerator_buffers.pdf Graphic file
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/accelerator_buffer
 s.pdf  used on input line 105.
 (pdftex.def)             Requested size: 156.23672pt x 89.27863pt.
- [55
+ [54
 
 ]
-<../chapters/cnn_accelerator/figures/dot-product_unit.pdf, id=2615, 252.945pt x
+<../chapters/cnn_accelerator/figures/dot-product_unit.pdf, id=2590, 252.945pt x
  187.902pt>
 File: ../chapters/cnn_accelerator/figures/dot-product_unit.pdf Graphic file (ty
 pe pdf)
@@ -1949,7 +1947,7 @@ pe pdf)
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/dot-product_unit.p
 df  used on input line 130.
 (pdftex.def)             Requested size: 130.19815pt x 96.72043pt.
-<../chapters/cnn_accelerator/figures/multiplier.pdf, id=2616, 252.945pt x 397.4
+<../chapters/cnn_accelerator/figures/multiplier.pdf, id=2591, 252.945pt x 397.4
 85pt>
 File: ../chapters/cnn_accelerator/figures/multiplier.pdf Graphic file (type pdf
 )
@@ -1957,7 +1955,7 @@ File: ../chapters/cnn_accelerator/figures/multiplier.pdf Graphic file (type pdf
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/multiplier.pdf  us
 ed on input line 130.
 (pdftex.def)             Requested size: 86.79877pt x 136.39859pt.
- [56
+ [55
 
  <../chapters/cnn_accelerator/figures/dot-product_unit.pdf> <../chapters/cnn_ac
 celerator/figures/multiplier.pdf
@@ -1978,18 +1976,18 @@ File: ../chapters/cnn_accelerator/figures/multiplier.pdf Graphic file (type pdf
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/multiplier.pdf  us
 ed on input line 130.
 (pdftex.def)             Requested size: 86.79877pt x 136.39859pt.
- [57
+ [56
 
 ]
-<slides/algorithm_fp_2.pdf, id=2714, 384.11205pt x 375.57616pt>
+<slides/algorithm_fp_2.pdf, id=2691, 384.11205pt x 375.57616pt>
 File: slides/algorithm_fp_2.pdf Graphic file (type pdf)
 <use slides/algorithm_fp_2.pdf>
 Package pdftex.def Info: slides/algorithm_fp_2.pdf  used on input line 138.
 (pdftex.def)             Requested size: 208.31918pt x 203.69064pt.
- [58
+ [57
 
  <./slides/algorithm_fp_2.pdf>]
-<../chapters/cnn_accelerator/figures/histograms/data_set.pdf, id=2799, 252.945p
+<../chapters/cnn_accelerator/figures/histograms/data_set.pdf, id=2776, 252.945p
 t x 505.89pt>
 File: ../chapters/cnn_accelerator/figures/histograms/data_set.pdf Graphic file 
 (type pdf)
@@ -1997,14 +1995,14 @@ File: ../chapters/cnn_accelerator/figures/histograms/data_set.pdf Graphic file
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/histograms/data_se
 t.pdf  used on input line 161.
 (pdftex.def)             Requested size: 86.79877pt x 173.5982pt.
-<../chapters/cnn_accelerator/figures/models.pdf, id=2800, 252.945pt x 252.945pt
+<../chapters/cnn_accelerator/figures/models.pdf, id=2777, 252.945pt x 252.945pt
 >
 File: ../chapters/cnn_accelerator/figures/models.pdf Graphic file (type pdf)
 <use ../chapters/cnn_accelerator/figures/models.pdf>
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/models.pdf  used o
 n input line 161.
 (pdftex.def)             Requested size: 130.19815pt x 130.20058pt.
- [59
+ [58
 
  <../chapters/cnn_accelerator/figures/histograms/data_set.pdf> <../chapters/cnn
 _accelerator/figures/models.pdf
@@ -2024,34 +2022,34 @@ File: ../chapters/cnn_accelerator/figures/models.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../chapters/cnn_accelerator/figures/models.pdf  used o
 n input line 161.
 (pdftex.def)             Requested size: 130.19815pt x 130.20058pt.
- [60
+ [59
 
 ]
-<slides/algorithm_early_stop_1.pdf, id=2874, 298.75415pt x 318.67056pt>
+<slides/algorithm_early_stop_1.pdf, id=2850, 298.75415pt x 318.67056pt>
 File: slides/algorithm_early_stop_1.pdf Graphic file (type pdf)
 <use slides/algorithm_early_stop_1.pdf>
 Package pdftex.def Info: slides/algorithm_early_stop_1.pdf  used on input line 
 187.
 (pdftex.def)             Requested size: 112.83734pt x 120.35696pt.
-<slides/figures/training_iterative_early_stop.pdf, id=2875, 252.945pt x 198.742
+<slides/figures/training_iterative_early_stop.pdf, id=2851, 252.945pt x 198.742
 5pt>
 File: slides/figures/training_iterative_early_stop.pdf Graphic file (type pdf)
 <use slides/figures/training_iterative_early_stop.pdf>
 Package pdftex.def Info: slides/figures/training_iterative_early_stop.pdf  used
  on input line 187.
 (pdftex.def)             Requested size: 112.83734pt x 88.65999pt.
-<slides/OnMiniBatchUpdate_2.pdf, id=2876, 298.75415pt x 244.69417pt>
+<slides/OnMiniBatchUpdate_2.pdf, id=2852, 298.75415pt x 244.69417pt>
 File: slides/OnMiniBatchUpdate_2.pdf Graphic file (type pdf)
 <use slides/OnMiniBatchUpdate_2.pdf>
 Package pdftex.def Info: slides/OnMiniBatchUpdate_2.pdf  used on input line 187
 .
 (pdftex.def)             Requested size: 112.83734pt x 92.4172pt.
-<slides/figures/QAT.pdf, id=2877, 252.945pt x 180.675pt>
+<slides/figures/QAT.pdf, id=2853, 252.945pt x 180.675pt>
 File: slides/figures/QAT.pdf Graphic file (type pdf)
 <use slides/figures/QAT.pdf>
 Package pdftex.def Info: slides/figures/QAT.pdf  used on input line 187.
 (pdftex.def)             Requested size: 112.83734pt x 80.59999pt.
- [61
+ [60
 
  <./slides/algorithm_early_stop_1.pdf> <./slides/figures/training_iterative_ear
 ly_stop.pdf> <./slides/OnMiniBatchUpdate_2.pdf> <./slides/figures/QAT.pdf
@@ -2059,6 +2057,28 @@ ly_stop.pdf> <./slides/OnMiniBatchUpdate_2.pdf> <./slides/figures/QAT.pdf
 pdfTeX warning: /usr/bin/pdflatex (file ./slides/figures/QAT.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >]
+File: slides/algorithm_early_stop_1.pdf Graphic file (type pdf)
+<use slides/algorithm_early_stop_1.pdf>
+Package pdftex.def Info: slides/algorithm_early_stop_1.pdf  used on input line 
+187.
+(pdftex.def)             Requested size: 112.83734pt x 120.35696pt.
+File: slides/figures/training_iterative_early_stop.pdf Graphic file (type pdf)
+<use slides/figures/training_iterative_early_stop.pdf>
+Package pdftex.def Info: slides/figures/training_iterative_early_stop.pdf  used
+ on input line 187.
+(pdftex.def)             Requested size: 112.83734pt x 88.65999pt.
+File: slides/OnMiniBatchUpdate_2.pdf Graphic file (type pdf)
+<use slides/OnMiniBatchUpdate_2.pdf>
+Package pdftex.def Info: slides/OnMiniBatchUpdate_2.pdf  used on input line 187
+.
+(pdftex.def)             Requested size: 112.83734pt x 92.4172pt.
+File: slides/figures/QAT.pdf Graphic file (type pdf)
+<use slides/figures/QAT.pdf>
+Package pdftex.def Info: slides/figures/QAT.pdf  used on input line 187.
+(pdftex.def)             Requested size: 112.83734pt x 80.59999pt.
+ [61
+
+]
 File: slides/algorithm_early_stop_1.pdf Graphic file (type pdf)
 <use slides/algorithm_early_stop_1.pdf>
 Package pdftex.def Info: slides/algorithm_early_stop_1.pdf  used on input line 
@@ -2103,65 +2123,43 @@ Package pdftex.def Info: slides/figures/QAT.pdf  used on input line 187.
  [63
 
 ]
-File: slides/algorithm_early_stop_1.pdf Graphic file (type pdf)
-<use slides/algorithm_early_stop_1.pdf>
-Package pdftex.def Info: slides/algorithm_early_stop_1.pdf  used on input line 
-187.
-(pdftex.def)             Requested size: 112.83734pt x 120.35696pt.
-File: slides/figures/training_iterative_early_stop.pdf Graphic file (type pdf)
-<use slides/figures/training_iterative_early_stop.pdf>
-Package pdftex.def Info: slides/figures/training_iterative_early_stop.pdf  used
- on input line 187.
-(pdftex.def)             Requested size: 112.83734pt x 88.65999pt.
-File: slides/OnMiniBatchUpdate_2.pdf Graphic file (type pdf)
-<use slides/OnMiniBatchUpdate_2.pdf>
-Package pdftex.def Info: slides/OnMiniBatchUpdate_2.pdf  used on input line 187
-.
-(pdftex.def)             Requested size: 112.83734pt x 92.4172pt.
-File: slides/figures/QAT.pdf Graphic file (type pdf)
-<use slides/figures/QAT.pdf>
-Package pdftex.def Info: slides/figures/QAT.pdf  used on input line 187.
-(pdftex.def)             Requested size: 112.83734pt x 80.59999pt.
- [64
-
-]
-<slides/figures/model_evaluation_a.pdf, id=3117, 252.945pt x 101.88931pt>
+<slides/figures/model_evaluation_a.pdf, id=3094, 252.945pt x 101.88931pt>
 File: slides/figures/model_evaluation_a.pdf Graphic file (type pdf)
 <use slides/figures/model_evaluation_a.pdf>
 Package pdftex.def Info: slides/figures/model_evaluation_a.pdf  used on input l
 ine 211.
 (pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
-<slides/figures/model_evaluation_b.pdf, id=3118, 252.945pt x 101.88931pt>
+<slides/figures/model_evaluation_b.pdf, id=3095, 252.945pt x 101.88931pt>
 File: slides/figures/model_evaluation_b.pdf Graphic file (type pdf)
 <use slides/figures/model_evaluation_b.pdf>
 Package pdftex.def Info: slides/figures/model_evaluation_b.pdf  used on input l
 ine 211.
 (pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
-<slides/figures/model_evaluation_c.pdf, id=3119, 252.945pt x 101.88931pt>
+<slides/figures/model_evaluation_c.pdf, id=3096, 252.945pt x 101.88931pt>
 File: slides/figures/model_evaluation_c.pdf Graphic file (type pdf)
 <use slides/figures/model_evaluation_c.pdf>
 Package pdftex.def Info: slides/figures/model_evaluation_c.pdf  used on input l
 ine 211.
 (pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
-<slides/figures/model_evaluation_d.pdf, id=3120, 252.945pt x 101.88931pt>
+<slides/figures/model_evaluation_d.pdf, id=3097, 252.945pt x 101.88931pt>
 File: slides/figures/model_evaluation_d.pdf Graphic file (type pdf)
 <use slides/figures/model_evaluation_d.pdf>
 Package pdftex.def Info: slides/figures/model_evaluation_d.pdf  used on input l
 ine 211.
 (pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
-<slides/figures/model_evaluation_e.pdf, id=3121, 252.945pt x 101.88931pt>
+<slides/figures/model_evaluation_e.pdf, id=3098, 252.945pt x 101.88931pt>
 File: slides/figures/model_evaluation_e.pdf Graphic file (type pdf)
 <use slides/figures/model_evaluation_e.pdf>
 Package pdftex.def Info: slides/figures/model_evaluation_e.pdf  used on input l
 ine 211.
 (pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
-<slides/figures/model_evaluation_f.pdf, id=3122, 252.945pt x 101.88931pt>
+<slides/figures/model_evaluation_f.pdf, id=3099, 252.945pt x 101.88931pt>
 File: slides/figures/model_evaluation_f.pdf Graphic file (type pdf)
 <use slides/figures/model_evaluation_f.pdf>
 Package pdftex.def Info: slides/figures/model_evaluation_f.pdf  used on input l
 ine 211.
 (pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
- [65
+ [64
 
  <./slides/figures/model_evaluation_a.pdf> <./slides/figures/model_evaluation_b
 .pdf
@@ -2185,6 +2183,39 @@ pdfTeX warning: /usr/bin/pdflatex (file ./slides/figures/model_evaluation_e.pdf
 pdfTeX warning: /usr/bin/pdflatex (file ./slides/figures/model_evaluation_f.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >]
+File: slides/figures/model_evaluation_a.pdf Graphic file (type pdf)
+<use slides/figures/model_evaluation_a.pdf>
+Package pdftex.def Info: slides/figures/model_evaluation_a.pdf  used on input l
+ine 211.
+(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
+File: slides/figures/model_evaluation_b.pdf Graphic file (type pdf)
+<use slides/figures/model_evaluation_b.pdf>
+Package pdftex.def Info: slides/figures/model_evaluation_b.pdf  used on input l
+ine 211.
+(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
+File: slides/figures/model_evaluation_c.pdf Graphic file (type pdf)
+<use slides/figures/model_evaluation_c.pdf>
+Package pdftex.def Info: slides/figures/model_evaluation_c.pdf  used on input l
+ine 211.
+(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
+File: slides/figures/model_evaluation_d.pdf Graphic file (type pdf)
+<use slides/figures/model_evaluation_d.pdf>
+Package pdftex.def Info: slides/figures/model_evaluation_d.pdf  used on input l
+ine 211.
+(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
+File: slides/figures/model_evaluation_e.pdf Graphic file (type pdf)
+<use slides/figures/model_evaluation_e.pdf>
+Package pdftex.def Info: slides/figures/model_evaluation_e.pdf  used on input l
+ine 211.
+(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
+File: slides/figures/model_evaluation_f.pdf Graphic file (type pdf)
+<use slides/figures/model_evaluation_f.pdf>
+Package pdftex.def Info: slides/figures/model_evaluation_f.pdf  used on input l
+ine 211.
+(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
+ [65
+
+]
 File: slides/figures/model_evaluation_a.pdf Graphic file (type pdf)
 <use slides/figures/model_evaluation_a.pdf>
 Package pdftex.def Info: slides/figures/model_evaluation_a.pdf  used on input l
@@ -2317,73 +2348,40 @@ ine 211.
  [69
 
 ]
-File: slides/figures/model_evaluation_a.pdf Graphic file (type pdf)
-<use slides/figures/model_evaluation_a.pdf>
-Package pdftex.def Info: slides/figures/model_evaluation_a.pdf  used on input l
-ine 211.
-(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
-File: slides/figures/model_evaluation_b.pdf Graphic file (type pdf)
-<use slides/figures/model_evaluation_b.pdf>
-Package pdftex.def Info: slides/figures/model_evaluation_b.pdf  used on input l
-ine 211.
-(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
-File: slides/figures/model_evaluation_c.pdf Graphic file (type pdf)
-<use slides/figures/model_evaluation_c.pdf>
-Package pdftex.def Info: slides/figures/model_evaluation_c.pdf  used on input l
-ine 211.
-(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
-File: slides/figures/model_evaluation_d.pdf Graphic file (type pdf)
-<use slides/figures/model_evaluation_d.pdf>
-Package pdftex.def Info: slides/figures/model_evaluation_d.pdf  used on input l
-ine 211.
-(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
-File: slides/figures/model_evaluation_e.pdf Graphic file (type pdf)
-<use slides/figures/model_evaluation_e.pdf>
-Package pdftex.def Info: slides/figures/model_evaluation_e.pdf  used on input l
-ine 211.
-(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
-File: slides/figures/model_evaluation_f.pdf Graphic file (type pdf)
-<use slides/figures/model_evaluation_f.pdf>
-Package pdftex.def Info: slides/figures/model_evaluation_f.pdf  used on input l
-ine 211.
-(pdftex.def)             Requested size: 164.91713pt x 66.43092pt.
- [70
-
-]
-<slides/figures/runtime_a.pdf, id=3761, 252.945pt x 158.99399pt>
+<slides/figures/runtime_a.pdf, id=3738, 252.945pt x 158.99399pt>
 File: slides/figures/runtime_a.pdf Graphic file (type pdf)
 <use slides/figures/runtime_a.pdf>
 Package pdftex.def Info: slides/figures/runtime_a.pdf  used on input line 239.
 (pdftex.def)             Requested size: 86.79877pt x 54.55942pt.
-<slides/figures/runtime_b.pdf, id=3762, 252.945pt x 202.356pt>
+<slides/figures/runtime_b.pdf, id=3739, 252.945pt x 202.356pt>
 File: slides/figures/runtime_b.pdf Graphic file (type pdf)
 <use slides/figures/runtime_b.pdf>
 Package pdftex.def Info: slides/figures/runtime_b.pdf  used on input line 239.
 (pdftex.def)             Requested size: 86.79877pt x 69.43927pt.
-<slides/figures/runtime_c.pdf, id=3763, 252.945pt x 202.356pt>
+<slides/figures/runtime_c.pdf, id=3740, 252.945pt x 202.356pt>
 File: slides/figures/runtime_c.pdf Graphic file (type pdf)
 <use slides/figures/runtime_c.pdf>
 Package pdftex.def Info: slides/figures/runtime_c.pdf  used on input line 239.
 (pdftex.def)             Requested size: 86.79877pt x 69.43927pt.
-<slides/figures/acceleration_vs_cpu.pdf, id=3764, 144.54pt x 115.632pt>
+<slides/figures/acceleration_vs_cpu.pdf, id=3741, 144.54pt x 115.632pt>
 File: slides/figures/acceleration_vs_cpu.pdf Graphic file (type pdf)
 <use slides/figures/acceleration_vs_cpu.pdf>
 Package pdftex.def Info: slides/figures/acceleration_vs_cpu.pdf  used on input 
 line 239.
 (pdftex.def)             Requested size: 86.79877pt x 69.43796pt.
-<slides/figures/power_reduction_vs_cpu.pdf, id=3765, 144.54pt x 115.632pt>
+<slides/figures/power_reduction_vs_cpu.pdf, id=3742, 144.54pt x 115.632pt>
 File: slides/figures/power_reduction_vs_cpu.pdf Graphic file (type pdf)
 <use slides/figures/power_reduction_vs_cpu.pdf>
 Package pdftex.def Info: slides/figures/power_reduction_vs_cpu.pdf  used on inp
 ut line 239.
 (pdftex.def)             Requested size: 86.79877pt x 69.43796pt.
-<slides/figures/resource_utilization.pdf, id=3766, 252.945pt x 108.405pt>
+<slides/figures/resource_utilization.pdf, id=3743, 252.945pt x 108.405pt>
 File: slides/figures/resource_utilization.pdf Graphic file (type pdf)
 <use slides/figures/resource_utilization.pdf>
 Package pdftex.def Info: slides/figures/resource_utilization.pdf  used on input
  line 239.
 (pdftex.def)             Requested size: 138.87856pt x 59.52037pt.
- [71
+ [70
 
  <./slides/figures/runtime_a.pdf> <./slides/figures/runtime_b.pdf
 
@@ -2406,6 +2404,36 @@ pdfTeX warning: /usr/bin/pdflatex (file ./slides/figures/power_reduction_vs_cpu
 pdfTeX warning: /usr/bin/pdflatex (file ./slides/figures/resource_utilization.p
 df): PDF inclusion: multiple pdfs with page group included in a single page
 >]
+File: slides/figures/runtime_a.pdf Graphic file (type pdf)
+<use slides/figures/runtime_a.pdf>
+Package pdftex.def Info: slides/figures/runtime_a.pdf  used on input line 239.
+(pdftex.def)             Requested size: 86.79877pt x 54.55942pt.
+File: slides/figures/runtime_b.pdf Graphic file (type pdf)
+<use slides/figures/runtime_b.pdf>
+Package pdftex.def Info: slides/figures/runtime_b.pdf  used on input line 239.
+(pdftex.def)             Requested size: 86.79877pt x 69.43927pt.
+File: slides/figures/runtime_c.pdf Graphic file (type pdf)
+<use slides/figures/runtime_c.pdf>
+Package pdftex.def Info: slides/figures/runtime_c.pdf  used on input line 239.
+(pdftex.def)             Requested size: 86.79877pt x 69.43927pt.
+File: slides/figures/acceleration_vs_cpu.pdf Graphic file (type pdf)
+<use slides/figures/acceleration_vs_cpu.pdf>
+Package pdftex.def Info: slides/figures/acceleration_vs_cpu.pdf  used on input 
+line 239.
+(pdftex.def)             Requested size: 86.79877pt x 69.43796pt.
+File: slides/figures/power_reduction_vs_cpu.pdf Graphic file (type pdf)
+<use slides/figures/power_reduction_vs_cpu.pdf>
+Package pdftex.def Info: slides/figures/power_reduction_vs_cpu.pdf  used on inp
+ut line 239.
+(pdftex.def)             Requested size: 86.79877pt x 69.43796pt.
+File: slides/figures/resource_utilization.pdf Graphic file (type pdf)
+<use slides/figures/resource_utilization.pdf>
+Package pdftex.def Info: slides/figures/resource_utilization.pdf  used on input
+ line 239.
+(pdftex.def)             Requested size: 138.87856pt x 59.52037pt.
+ [71
+
+]
 File: slides/figures/runtime_a.pdf Graphic file (type pdf)
 <use slides/figures/runtime_a.pdf>
 Package pdftex.def Info: slides/figures/runtime_a.pdf  used on input line 239.
@@ -2526,61 +2554,27 @@ Package pdftex.def Info: slides/figures/resource_utilization.pdf  used on input
  [75
 
 ]
-File: slides/figures/runtime_a.pdf Graphic file (type pdf)
-<use slides/figures/runtime_a.pdf>
-Package pdftex.def Info: slides/figures/runtime_a.pdf  used on input line 239.
-(pdftex.def)             Requested size: 86.79877pt x 54.55942pt.
-File: slides/figures/runtime_b.pdf Graphic file (type pdf)
-<use slides/figures/runtime_b.pdf>
-Package pdftex.def Info: slides/figures/runtime_b.pdf  used on input line 239.
-(pdftex.def)             Requested size: 86.79877pt x 69.43927pt.
-File: slides/figures/runtime_c.pdf Graphic file (type pdf)
-<use slides/figures/runtime_c.pdf>
-Package pdftex.def Info: slides/figures/runtime_c.pdf  used on input line 239.
-(pdftex.def)             Requested size: 86.79877pt x 69.43927pt.
-File: slides/figures/acceleration_vs_cpu.pdf Graphic file (type pdf)
-<use slides/figures/acceleration_vs_cpu.pdf>
-Package pdftex.def Info: slides/figures/acceleration_vs_cpu.pdf  used on input 
-line 239.
-(pdftex.def)             Requested size: 86.79877pt x 69.43796pt.
-File: slides/figures/power_reduction_vs_cpu.pdf Graphic file (type pdf)
-<use slides/figures/power_reduction_vs_cpu.pdf>
-Package pdftex.def Info: slides/figures/power_reduction_vs_cpu.pdf  used on inp
-ut line 239.
-(pdftex.def)             Requested size: 86.79877pt x 69.43796pt.
-File: slides/figures/resource_utilization.pdf Graphic file (type pdf)
-<use slides/figures/resource_utilization.pdf>
-Package pdftex.def Info: slides/figures/resource_utilization.pdf  used on input
- line 239.
-(pdftex.def)             Requested size: 138.87856pt x 59.52037pt.
- [76
-
-]
-<slides/figures/cnn_related_work.pdf, id=4028, 512.14938pt x 284.52798pt>
+<slides/figures/cnn_related_work.pdf, id=4005, 512.14938pt x 284.52798pt>
 File: slides/figures/cnn_related_work.pdf Graphic file (type pdf)
 <use slides/figures/cnn_related_work.pdf>
 Package pdftex.def Info: slides/figures/cnn_related_work.pdf  used on input lin
 e 246.
 (pdftex.def)             Requested size: 347.19511pt x 192.8947pt.
- [77
+ [76
 
  <./slides/figures/cnn_related_work.pdf>])
-(./slides/conclusions.tex (./presentation.toc) [78
+(./slides/conclusions.tex (./presentation.toc) [77
 
-] [79] [80
+] [78] [79
+
+] [80
 
 ] [81
 
-] [82
+])
+(./slides/publications.tex [82
 
-]
-[83
-
-] [84
-
-]) (./slides/publications.tex [85
-
-] [86
+] [83
 
 ])
 \tf@nav=\write8
@@ -2604,35 +2598,39 @@ Package logreq Info: Writing requests to 'presentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31589 strings out of 481239
- 615537 string characters out of 5920377
- 1277668 words of memory out of 5000000
- 45955 multiletter control sequences out of 15000+600000
+ 31569 strings out of 481239
+ 615170 string characters out of 5920377
+ 1277666 words of memory out of 5000000
+ 45941 multiletter control sequences out of 15000+600000
  539711 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,16n,72p,992b,789s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-si8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfrm0700.pfb>
-Output written on presentation.pdf (86 pages, 4391208 bytes).
+exlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700
+.pfb>
+Output written on presentation.pdf (83 pages, 4412950 bytes).
 PDF statistics:
- 4401 PDF objects out of 5155 (max. 8388607)
- 3550 compressed objects within 36 object streams
- 180 named destinations out of 1000 (max. 500000)
+ 4333 PDF objects out of 5155 (max. 8388607)
+ 3482 compressed objects within 35 object streams
+ 174 named destinations out of 1000 (max. 500000)
  368 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,7 +5,7 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.5\textwidth]{../figures/convolution.pdf}
-		\caption{\scriptsize Two dimensional convolution operation.}
+		\caption{ Two dimensional convolution operation}
 	\end{figure}
 	
 	%\pause % Pause for the equation to appear after the image
@@ -18,14 +18,14 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 	}
 \end{frame}
 
-\begin{frame}{HW/SW Co-Design Framework}
+\begin{frame}{HW/SW Co-Design and Deployment Framework}
 	\begin{columns}[c] % The [T] option aligns the tops of the columns
 		
 		% Left column for the first image
 		\begin{column}{0.5\textwidth}
 			\begin{figure}
 				\includegraphics[width=\textwidth]{../chapters/cnn_accelerator/figures/sw_stack.pdf}
-				\caption{\scriptsize High level embedded software architecture.}
+				\caption{ High level embedded software architecture}
 			\end{figure}
 		\end{column}
 		
@@ -33,7 +33,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 		\begin{column}{0.5\textwidth}
 			\begin{figure}
 				\includegraphics[width=0.8\textwidth]{../chapters/cnn_accelerator/figures/system_design.pdf} % Adjust the filename
-				\caption{\scriptsize Base embedded system architecture.}
+				\caption{ Base embedded system architecture}
 			\end{figure}
 		\end{column}
 		
@@ -47,7 +47,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 		\begin{column}<1->{0.5\textwidth}
 			\begin{figure}
 				\includegraphics[width=0.7\textwidth]{../chapters/cnn_accelerator/figures/accelerator.pdf} % Adjust the filename
-				\caption{\scriptsize High level architecture.}
+				\caption{High level architecture of tensor processor}
 			\end{figure}
 		\end{column}
 		
@@ -55,7 +55,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 		\begin{column}<2->{0.5\textwidth}
 			\begin{figure}
 				\includegraphics[width=0.9\textwidth]{../chapters/cnn_accelerator/figures/accelerator_buffers.pdf} % Adjust the filename
-				\caption{\scriptsize On-chip memory buffers.}
+				\caption{ On-chip memory buffers}
 			\end{figure}
 		\end{column}
 		
@@ -66,7 +66,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 	\begin{columns}[c] % The [T] option aligns the tops of the columns
 		% Left column for equations
 		\begin{column}{0.5\textwidth}
-			\scriptsize
+
 			\vspace{1mm}
 			\begin{equation}
 			TP_{M}=TP_B+V_{M}
@@ -98,7 +98,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 			\begin{figure}
 				\centering
 				\includegraphics[width=0.9\textwidth]{../chapters/cnn_accelerator/figures/accelerator_buffers.pdf} % Adjust the filename
-				\caption{\scriptsize On-chip memory buffers.}
+				\caption{ On-chip memory buffers}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -112,7 +112,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 		\begin{column}<1->{0.5\textwidth}\centering
 			\begin{figure}
 				\includegraphics[width=0.75\textwidth]{../chapters/cnn_accelerator/figures/dot-product_unit.pdf} % Adjust the filename
-				\caption{\scriptsize High level architecture.}
+				\caption{\scriptsize Dot-product}
 			\end{figure}
 		\end{column}
 		
@@ -120,7 +120,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 		\begin{column}<2->{0.5\textwidth}
 			\begin{figure}
 				\includegraphics[width=0.5\textwidth]{../chapters/cnn_accelerator/figures/multiplier.pdf} % Adjust the filename
-				\caption{\scriptsize On-chip memory buffers.}
+				\caption{Multiply-accumulate design}
 			\end{figure}
 		\scriptsize
 		\[ L_{hf}=N+7 \]
@@ -138,14 +138,14 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 \end{frame}
 
 
-\begin{frame}{Acceleration in Sensor Analytics (TinyML)}
+\begin{frame}{Case Study: Applying Sensor Analytics to Structural Health Monitoring}
 	\begin{columns}[c] % The [T] option aligns the tops of the columns
 		
 		% Left column for the first image
 		\begin{column}<1->{0.5\textwidth}\centering
 			\begin{figure}
 				\includegraphics[width=0.5\textwidth]{../chapters/cnn_accelerator/figures/histograms/data_set.pdf} % Adjust the filename
-				\caption{\scriptsize Structural health monitoring, all lengths are in metters (m).}
+				\caption{ Structural health monitoring, all lengths are in meters (m)}
 			\end{figure}
 		\end{column}
 		
@@ -153,7 +153,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 		\begin{column}<2->{0.5\textwidth}
 			\begin{figure}
 				\includegraphics[width=0.75\textwidth]{../chapters/cnn_accelerator/figures/models.pdf} % Adjust the filename
-				\caption{\scriptsize CNN-regression model for sensor analytics.}
+				\caption{ CNN-regression model for sensor analytics}
 			\end{figure}
 		\end{column}
 		
@@ -186,7 +186,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 	\end{columns}
 \end{frame}
 
-\begin{frame}{Inference}
+\begin{frame}{Quantization Impact: Error Histograms in Position Prediction}
 	% Using columns to arrange images
 	\begin{columns}[T] % Align columns at the top
 		\begin{column}{0.5\textwidth}
@@ -210,7 +210,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 	\end{columns}
 \end{frame}
 
-\begin{frame}{Acceleration, Power Reduction, and Hardware Resources}
+\begin{frame}{Evaluating Floating-Point Configurations: Speed, Power, and Hardware Utilization}
 	% Using columns to arrange images vertically in two columns
 	\begin{columns}[T] % Align columns at the top
 		\begin{column}{0.5\textwidth}
