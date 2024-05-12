@@ -1,6 +1,8 @@
 \section{State-of-the-Art}
 	\tableofcontents[currentsection]
 	
+	\begin{comment}
+	
 	\begin{frame}{High-Performance FPGA-Based CNN Accelerator With Block-Floating-Point Arithmetic}
 		\centering
 		\begin{figure}
@@ -32,3 +34,28 @@
 		\caption{(a) System architecture. (b) Convolution engine.}
 	\end{figure}
 	\end{frame}
+	
+	\end{comment}
+	
+	
+\begin{frame}{Limitations of State-of-the-Art in Low-Power Neural Network Accelerators}
+	\begin{itemize}
+		\item<1-> \textbf{Spike-by-Spike Neural Networks:}
+		\begin{itemize}
+			\item<2-> \alert{Quantization Challenges:} Struggles with reduced number representations (8-bit and 4-bit).
+			\item<3-> \alert{Deployment Frameworks:} Lack of deployment strategies for IoT and TinyML applications.
+			\item<4-> \alert{Design Methodologies:} Lack of effective low-power accelerator design methodologies to realize deployment.
+		\end{itemize}
+		\item<5-> \textbf{Convolutional Neural Networks:}
+		\begin{itemize}
+			\item<6-> \alert{Floating-Point Design:} Research gap in floating-point methodologies for resource-constrained IoT and TinyML applications.
+			\item<7-> \alert{Reproducibility:} Deficiency in reproducible research, limiting validation and adoption.
+		\end{itemize}
+		\item<8-> \textbf{Aggressive Quantization:}
+		\begin{itemize}
+			\item<9-> \alert{Computational Efficiency vs. Accuracy:} Enhances efficiency but often at the expense of significant accuracy degradation.
+			\item<10-> \alert{Mission-Critical Applications:} Often unsuitable for applications requiring high reliability, safety, and quality-of-result.
+			\item<11-> \alert{Compatibility and Portability:} Faces challenges in compatibility and portability across different computing platforms and ML frameworks.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
