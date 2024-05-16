@@ -9,14 +9,14 @@
 	\thispagestyle{empty} % Remove page numbers and headers/footers
 	
 	\begin{algorithm}[H]
-		\caption{Custom floating-point quantization.}
+		\caption{Custom floating-point quantization}
 		\DontPrintSemicolon
 		\SetAlgoVlined % Ensures vertical lines are used
-		\KwIn{$MODEL$ as the CNN.}
-		\KwIn{$E_{size}$ as the target exponent bit size.}
-		\KwIn{$M_{size}$ as the target mantissa bits size.}
-		\KwIn{$STDM_{size}$ as the IEEE 754 mantissa bit size.}
-		\KwOut{$MODEL$ as the quantized CNN.}
+		\KwIn{$MODEL$ as the CNN}
+		\KwIn{$E_{size}$ as the target exponent bit size}
+		\KwIn{$M_{size}$ as the target mantissa bits size}
+		\KwIn{$STDM_{size}$ as the IEEE 754 mantissa bit size}
+		\KwOut{$MODEL$ as the quantized CNN}
 		\ForEach{$layer$ in $MODEL$}{
 			\If{$layer$ is $Conv2D$ or $SeparableConv2D$}{
 				$filter, bias \gets GetWeights(layer)$\;

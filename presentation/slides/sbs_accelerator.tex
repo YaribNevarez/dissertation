@@ -1,38 +1,35 @@
 \section{Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}
 \tableofcontents[currentsection]
+
 \begin{frame}{Spike-by-Spike Neural Network}
-	\begin{columns}[c] % The [T] option aligns the tops of the columns
+	\begin{columns}[c]  % Top alignment for the columns
 		
-		% Left column for the first image
-		\begin{column}<1->{0.5\textwidth}
-			\begin{figure}
-				\includegraphics[width=\textwidth]{../chapters/sbs_accelerator/figures/sbs_network.pdf} % Adjust the filename
-				\caption{Spike-by-Spike (SbS) neural network architecture for handwritten digit classification task}
-			\end{figure}
+		% Left Column for top left image
+		\begin{column}{0.5\textwidth}
+			\uncover<1->{  % Uncover the top left image first
+				\begin{figure}
+					\centering
+					\includegraphics[width=\textwidth]{../chapters/sbs_accelerator/figures/SbS_layer.pdf}
+					\caption{SbS inference}
+				\end{figure}
+			}
 		\end{column}
 		
-		% Right column for the second image
-		\begin{column}<2->{0.5\textwidth}
-			\begin{figure}
-				\includegraphics[width=\textwidth]{../chapters/sbs_accelerator/figures/sbs_robustnes.pdf} % Adjust the filename
-				\caption{Performance classification of SbS NN versus equivalent CNN}
-			\end{figure}
+		% Right Column for top right image
+		\begin{column}{0.5\textwidth}
+			\uncover<2->{  % Uncover the top right image second
+				\begin{figure}
+					\centering
+					\includegraphics[width=0.9\textwidth]{../chapters/sbs_accelerator/figures/sbs_robustnes.pdf}
+					\caption{Robustness of SbS NN versus CNN}
+				\end{figure}
+			}
 		\end{column}
 		
 	\end{columns}
-\end{frame}
-
-\begin{frame}{Spike-by-Spike Inference}
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.5\textwidth]{../chapters/sbs_accelerator/figures/SbS_layer.pdf}
-		\caption{SbS inference population (IP) as independent computational entities}
-	\end{figure}
-	
-	%\pause % Pause for the equation to appear after the image
-	
-	% Equation at the bottom
-	{
+	\vspace{10mm}
+	% Bottom full-width equation
+	\uncover<3->{  % Uncover the equation last across the full width of the slide
 		\[
 		h_\mu^{new}(i) = \frac{1}{1+\epsilon} \left(h_\mu(i) + \epsilon \frac{h_\mu(i) W(s_t|i) }{\sum_j h_\mu(j) W(s_t|j)} \right) 
 		\]
@@ -40,66 +37,40 @@
 \end{frame}
 
 \begin{frame}{HW/SW Co-Design and Deployment Framework}
-	\begin{columns}[t] % The [T] option aligns the tops of the columns
-		
-		% Left column for the first image
-		\begin{column}{0.5\textwidth}
+
 			\begin{figure}
-				\includegraphics[width=0.8\textwidth]{../chapters/sbs_accelerator/figures/sbs_software_component.pdf}
+				\includegraphics[width=0.75\textwidth]{slides/figures/sbs_software_component.pdf}
 				\caption{System-level overview of the embedded software architecture}
 			\end{figure}
-		\end{column}
-		
-		% Right column for the second image
-		\begin{column}{0.5\textwidth}
-			\begin{figure}
-				\includegraphics[width=0.8\textwidth]{../chapters/sbs_accelerator/figures/sbs_hw.pdf} % Adjust the filename
-				\caption{System-level hardware architecture with scalable number of heterogeneous processing units}
-			\end{figure}
-		\end{column}
-		
-	\end{columns}
+
 \end{frame}
 
-\begin{frame}{Processing Unit}
-	\begin{columns}[c] % The [T] option aligns the tops of the columns
-		
-		% Left column for the first image
-		\begin{column}<1->{0.5\textwidth}
+\begin{frame}{HW/SW Co-Design and Deployment Framework}
+
 			\begin{figure}
-				\includegraphics[width=0.7\textwidth]{../chapters/sbs_accelerator/figures/sbs_conv.pdf} % Adjust the filename
-				\caption{Convolution processing unit}
+				\includegraphics[width=0.75\textwidth]{./slides/figures/sbs_hw.pdf} % Adjust the filename
+				\caption{System-level hardware architecture with scalable number of heterogeneous processing units}
 			\end{figure}
-		\end{column}
-		
-		% Right column for the second image
-		\begin{column}<2->{0.5\textwidth}
-			\begin{figure}
-				\includegraphics[width=0.9\textwidth]{../chapters/sbs_accelerator/figures/dot-product_unit.pdf} % Adjust the filename
-				\caption{Dot-product hardware module}
-			\end{figure}
-		\end{column}
-		
-	\end{columns}
+
 \end{frame}
 
 \begin{frame}{Hybrid Dot-Product Approximation}
-	\begin{columns}[c] % The [T] option aligns the tops of the columns
+	\begin{columns}[t] % The [T] option aligns the tops of the columns
 		% Left column for equations
 		\begin{column}{0.5\textwidth}
 
 			\begin{equation}
 			r_{\mu}\left(s_t\right)=\sum_{j=0}^{N-1}h_{\mu}(j)W(s_t|j)
 			\end{equation}
-			\vspace{5mm} 
+			\vspace{4mm} 
 			\begin{equation}
 			E_{\min}=\log _2(\min_{\forall i}(W(i)))
 			\end{equation}
-			\vspace{5mm} 
+			\vspace{4mm} 
 			\begin{equation}
 			N_E=\lceil\log_2(|E_{\min}|)\rceil
 			\end{equation}
-			\vspace{5mm} 
+			\vspace{4mm} 
 			\begin{equation}
 			N_W=N_E + N_M
 			\end{equation}
@@ -169,7 +140,7 @@
 			\begin{minipage}[c][.45\textheight][c]{\linewidth}
 				\centering
 				\begin{figure}
-				\includegraphics[width=0.75\linewidth]{../chapters/sbs_accelerator/figures/sbs_hw_experimental.pdf} % Adjust path and size as needed
+				\includegraphics[width=0.75\linewidth]{./slides/figures/sbs_hw_experimental.pdf} % Adjust path and size as needed
 				\caption{System overview of the top-level architecture with 8 processing units}
 				\end{figure}
 				\pause

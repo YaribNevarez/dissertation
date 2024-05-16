@@ -18,6 +18,14 @@
 % Define glossary entries if not already defined
 \newglossaryentry{fp}{name={FP}, description={Floating Point}}
 
+\newcommand{\backupbegin}{
+	\newcounter{framenumberappendix}
+	\setcounter{framenumberappendix}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+	\addtocounter{framenumberappendix}{-\value{framenumber}}
+	\addtocounter{framenumber}{\value{framenumberappendix}} 
+}
 
 \mode<presentation> {
 	% Choose the style for your slides:
@@ -45,5 +53,9 @@
 	\input{slides/conclusions.tex}
 	
 	\input{slides/publications.tex}
+	
+	\input{slides/thank_you.tex}
+	
+	\input{slides/backup.tex}
 	
 \end{document}

@@ -5,7 +5,7 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.5\textwidth]{../figures/convolution.pdf}
-		\caption{ Two dimensional convolution operation}
+		\caption{ 2D convolution operation}
 	\end{figure}
 	
 	%\pause % Pause for the equation to appear after the image
@@ -19,48 +19,25 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 \end{frame}
 
 \begin{frame}{HW/SW Co-Design and Deployment Framework}
-	\begin{columns}[c] % The [T] option aligns the tops of the columns
-		
-		% Left column for the first image
-		\begin{column}{0.5\textwidth}
+
 			\begin{figure}
-				\includegraphics[width=\textwidth]{../chapters/cnn_accelerator/figures/sw_stack.pdf}
+				\includegraphics[width=0.75\textwidth]{../chapters/cnn_accelerator/figures/sw_stack.pdf}
 				\caption{ High level embedded software architecture}
 			\end{figure}
-		\end{column}
-		
-		% Right column for the second image
-		\begin{column}{0.5\textwidth}
-			\begin{figure}
-				\includegraphics[width=0.8\textwidth]{../chapters/cnn_accelerator/figures/system_design.pdf} % Adjust the filename
-				\caption{ Base embedded system architecture}
-			\end{figure}
-		\end{column}
-		
-	\end{columns}
+
 \end{frame}
 
-\begin{frame}{Tensor Processor}
-	\begin{columns}[c] % The [T] option aligns the tops of the columns
-		
-		% Left column for the first image
-		\begin{column}<1->{0.5\textwidth}
-			\begin{figure}
-				\includegraphics[width=0.7\textwidth]{../chapters/cnn_accelerator/figures/accelerator.pdf} % Adjust the filename
-				\caption{High level architecture of tensor processor}
-			\end{figure}
-		\end{column}
-		
-		% Right column for the second image
-		\begin{column}<2->{0.5\textwidth}
-			\begin{figure}
-				\includegraphics[width=0.9\textwidth]{../chapters/cnn_accelerator/figures/accelerator_buffers.pdf} % Adjust the filename
-				\caption{ On-chip memory buffers}
-			\end{figure}
-		\end{column}
-		
-	\end{columns}
+\begin{frame}{Tensor Processor Operations and Data Flow Overview}
+	
+	\begin{figure}
+		\includegraphics[width=0.65\textwidth]{../figures/task_execution.pdf}
+		% Adjust the filename
+		\caption{Tensor processor task execution}
+	\end{figure}
+	
 \end{frame}
+
+
 
 \begin{frame}{On-Chip Memory}
 	\begin{columns}[c] % The [T] option aligns the tops of the columns
@@ -112,7 +89,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 		\begin{column}<1->{0.5\textwidth}\centering
 			\begin{figure}
 				\includegraphics[width=0.75\textwidth]{../chapters/cnn_accelerator/figures/dot-product_unit.pdf} % Adjust the filename
-				\caption{\scriptsize Dot-product}
+				\caption{Dot-product}
 			\end{figure}
 		\end{column}
 		
@@ -120,7 +97,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 		\begin{column}<2->{0.5\textwidth}
 			\begin{figure}
 				\includegraphics[width=0.5\textwidth]{../chapters/cnn_accelerator/figures/multiplier.pdf} % Adjust the filename
-				\caption{Multiply-accumulate design}
+				\caption{Multiply-accumulate unit}
 			\end{figure}
 		\scriptsize
 		\[ L_{hf}=N+7 \]
@@ -139,7 +116,7 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 
 
 \begin{frame}{Case Study: Applying Sensor Analytics to Structural Health Monitoring}
-	\begin{columns}[c] % The [T] option aligns the tops of the columns
+	\begin{columns}[t] % The [T] option aligns the tops of the columns
 		
 		% Left column for the first image
 		\begin{column}<1->{0.5\textwidth}\centering
@@ -160,53 +137,25 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 	\end{columns}
 \end{frame}
 
-\begin{frame}{Training}
-	% Sequential appearance of images 2x2
+\begin{frame}{Quantized Aware Training with Custom Floating-Point}
 	\begin{columns}
 		\column{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.65\linewidth]{slides/algorithm_early_stop_1.pdf} % Top left image
-		\pause % Wait to reveal the next image
 		
 		\column{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.65\linewidth]{slides/figures/training_iterative_early_stop.pdf} % Top right image
-		\pause % Wait to reveal the next image
 	\end{columns}
-	
+	\pause % Pause after top images to reveal bottom images together
 	\begin{columns}
 		\column{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.65\linewidth]{slides/OnMiniBatchUpdate_2.pdf} % Bottom left image
-		\pause % Wait to reveal the next image
 		
 		\column{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.65\linewidth]{slides/figures/QAT.pdf} % Bottom right image
-	\end{columns}
-\end{frame}
-
-\begin{frame}{Quantization Impact: Error Histograms in Position Prediction}
-	% Using columns to arrange images
-	\begin{columns}[T] % Align columns at the top
-		\begin{column}{0.5\textwidth}
-			\centering
-			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_a.pdf} % Left top image
-			\pause % Wait to reveal the next image
-			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_b.pdf} % Left middle image
-			\pause % Wait to reveal the next image
-			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_c.pdf} % Left bottom image
-			\pause % Wait to reveal the next image
-		\end{column}
-		
-		\begin{column}{0.5\textwidth}
-			\centering
-			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_d.pdf} % Right top image
-			\pause % Wait to reveal the next image
-			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_e.pdf} % Right middle image
-			\pause % Wait to reveal the next image
-			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_f.pdf} % Right bottom image
-		\end{column}
 	\end{columns}
 \end{frame}
 
@@ -238,9 +187,27 @@ Conv2D\left(W,b,h\right)_{i,j,o}=\sum_{k,l,m}^{K,L,M} h_{(i+k,j+l,m)} W_{(o,k,l,
 	\end{columns}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Comparison with Related Work} % optional, remove or leave empty if no title is desired
-	\begin{center}
-		\includegraphics[width=\textwidth]{slides/figures/cnn_related_work.pdf} % Adjust the width as needed
-	\end{center}
+
+\begin{frame}{Quantization Impact: Error Histograms in Position Prediction}
+	% Using columns to arrange images
+	\begin{columns}[T] % Align columns at the top
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_a.pdf} % Left top image
+			\pause % Wait to reveal the next image
+			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_b.pdf} % Left middle image
+			\pause % Wait to reveal the next image
+			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_c.pdf} % Left bottom image
+			\pause % Wait to reveal the next image
+		\end{column}
+		
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_d.pdf} % Right top image
+			\pause % Wait to reveal the next image
+			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_e.pdf} % Right middle image
+			\pause % Wait to reveal the next image
+			\includegraphics[width=0.95\linewidth]{slides/figures/model_evaluation_f.pdf} % Right bottom image
+		\end{column}
+	\end{columns}
 \end{frame}
