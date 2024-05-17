@@ -2,8 +2,8 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {3}{Methodology}{22}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{52}{0}{2}
+\beamer@sectionintoc {4}{Custom Floating-Point MAC Designs and Quantization Techniques}{53}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Hybrid 6-bit Floating-Point Computation}{57}{0}{3}
+\beamer@sectionintoc {5}{Case Studies}{61}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {6}{Conclusions and Future Research}{81}{0}{4}
+\beamer@sectionintoc {6}{Conclusions and Future Research}{64}{0}{4}
