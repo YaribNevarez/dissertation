@@ -1,4 +1,9 @@
+{
+	\setbeamertemplate{footline}{} % Remove the footline for this slide only
 	\begin{frame}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{slides/figures/cover_image_3.pdf}
+		\end{figure}
 		\titlepage % This command creates the title page
 		\vfill % This command will push your images to the bottom of the page
 		\begin{figure}[h]
@@ -17,4 +22,7 @@
 				%%\caption{Image 3}
 			\end{minipage}
 		\end{figure}
+		
+		\addtocounter{framenumber}{-1} % this decrements the frame counter so the title page doesn't count
 	\end{frame}
+}

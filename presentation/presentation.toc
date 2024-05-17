@@ -1,9 +1,9 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{State-of-the-Art}{14}{0}{1}
+\beamer@sectionintoc {3}{Methodology}{22}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{26}{0}{2}
+\beamer@sectionintoc {4}{Hybrid 8-bit Floating-Point and 4-bit Logarithmic Computation}{52}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Hybrid 6-bit Floating-Point Computation}{45}{0}{3}
+\beamer@sectionintoc {5}{Hybrid 6-bit Floating-Point Computation}{57}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {6}{Conclusions and Future Research}{69}{0}{4}
+\beamer@sectionintoc {6}{Conclusions and Future Research}{81}{0}{4}
