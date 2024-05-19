@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  19 MAY 2024 07:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  19 MAY 2024 21:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2784,12 +2784,14 @@ Overfull \vbox (2.84789pt too high) detected at line 77
 
 ] [134
 
-]) (./slides/publications.tex
-[135
+] [135
 
-] [136
+])
+(./slides/publications.tex [136
 
-]) (./slides/thank_you.tex [137
+] [137
+
+]) (./slides/thank_you.tex [138
 
 ])
 \tf@nav=\write8
@@ -2803,19 +2805,20 @@ Overfull \vbox (2.84789pt too high) detected at line 77
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
- (./presentation.aux)
+
+(./presentation.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 40D890AE4B1FECC28B3955BA6E290545;438.
+(rerunfilecheck)             Checksum: 0DF6ABE6FAA1864728378D94A19F0106;418.
 Package logreq Info: Writing requests to 'presentation.run.xml'.
 \openout1 = `presentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31873 strings out of 481239
- 619702 string characters out of 5920377
- 1271322 words of memory out of 5000000
+ 31875 strings out of 481239
+ 619723 string characters out of 5920377
+ 1271323 words of memory out of 5000000
  46144 multiletter control sequences out of 15000+600000
  534787 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2834,10 +2837,10 @@ mssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on presentation.pdf (137 pages, 16685782 bytes).
+Output written on presentation.pdf (138 pages, 16687735 bytes).
 PDF statistics:
- 16917 PDF objects out of 18468 (max. 8388607)
- 8635 compressed objects within 87 object streams
- 283 named destinations out of 1000 (max. 500000)
+ 16923 PDF objects out of 18468 (max. 8388607)
+ 8640 compressed objects within 87 object streams
+ 285 named destinations out of 1000 (max. 500000)
  741 words of extra memory for PDF output out of 10000 (max. 10000000)
 
