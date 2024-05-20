@@ -43,61 +43,65 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\sectionentry {4}{Custom Floating-Point MAC Designs and Quantization Techniques}{53}{Custom Floating-Point MAC Designs and Quantization Techniques}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{1}{53/59}{}{0}}
+\headcommand {\slideentry {4}{0}{1}{53/58}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {53}{59}}
+\headcommand {\beamer@framepages {53}{58}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{2}{60/60}{}{0}}
+\headcommand {\slideentry {4}{0}{2}{59/64}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\beamer@framepages {59}{64}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {53}{60}}
+\headcommand {\slideentry {4}{0}{3}{65/65}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {53}{60}}
+\headcommand {\beamer@framepages {65}{65}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {5}{Case Studies}{61}{Case Studies}{0}}
+\headcommand {\beamer@sectionpages {53}{65}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{0}{1}{61/88}{}{0}}
+\headcommand {\beamer@subsectionpages {53}{65}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {61}{88}}
+\headcommand {\sectionentry {5}{Case Studies}{66}{Case Studies}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{0}{2}{89/139}{}{0}}
+\headcommand {\slideentry {5}{0}{1}{66/93}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {89}{139}}
+\headcommand {\beamer@framepages {66}{93}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {61}{139}}
+\headcommand {\slideentry {5}{0}{2}{94/144}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {61}{139}}
+\headcommand {\beamer@framepages {94}{144}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {6}{Conclusions}{140}{Conclusions}{0}}
+\headcommand {\beamer@sectionpages {66}{144}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {6}{0}{1}{140/145}{}{0}}
+\headcommand {\beamer@subsectionpages {66}{144}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {140}{145}}
+\headcommand {\sectionentry {6}{Conclusions}{145}{Conclusions}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {140}{145}}
+\headcommand {\slideentry {6}{0}{1}{145/149}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {140}{145}}
+\headcommand {\beamer@framepages {145}{149}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {7}{Publications}{146}{Publications}{0}}
+\headcommand {\beamer@sectionpages {145}{149}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {7}{0}{1}{146/146}{}{0}}
+\headcommand {\beamer@subsectionpages {145}{149}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {146}{146}}
+\headcommand {\sectionentry {7}{Publications}{150}{Publications}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {7}{0}{2}{147/147}{}{0}}
+\headcommand {\slideentry {7}{0}{1}{150/150}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {147}{147}}
+\headcommand {\beamer@framepages {150}{150}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {146}{147}}
+\headcommand {\slideentry {7}{0}{2}{151/151}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {146}{147}}
+\headcommand {\beamer@framepages {151}{151}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{1}{148/148}{}{0}}
+\headcommand {\beamer@sectionpages {150}{151}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {148}{148}}
-\headcommand {\beamer@partpages {1}{148}}
-\headcommand {\beamer@subsectionpages {148}{148}}
-\headcommand {\beamer@sectionpages {148}{148}}
-\headcommand {\beamer@documentpages {148}}
-\headcommand {\gdef \inserttotalframenumber {12}}
+\headcommand {\beamer@subsectionpages {150}{151}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {8}{0}{1}{152/152}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {152}{152}}
+\headcommand {\beamer@partpages {1}{152}}
+\headcommand {\beamer@subsectionpages {152}{152}}
+\headcommand {\beamer@sectionpages {152}{152}}
+\headcommand {\beamer@documentpages {152}}
+\headcommand {\gdef \inserttotalframenumber {13}}

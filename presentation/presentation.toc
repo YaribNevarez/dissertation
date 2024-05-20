@@ -4,6 +4,6 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {4}{Custom Floating-Point MAC Designs and Quantization Techniques}{53}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Case Studies}{61}{0}{3}
+\beamer@sectionintoc {5}{Case Studies}{66}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {6}{Conclusions}{140}{0}{4}
+\beamer@sectionintoc {6}{Conclusions}{145}{0}{4}
