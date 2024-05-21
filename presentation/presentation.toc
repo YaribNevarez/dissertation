@@ -1,9 +1,9 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Methodology}{22}{0}{1}
+\beamer@sectionintoc {3}{Methodology}{24}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Floating-Point Multiply-Accumulate Unit}{53}{0}{2}
+\beamer@sectionintoc {4}{Floating-Point Multiply-Accumulate Unit}{55}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Case Studies}{66}{0}{3}
+\beamer@sectionintoc {5}{Case Studies}{67}{0}{3}
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {6}{Conclusions}{145}{0}{4}
