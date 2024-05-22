@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  21 MAY 2024 22:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  22 MAY 2024 03:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1666,7 +1666,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [34
 
  <./slides/Methodlogy/10.pdf>]
-<slides/Methodlogy/11.pdf, id=728, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/11.pdf, id=732, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/11.pdf Graphic file (type pdf)
 <use slides/Methodlogy/11.pdf>
 Package pdftex.def Info: slides/Methodlogy/11.pdf  used on input line 48.
@@ -1678,7 +1678,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [35
 
  <./slides/Methodlogy/11.pdf>]
-<slides/Methodlogy/12.pdf, id=752, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/12.pdf, id=756, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/12.pdf Graphic file (type pdf)
 <use slides/Methodlogy/12.pdf>
 Package pdftex.def Info: slides/Methodlogy/12.pdf  used on input line 48.
@@ -1690,7 +1690,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [36
 
  <./slides/Methodlogy/12.pdf>]
-<slides/Methodlogy/13.pdf, id=776, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/13.pdf, id=784, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/13.pdf Graphic file (type pdf)
 <use slides/Methodlogy/13.pdf>
 Package pdftex.def Info: slides/Methodlogy/13.pdf  used on input line 48.
@@ -1702,7 +1702,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [37
 
  <./slides/Methodlogy/13.pdf>]
-<slides/Methodlogy/14.pdf, id=802, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/14.pdf, id=810, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/14.pdf Graphic file (type pdf)
 <use slides/Methodlogy/14.pdf>
 Package pdftex.def Info: slides/Methodlogy/14.pdf  used on input line 48.
@@ -1714,7 +1714,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [38
 
  <./slides/Methodlogy/14.pdf>]
-<slides/Methodlogy/15.pdf, id=826, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/15.pdf, id=834, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/15.pdf Graphic file (type pdf)
 <use slides/Methodlogy/15.pdf>
 Package pdftex.def Info: slides/Methodlogy/15.pdf  used on input line 48.
@@ -1726,7 +1726,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [39
 
  <./slides/Methodlogy/15.pdf>]
-<slides/Methodlogy/16.pdf, id=850, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/16.pdf, id=858, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/16.pdf Graphic file (type pdf)
 <use slides/Methodlogy/16.pdf>
 Package pdftex.def Info: slides/Methodlogy/16.pdf  used on input line 48.
@@ -1738,7 +1738,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [40
 
  <./slides/Methodlogy/16.pdf>]
-<slides/Methodlogy/17.pdf, id=879, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/17.pdf, id=887, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/17.pdf Graphic file (type pdf)
 <use slides/Methodlogy/17.pdf>
 Package pdftex.def Info: slides/Methodlogy/17.pdf  used on input line 48.
@@ -1750,7 +1750,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [41
 
  <./slides/Methodlogy/17.pdf>]
-<slides/Methodlogy/18.pdf, id=908, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/18.pdf, id=916, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/18.pdf Graphic file (type pdf)
 <use slides/Methodlogy/18.pdf>
 Package pdftex.def Info: slides/Methodlogy/18.pdf  used on input line 48.
@@ -1762,7 +1762,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [42
 
  <./slides/Methodlogy/18.pdf>]
-<slides/Methodlogy/19.pdf, id=932, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/19.pdf, id=940, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/19.pdf Graphic file (type pdf)
 <use slides/Methodlogy/19.pdf>
 Package pdftex.def Info: slides/Methodlogy/19.pdf  used on input line 48.
@@ -1774,7 +1774,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [43
 
  <./slides/Methodlogy/19.pdf>]
-<slides/Methodlogy/20.pdf, id=958, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/20.pdf, id=966, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/20.pdf Graphic file (type pdf)
 <use slides/Methodlogy/20.pdf>
 Package pdftex.def Info: slides/Methodlogy/20.pdf  used on input line 48.
@@ -1786,7 +1786,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [44
 
  <./slides/Methodlogy/20.pdf>]
-<slides/Methodlogy/21.pdf, id=987, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/21.pdf, id=995, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/21.pdf Graphic file (type pdf)
 <use slides/Methodlogy/21.pdf>
 Package pdftex.def Info: slides/Methodlogy/21.pdf  used on input line 48.
@@ -1798,7 +1798,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [45
 
  <./slides/Methodlogy/21.pdf>]
-<slides/Methodlogy/22.pdf, id=1016, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/22.pdf, id=1024, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/22.pdf Graphic file (type pdf)
 <use slides/Methodlogy/22.pdf>
 Package pdftex.def Info: slides/Methodlogy/22.pdf  used on input line 48.
@@ -1810,7 +1810,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [46
 
  <./slides/Methodlogy/22.pdf>]
-<slides/Methodlogy/23.pdf, id=1045, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/23.pdf, id=1053, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/23.pdf Graphic file (type pdf)
 <use slides/Methodlogy/23.pdf>
 Package pdftex.def Info: slides/Methodlogy/23.pdf  used on input line 48.
@@ -1822,7 +1822,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [47
 
  <./slides/Methodlogy/23.pdf>]
-<slides/Methodlogy/24.pdf, id=1074, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/24.pdf, id=1082, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/24.pdf Graphic file (type pdf)
 <use slides/Methodlogy/24.pdf>
 Package pdftex.def Info: slides/Methodlogy/24.pdf  used on input line 48.
@@ -1834,7 +1834,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [48
 
  <./slides/Methodlogy/24.pdf>]
-<slides/Methodlogy/25.pdf, id=1104, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/25.pdf, id=1112, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/25.pdf Graphic file (type pdf)
 <use slides/Methodlogy/25.pdf>
 Package pdftex.def Info: slides/Methodlogy/25.pdf  used on input line 48.
@@ -1846,7 +1846,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [49
 
  <./slides/Methodlogy/25.pdf>]
-<slides/Methodlogy/26.pdf, id=1134, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/26.pdf, id=1142, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/26.pdf Graphic file (type pdf)
 <use slides/Methodlogy/26.pdf>
 Package pdftex.def Info: slides/Methodlogy/26.pdf  used on input line 48.
@@ -1858,7 +1858,7 @@ Overfull \vbox (2.84789pt too high) detected at line 48
 [50
 
  <./slides/Methodlogy/26.pdf>]
-<slides/Methodlogy/31.pdf, id=1163, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/31.pdf, id=1171, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/31.pdf Graphic file (type pdf)
 <use slides/Methodlogy/31.pdf>
 Package pdftex.def Info: slides/Methodlogy/31.pdf  used on input line 48.
@@ -1870,7 +1870,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [51
 
  <./slides/Methodlogy/31.pdf>]
-<slides/Methodlogy/32.pdf, id=1208, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/32.pdf, id=1216, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/32.pdf Graphic file (type pdf)
 <use slides/Methodlogy/32.pdf>
 Package pdftex.def Info: slides/Methodlogy/32.pdf  used on input line 48.
@@ -1882,7 +1882,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [52
 
  <./slides/Methodlogy/32.pdf>]
-<slides/Methodlogy/33.pdf, id=1247, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/33.pdf, id=1255, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/33.pdf Graphic file (type pdf)
 <use slides/Methodlogy/33.pdf>
 Package pdftex.def Info: slides/Methodlogy/33.pdf  used on input line 48.
@@ -1894,7 +1894,7 @@ Overfull \vbox (12.34789pt too high) detected at line 48
 [53
 
  <./slides/Methodlogy/33.pdf>]
-<slides/Methodlogy/34.pdf, id=1287, 346.89601pt x 238.49101pt>
+<slides/Methodlogy/34.pdf, id=1295, 346.89601pt x 238.49101pt>
 File: slides/Methodlogy/34.pdf Graphic file (type pdf)
 <use slides/Methodlogy/34.pdf>
 Package pdftex.def Info: slides/Methodlogy/34.pdf  used on input line 48.
@@ -1906,7 +1906,7 @@ Overfull \vbox (2.84789pt too high) detected at line 48
 [54
 
  <./slides/Methodlogy/34.pdf>]) (./slides/mac_qat.tex (./presentation.toc)
-<slides/Methodlogy/mac-fp-1.pdf, id=1320, 607.068pt x 419.166pt>
+<slides/Methodlogy/mac-fp-1.pdf, id=1328, 607.068pt x 419.166pt>
 File: slides/Methodlogy/mac-fp-1.pdf Graphic file (type pdf)
 <use slides/Methodlogy/mac-fp-1.pdf>
 Package pdftex.def Info: slides/Methodlogy/mac-fp-1.pdf  used on input line 10.
@@ -1919,7 +1919,7 @@ Overfull \vbox (13.36572pt too high) detected at line 10
 [55
 
 ] [56 <./slides/Methodlogy/mac-fp-1.pdf>]
-<slides/Methodlogy/mac-fp-2.pdf, id=1345, 607.068pt x 419.166pt>
+<slides/Methodlogy/mac-fp-2.pdf, id=1353, 607.068pt x 419.166pt>
 File: slides/Methodlogy/mac-fp-2.pdf Graphic file (type pdf)
 <use slides/Methodlogy/mac-fp-2.pdf>
 Package pdftex.def Info: slides/Methodlogy/mac-fp-2.pdf  used on input line 10.
@@ -1932,7 +1932,7 @@ Overfull \vbox (13.36572pt too high) detected at line 10
 [57
 
  <./slides/Methodlogy/mac-fp-2.pdf>]
-<slides/Methodlogy/mac-fp-3.pdf, id=1364, 607.068pt x 419.166pt>
+<slides/Methodlogy/mac-fp-3.pdf, id=1372, 607.068pt x 419.166pt>
 File: slides/Methodlogy/mac-fp-3.pdf Graphic file (type pdf)
 <use slides/Methodlogy/mac-fp-3.pdf>
 Package pdftex.def Info: slides/Methodlogy/mac-fp-3.pdf  used on input line 10.
@@ -1945,7 +1945,7 @@ Overfull \vbox (13.36572pt too high) detected at line 10
 [58
 
  <./slides/Methodlogy/mac-fp-3.pdf>]
-<slides/Methodlogy/mac-fp-4.pdf, id=1383, 607.068pt x 419.166pt>
+<slides/Methodlogy/mac-fp-4.pdf, id=1391, 607.068pt x 419.166pt>
 File: slides/Methodlogy/mac-fp-4.pdf Graphic file (type pdf)
 <use slides/Methodlogy/mac-fp-4.pdf>
 Package pdftex.def Info: slides/Methodlogy/mac-fp-4.pdf  used on input line 10.
@@ -1958,7 +1958,7 @@ Overfull \vbox (13.36572pt too high) detected at line 10
 [59
 
  <./slides/Methodlogy/mac-fp-4.pdf>]
-<slides/Methodlogy/mac-fp-5.pdf, id=1412, 607.068pt x 419.166pt>
+<slides/Methodlogy/mac-fp-5.pdf, id=1421, 607.068pt x 419.166pt>
 File: slides/Methodlogy/mac-fp-5.pdf Graphic file (type pdf)
 <use slides/Methodlogy/mac-fp-5.pdf>
 Package pdftex.def Info: slides/Methodlogy/mac-fp-5.pdf  used on input line 10.
@@ -1971,7 +1971,7 @@ Overfull \vbox (3.86572pt too high) detected at line 10
 [60
 
  <./slides/Methodlogy/mac-fp-5.pdf>]
-<slides/Methodlogy/mac.pdf, id=1442, 607.068pt x 419.166pt>
+<slides/Methodlogy/mac.pdf, id=1450, 607.068pt x 419.166pt>
 File: slides/Methodlogy/mac.pdf Graphic file (type pdf)
 <use slides/Methodlogy/mac.pdf>
 Package pdftex.def Info: slides/Methodlogy/mac.pdf  used on input line 20.
@@ -1983,7 +1983,7 @@ Overfull \vbox (13.36572pt too high) detected at line 20
 [61
 
  <./slides/Methodlogy/mac.pdf>]
-<slides/Methodlogy/mac-2.pdf, id=1477, 607.068pt x 419.166pt>
+<slides/Methodlogy/mac-2.pdf, id=1485, 607.068pt x 419.166pt>
 File: slides/Methodlogy/mac-2.pdf Graphic file (type pdf)
 <use slides/Methodlogy/mac-2.pdf>
 Package pdftex.def Info: slides/Methodlogy/mac-2.pdf  used on input line 20.
@@ -1995,7 +1995,7 @@ Overfull \vbox (13.36572pt too high) detected at line 20
 [62
 
  <./slides/Methodlogy/mac-2.pdf>]
-<slides/Methodlogy/mac-3.pdf, id=1501, 607.068pt x 419.166pt>
+<slides/Methodlogy/mac-3.pdf, id=1509, 607.068pt x 419.166pt>
 File: slides/Methodlogy/mac-3.pdf Graphic file (type pdf)
 <use slides/Methodlogy/mac-3.pdf>
 Package pdftex.def Info: slides/Methodlogy/mac-3.pdf  used on input line 20.
@@ -2007,7 +2007,7 @@ Overfull \vbox (13.36572pt too high) detected at line 20
 [63
 
  <./slides/Methodlogy/mac-3.pdf>]
-<slides/Methodlogy/mac-4.pdf, id=1525, 607.068pt x 419.166pt>
+<slides/Methodlogy/mac-4.pdf, id=1533, 607.068pt x 419.166pt>
 File: slides/Methodlogy/mac-4.pdf Graphic file (type pdf)
 <use slides/Methodlogy/mac-4.pdf>
 Package pdftex.def Info: slides/Methodlogy/mac-4.pdf  used on input line 20.
@@ -2019,7 +2019,7 @@ Overfull \vbox (13.36572pt too high) detected at line 20
 [64
 
  <./slides/Methodlogy/mac-4.pdf>]
-<slides/Methodlogy/mac-5.pdf, id=1549, 607.068pt x 419.166pt>
+<slides/Methodlogy/mac-5.pdf, id=1557, 607.068pt x 419.166pt>
 File: slides/Methodlogy/mac-5.pdf Graphic file (type pdf)
 <use slides/Methodlogy/mac-5.pdf>
 Package pdftex.def Info: slides/Methodlogy/mac-5.pdf  used on input line 20.
@@ -2031,7 +2031,7 @@ Overfull \vbox (13.36572pt too high) detected at line 20
 [65
 
  <./slides/Methodlogy/mac-5.pdf>]
-<slides/Methodlogy/mac-6.pdf, id=1569, 607.068pt x 419.166pt>
+<slides/Methodlogy/mac-6.pdf, id=1577, 607.068pt x 419.166pt>
 File: slides/Methodlogy/mac-6.pdf Graphic file (type pdf)
 <use slides/Methodlogy/mac-6.pdf>
 Package pdftex.def Info: slides/Methodlogy/mac-6.pdf  used on input line 20.
@@ -2044,7 +2044,7 @@ Overfull \vbox (3.86572pt too high) detected at line 20
 
  <./slides/Methodlogy/mac-6.pdf>]) (./slides/case_studies.tex
 (./presentation.toc)
-<slides/Case_study_sbs/1.pdf, id=1592, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/1.pdf, id=1600, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/1.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/1.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/1.pdf  used on input line 31.
@@ -2056,7 +2056,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [67
 
 ] [68 <./slides/Case_study_sbs/1.pdf>]
-<slides/Case_study_sbs/2.pdf, id=2621, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/2.pdf, id=2629, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/2.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/2.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/2.pdf  used on input line 31.
@@ -2068,7 +2068,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [69
 
  <./slides/Case_study_sbs/2.pdf>]
-<slides/Case_study_sbs/3.pdf, id=3667, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/3.pdf, id=3675, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/3.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/3.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/3.pdf  used on input line 31.
@@ -2080,7 +2080,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [70
 
  <./slides/Case_study_sbs/3.pdf>]
-<slides/Case_study_sbs/4.pdf, id=4717, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/4.pdf, id=4725, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/4.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/4.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/4.pdf  used on input line 31.
@@ -2092,7 +2092,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [71
 
  <./slides/Case_study_sbs/4.pdf>]
-<slides/Case_study_sbs/5.pdf, id=5772, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/5.pdf, id=5780, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/5.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/5.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/5.pdf  used on input line 31.
@@ -2104,7 +2104,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [72
 
  <./slides/Case_study_sbs/5.pdf>]
-<slides/Case_study_sbs/6.pdf, id=6826, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/6.pdf, id=6834, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/6.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/6.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/6.pdf  used on input line 31.
@@ -2116,7 +2116,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [73
 
  <./slides/Case_study_sbs/6.pdf>]
-<slides/Case_study_sbs/7.pdf, id=7881, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/7.pdf, id=7889, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/7.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/7.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/7.pdf  used on input line 31.
@@ -2128,7 +2128,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [74
 
  <./slides/Case_study_sbs/7.pdf>]
-<slides/Case_study_sbs/8.pdf, id=8935, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/8.pdf, id=8944, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/8.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/8.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/8.pdf  used on input line 31.
@@ -2140,7 +2140,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [75
 
  <./slides/Case_study_sbs/8.pdf>]
-<slides/Case_study_sbs/9.pdf, id=9990, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/9.pdf, id=9998, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/9.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/9.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/9.pdf  used on input line 31.
@@ -2152,7 +2152,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [76
 
  <./slides/Case_study_sbs/9.pdf>]
-<slides/Case_study_sbs/10.pdf, id=11044, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/10.pdf, id=11052, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/10.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/10.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/10.pdf  used on input line 31.
@@ -2164,7 +2164,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [77
 
  <./slides/Case_study_sbs/10.pdf>]
-<slides/Case_study_sbs/11.pdf, id=12098, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/11.pdf, id=12106, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/11.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/11.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/11.pdf  used on input line 31.
@@ -2176,7 +2176,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [78
 
  <./slides/Case_study_sbs/11.pdf>]
-<slides/Case_study_sbs/12.pdf, id=13153, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/12.pdf, id=13161, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/12.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/12.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/12.pdf  used on input line 31.
@@ -2188,7 +2188,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [79
 
  <./slides/Case_study_sbs/12.pdf>]
-<slides/Case_study_sbs/13.pdf, id=14208, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/13.pdf, id=14216, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/13.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/13.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/13.pdf  used on input line 31.
@@ -2200,7 +2200,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [80
 
  <./slides/Case_study_sbs/13.pdf>]
-<slides/Case_study_sbs/14.pdf, id=14257, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/14.pdf, id=14265, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/14.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/14.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/14.pdf  used on input line 31.
@@ -2212,7 +2212,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [81
 
  <./slides/Case_study_sbs/14.pdf>]
-<slides/Case_study_sbs/15.pdf, id=14306, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/15.pdf, id=14314, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/15.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/15.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/15.pdf  used on input line 31.
@@ -2224,7 +2224,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [82
 
  <./slides/Case_study_sbs/15.pdf>]
-<slides/Case_study_sbs/16.pdf, id=14368, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/16.pdf, id=14376, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/16.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/16.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/16.pdf  used on input line 31.
@@ -2236,7 +2236,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [83
 
  <./slides/Case_study_sbs/16.pdf>]
-<slides/Case_study_sbs/17.pdf, id=14429, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/17.pdf, id=14437, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/17.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/17.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/17.pdf  used on input line 31.
@@ -2248,7 +2248,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [84
 
  <./slides/Case_study_sbs/17.pdf>]
-<slides/Case_study_sbs/18.pdf, id=14490, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/18.pdf, id=14498, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/18.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/18.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/18.pdf  used on input line 31.
@@ -2260,7 +2260,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [85
 
  <./slides/Case_study_sbs/18.pdf>]
-<slides/Case_study_sbs/19.pdf, id=14557, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/19.pdf, id=14565, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/19.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/19.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/19.pdf  used on input line 31.
@@ -2272,7 +2272,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [86
 
  <./slides/Case_study_sbs/19.pdf>]
-<slides/Case_study_sbs/20.pdf, id=14622, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/20.pdf, id=14630, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/20.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/20.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/20.pdf  used on input line 31.
@@ -2284,7 +2284,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [87
 
  <./slides/Case_study_sbs/20.pdf>]
-<slides/Case_study_sbs/21.pdf, id=14657, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/21.pdf, id=14665, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/21.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/21.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/21.pdf  used on input line 31.
@@ -2296,7 +2296,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [88
 
  <./slides/Case_study_sbs/21.pdf>]
-<slides/Case_study_sbs/22.pdf, id=14703, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/22.pdf, id=14711, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/22.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/22.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/22.pdf  used on input line 31.
@@ -2308,7 +2308,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [89
 
  <./slides/Case_study_sbs/22.pdf>]
-<slides/Case_study_sbs/23.pdf, id=14754, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/23.pdf, id=14762, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/23.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/23.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/23.pdf  used on input line 31.
@@ -2320,7 +2320,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [90
 
  <./slides/Case_study_sbs/23.pdf>]
-<slides/Case_study_sbs/24.pdf, id=14805, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/24.pdf, id=14813, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/24.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/24.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/24.pdf  used on input line 31.
@@ -2332,7 +2332,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [91
 
  <./slides/Case_study_sbs/24.pdf>]
-<slides/Case_study_sbs/25.pdf, id=14858, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/25.pdf, id=14866, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/25.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/25.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/25.pdf  used on input line 31.
@@ -2344,7 +2344,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [92
 
  <./slides/Case_study_sbs/25.pdf>]
-<slides/Case_study_sbs/26.pdf, id=14909, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/26.pdf, id=14917, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/26.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/26.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/26.pdf  used on input line 31.
@@ -2356,7 +2356,7 @@ Overfull \vbox (12.34789pt too high) detected at line 31
 [93
 
  <./slides/Case_study_sbs/26.pdf>]
-<slides/Case_study_sbs/27.pdf, id=14960, 346.89601pt x 238.49101pt>
+<slides/Case_study_sbs/27.pdf, id=14968, 346.89601pt x 238.49101pt>
 File: slides/Case_study_sbs/27.pdf Graphic file (type pdf)
 <use slides/Case_study_sbs/27.pdf>
 Package pdftex.def Info: slides/Case_study_sbs/27.pdf  used on input line 31.
@@ -2368,7 +2368,7 @@ Overfull \vbox (2.84789pt too high) detected at line 31
 [94
 
  <./slides/Case_study_sbs/27.pdf>]
-<slides/Case_study_cnn/1.pdf, id=15012, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/1.pdf, id=15020, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/1.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/1.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/1.pdf  used on input line 88.
@@ -2380,7 +2380,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [95
 
  <./slides/Case_study_cnn/1.pdf>]
-<slides/Case_study_cnn/2.pdf, id=15032, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/2.pdf, id=15040, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/2.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/2.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/2.pdf  used on input line 88.
@@ -2392,7 +2392,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [96
 
  <./slides/Case_study_cnn/2.pdf>]
-<slides/Case_study_cnn/3.pdf, id=15051, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/3.pdf, id=15059, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/3.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/3.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/3.pdf  used on input line 88.
@@ -2404,7 +2404,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [97
 
  <./slides/Case_study_cnn/3.pdf>]
-<slides/Case_study_cnn/4.pdf, id=15071, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/4.pdf, id=15079, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/4.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/4.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/4.pdf  used on input line 88.
@@ -2416,7 +2416,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [98
 
  <./slides/Case_study_cnn/4.pdf>]
-<slides/Case_study_cnn/5.pdf, id=15090, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/5.pdf, id=15098, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/5.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/5.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/5.pdf  used on input line 88.
@@ -2428,7 +2428,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [99
 
  <./slides/Case_study_cnn/5.pdf>]
-<slides/Case_study_cnn/6.pdf, id=15109, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/6.pdf, id=15117, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/6.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/6.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/6.pdf  used on input line 88.
@@ -2440,7 +2440,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [100
 
  <./slides/Case_study_cnn/6.pdf>]
-<slides/Case_study_cnn/7.pdf, id=15128, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/7.pdf, id=15136, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/7.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/7.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/7.pdf  used on input line 88.
@@ -2452,7 +2452,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [101
 
  <./slides/Case_study_cnn/7.pdf>]
-<slides/Case_study_cnn/8.pdf, id=15147, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/8.pdf, id=15155, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/8.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/8.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/8.pdf  used on input line 88.
@@ -2464,7 +2464,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [102
 
  <./slides/Case_study_cnn/8.pdf>]
-<slides/Case_study_cnn/9.pdf, id=15167, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/9.pdf, id=15175, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/9.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/9.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/9.pdf  used on input line 88.
@@ -2476,7 +2476,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [103
 
  <./slides/Case_study_cnn/9.pdf>]
-<slides/Case_study_cnn/10.pdf, id=15187, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/10.pdf, id=15195, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/10.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/10.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/10.pdf  used on input line 88.
@@ -2488,7 +2488,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [104
 
  <./slides/Case_study_cnn/10.pdf>]
-<slides/Case_study_cnn/11.pdf, id=15206, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/11.pdf, id=15214, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/11.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/11.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/11.pdf  used on input line 88.
@@ -2500,7 +2500,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [105
 
  <./slides/Case_study_cnn/11.pdf>]
-<slides/Case_study_cnn/12.pdf, id=15230, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/12.pdf, id=15238, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/12.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/12.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/12.pdf  used on input line 88.
@@ -2512,7 +2512,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [106
 
  <./slides/Case_study_cnn/12.pdf>]
-<slides/Case_study_cnn/13.pdf, id=15254, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/13.pdf, id=15262, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/13.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/13.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/13.pdf  used on input line 88.
@@ -2524,7 +2524,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [107
 
  <./slides/Case_study_cnn/13.pdf>]
-<slides/Case_study_cnn/14.pdf, id=15278, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/14.pdf, id=15286, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/14.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/14.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/14.pdf  used on input line 88.
@@ -2536,7 +2536,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [108
 
  <./slides/Case_study_cnn/14.pdf>]
-<slides/Case_study_cnn/15.pdf, id=15297, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/15.pdf, id=15305, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/15.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/15.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/15.pdf  used on input line 88.
@@ -2548,7 +2548,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [109
 
  <./slides/Case_study_cnn/15.pdf>]
-<slides/Case_study_cnn/16.pdf, id=15323, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/16.pdf, id=15331, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/16.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/16.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/16.pdf  used on input line 88.
@@ -2560,7 +2560,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [110
 
  <./slides/Case_study_cnn/16.pdf>]
-<slides/Case_study_cnn/17.pdf, id=15347, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/17.pdf, id=15355, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/17.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/17.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/17.pdf  used on input line 88.
@@ -2572,7 +2572,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [111
 
  <./slides/Case_study_cnn/17.pdf>]
-<slides/Case_study_cnn/18.pdf, id=15370, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/18.pdf, id=15378, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/18.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/18.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/18.pdf  used on input line 88.
@@ -2584,7 +2584,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [112
 
  <./slides/Case_study_cnn/18.pdf>]
-<slides/Case_study_cnn/19.pdf, id=15405, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/19.pdf, id=15413, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/19.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/19.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/19.pdf  used on input line 88.
@@ -2596,7 +2596,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [113
 
  <./slides/Case_study_cnn/19.pdf>]
-<slides/Case_study_cnn/20.pdf, id=15424, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/20.pdf, id=15432, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/20.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/20.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/20.pdf  used on input line 88.
@@ -2608,7 +2608,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [114
 
  <./slides/Case_study_cnn/20.pdf>]
-<slides/Case_study_cnn/21.pdf, id=15443, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/21.pdf, id=15451, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/21.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/21.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/21.pdf  used on input line 88.
@@ -2620,7 +2620,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [115
 
  <./slides/Case_study_cnn/21.pdf>]
-<slides/Case_study_cnn/22.pdf, id=15463, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/22.pdf, id=15472, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/22.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/22.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/22.pdf  used on input line 88.
@@ -2632,7 +2632,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [116
 
  <./slides/Case_study_cnn/22.pdf>]
-<slides/Case_study_cnn/23.pdf, id=15483, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/23.pdf, id=15491, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/23.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/23.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/23.pdf  used on input line 88.
@@ -2644,7 +2644,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [117
 
  <./slides/Case_study_cnn/23.pdf>]
-<slides/Case_study_cnn/24.pdf, id=15502, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/24.pdf, id=15510, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/24.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/24.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/24.pdf  used on input line 88.
@@ -2656,7 +2656,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [118
 
  <./slides/Case_study_cnn/24.pdf>]
-<slides/Case_study_cnn/25.pdf, id=15540, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/25.pdf, id=15548, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/25.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/25.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/25.pdf  used on input line 88.
@@ -2668,7 +2668,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [119
 
  <./slides/Case_study_cnn/25.pdf>]
-<slides/Case_study_cnn/26.pdf, id=15626, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/26.pdf, id=15634, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/26.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/26.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/26.pdf  used on input line 88.
@@ -2680,7 +2680,7 @@ Overfull \vbox (2.84789pt too high) detected at line 88
 [120
 
  <./slides/Case_study_cnn/26.pdf>]
-<slides/Case_study_cnn/27.pdf, id=15685, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/27.pdf, id=15694, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/27.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/27.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/27.pdf  used on input line 88.
@@ -2692,7 +2692,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [121
 
  <./slides/Case_study_cnn/27.pdf>]
-<slides/Case_study_cnn/28.pdf, id=15783, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/28.pdf, id=15791, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/28.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/28.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/28.pdf  used on input line 88.
@@ -2704,7 +2704,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [122
 
  <./slides/Case_study_cnn/28.pdf>]
-<slides/Case_study_cnn/29.pdf, id=15879, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/29.pdf, id=15887, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/29.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/29.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/29.pdf  used on input line 88.
@@ -2716,7 +2716,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [123
 
  <./slides/Case_study_cnn/29.pdf>]
-<slides/Case_study_cnn/30.pdf, id=16015, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/30.pdf, id=16023, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/30.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/30.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/30.pdf  used on input line 88.
@@ -2728,7 +2728,7 @@ Overfull \vbox (2.84789pt too high) detected at line 88
 [124
 
  <./slides/Case_study_cnn/30.pdf>]
-<slides/Case_study_cnn/31.pdf, id=16152, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/31.pdf, id=16160, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/31.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/31.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/31.pdf  used on input line 88.
@@ -2740,7 +2740,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [125
 
  <./slides/Case_study_cnn/31.pdf>]
-<slides/Case_study_cnn/32.pdf, id=16325, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/32.pdf, id=16333, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/32.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/32.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/32.pdf  used on input line 88.
@@ -2752,7 +2752,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [126
 
  <./slides/Case_study_cnn/32.pdf>]
-<slides/Case_study_cnn/33.pdf, id=16498, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/33.pdf, id=16506, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/33.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/33.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/33.pdf  used on input line 88.
@@ -2764,7 +2764,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [127
 
  <./slides/Case_study_cnn/33.pdf>]
-<slides/Case_study_cnn/34.pdf, id=16710, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/34.pdf, id=16718, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/34.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/34.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/34.pdf  used on input line 88.
@@ -2776,7 +2776,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [128
 
  <./slides/Case_study_cnn/34.pdf>]
-<slides/Case_study_cnn/35.pdf, id=16749, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/35.pdf, id=16757, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/35.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/35.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/35.pdf  used on input line 88.
@@ -2788,7 +2788,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [129
 
  <./slides/Case_study_cnn/35.pdf>]
-<slides/Case_study_cnn/36.pdf, id=16788, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/36.pdf, id=16796, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/36.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/36.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/36.pdf  used on input line 88.
@@ -2800,7 +2800,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [130
 
  <./slides/Case_study_cnn/36.pdf>]
-<slides/Case_study_cnn/37.pdf, id=16827, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/37.pdf, id=16835, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/37.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/37.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/37.pdf  used on input line 88.
@@ -2812,7 +2812,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [131
 
  <./slides/Case_study_cnn/37.pdf>]
-<slides/Case_study_cnn/38.pdf, id=16867, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/38.pdf, id=16875, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/38.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/38.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/38.pdf  used on input line 88.
@@ -2824,7 +2824,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [132
 
  <./slides/Case_study_cnn/38.pdf>]
-<slides/Case_study_cnn/39.pdf, id=16906, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/39.pdf, id=16914, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/39.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/39.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/39.pdf  used on input line 88.
@@ -2836,7 +2836,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [133
 
  <./slides/Case_study_cnn/39.pdf>]
-<slides/Case_study_cnn/40.pdf, id=16946, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/40.pdf, id=16954, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/40.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/40.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/40.pdf  used on input line 88.
@@ -2848,7 +2848,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [134
 
  <./slides/Case_study_cnn/40.pdf>]
-<slides/Case_study_cnn/41.pdf, id=16985, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/41.pdf, id=16993, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/41.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/41.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/41.pdf  used on input line 88.
@@ -2860,7 +2860,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [135
 
  <./slides/Case_study_cnn/41.pdf>]
-<slides/Case_study_cnn/42.pdf, id=17025, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/42.pdf, id=17033, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/42.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/42.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/42.pdf  used on input line 88.
@@ -2872,7 +2872,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [136
 
  <./slides/Case_study_cnn/42.pdf>]
-<slides/Case_study_cnn/43.pdf, id=17064, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/43.pdf, id=17072, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/43.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/43.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/43.pdf  used on input line 88.
@@ -2884,7 +2884,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [137
 
  <./slides/Case_study_cnn/43.pdf>]
-<slides/Case_study_cnn/44.pdf, id=17103, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/44.pdf, id=17111, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/44.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/44.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/44.pdf  used on input line 88.
@@ -2896,7 +2896,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [138
 
  <./slides/Case_study_cnn/44.pdf>]
-<slides/Case_study_cnn/45.pdf, id=17142, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/45.pdf, id=17150, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/45.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/45.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/45.pdf  used on input line 88.
@@ -2908,7 +2908,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [139
 
  <./slides/Case_study_cnn/45.pdf>]
-<slides/Case_study_cnn/46.pdf, id=17183, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/46.pdf, id=17191, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/46.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/46.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/46.pdf  used on input line 88.
@@ -2920,7 +2920,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [140
 
  <./slides/Case_study_cnn/46.pdf>]
-<slides/Case_study_cnn/47.pdf, id=17222, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/47.pdf, id=17230, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/47.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/47.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/47.pdf  used on input line 88.
@@ -2932,7 +2932,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [141
 
  <./slides/Case_study_cnn/47.pdf>]
-<slides/Case_study_cnn/48.pdf, id=17241, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/48.pdf, id=17249, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/48.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/48.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/48.pdf  used on input line 88.
@@ -2944,7 +2944,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [142
 
  <./slides/Case_study_cnn/48.pdf>]
-<slides/Case_study_cnn/49.pdf, id=17260, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/49.pdf, id=17268, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/49.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/49.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/49.pdf  used on input line 88.
@@ -2956,7 +2956,7 @@ Overfull \vbox (12.34789pt too high) detected at line 88
 [143
 
  <./slides/Case_study_cnn/49.pdf>]
-<slides/Case_study_cnn/50.pdf, id=17279, 346.89601pt x 238.49101pt>
+<slides/Case_study_cnn/50.pdf, id=17287, 346.89601pt x 238.49101pt>
 File: slides/Case_study_cnn/50.pdf Graphic file (type pdf)
 <use slides/Case_study_cnn/50.pdf>
 Package pdftex.def Info: slides/Case_study_cnn/50.pdf  used on input line 88.
@@ -3007,7 +3007,7 @@ Package logreq Info: Writing requests to 'presentation.run.xml'.
 Here is how much of TeX's memory you used:
  31991 strings out of 481239
  623110 string characters out of 5920377
- 1271323 words of memory out of 5000000
+ 1271322 words of memory out of 5000000
  46224 multiletter control sequences out of 15000+600000
  534787 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3016,10 +3016,10 @@ Here is how much of TeX's memory you used:
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb>
-Output written on presentation.pdf (152 pages, 17466790 bytes).
+Output written on presentation.pdf (152 pages, 17469896 bytes).
 PDF statistics:
- 17441 PDF objects out of 18468 (max. 8388607)
- 8953 compressed objects within 90 object streams
+ 17449 PDF objects out of 18468 (max. 8388607)
+ 8959 compressed objects within 90 object streams
  313 named destinations out of 1000 (max. 500000)
  821 words of extra memory for PDF output out of 10000 (max. 10000000)
 
