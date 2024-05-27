@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  18 MAY 2024 02:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  27 MAY 2024 23:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1855,12 +1855,6 @@ LaTeX Warning: Label `sec:experimental_results' multiply defined.
 LaTeX Warning: Label `sec:experimental_results@cref' multiply defined.
 
 
-LaTeX Warning: Label `tab:LogiCORE' multiply defined.
-
-
-LaTeX Warning: Label `tab:LogiCORE@cref' multiply defined.
-
-
 LaTeX Warning: Label `sec:conclusions' multiply defined.
 
 
@@ -2795,7 +2789,7 @@ Package pdftex.def Info: ./chapters/sbs_accelerator/figures/accuracy_vs_noise_p
 u_fp.pdf  used on input line 162.
 (pdftex.def)             Requested size: 227.62206pt x 390.24202pt.
  [71] [72 <./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_fp.pdf>]
-<./chapters/sbs_accelerator/figures/log2_histogram.pdf, id=2753, 252.91655pt x 
+<./chapters/sbs_accelerator/figures/log2_histogram.pdf, id=2752, 252.91655pt x 
 361.32155pt>
 File: ./chapters/sbs_accelerator/figures/log2_histogram.pdf Graphic file (type 
 pdf)
@@ -2807,7 +2801,7 @@ Package pdftex.def Info: ./chapters/sbs_accelerator/figures/log2_histogram.pdf
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [73 <./chapters/sbs_accelerator/figures/log2_histogram.pdf>]
-<./chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf, id=2782, 252.91655pt
+<./chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf, id=2781, 252.91655pt
  x 252.91655pt>
 File: ./chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf Graphic file (ty
 pe pdf)
@@ -2816,7 +2810,7 @@ Package pdftex.def Info: ./chapters/sbs_accelerator/figures/latency_cfp_cycle.p
 df  used on input line 227.
 (pdftex.def)             Requested size: 227.62206pt x 227.6305pt.
 <./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponent_1-b
-it-mantissa).pdf, id=2783, 252.91655pt x 433.59154pt>
+it-mantissa).pdf, id=2782, 252.91655pt x 433.59154pt>
 File: ./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponen
 t_1-bit-mantissa).pdf Graphic file (type pdf)
 <use ./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_cfp(4-bit-exponent
@@ -2828,7 +2822,7 @@ u_cfp(4-bit-exponent_1-bit-mantissa).pdf  used on input line 234.
 Underfull \vbox (badness 2384) has occurred while \output is active []
 
  [75 <./chapters/sbs_accelerator/figures/latency_cfp_cycle.pdf>]
-<./chapters/sbs_accelerator/figures/latency_log_cycle.pdf, id=2833, 252.91655pt
+<./chapters/sbs_accelerator/figures/latency_log_cycle.pdf, id=2832, 252.91655pt
  x 252.91655pt>
 File: ./chapters/sbs_accelerator/figures/latency_log_cycle.pdf Graphic file (ty
 pe pdf)
@@ -2840,7 +2834,7 @@ df  used on input line 269.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf, id=2834, 252.
+<./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf, id=2833, 252.
 91655pt x 433.59154pt>
 File: ./chapters/sbs_accelerator/figures/accuracy_vs_noise_pu_log.pdf Graphic f
 ile (type pdf)
@@ -2871,7 +2865,7 @@ Overfull \hbox (1.05733pt too wide) in paragraph at lines 341--363
  []
 
 <./chapters/sbs_accelerator/figures/platform_power_dissipation_breakdown.pdf, i
-d=2925, 505.86154pt x 93.92255pt>
+d=2924, 505.86154pt x 93.92255pt>
 File: ./chapters/sbs_accelerator/figures/platform_power_dissipation_breakdown.p
 df Graphic file (type pdf)
 <use ./chapters/sbs_accelerator/figures/platform_power_dissipation_breakdown.pd
@@ -3149,7 +3143,7 @@ is-si-pa-tion are pre-sented in \T1/ntxtlf/b/n/12 Tab. []\T1/ntxtlf/m/n/12 4.1[
 
 [111]
 <./chapters/cnn_accelerator/figures/power_breakdown/acceleration_power_reductio
-n.pdf, id=4339, 252.945pt x 115.632pt>
+n.pdf, id=4340, 252.945pt x 115.632pt>
 File: ./chapters/cnn_accelerator/figures/power_breakdown/acceleration_power_red
 uction.pdf Graphic file (type pdf)
 <use ./chapters/cnn_accelerator/figures/power_breakdown/acceleration_power_redu
@@ -3165,7 +3159,7 @@ is-si-pa-tion are pre-sented in \T1/ntxtlf/b/n/12 Tab. []\T1/ntxtlf/m/n/12 4.1[
 ](b).
  []
 
-<./chapters/cnn_accelerator/figures/runtime/runtime.pdf, id=4368, 252.945pt x 5
+<./chapters/cnn_accelerator/figures/runtime/runtime.pdf, id=4369, 252.945pt x 5
 78.16pt>
 File: ./chapters/cnn_accelerator/figures/runtime/runtime.pdf Graphic file (type
  pdf)
@@ -3178,7 +3172,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [114 <./chapters/cnn_accelerator/figures/runtime/runtime.pdf>]
 <./chapters/cnn_accelerator/figures/histograms/2D_error_distribtion.pdf, id=440
-8, 252.945pt x 216.81pt>
+9, 252.945pt x 216.81pt>
 File: ./chapters/cnn_accelerator/figures/histograms/2D_error_distribtion.pdf Gr
 aphic file (type pdf)
 <use ./chapters/cnn_accelerator/figures/histograms/2D_error_distribtion.pdf>
@@ -3186,7 +3180,7 @@ Package pdftex.def Info: ./chapters/cnn_accelerator/figures/histograms/2D_error
 _distribtion.pdf  used on input line 241.
 (pdftex.def)             Requested size: 227.62206pt x 195.10733pt.
 <./chapters/cnn_accelerator/figures/power_breakdown/resource_utilization.pdf, i
-d=4436, 252.945pt x 108.405pt>
+d=4437, 252.945pt x 108.405pt>
 File: ./chapters/cnn_accelerator/figures/power_breakdown/resource_utilization.p
 df Graphic file (type pdf)
 <use ./chapters/cnn_accelerator/figures/power_breakdown/resource_utilization.pd
@@ -3199,7 +3193,7 @@ ource_utilization.pdf  used on input line 256.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <./chapters/cnn_accelerator/figures/power_breakdown/power_breakdown.pdf, id=443
-7, 252.945pt x 115.632pt>
+8, 252.945pt x 115.632pt>
 File: ./chapters/cnn_accelerator/figures/power_breakdown/power_breakdown.pdf Gr
 aphic file (type pdf)
 <use ./chapters/cnn_accelerator/figures/power_breakdown/power_breakdown.pdf>
@@ -3396,10 +3390,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
  ) 
 Here is how much of TeX's memory you used:
- 64381 strings out of 481239
- 1310998 string characters out of 5920377
- 1914399 words of memory out of 5000000
- 76954 multiletter control sequences out of 15000+600000
+ 64383 strings out of 481239
+ 1311033 string characters out of 5920377
+ 1914551 words of memory out of 5000000
+ 76956 multiletter control sequences out of 15000+600000
  734256 words of font info for 253 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,17n,122p,10114b,3965s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3424,9 +3418,9 @@ texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf
 type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txs
 ys.pfb>
-Output written on Thesis_YaribNevarez.pdf (182 pages, 5587800 bytes).
+Output written on Thesis_YaribNevarez.pdf (182 pages, 5588577 bytes).
 PDF statistics:
- 6723 PDF objects out of 7423 (max. 8388607)
+ 6724 PDF objects out of 7423 (max. 8388607)
  1279 named destinations out of 1440 (max. 500000)
  933 words of extra memory for PDF output out of 10000 (max. 10000000)
 

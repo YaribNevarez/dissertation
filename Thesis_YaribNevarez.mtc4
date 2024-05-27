@@ -24,7 +24,7 @@
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.2}Training}{\reset@font\mtcSSfont 106}{subsection.4.3.2}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Base Model}{\reset@font\mtcSSSfont 106}{section*.144}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline TensorFlow Lite 8-bit Quantization}{\reset@font\mtcSSSfont 109}{section*.147}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Inference of Non-Quantized Models on HF6 Hardware}{\reset@font\mtcSSSfont 109}{section*.148}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Trans-Precision Inference on HF6 Hardware}{\reset@font\mtcSSSfont 109}{section*.148}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Quantization-Aware Training for HF6 Hardware}{\reset@font\mtcSSSfont 109}{section*.149}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Quantization-Aware Training for Hybrid-Logarithmic 6-bit}{\reset@font\mtcSSSfont 110}{section*.150}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.3}Hardware Design Exploration}{\reset@font\mtcSSfont 110}{subsection.4.3.3}}

@@ -131,7 +131,7 @@
 \contentsline {subsection}{\numberline {4.3.2}Training}{106}{subsection.4.3.2}%
 \contentsline {subsubsection}{\nonumberline Base Model}{106}{section*.144}%
 \contentsline {subsubsection}{\nonumberline TensorFlow Lite 8-bit Quantization}{109}{section*.147}%
-\contentsline {subsubsection}{\nonumberline Inference of Non-Quantized Models on HF6 Hardware}{109}{section*.148}%
+\contentsline {subsubsection}{\nonumberline Trans-Precision Inference on HF6 Hardware}{109}{section*.148}%
 \contentsline {subsubsection}{\nonumberline Quantization-Aware Training for HF6 Hardware}{109}{section*.149}%
 \contentsline {subsubsection}{\nonumberline Quantization-Aware Training for Hybrid-Logarithmic 6-bit}{110}{section*.150}%
 \contentsline {subsection}{\numberline {4.3.3}Hardware Design Exploration}{110}{subsection.4.3.3}%

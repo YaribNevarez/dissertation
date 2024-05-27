@@ -23,7 +23,7 @@ The data sets are recorded applying pulses on the metal plate, the x- y- coordin
 In order to create reproducible acoustic emissions, this demonstration uses 9-cycle sine pulse in a Hanning window with central frequency $f_\mathrm{c}$ (narrow-banded in the frequency domain). This experiment assumes guided Lamb waves based on the plate structure. The narrow-band behavior also reduces the dispersion of the acoustic emission waves~\cite{hannwindowsine}. The waveform can be expressed as a function of time $t$ as follows:
 
 \begin{equation}
-x_\mathrm{pulse}(t) = \frac{1}{2} \Big(1-\cos{\frac{f_\mathrm{c} t}{5}} \Big) A_0 \sin{f_\mathrm{c} t}.
+x_\mathrm{pulse}(t) = 0.5 \left(1 - \cos\left(\frac{2\pi t f_\mathrm{c}}{9}\right)\right) A_0 \sin(2\pi f_\mathrm{c} t)
 \end{equation}
 
 To generate the data sets, slightly different pulse amplitudes and frequencies for excitation are used. The pulse frequency $f_c$ is varied in $\unit[1]{kHz}$ steps between $\unit[300]{kHz}$ and $\unit[349]{kHz}$ and the amplitude $A_0$ is varied in $\unit[0.1]{V}$ steps between $\unit[2.6]{V}$ and $\unit[3.5]{V}$. This produces 500 different pulses for each of the excitation points.
@@ -44,7 +44,7 @@ Here $x[n]$ describes a discrete-time signal and $\gamma^*[n-m\Delta M]\cdot \ma
 \mathcal{S}_{m,k}= \left|\mathcal{F}_{m,k}^\gamma\right|^2 = \left|\sum_{n=0}^{N-1} x[n] \cdot \gamma^*[n-m\Delta M]\cdot \mathrm{e}^{\frac{-j 2 \pi k n }{N}} \right|^2
 \end{flalign}
 
-In addition, these spectrograms are scaled in decibels. The spectrogram in decibels $\mathcal{S}_{m,k,\mathrm{dB}}$ produces $\mathcal{S}_{m,k,\mathrm{dB}}= 20 \cdot \mathrm{log}_{10}(\mathcal{S}_{m,k})$. For conversion of data, the experiment uses a signal length of 400 \textmu s (75 \textmu s pretrigger and 325 \textmu s post trigger). Thus, the arrival times of the pulses are included in the spectrogram for all channels and labeled positions. This uses Blackman window function~\cite{blackman_window}, \gls{fft} length of 32 samples, and overlap of 8 samples. The spectrograms are calculated for frequencies in the range of \unit[100]{kHz} to \unit[500]{kHz}. This produces a spectrogram size of 8x16 (8 frequency bins, 16 time values).
+In addition, these spectrograms are scaled in decibels. The spectrogram in decibels $\mathcal{S}_{m,k,\mathrm{dB}}$ produces $\mathcal{S}_{m,k,\mathrm{dB}}= 10 \cdot \mathrm{log}_{10}(\mathcal{S}_{m,k})$. For conversion of data, the experiment uses a signal length of 400 \textmu s (75 \textmu s pretrigger and 325 \textmu s post trigger). Thus, the arrival times of the pulses are included in the spectrogram for all channels and labeled positions. This uses Blackman window function~\cite{blackman_window}, \gls{fft} length of 32 samples, and overlap of 8 samples. The spectrograms are calculated for frequencies in the range of \unit[100]{kHz} to \unit[500]{kHz}. This produces a spectrogram size of 8x16 (8 frequency bins, 16 time values).
 
 In order to generate larger data sets, four further variants are created with time shifts of 15 \textmu s/ 30 \textmu s/ 45 \textmu s/ 60 \textmu s. Subsequently, all spectrograms are converted to grayscale with scaling between \unit[-100]{dB} and \unit[-40]{dB}, see \fig{fig:spectrograms}.
 
@@ -108,8 +108,8 @@ The base model is quantized using the TensorFlow Lite library with integer-only 
 
 This model achieves $MSE=\unit[0.0126]{m^2}$ and $MAE=\unit[0.0992]{m}$. See \fig{fig:model_evaluation}(b). The MAE increases 5.1\% of the base model. This degradation is attributed to the 8-bit quantization on the \emph{Conv2D} layers.
 
-\subsubsection{Inference of Non-Quantized Models on HF6 Hardware}
-To demonstrate backward compatibility, the inference quality of the base model is measured without quantization on the \gls{hf6} hardware. See \fig{fig:model_evaluation}(c). This obtains $MSE=\unit[0.0188]{m^2}$ and $MAE=\unit[0.1232]{m}$. The MAE increases 29.5\% of the base model. This degradation is attributed to the rounding errors of non-quantized filters and bias in \emph{Conv2D} layers.
+\subsubsection{Trans-Precision Inference on HF6 Hardware}
+To demonstrate backward compatibility, the inference quality of the base model is measured without \gls{qat} on the \gls{hf6} hardware. See \fig{fig:model_evaluation}(c). This obtains $MSE=\unit[0.0188]{m^2}$ and $MAE=\unit[0.1232]{m}$. The MAE increases 29.5\% of the base model. This degradation is attributed to the rounding errors of non-quantized filters and bias in \emph{Conv2D} layers.
 
 \subsubsection{Quantization-Aware Training for HF6 Hardware}
 The \gls{qat} is a post-training optimization. This has been run during two epochs with mini-batch size of 10 samples. This quantization is executed targeting the HF6 format: 4-bit exponent and 1-bit mantissa. This is applied to filter and bias tensors of \emph{Conv2D} layers. This method is described in \Algo{alg:quantization_integration} with $N_{ep}=2$, $B_{size}=10$, $E_{size}=4$, $M_{size}=1$. The optimization results are illustrated in \fig{fig:optimization}(b).
