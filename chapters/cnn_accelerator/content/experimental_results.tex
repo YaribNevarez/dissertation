@@ -23,7 +23,7 @@ The data sets are recorded applying pulses on the metal plate, the x- y- coordin
 In order to create reproducible acoustic emissions, this demonstration uses 9-cycle sine pulse in a Hanning window with central frequency $f_\mathrm{c}$ (narrow-banded in the frequency domain). This experiment assumes guided Lamb waves based on the plate structure. The narrow-band behavior also reduces the dispersion of the acoustic emission waves~\cite{hannwindowsine}. The waveform can be expressed as a function of time $t$ as follows:
 
 \begin{equation}
-x_\mathrm{pulse}(t) = 0.5 \left(1 - \cos\left(\frac{2\pi t f_\mathrm{c}}{9}\right)\right) A_0 \sin(2\pi f_\mathrm{c} t)
+x_\mathrm{pulse}(t) = \frac{1}{2} \left(1 - \cos\left(\frac{2\pi f_\mathrm{c}t}{9}\right)\right) A_0 \sin(2\pi f_\mathrm{c} t)
 \end{equation}
 
 To generate the data sets, slightly different pulse amplitudes and frequencies for excitation are used. The pulse frequency $f_c$ is varied in $\unit[1]{kHz}$ steps between $\unit[300]{kHz}$ and $\unit[349]{kHz}$ and the amplitude $A_0$ is varied in $\unit[0.1]{V}$ steps between $\unit[2.6]{V}$ and $\unit[3.5]{V}$. This produces 500 different pulses for each of the excitation points.
